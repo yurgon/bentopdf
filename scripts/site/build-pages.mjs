@@ -315,9 +315,13 @@ function legacyTool(slug) {
           .split('<script')[0]
           .trim()
       : '';
+  // parse it on its own so stray closing tags (the end of BentoPDF's landing wrapper) are dropped
+  const tailHtml = tail
+    ? new JSDOM(`<body>${tail}</body>`).window.document.body.innerHTML
+    : '';
   const html = `<section class="work legacy" id="tool">
 ${d.body.innerHTML.replace(/\{\{&gt;/g, '{{>')}
-</section>${tail ? `\n${tail}` : ''}
+</section>${tailHtml ? `\n${tailHtml}` : ''}
 ${scripts.map((s) => `<script type="module" src="${s}"></script>`).join('\n')}`;
   return { html, styles };
 }
