@@ -3,13 +3,17 @@
 ## Deploy
 
 ```bash
-SITE_URL=https://plyleaf.pages.dev npm run build:plyleaf
+SITE_URL=https://plyleaf.com npm run build:plyleaf
 npx wrangler pages deploy --project-name plyleaf --branch main
 ```
 
 `wrangler.toml` points Wrangler at `dist/` and binds the D1 database `plyleaf-stats` (usage counter) as `STATS`. The Pages Function in `functions/api/e.ts` is deployed with the site.
 
 While `SITE_URL` is not the final domain, `scripts/apply-indexing-policy.mjs` marks every page `noindex`. On the real domain, build with `SITE_URL=https://<domain> ALLOW_INDEXING=true`.
+
+## Domain
+
+`plyleaf.com` is a Cloudflare zone (Free plan, nameservers `lola.ns.cloudflare.com` and `ray.ns.cloudflare.com`) attached to the Pages project as a custom domain; `plyleaf.pages.dev` stays as the project's own address. The domain is registered outside Cloudflare, so nameserver changes are made at the registrar.
 
 ## Headers
 
