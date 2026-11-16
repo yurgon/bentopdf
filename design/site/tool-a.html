@@ -156,189 +156,184 @@
   </head>
   <body>
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <defs>
-        <symbol id="mark" viewBox="0 0 24 24">
-          <rect
-            x="3.5"
-            y="5.5"
-            width="13"
-            height="16"
-            rx="2.5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-          />
-          <path
-            d="M8 2.5h10.5a2.5 2.5 0 0 1 2.5 2.5v13.5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-          />
-          <path
-            d="M3.5 13.5 10 9.5l6.5 4"
-            fill="none"
-            stroke="oklch(0.74 0.15 76)"
-            stroke-width="1.6"
-            stroke-linejoin="round"
-            stroke-linecap="round"
-          />
-        </symbol>
-        <symbol id="upload" viewBox="0 0 20 20">
-          <path
-            d="M10 13V3.5M6 7.5l4-4 4 4M3.5 12.5v2a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-2"
-          />
-        </symbol>
-        <symbol id="file" viewBox="0 0 20 20">
-          <path
-            d="M11.5 2.5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7z"
-          />
-          <path d="M11.5 2.5V7H16" />
-        </symbol>
-        <symbol id="device" viewBox="0 0 20 20">
-          <rect x="3" y="4" width="14" height="9.5" rx="1.5" />
-          <path d="M1.5 16.5h17M8 9.5l1.5 1.5 3-3" />
-        </symbol>
-        <symbol id="printer" viewBox="0 0 20 20">
-          <path
-            d="M5.5 7.5v-4h9v4M5.5 14H4a1.5 1.5 0 0 1-1.5-1.5V9A1.5 1.5 0 0 1 4 7.5h12A1.5 1.5 0 0 1 17.5 9v3.5A1.5 1.5 0 0 1 16 14h-1.5"
-          />
-          <path d="M5.5 11.5h9v5h-9z" />
-        </symbol>
-        <symbol id="book" viewBox="0 0 20 20">
-          <path
-            d="M10 5.5C8.5 4.2 6.5 3.5 3 3.5v11c3.5 0 5.5.7 7 2 1.5-1.3 3.5-2 7-2v-11c-3.5 0-5.5.7-7 2zM10 5.5v11"
-          />
-        </symbol>
-        <symbol id="check" viewBox="0 0 20 20">
-          <path d="M4.5 10.5l3.5 3.5 7.5-8" />
-        </symbol>
-        <symbol id="arrow" viewBox="0 0 20 20">
-          <path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" />
-        </symbol>
-        <symbol id="plus" viewBox="0 0 20 20">
-          <path d="M10 4v12M4 10h12" />
-        </symbol>
-        <symbol id="x" viewBox="0 0 20 20">
-          <path d="M5.5 5.5l9 9M14.5 5.5l-9 9" />
-        </symbol>
-        <symbol id="sun" viewBox="0 0 20 20">
-          <circle cx="10" cy="10" r="3.5" />
-          <path
-            d="M10 2v1.5M10 16.5V18M2 10h1.5M16.5 10H18M4.3 4.3l1 1M14.7 14.7l1 1M4.3 15.7l1-1M14.7 5.3l1-1"
-          />
-        </symbol>
-        <symbol id="moon" viewBox="0 0 20 20">
-          <path d="M16.5 12.2A6.5 6.5 0 0 1 7.8 3.5a6.5 6.5 0 1 0 8.7 8.7z" />
-        </symbol>
-        <symbol id="merge" viewBox="0 0 20 20">
-          <rect x="2.5" y="3" width="6" height="8" rx="1" />
-          <rect x="11.5" y="3" width="6" height="8" rx="1" />
-          <path
-            d="M5.5 11v2.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V11M10 15v2.5"
-          />
-        </symbol>
-        <symbol id="split" viewBox="0 0 20 20">
-          <rect x="5" y="2.5" width="10" height="15" rx="1.5" />
-          <path d="M2.5 10h3M14.5 10h3M8 10h4" stroke-dasharray="1.5 2" />
-        </symbol>
-        <symbol id="hash" viewBox="0 0 20 20">
-          <path d="M7.5 3.5 6 16.5M14 3.5l-1.5 13M3.5 7.5h13M3 12.5h13" />
-        </symbol>
-        <symbol id="testpage" viewBox="0 0 20 20">
-          <rect x="4" y="2.5" width="12" height="15" rx="1.5" />
-          <path d="M7 6.5h6M7 9.5h6M7 12.5h3" />
-          <circle cx="13" cy="13" r="1" />
-        </symbol>
-        <symbol id="grid" viewBox="0 0 20 20">
-          <rect x="3" y="3" width="14" height="14" rx="1.5" />
-          <path d="M3 7.7h14M3 12.3h14M7.7 3v14M12.3 3v14" />
-        </symbol>
-        <symbol id="pen" viewBox="0 0 20 20">
-          <path
-            d="M3.5 16.5c2-3 4.5-1 6.5-3s4.5-6 6-9.5c-3.5 1.5-7.5 4-9.5 6s0 4.5-3 6.5z"
-          />
-        </symbol>
-        <symbol id="sign" viewBox="0 0 20 20">
-          <path
-            d="M2.5 13c1.5-4 3-6 4-6 1.5 0 0 6 1.5 6s2-3 3-3 .5 3 2 3 2-1.5 3-1.5M2.5 16.5h15"
-          />
-        </symbol>
-        <symbol id="scan" viewBox="0 0 20 20">
-          <path
-            d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M6.5 8h7M6.5 12h5"
-          />
-        </symbol>
-        <symbol id="redact" viewBox="0 0 20 20">
-          <path d="M3.5 5.5h13M3.5 14.5h7" />
-          <rect
-            x="3"
-            y="8.3"
-            width="11"
-            height="3.4"
-            rx=".8"
-            fill="currentColor"
-            stroke="none"
-          />
-        </symbol>
-        <symbol id="compare" viewBox="0 0 20 20">
-          <rect x="2.5" y="3" width="6.5" height="14" rx="1" />
-          <rect x="11" y="3" width="6.5" height="14" rx="1" />
-          <path d="M5 7h2M13.5 7h2M5 10h2M13.5 10h2" />
-        </symbol>
-        <symbol id="compress" viewBox="0 0 20 20">
-          <path
-            d="M10 2.5v5M7.5 5.5 10 8l2.5-2.5M10 17.5v-5M7.5 14.5 10 12l2.5 2.5M4 10h12"
-          />
-        </symbol>
-        <symbol id="image" viewBox="0 0 20 20">
-          <rect x="2.5" y="3.5" width="15" height="13" rx="1.5" />
-          <circle cx="7" cy="8" r="1.5" />
-          <path d="M17.5 13.5l-4-4-7.5 7" />
-        </symbol>
-        <symbol id="edit" viewBox="0 0 20 20">
-          <path d="M12.5 4.5l3 3L7 16H4v-3zM11 6l3 3" />
-        </symbol>
-        <symbol id="lock" viewBox="0 0 20 20">
-          <rect x="4" y="8.5" width="12" height="9" rx="1.5" />
-          <path d="M6.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5" />
-        </symbol>
-        <symbol id="rotate" viewBox="0 0 20 20">
-          <path d="M15.5 9.5A5.5 5.5 0 1 1 13.8 5.6M15.8 3v3.5h-3.5" />
-        </symbol>
-        <symbol id="search" viewBox="0 0 20 20">
-          <circle cx="9" cy="9" r="5.5" />
-          <path d="M13 13l4 4" />
-        </symbol>
-        <symbol id="fold" viewBox="0 0 20 20">
-          <path d="M3 4.5h14v11H3zM10 4.5v11" />
-          <path d="M10 4.5 13.5 3v11L10 15.5" />
-        </symbol>
-      </defs>
-    </svg>
-
-    <a class="visually-hidden" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="home-a.html"
-          ><svg class="brand-mark"><use href="#mark" /></svg>Plyleaf</a
-        >
-        <nav class="nav" aria-label="Main">
-          <a href="#">All tools</a>
-          <a href="#" class="nav-hide">For printing</a>
-          <a href="#" class="nav-hide">For e-readers</a>
-          <a href="#" class="nav-hide">About</a>
-          <button
-            class="theme-toggle"
-            type="button"
-            id="theme-toggle"
-            aria-label="Switch to dark theme"
-          >
-            <svg class="i i-sm"><use href="#moon" /></svg>
-          </button>
-        </nav>
-      </div>
-    </header>
+  <defs>
+    <symbol id="mark" viewBox="0 0 24 24">
+      <rect
+        x="3.5"
+        y="5.5"
+        width="13"
+        height="16"
+        rx="2.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+      />
+      <path
+        d="M8 2.5h10.5a2.5 2.5 0 0 1 2.5 2.5v13.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+      />
+      <path
+        d="M3.5 13.5 10 9.5l6.5 4"
+        fill="none"
+        stroke="oklch(0.74 0.15 76)"
+        stroke-width="1.6"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+      />
+    </symbol>
+    <symbol id="upload" viewBox="0 0 20 20">
+      <path
+        d="M10 13V3.5M6 7.5l4-4 4 4M3.5 12.5v2a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-2"
+      />
+    </symbol>
+    <symbol id="file" viewBox="0 0 20 20">
+      <path d="M11.5 2.5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7z" />
+      <path d="M11.5 2.5V7H16" />
+    </symbol>
+    <symbol id="device" viewBox="0 0 20 20">
+      <rect x="3" y="4" width="14" height="9.5" rx="1.5" />
+      <path d="M1.5 16.5h17M8 9.5l1.5 1.5 3-3" />
+    </symbol>
+    <symbol id="printer" viewBox="0 0 20 20">
+      <path
+        d="M5.5 7.5v-4h9v4M5.5 14H4a1.5 1.5 0 0 1-1.5-1.5V9A1.5 1.5 0 0 1 4 7.5h12A1.5 1.5 0 0 1 17.5 9v3.5A1.5 1.5 0 0 1 16 14h-1.5"
+      />
+      <path d="M5.5 11.5h9v5h-9z" />
+    </symbol>
+    <symbol id="book" viewBox="0 0 20 20">
+      <path
+        d="M10 5.5C8.5 4.2 6.5 3.5 3 3.5v11c3.5 0 5.5.7 7 2 1.5-1.3 3.5-2 7-2v-11c-3.5 0-5.5.7-7 2zM10 5.5v11"
+      />
+    </symbol>
+    <symbol id="check" viewBox="0 0 20 20">
+      <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 20 20">
+      <path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" />
+    </symbol>
+    <symbol id="plus" viewBox="0 0 20 20"><path d="M10 4v12M4 10h12" /></symbol>
+    <symbol id="x" viewBox="0 0 20 20">
+      <path d="M5.5 5.5l9 9M14.5 5.5l-9 9" />
+    </symbol>
+    <symbol id="sun" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="3.5" />
+      <path
+        d="M10 2v1.5M10 16.5V18M2 10h1.5M16.5 10H18M4.3 4.3l1 1M14.7 14.7l1 1M4.3 15.7l1-1M14.7 5.3l1-1"
+      />
+    </symbol>
+    <symbol id="moon" viewBox="0 0 20 20">
+      <path d="M16.5 12.2A6.5 6.5 0 0 1 7.8 3.5a6.5 6.5 0 1 0 8.7 8.7z" />
+    </symbol>
+    <symbol id="merge" viewBox="0 0 20 20">
+      <rect x="2.5" y="3" width="6" height="8" rx="1" />
+      <rect x="11.5" y="3" width="6" height="8" rx="1" />
+      <path
+        d="M5.5 11v2.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V11M10 15v2.5"
+      />
+    </symbol>
+    <symbol id="split" viewBox="0 0 20 20">
+      <rect x="5" y="2.5" width="10" height="15" rx="1.5" />
+      <path d="M2.5 10h3M14.5 10h3M8 10h4" stroke-dasharray="1.5 2" />
+    </symbol>
+    <symbol id="hash" viewBox="0 0 20 20">
+      <path d="M7.5 3.5 6 16.5M14 3.5l-1.5 13M3.5 7.5h13M3 12.5h13" />
+    </symbol>
+    <symbol id="testpage" viewBox="0 0 20 20">
+      <rect x="4" y="2.5" width="12" height="15" rx="1.5" />
+      <path d="M7 6.5h6M7 9.5h6M7 12.5h3" />
+      <circle cx="13" cy="13" r="1" />
+    </symbol>
+    <symbol id="grid" viewBox="0 0 20 20">
+      <rect x="3" y="3" width="14" height="14" rx="1.5" />
+      <path d="M3 7.7h14M3 12.3h14M7.7 3v14M12.3 3v14" />
+    </symbol>
+    <symbol id="pen" viewBox="0 0 20 20">
+      <path
+        d="M3.5 16.5c2-3 4.5-1 6.5-3s4.5-6 6-9.5c-3.5 1.5-7.5 4-9.5 6s0 4.5-3 6.5z"
+      />
+    </symbol>
+    <symbol id="sign" viewBox="0 0 20 20">
+      <path
+        d="M2.5 13c1.5-4 3-6 4-6 1.5 0 0 6 1.5 6s2-3 3-3 .5 3 2 3 2-1.5 3-1.5M2.5 16.5h15"
+      />
+    </symbol>
+    <symbol id="scan" viewBox="0 0 20 20">
+      <path
+        d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M6.5 8h7M6.5 12h5"
+      />
+    </symbol>
+    <symbol id="redact" viewBox="0 0 20 20">
+      <path d="M3.5 5.5h13M3.5 14.5h7" />
+      <rect
+        x="3"
+        y="8.3"
+        width="11"
+        height="3.4"
+        rx=".8"
+        fill="currentColor"
+        stroke="none"
+      />
+    </symbol>
+    <symbol id="compare" viewBox="0 0 20 20">
+      <rect x="2.5" y="3" width="6.5" height="14" rx="1" />
+      <rect x="11" y="3" width="6.5" height="14" rx="1" />
+      <path d="M5 7h2M13.5 7h2M5 10h2M13.5 10h2" />
+    </symbol>
+    <symbol id="compress" viewBox="0 0 20 20">
+      <path
+        d="M10 2.5v5M7.5 5.5 10 8l2.5-2.5M10 17.5v-5M7.5 14.5 10 12l2.5 2.5M4 10h12"
+      />
+    </symbol>
+    <symbol id="image" viewBox="0 0 20 20">
+      <rect x="2.5" y="3.5" width="15" height="13" rx="1.5" />
+      <circle cx="7" cy="8" r="1.5" />
+      <path d="M17.5 13.5l-4-4-7.5 7" />
+    </symbol>
+    <symbol id="edit" viewBox="0 0 20 20">
+      <path d="M12.5 4.5l3 3L7 16H4v-3zM11 6l3 3" />
+    </symbol>
+    <symbol id="lock" viewBox="0 0 20 20">
+      <rect x="4" y="8.5" width="12" height="9" rx="1.5" />
+      <path d="M6.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5" />
+    </symbol>
+    <symbol id="rotate" viewBox="0 0 20 20">
+      <path d="M15.5 9.5A5.5 5.5 0 1 1 13.8 5.6M15.8 3v3.5h-3.5" />
+    </symbol>
+    <symbol id="search" viewBox="0 0 20 20">
+      <circle cx="9" cy="9" r="5.5" />
+      <path d="M13 13l4 4" />
+    </symbol>
+    <symbol id="fold" viewBox="0 0 20 20">
+      <path d="M3 4.5h14v11H3zM10 4.5v11" />
+      <path d="M10 4.5 13.5 3v11L10 15.5" />
+    </symbol>
+  </defs>
+</svg>
+ <a class="visually-hidden" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="home-a.html"
+      ><svg class="brand-mark"><use href="#mark" /></svg>Plyleaf</a
+    >
+    <nav class="nav" aria-label="Main">
+      <a href="#">All tools</a>
+      <a href="#" class="nav-hide">For printing</a>
+      <a href="#" class="nav-hide">For e-readers</a>
+      <a href="#" class="nav-hide">About</a>
+      <button
+        class="theme-toggle"
+        type="button"
+        id="theme-toggle"
+        aria-label="Switch to dark theme"
+      >
+        <svg class="i i-sm"><use href="#moon" /></svg>
+      </button>
+    </nav>
+  </div>
+</header>
 
     <main id="main">
       <div class="wrap">
@@ -366,213 +361,172 @@
             >
           </div>
         </section>
-        <div class="tool-a">
-          <section class="work" id="tool" aria-label="Booklet maker">
-            <div class="work-body">
-              <!-- empty state -->
-              <div class="drop" id="drop-zone" data-state="idle">
-                <input
-                  type="file"
-                  id="file-input"
-                  accept="application/pdf,.pdf"
-                  aria-label="Choose a PDF file"
-                />
-                <div class="drop-icon">
-                  <svg class="i"><use href="#upload" /></svg>
-                </div>
-                <div>
-                  <p class="drop-title">Drop a PDF here</p>
-                  <p class="drop-sub">
-                    or choose a file. It is read on this device and never
-                    uploaded.
-                  </p>
-                </div>
-                <div class="drop-actions">
-                  <span class="btn btn-sm" aria-hidden="true">Choose PDF</span>
-                  <button
-                    class="btn btn-sm btn-ghost raise"
-                    type="button"
-                    id="sample-btn"
-                  >
-                    Try a sample file
-                  </button>
-                </div>
-                <p class="drop-error" id="drop-error" hidden></p>
-              </div>
+        <div class="tool-a"><section class="work" id="tool" aria-label="Booklet maker">
+  <div class="work-body">
+    <!-- empty state -->
+    <div class="drop" id="drop-zone" data-state="idle">
+      <input
+        type="file"
+        id="file-input"
+        accept="application/pdf,.pdf"
+        aria-label="Choose a PDF file"
+      />
+      <div class="drop-icon">
+        <svg class="i"><use href="#upload" /></svg>
+      </div>
+      <div>
+        <p class="drop-title">Drop a PDF here</p>
+        <p class="drop-sub">
+          or choose a file. It is read on this device and never uploaded.
+        </p>
+      </div>
+      <div class="drop-actions">
+        <span class="btn btn-sm" aria-hidden="true">Choose PDF</span>
+        <button
+          class="btn btn-sm btn-ghost raise"
+          type="button"
+          id="sample-btn"
+        >
+          Try a sample file
+        </button>
+      </div>
+      <p class="drop-error" id="drop-error" hidden></p>
+    </div>
 
-              <!-- file chosen -->
-              <div id="file-display-area" hidden>
-                <div class="file-row">
-                  <div class="file-thumb" aria-hidden="true"></div>
-                  <div class="file-meta">
-                    <p class="file-name" id="file-name">field-notes.pdf</p>
-                    <p class="file-info tnum" id="file-info">
-                      14 pages · 2.1 MB
-                    </p>
-                  </div>
-                  <button
-                    class="btn btn-sm btn-ghost"
-                    type="button"
-                    id="remove-file"
-                    aria-label="Remove file"
-                  >
-                    <svg class="i i-sm"><use href="#x" /></svg>
-                  </button>
-                </div>
-              </div>
-
-              <div id="tool-options" class="options" hidden>
-                <div class="opt-grid">
-                  <div class="field">
-                    <span class="label" id="lbl-size">Booklet size</span>
-                    <div
-                      class="seg"
-                      role="radiogroup"
-                      aria-labelledby="lbl-size"
-                    >
-                      <input
-                        type="radio"
-                        name="size"
-                        id="size-a5"
-                        value="a5"
-                        checked
-                      /><label for="size-a5">A5 from A4</label>
-                      <input
-                        type="radio"
-                        name="size"
-                        id="size-hl"
-                        value="hl"
-                      /><label for="size-hl">Half Letter</label>
-                      <input
-                        type="radio"
-                        name="size"
-                        id="size-a4"
-                        value="a4"
-                      /><label for="size-a4">A4 from A3</label>
-                    </div>
-                  </div>
-                  <div class="field">
-                    <span class="label" id="lbl-bind">Binding</span>
-                    <div
-                      class="seg"
-                      role="radiogroup"
-                      aria-labelledby="lbl-bind"
-                    >
-                      <input
-                        type="radio"
-                        name="bind"
-                        id="bind-l"
-                        value="l"
-                        checked
-                      /><label for="bind-l">Left</label>
-                      <input
-                        type="radio"
-                        name="bind"
-                        id="bind-r"
-                        value="r"
-                      /><label for="bind-r">Right</label>
-                    </div>
-                  </div>
-                </div>
-                <fieldset
-                  class="field"
-                  style="border: 0; margin: 0; padding: 0"
-                >
-                  <legend class="label" style="margin-bottom: 6px; padding: 0">
-                    Your printer
-                  </legend>
-                  <div class="choices choices-2">
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="duplex"
-                        value="auto"
-                        checked
-                      /><strong>Prints both sides</strong
-                      ><span>Flip on the short edge. One pass.</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="duplex"
-                        value="manual"
-                      /><strong>One side at a time</strong
-                      ><span
-                        >We split it into two passes and tell you how to turn
-                        the stack.</span
-                      ></label
-                    >
-                  </div>
-                </fieldset>
-
-                <div class="field">
-                  <div class="preview-head">
-                    <span class="label">Preview</span>
-                    <span class="hint tnum" id="preview-sum"
-                      >16 pages on 4 sheets · 2 blank pages added</span
-                    >
-                  </div>
-                  <div
-                    class="sheets"
-                    id="booklet-preview"
-                    aria-live="polite"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress" id="progress" hidden>
-                <div class="progress-track">
-                  <div class="progress-bar" id="progress-bar"></div>
-                </div>
-                <div class="progress-text">
-                  <span id="progress-label">Reading pages</span
-                  ><span class="tnum" id="progress-pct">0%</span>
-                </div>
-              </div>
-
-              <div class="result appear" id="result" hidden>
-                <div class="result-icon">
-                  <svg class="i"><use href="#check" /></svg>
-                </div>
-                <p class="result-title" id="result-title">Booklet ready</p>
-                <p class="result-sub tnum" id="result-sub">
-                  field-notes-booklet.pdf · 4 sheets · A5
-                </p>
-                <div class="result-actions">
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                    id="download-btn"
-                  >
-                    <svg class="i">
-                      <use href="#upload" transform="rotate(180 10 10)" /></svg
-                    >Download booklet
-                  </button>
-                  <a class="btn" href="#printing">How to print it</a>
-                  <button class="btn btn-ghost" type="button" id="restart-btn">
-                    Start over
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="work-foot">
-              <span class="privacy-note"
-                ><svg class="i"><use href="#device" /></svg>Processed in your
-                browser. Nothing is uploaded.</span
-              >
-              <span class="spacer"></span>
-              <button
-                class="btn btn-primary btn-lg"
-                type="button"
-                id="make-btn"
-                disabled
-              >
-                Make booklet
-              </button>
-            </div>
-            <p class="toast" id="toast" role="status" hidden></p>
-          </section>
+    <!-- file chosen -->
+    <div id="file-display-area" hidden>
+      <div class="file-row">
+        <div class="file-thumb" aria-hidden="true"></div>
+        <div class="file-meta">
+          <p class="file-name" id="file-name">field-notes.pdf</p>
+          <p class="file-info tnum" id="file-info">14 pages · 2.1 MB</p>
         </div>
+        <button
+          class="btn btn-sm btn-ghost"
+          type="button"
+          id="remove-file"
+          aria-label="Remove file"
+        >
+          <svg class="i i-sm"><use href="#x" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="tool-options" class="options" hidden>
+      <div class="opt-grid">
+        <div class="field">
+          <span class="label" id="lbl-size">Booklet size</span>
+          <div class="seg" role="radiogroup" aria-labelledby="lbl-size">
+            <input
+              type="radio"
+              name="size"
+              id="size-a5"
+              value="a5"
+              checked
+            /><label for="size-a5">A5 from A4</label>
+            <input type="radio" name="size" id="size-hl" value="hl" /><label
+              for="size-hl"
+              >Half Letter</label
+            >
+            <input type="radio" name="size" id="size-a4" value="a4" /><label
+              for="size-a4"
+              >A4 from A3</label
+            >
+          </div>
+        </div>
+        <div class="field">
+          <span class="label" id="lbl-bind">Binding</span>
+          <div class="seg" role="radiogroup" aria-labelledby="lbl-bind">
+            <input
+              type="radio"
+              name="bind"
+              id="bind-l"
+              value="l"
+              checked
+            /><label for="bind-l">Left</label>
+            <input type="radio" name="bind" id="bind-r" value="r" /><label
+              for="bind-r"
+              >Right</label
+            >
+          </div>
+        </div>
+      </div>
+      <fieldset class="field" style="border: 0; margin: 0; padding: 0">
+        <legend class="label" style="margin-bottom: 6px; padding: 0">
+          Your printer
+        </legend>
+        <div class="choices choices-2">
+          <label class="choice"
+            ><input type="radio" name="duplex" value="auto" checked /><strong
+              >Prints both sides</strong
+            ><span>Flip on the short edge. One pass.</span></label
+          >
+          <label class="choice"
+            ><input type="radio" name="duplex" value="manual" /><strong
+              >One side at a time</strong
+            ><span
+              >We split it into two passes and tell you how to turn the
+              stack.</span
+            ></label
+          >
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <div class="preview-head">
+          <span class="label">Preview</span>
+          <span class="hint tnum" id="preview-sum"
+            >16 pages on 4 sheets · 2 blank pages added</span
+          >
+        </div>
+        <div class="sheets" id="booklet-preview" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="progress" id="progress" hidden>
+      <div class="progress-track">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-text">
+        <span id="progress-label">Reading pages</span
+        ><span class="tnum" id="progress-pct">0%</span>
+      </div>
+    </div>
+
+    <div class="result appear" id="result" hidden>
+      <div class="result-icon">
+        <svg class="i"><use href="#check" /></svg>
+      </div>
+      <p class="result-title" id="result-title">Booklet ready</p>
+      <p class="result-sub tnum" id="result-sub">
+        field-notes-booklet.pdf · 4 sheets · A5
+      </p>
+      <div class="result-actions">
+        <button class="btn btn-primary" type="button" id="download-btn">
+          <svg class="i">
+            <use href="#upload" transform="rotate(180 10 10)" /></svg
+          >Download booklet
+        </button>
+        <a class="btn" href="#printing">How to print it</a>
+        <button class="btn btn-ghost" type="button" id="restart-btn">
+          Start over
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="work-foot">
+    <span class="privacy-note"
+      ><svg class="i"><use href="#device" /></svg>Processed in your browser.
+      Nothing is uploaded.</span
+    >
+    <span class="spacer"></span>
+    <button class="btn btn-primary btn-lg" type="button" id="make-btn" disabled>
+      Make booklet
+    </button>
+  </div>
+  <p class="toast" id="toast" role="status" hidden></p>
+</section>
+</div>
         <div class="doc-a">
           <nav class="toc" aria-label="On this page">
             <p>On this page</p>
@@ -586,647 +540,505 @@
               <li><a href="#related">Related tools</a></li>
             </ol>
           </nav>
-          <div class="content">
-            <section class="block" id="how-to" aria-labelledby="h-how">
-              <h2 id="h-how" class="block-title">How to make a PDF booklet</h2>
-              <ol class="steps">
-                <li class="step">
-                  <div class="step-fig" aria-hidden="true">
-                    <svg viewBox="0 0 160 100">
-                      <rect
-                        class="f-zone"
-                        x="20"
-                        y="14"
-                        width="120"
-                        height="72"
-                        rx="8"
-                      />
-                      <rect
-                        class="f-page"
-                        x="66"
-                        y="26"
-                        width="28"
-                        height="36"
-                        rx="2"
-                      />
-                      <path class="f-line" d="M72 36h16M72 42h16M72 48h10" />
-                      <path class="f-stroke" d="M80 78V66M75 71l5-5 5 5" />
-                    </svg>
-                  </div>
-                  <div class="step-head">
-                    <span class="step-num"></span>
-                    <h3>Add your PDF</h3>
-                  </div>
-                  <p>
-                    Drop the file onto the page or choose it. Pages are counted
-                    right here in your browser, so even a private document is
-                    safe to use.
-                  </p>
-                </li>
-                <li class="step">
-                  <div class="step-fig" aria-hidden="true">
-                    <svg viewBox="0 0 160 100">
-                      <rect
-                        class="f-page"
-                        x="22"
-                        y="18"
-                        width="52"
-                        height="68"
-                        rx="2"
-                      />
-                      <rect
-                        class="f-accent"
-                        x="86"
-                        y="18"
-                        width="52"
-                        height="68"
-                        rx="2"
-                      />
-                      <path class="f-fold" d="M112 18v68" />
-                      <text class="f-t" x="48" y="56" text-anchor="middle">
-                        A4
-                      </text>
-                      <text class="f-t" x="99" y="56" text-anchor="middle">
-                        A5
-                      </text>
-                      <text class="f-t" x="125" y="56" text-anchor="middle">
-                        A5
-                      </text>
-                    </svg>
-                  </div>
-                  <div class="step-head">
-                    <span class="step-num"></span>
-                    <h3>Pick the booklet size</h3>
-                  </div>
-                  <p>
-                    A4 paper folds into A5, US Letter into half Letter, A3 into
-                    A4. Choose right binding for Arabic, Hebrew or manga.
-                  </p>
-                </li>
-                <li class="step">
-                  <div class="step-fig" aria-hidden="true">
-                    <svg viewBox="0 0 160 100">
-                      <g transform="translate(18 26)">
-                        <rect class="f-page" width="56" height="44" rx="2" />
-                        <path class="f-fold" d="M28 0v44" />
-                        <text class="f-t" x="14" y="27" text-anchor="middle">
-                          16
-                        </text>
-                        <text class="f-t" x="42" y="27" text-anchor="middle">
-                          1
-                        </text>
-                      </g>
-                      <g transform="translate(86 26)">
-                        <rect class="f-page" width="56" height="44" rx="2" />
-                        <path class="f-fold" d="M28 0v44" />
-                        <text class="f-t" x="14" y="27" text-anchor="middle">
-                          2
-                        </text>
-                        <text class="f-t" x="42" y="27" text-anchor="middle">
-                          15
-                        </text>
-                      </g>
-                      <text class="f-s" x="46" y="86" text-anchor="middle">
-                        front
-                      </text>
-                      <text class="f-s" x="114" y="86" text-anchor="middle">
-                        back
-                      </text>
-                    </svg>
-                  </div>
-                  <div class="step-head">
-                    <span class="step-num"></span>
-                    <h3>Check the preview</h3>
-                  </div>
-                  <p>
-                    Each sheet shows which pages land on its front and back. If
-                    the page count is not a multiple of four, blank pages are
-                    added at the end.
-                  </p>
-                </li>
-                <li class="step">
-                  <div class="step-fig" aria-hidden="true">
-                    <svg viewBox="0 0 160 100">
-                      <path
-                        class="f-page"
-                        d="M30 30 80 22l50 8v48l-50-8-50 8z"
-                      />
-                      <path class="f-fold" d="M80 22v48" />
-                      <path class="f-stroke" d="M77 40h6M77 54h6" />
-                      <path
-                        class="f-line"
-                        d="M40 40l28-4M40 48l28-4M92 36l28 4M92 44l28 4"
-                      />
-                    </svg>
-                  </div>
-                  <div class="step-head">
-                    <span class="step-num"></span>
-                    <h3>Print, fold, staple</h3>
-                  </div>
-                  <p>
-                    Follow the printing guide for your printer, fold the whole
-                    stack in half and put two staples on the crease.
-                  </p>
-                </li>
-              </ol>
-            </section>
+          <div class="content"><section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to make a PDF booklet</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <rect class="f-page" x="66" y="26" width="28" height="36" rx="2" />
+          <path class="f-line" d="M72 36h16M72 42h16M72 48h10" />
+          <path class="f-stroke" d="M80 78V66M75 71l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDF</h3>
+      </div>
+      <p>
+        Drop the file onto the page or choose it. Pages are counted right here
+        in your browser, so even a private document is safe to use.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="22" y="18" width="52" height="68" rx="2" />
+          <rect class="f-accent" x="86" y="18" width="52" height="68" rx="2" />
+          <path class="f-fold" d="M112 18v68" />
+          <text class="f-t" x="48" y="56" text-anchor="middle">A4</text>
+          <text class="f-t" x="99" y="56" text-anchor="middle">A5</text>
+          <text class="f-t" x="125" y="56" text-anchor="middle">A5</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Pick the booklet size</h3>
+      </div>
+      <p>
+        A4 paper folds into A5, US Letter into half Letter, A3 into A4. Choose
+        right binding for Arabic, Hebrew or manga.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(18 26)">
+            <rect class="f-page" width="56" height="44" rx="2" />
+            <path class="f-fold" d="M28 0v44" />
+            <text class="f-t" x="14" y="27" text-anchor="middle">16</text>
+            <text class="f-t" x="42" y="27" text-anchor="middle">1</text>
+          </g>
+          <g transform="translate(86 26)">
+            <rect class="f-page" width="56" height="44" rx="2" />
+            <path class="f-fold" d="M28 0v44" />
+            <text class="f-t" x="14" y="27" text-anchor="middle">2</text>
+            <text class="f-t" x="42" y="27" text-anchor="middle">15</text>
+          </g>
+          <text class="f-s" x="46" y="86" text-anchor="middle">front</text>
+          <text class="f-s" x="114" y="86" text-anchor="middle">back</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Check the preview</h3>
+      </div>
+      <p>
+        Each sheet shows which pages land on its front and back. If the page
+        count is not a multiple of four, blank pages are added at the end.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <path class="f-page" d="M30 30 80 22l50 8v48l-50-8-50 8z" />
+          <path class="f-fold" d="M80 22v48" />
+          <path class="f-stroke" d="M77 40h6M77 54h6" />
+          <path
+            class="f-line"
+            d="M40 40l28-4M40 48l28-4M92 36l28 4M92 44l28 4"
+          />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Print, fold, staple</h3>
+      </div>
+      <p>
+        Follow the printing guide for your printer, fold the whole stack in half
+        and put two staples on the crease.
+      </p>
+    </li>
+  </ol>
+</section>
 
-            <section
-              class="block"
-              id="result-example"
-              aria-labelledby="h-result"
-            >
-              <h2 id="h-result" class="block-title">What you get</h2>
-              <div class="before-after">
-                <figure class="ba-fig">
-                  <svg viewBox="0 0 300 120" role="img" aria-labelledby="ba1">
-                    <title id="ba1">
-                      Before: a 14-page PDF as single pages in reading order
-                    </title>
-                    <g class="f-row">
-                      <rect
-                        class="f-page"
-                        x="8"
-                        y="22"
-                        width="34"
-                        height="46"
-                        rx="2"
-                      />
-                      <rect
-                        class="f-page"
-                        x="50"
-                        y="22"
-                        width="34"
-                        height="46"
-                        rx="2"
-                      />
-                      <rect
-                        class="f-page"
-                        x="92"
-                        y="22"
-                        width="34"
-                        height="46"
-                        rx="2"
-                      />
-                      <rect
-                        class="f-page"
-                        x="134"
-                        y="22"
-                        width="34"
-                        height="46"
-                        rx="2"
-                      />
-                      <rect
-                        class="f-page"
-                        x="176"
-                        y="22"
-                        width="34"
-                        height="46"
-                        rx="2"
-                      />
-                      <rect
-                        class="f-page"
-                        x="218"
-                        y="22"
-                        width="34"
-                        height="46"
-                        rx="2"
-                      />
-                      <rect
-                        class="f-page f-fade"
-                        x="260"
-                        y="22"
-                        width="34"
-                        height="46"
-                        rx="2"
-                      />
-                    </g>
-                    <g class="f-t">
-                      <text x="25" y="49" text-anchor="middle">1</text>
-                      <text x="67" y="49" text-anchor="middle">2</text>
-                      <text x="109" y="49" text-anchor="middle">3</text>
-                      <text x="151" y="49" text-anchor="middle">4</text>
-                      <text x="193" y="49" text-anchor="middle">5</text>
-                      <text x="235" y="49" text-anchor="middle">6</text>
-                      <text x="277" y="49" text-anchor="middle">…14</text>
-                    </g>
-                    <text class="f-s" x="8" y="96">
-                      Your PDF: 14 pages, one per sheet, in reading order
-                    </text>
-                  </svg>
-                  <figcaption>Before</figcaption>
-                </figure>
-                <figure class="ba-fig">
-                  <svg viewBox="0 0 300 120" role="img" aria-labelledby="ba2">
-                    <title id="ba2">
-                      After: four sheets with two pages on each side, ready to
-                      fold into a 16-page A5 booklet
-                    </title>
-                    <g transform="translate(8 22)">
-                      <rect class="f-page" width="64" height="46" rx="2" />
-                      <path class="f-fold" d="M32 0v46" />
-                      <text class="f-t" x="16" y="27" text-anchor="middle">
-                        16
-                      </text>
-                      <text class="f-t" x="48" y="27" text-anchor="middle">
-                        1
-                      </text>
-                    </g>
-                    <g transform="translate(80 22)">
-                      <rect class="f-page" width="64" height="46" rx="2" />
-                      <path class="f-fold" d="M32 0v46" />
-                      <text class="f-t" x="16" y="27" text-anchor="middle">
-                        14
-                      </text>
-                      <text class="f-t" x="48" y="27" text-anchor="middle">
-                        3
-                      </text>
-                    </g>
-                    <g transform="translate(152 22)">
-                      <rect class="f-page" width="64" height="46" rx="2" />
-                      <path class="f-fold" d="M32 0v46" />
-                      <text class="f-t" x="16" y="27" text-anchor="middle">
-                        12
-                      </text>
-                      <text class="f-t" x="48" y="27" text-anchor="middle">
-                        5
-                      </text>
-                    </g>
-                    <g transform="translate(224 22)">
-                      <rect class="f-page" width="64" height="46" rx="2" />
-                      <path class="f-fold" d="M32 0v46" />
-                      <text class="f-t" x="16" y="27" text-anchor="middle">
-                        10
-                      </text>
-                      <text class="f-t" x="48" y="27" text-anchor="middle">
-                        7
-                      </text>
-                    </g>
-                    <text class="f-s" x="8" y="96">
-                      Booklet PDF: 4 sheets, fronts shown, pages in folding
-                      order
-                    </text>
-                  </svg>
-                  <figcaption>After</figcaption>
-                </figure>
-              </div>
-              <div class="table-wrap" style="margin-top: 24px">
-                <table class="table">
-                  <caption class="visually-hidden">
-                    How many sheets a booklet needs
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Pages in your PDF</th>
-                      <th scope="col">Booklet pages</th>
-                      <th scope="col">Sheets of paper</th>
-                      <th scope="col">Blank pages added</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>8</td>
-                      <td>8</td>
-                      <td>2</td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td>14</td>
-                      <td>16</td>
-                      <td>4</td>
-                      <td>2</td>
-                    </tr>
-                    <tr>
-                      <td>21</td>
-                      <td>24</td>
-                      <td>6</td>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <td>40</td>
-                      <td>40</td>
-                      <td>10</td>
-                      <td>0</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg viewBox="0 0 300 120" role="img" aria-labelledby="ba1">
+        <title id="ba1">
+          Before: a 14-page PDF as single pages in reading order
+        </title>
+        <g class="f-row">
+          <rect class="f-page" x="8" y="22" width="34" height="46" rx="2" />
+          <rect class="f-page" x="50" y="22" width="34" height="46" rx="2" />
+          <rect class="f-page" x="92" y="22" width="34" height="46" rx="2" />
+          <rect class="f-page" x="134" y="22" width="34" height="46" rx="2" />
+          <rect class="f-page" x="176" y="22" width="34" height="46" rx="2" />
+          <rect class="f-page" x="218" y="22" width="34" height="46" rx="2" />
+          <rect
+            class="f-page f-fade"
+            x="260"
+            y="22"
+            width="34"
+            height="46"
+            rx="2"
+          />
+        </g>
+        <g class="f-t">
+          <text x="25" y="49" text-anchor="middle">1</text>
+          <text x="67" y="49" text-anchor="middle">2</text>
+          <text x="109" y="49" text-anchor="middle">3</text>
+          <text x="151" y="49" text-anchor="middle">4</text>
+          <text x="193" y="49" text-anchor="middle">5</text>
+          <text x="235" y="49" text-anchor="middle">6</text>
+          <text x="277" y="49" text-anchor="middle">…14</text>
+        </g>
+        <text class="f-s" x="8" y="96">
+          Your PDF: 14 pages, one per sheet, in reading order
+        </text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg viewBox="0 0 300 120" role="img" aria-labelledby="ba2">
+        <title id="ba2">
+          After: four sheets with two pages on each side, ready to fold into a
+          16-page A5 booklet
+        </title>
+        <g transform="translate(8 22)">
+          <rect class="f-page" width="64" height="46" rx="2" />
+          <path class="f-fold" d="M32 0v46" />
+          <text class="f-t" x="16" y="27" text-anchor="middle">16</text>
+          <text class="f-t" x="48" y="27" text-anchor="middle">1</text>
+        </g>
+        <g transform="translate(80 22)">
+          <rect class="f-page" width="64" height="46" rx="2" />
+          <path class="f-fold" d="M32 0v46" />
+          <text class="f-t" x="16" y="27" text-anchor="middle">14</text>
+          <text class="f-t" x="48" y="27" text-anchor="middle">3</text>
+        </g>
+        <g transform="translate(152 22)">
+          <rect class="f-page" width="64" height="46" rx="2" />
+          <path class="f-fold" d="M32 0v46" />
+          <text class="f-t" x="16" y="27" text-anchor="middle">12</text>
+          <text class="f-t" x="48" y="27" text-anchor="middle">5</text>
+        </g>
+        <g transform="translate(224 22)">
+          <rect class="f-page" width="64" height="46" rx="2" />
+          <path class="f-fold" d="M32 0v46" />
+          <text class="f-t" x="16" y="27" text-anchor="middle">10</text>
+          <text class="f-t" x="48" y="27" text-anchor="middle">7</text>
+        </g>
+        <text class="f-s" x="8" y="96">
+          Booklet PDF: 4 sheets, fronts shown, pages in folding order
+        </text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        How many sheets a booklet needs
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Pages in your PDF</th>
+          <th scope="col">Booklet pages</th>
+          <th scope="col">Sheets of paper</th>
+          <th scope="col">Blank pages added</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8</td>
+          <td>8</td>
+          <td>2</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>16</td>
+          <td>4</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>24</td>
+          <td>6</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td>40</td>
+          <td>10</td>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-            <section class="block block-prose" id="article" aria-label="Guide">
-              <div class="prose">
-                <p class="lede">
-                  A PDF booklet is your document rearranged so that, printed on
-                  both sides and folded in half, it reads like a small book. You
-                  do not need special software: this page does the rearranging
-                  and tells you exactly how to feed the paper.
-                </p>
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      A PDF booklet is your document rearranged so that, printed on both sides
+      and folded in half, it reads like a small book. You do not need special
+      software: this page does the rearranging and tells you exactly how to feed
+      the paper.
+    </p>
 
-                <h2 id="printing">How to print a booklet on a home printer</h2>
-                <p>
-                  Most printing trouble comes from one setting: which edge the
-                  printer flips the paper on. For a booklet it has to flip on
-                  the <strong>short edge</strong>. If it flips on the long edge,
-                  every back side comes out upside down.
-                </p>
-                <h3>If your printer prints both sides</h3>
-                <ol>
-                  <li>Open the booklet PDF and choose Print.</li>
-                  <li>
-                    Set the paper to the size you picked (A4 for an A5 booklet,
-                    Letter for half Letter).
-                  </li>
-                  <li>
-                    Turn on two-sided printing and choose
-                    <strong>flip on short edge</strong>.
-                  </li>
-                  <li>
-                    Set scale to 100% or “Actual size”, not “Fit to page”.
-                  </li>
-                </ol>
-                <h3>If it prints one side at a time</h3>
-                <p>
-                  Choose “One side at a time” above. The booklet comes out as
-                  two passes. Print pass 1, put the printed stack back into the
-                  tray without changing its order, turned the way the guide
-                  shows for your printer, then print pass 2. Not sure which way
-                  your printer feeds paper? Print our
-                  <a href="#">two-sided test sheet</a> first: it takes one sheet
-                  and shows the answer.
-                </p>
+    <h2 id="printing">How to print a booklet on a home printer</h2>
+    <p>
+      Most printing trouble comes from one setting: which edge the printer flips
+      the paper on. For a booklet it has to flip on the
+      <strong>short edge</strong>. If it flips on the long edge, every back side
+      comes out upside down.
+    </p>
+    <h3>If your printer prints both sides</h3>
+    <ol>
+      <li>Open the booklet PDF and choose Print.</li>
+      <li>
+        Set the paper to the size you picked (A4 for an A5 booklet, Letter for
+        half Letter).
+      </li>
+      <li>
+        Turn on two-sided printing and choose
+        <strong>flip on short edge</strong>.
+      </li>
+      <li>Set scale to 100% or “Actual size”, not “Fit to page”.</li>
+    </ol>
+    <h3>If it prints one side at a time</h3>
+    <p>
+      Choose “One side at a time” above. The booklet comes out as two passes.
+      Print pass 1, put the printed stack back into the tray without changing
+      its order, turned the way the guide shows for your printer, then print
+      pass 2. Not sure which way your printer feeds paper? Print our
+      <a href="#">two-sided test sheet</a> first: it takes one sheet and shows
+      the answer.
+    </p>
 
-                <h2 id="how-it-works">How it works</h2>
-                <p>
-                  Printers call this <em>imposition</em>. A 16-page booklet is
-                  four sheets nested inside each other, so the outer sheet
-                  carries pages 16 and 1 on the front and 2 and 15 on the back.
-                  The tool works out that order for any page count, places two
-                  pages side by side on each sheet and scales them to fit. Pages
-                  are moved, not re-rendered, so text and vector graphics stay
-                  sharp.
-                </p>
-                <p>
-                  Everything happens in your browser. The PDF is opened in
-                  memory, rearranged and saved back to your device. Nothing is
-                  sent to a server, which is why there is no file size limit
-                  other than your device’s memory.
-                </p>
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      Printers call this <em>imposition</em>. A 16-page booklet is four sheets
+      nested inside each other, so the outer sheet carries pages 16 and 1 on the
+      front and 2 and 15 on the back. The tool works out that order for any page
+      count, places two pages side by side on each sheet and scales them to fit.
+      Pages are moved, not re-rendered, so text and vector graphics stay sharp.
+    </p>
+    <p>
+      Everything happens in your browser. The PDF is opened in memory,
+      rearranged and saved back to your device. Nothing is sent to a server,
+      which is why there is no file size limit other than your device’s memory.
+    </p>
 
-                <h2 id="uses">
-                  What people use it for, and when it will not work
-                </h2>
-                <p>
-                  Zines and comics, event programs, recipe booklets, children’s
-                  stories, instruction manuals, church and wedding programs,
-                  short story collections for an e-reader-free afternoon.
-                </p>
-                <ul>
-                  <li>
-                    <strong>Long documents.</strong> More than about 40 pages
-                    (10 sheets) will not fold flat and will be hard to staple.
-                    Split the PDF into parts of 32 or 40 pages and make a
-                    booklet from each.
-                  </li>
-                  <li>
-                    <strong>Creep.</strong> In a thick booklet the inner pages
-                    stick out slightly after folding. This tool does not shift
-                    pages to compensate, so keep important content away from the
-                    outer edge.
-                  </li>
-                  <li>
-                    <strong>Landscape pages</strong> are rotated and scaled down
-                    to fit the half sheet, so small text gets smaller.
-                  </li>
-                  <li>
-                    <strong>Password-protected PDFs</strong> need to be unlocked
-                    first.
-                  </li>
-                </ul>
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Zines and comics, event programs, recipe booklets, children’s stories,
+      instruction manuals, church and wedding programs, short story collections
+      for an e-reader-free afternoon.
+    </p>
+    <ul>
+      <li>
+        <strong>Long documents.</strong> More than about 40 pages (10 sheets)
+        will not fold flat and will be hard to staple. Split the PDF into parts
+        of 32 or 40 pages and make a booklet from each.
+      </li>
+      <li>
+        <strong>Creep.</strong> In a thick booklet the inner pages stick out
+        slightly after folding. This tool does not shift pages to compensate, so
+        keep important content away from the outer edge.
+      </li>
+      <li>
+        <strong>Landscape pages</strong> are rotated and scaled down to fit the
+        half sheet, so small text gets smaller.
+      </li>
+      <li>
+        <strong>Password-protected PDFs</strong> need to be unlocked first.
+      </li>
+    </ul>
 
-                <h2 id="sizes">Which paper size to choose</h2>
-                <p>
-                  Pick the paper you have in the printer. Your pages are scaled
-                  to the booklet size: an A4 document printed as an A5 booklet
-                  is reduced to 71%, about the same as reading a paperback. If
-                  the text becomes too small, a booklet of A4 pages on A3 paper
-                  keeps it at full size.
-                </p>
-              </div>
-            </section>
+    <h2 id="sizes">Which paper size to choose</h2>
+    <p>
+      Pick the paper you have in the printer. Your pages are scaled to the
+      booklet size: an A4 document printed as an A5 booklet is reduced to 71%,
+      about the same as reading a paperback. If the text becomes too small, a
+      booklet of A4 pages on A3 paper keeps it at full size.
+    </p>
+  </div>
+</section>
 
-            <section class="block" id="faq" aria-labelledby="h-faq">
-              <h2 id="h-faq" class="block-title">Questions and answers</h2>
-              <div class="faq">
-                <details open>
-                  <summary>
-                    How do I print a PDF as a booklet?<svg class="i">
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    Make the booklet here, then print it two-sided with “flip on
-                    short edge” and the scale at 100%. Fold the stack in half
-                    and staple along the fold. If your printer cannot print both
-                    sides, choose “One side at a time” and print the two passes.
-                  </div>
-                </details>
-                <details>
-                  <summary>
-                    Why are my booklet pages in the wrong order?<svg class="i">
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    Usually the printer flipped on the long edge, so every back
-                    side is upside down or shifted. Reprint with “flip on short
-                    edge”. If the order is wrong even with that, check that the
-                    print dialog is not set to print a page range or to reverse
-                    order.
-                  </div>
-                </details>
-                <details>
-                  <summary>
-                    Should I flip on the short edge or the long edge?<svg
-                      class="i"
-                    >
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    Short edge. A booklet sheet is landscape, and its back side
-                    must turn over like a calendar page. Long edge flipping is
-                    for ordinary portrait documents.
-                  </div>
-                </details>
-                <details>
-                  <summary>
-                    How many pages does a booklet need?<svg class="i">
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    A multiple of four, because each sheet holds four pages. If
-                    your PDF has 14 pages, the tool adds two blank pages at the
-                    end to make 16. You can see where they go in the preview
-                    before printing.
-                  </div>
-                </details>
-                <details>
-                  <summary>
-                    Can I make a booklet without a duplex printer?<svg
-                      class="i"
-                    >
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    Yes. Choose “One side at a time”. You get the fronts in one
-                    pass and the backs in a second pass, with instructions on
-                    how to put the stack back in the tray.
-                  </div>
-                </details>
-                <details>
-                  <summary>
-                    What paper size should I use?<svg class="i">
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    The paper you already have. A4 makes an A5 booklet, US
-                    Letter makes a half-Letter booklet (5.5 × 8.5 in), and A3
-                    makes an A4 booklet with pages at full size.
-                  </div>
-                </details>
-                <details>
-                  <summary>
-                    Is my file uploaded?<svg class="i">
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    No. The PDF is read and rearranged in your browser and saved
-                    straight to your device. You can disconnect from the
-                    internet after the page loads and the tool still works.
-                  </div>
-                </details>
-                <details>
-                  <summary>
-                    Can I make a right-to-left booklet?<svg class="i">
-                      <use href="#plus" />
-                    </svg>
-                  </summary>
-                  <div class="answer">
-                    Yes. Choose right binding. The page order is mirrored so the
-                    booklet opens from the right, as Arabic, Hebrew and Japanese
-                    books do.
-                  </div>
-                </details>
-              </div>
-            </section>
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I print a PDF as a booklet?<svg class="i">
+          <use href="#plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Make the booklet here, then print it two-sided with “flip on short edge”
+        and the scale at 100%. Fold the stack in half and staple along the fold.
+        If your printer cannot print both sides, choose “One side at a time” and
+        print the two passes.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why are my booklet pages in the wrong order?<svg class="i">
+          <use href="#plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Usually the printer flipped on the long edge, so every back side is
+        upside down or shifted. Reprint with “flip on short edge”. If the order
+        is wrong even with that, check that the print dialog is not set to print
+        a page range or to reverse order.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Should I flip on the short edge or the long edge?<svg class="i">
+          <use href="#plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Short edge. A booklet sheet is landscape, and its back side must turn
+        over like a calendar page. Long edge flipping is for ordinary portrait
+        documents.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How many pages does a booklet need?<svg class="i">
+          <use href="#plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        A multiple of four, because each sheet holds four pages. If your PDF has
+        14 pages, the tool adds two blank pages at the end to make 16. You can
+        see where they go in the preview before printing.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I make a booklet without a duplex printer?<svg class="i">
+          <use href="#plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Choose “One side at a time”. You get the fronts in one pass and the
+        backs in a second pass, with instructions on how to put the stack back
+        in the tray.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What paper size should I use?<svg class="i"><use href="#plus" /></svg>
+      </summary>
+      <div class="answer">
+        The paper you already have. A4 makes an A5 booklet, US Letter makes a
+        half-Letter booklet (5.5 × 8.5 in), and A3 makes an A4 booklet with
+        pages at full size.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my file uploaded?<svg class="i"><use href="#plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The PDF is read and rearranged in your browser and saved straight to
+        your device. You can disconnect from the internet after the page loads
+        and the tool still works.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I make a right-to-left booklet?<svg class="i">
+          <use href="#plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Choose right binding. The page order is mirrored so the booklet
+        opens from the right, as Arabic, Hebrew and Japanese books do.
+      </div>
+    </details>
+  </div>
+</section>
 
-            <section class="block" id="related" aria-labelledby="h-related">
-              <h2 id="h-related" class="block-title">Often needed next</h2>
-              <div class="related">
-                <a href="#"
-                  ><span class="rel-icon"
-                    ><svg class="i"><use href="#testpage" /></svg></span
-                  ><span
-                    ><span class="rel-name">Printer test page</span><br /><span
-                      class="rel-why"
-                      >See how your printer flips paper before you print 40
-                      pages the wrong way.</span
-                    ></span
-                  ><svg class="i i-arrow"><use href="#arrow" /></svg
-                ></a>
-                <a href="#"
-                  ><span class="rel-icon"
-                    ><svg class="i"><use href="#merge" /></svg></span
-                  ><span
-                    ><span class="rel-name">Merge PDF</span><br /><span
-                      class="rel-why"
-                      >Put the cover, chapters and back page into one file
-                      first.</span
-                    ></span
-                  ><svg class="i i-arrow"><use href="#arrow" /></svg
-                ></a>
-                <a href="#"
-                  ><span class="rel-icon"
-                    ><svg class="i"><use href="#hash" /></svg></span
-                  ><span
-                    ><span class="rel-name">Add page numbers</span><br /><span
-                      class="rel-why"
-                      >Number the pages before you make the booklet, so readers
-                      can find their place.</span
-                    ></span
-                  ><svg class="i i-arrow"><use href="#arrow" /></svg
-                ></a>
-                <a href="#"
-                  ><span class="rel-icon"
-                    ><svg class="i"><use href="#split" /></svg></span
-                  ><span
-                    ><span class="rel-name">Split PDF</span><br /><span
-                      class="rel-why"
-                      >Break a long document into 32- or 40-page parts that fold
-                      flat.</span
-                    ></span
-                  ><svg class="i i-arrow"><use href="#arrow" /></svg
-                ></a>
-              </div>
-            </section>
+<section class="block" id="related" aria-labelledby="h-related">
+  <h2 id="h-related" class="block-title">Often needed next</h2>
+  <div class="related">
+    <a href="#"
+      ><span class="rel-icon"
+        ><svg class="i"><use href="#testpage" /></svg></span
+      ><span
+        ><span class="rel-name">Printer test page</span><br /><span
+          class="rel-why"
+          >See how your printer flips paper before you print 40 pages the wrong
+          way.</span
+        ></span
+      ><svg class="i i-arrow"><use href="#arrow" /></svg
+    ></a>
+    <a href="#"
+      ><span class="rel-icon"
+        ><svg class="i"><use href="#merge" /></svg></span
+      ><span
+        ><span class="rel-name">Merge PDF</span><br /><span class="rel-why"
+          >Put the cover, chapters and back page into one file first.</span
+        ></span
+      ><svg class="i i-arrow"><use href="#arrow" /></svg
+    ></a>
+    <a href="#"
+      ><span class="rel-icon"
+        ><svg class="i"><use href="#hash" /></svg></span
+      ><span
+        ><span class="rel-name">Add page numbers</span><br /><span
+          class="rel-why"
+          >Number the pages before you make the booklet, so readers can find
+          their place.</span
+        ></span
+      ><svg class="i i-arrow"><use href="#arrow" /></svg
+    ></a>
+    <a href="#"
+      ><span class="rel-icon"
+        ><svg class="i"><use href="#split" /></svg></span
+      ><span
+        ><span class="rel-name">Split PDF</span><br /><span class="rel-why"
+          >Break a long document into 32- or 40-page parts that fold flat.</span
+        ></span
+      ><svg class="i i-arrow"><use href="#arrow" /></svg
+    ></a>
+  </div>
+</section>
 
-            <p class="updated block-updated">
-              <span>Updated 16 November 2026</span
-              ><span>Works offline once the page has loaded</span>
-            </p>
-          </div>
+<p class="updated block-updated">
+  <span>Updated 16 November 2026</span
+  ><span>Works offline once the page has loaded</span>
+</p>
+</div>
         </div>
       </div>
     </main>
     <footer class="site-footer">
-      <div class="wrap">
-        <div class="about">
-          <a class="brand" href="home-a.html"
-            ><svg class="brand-mark"><use href="#mark" /></svg>Plyleaf</a
-          >
-          <p style="margin-top: 12px; max-width: 34ch">
-            Free PDF tools that run in your browser. Your files are never
-            uploaded. No account, no ads, no limits.
-          </p>
-        </div>
-        <div>
-          <h3>For printing</h3>
-          <ul>
-            <li><a href="#">PDF booklet</a></li>
-            <li><a href="#">Printer test page</a></li>
-            <li><a href="#">Graph paper</a></li>
-            <li><a href="#">Bingo cards</a></li>
-            <li><a href="#">Name tracing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>For e-readers</h3>
-          <ul>
-            <li><a href="#">PDF to EPUB</a></li>
-            <li><a href="#">PDF for Kindle</a></li>
-            <li><a href="#">EPUB to PDF</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Plyleaf</h3>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Source code</a></li>
-            <li><a href="#">For AI assistants</a></li>
-          </ul>
-        </div>
-        <div class="fine">
-          <span>Open source under AGPL-3.0, built on BentoPDF.</span
-          ><span>Design prototype, 16 November 2026.</span>
-        </div>
-      </div>
-    </footer>
+  <div class="wrap">
+    <div class="about">
+      <a class="brand" href="home-a.html"
+        ><svg class="brand-mark"><use href="#mark" /></svg>Plyleaf</a
+      >
+      <p style="margin-top: 12px; max-width: 34ch">
+        Free PDF tools that run in your browser. Your files are never uploaded.
+        No account, no ads, no limits.
+      </p>
+    </div>
+    <div>
+      <h3>For printing</h3>
+      <ul>
+        <li><a href="#">PDF booklet</a></li>
+        <li><a href="#">Printer test page</a></li>
+        <li><a href="#">Graph paper</a></li>
+        <li><a href="#">Bingo cards</a></li>
+        <li><a href="#">Name tracing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>For e-readers</h3>
+      <ul>
+        <li><a href="#">PDF to EPUB</a></li>
+        <li><a href="#">PDF for Kindle</a></li>
+        <li><a href="#">EPUB to PDF</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Plyleaf</h3>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Source code</a></li>
+        <li><a href="#">For AI assistants</a></li>
+      </ul>
+    </div>
+    <div class="fine">
+      <span>Open source under AGPL-3.0, built on BentoPDF.</span
+      ><span>Design prototype, 16 November 2026.</span>
+    </div>
+  </div>
+</footer>
 
     <script src="assets/plyleaf.js"></script>
     <script>
