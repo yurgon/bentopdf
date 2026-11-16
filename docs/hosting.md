@@ -13,7 +13,7 @@ While `SITE_URL` is not the final domain, `scripts/apply-indexing-policy.mjs` ma
 
 ## Domain
 
-`plyleaf.com` is a Cloudflare zone (Free plan, nameservers `lola.ns.cloudflare.com` and `ray.ns.cloudflare.com`) attached to the Pages project as a custom domain; `plyleaf.pages.dev` stays as the project's own address. The domain is registered outside Cloudflare, so nameserver changes are made at the registrar.
+`plyleaf.com` is a Cloudflare zone (Free plan, nameservers `lola.ns.cloudflare.com` and `ray.ns.cloudflare.com`) attached to the Pages project as custom domains `plyleaf.com` and `www.plyleaf.com` (DNS: proxied CNAME records for `@` and `www` to `plyleaf.pages.dev`). A redirect rule in the zone sends `www.plyleaf.com/*` to `plyleaf.com` with a 301, keeping the query string. `plyleaf.pages.dev` stays as the project's own address; its pages carry the `plyleaf.com` canonical. The domain is registered outside Cloudflare, so nameserver changes are made at the registrar.
 
 ## Headers
 
