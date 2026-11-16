@@ -1,0 +1,23 @@
+{
+  "title": "Plyleaf: Free PDF Tools That Never Upload Your Files",
+  "description": "Make booklets, merge, sign, compress and convert PDFs for free. No account, no ads, and your files stay on your device: every tool runs in the browser.",
+  "h1": "PDF tools that never upload your files",
+  "lede": "Booklets, signatures, e-books, compression and 100 more tools. Everything runs in your browser, for free.",
+  "proof": ["Files stay on your device", "No account", "No ads", "Open source"],
+  "moreTitle": "More PDF tools",
+  "why": [
+    {
+      "title": "Your files stay with you",
+      "text": "Each tool runs inside the browser tab. Nothing is sent to a server, so there is nothing to delete afterwards and nothing to leak."
+    },
+    {
+      "title": "Free without a catch",
+      "text": "No account, no daily limit, no watermark. The code is open, so anyone can check what it does."
+    },
+    {
+      "title": "Every page explains itself",
+      "text": "Under each tool: step-by-step instructions, an example of the result and honest notes on what it cannot do."
+    }
+  ],
+  "updated": "2026-11-16"
+}

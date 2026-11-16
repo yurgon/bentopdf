@@ -532,6 +532,24 @@ function devPageTranslationsPlugin(): Plugin {
   };
 }
 
+// Plyleaf: pages generated into site-pages/ (see scripts/site/build-pages.mjs)
+const PLYLEAF_PAGES_DIR = resolve(__dirname, 'site-pages');
+function plyleafPageInputs(): Record<string, string> {
+  if (!fs.existsSync(PLYLEAF_PAGES_DIR)) return {};
+  return Object.fromEntries(
+    fs
+      .readdirSync(PLYLEAF_PAGES_DIR)
+      .filter((f) => f.endsWith('.html'))
+      .map((f) => {
+        const name = f.replace('.html', '');
+        return [
+          name === 'index' ? 'main' : name,
+          resolve(PLYLEAF_PAGES_DIR, f),
+        ];
+      })
+  );
+}
+
 function flattenPagesPlugin(): Plugin {
   return {
     name: 'flatten-pages',
@@ -547,6 +565,12 @@ function flattenPagesPlugin(): Plugin {
           moves.push({
             from: fileName,
             to: fileName.replace('src/pages/', ''),
+          });
+        }
+        if (fileName.startsWith('site-pages/') && fileName.endsWith('.html')) {
+          moves.push({
+            from: fileName,
+            to: fileName.replace('site-pages/', ''),
           });
         }
       }
@@ -567,6 +591,13 @@ function flattenPagesPlugin(): Plugin {
       const pagesDir = resolve(outDir, 'src/pages');
       if (fs.existsSync(pagesDir) && fs.readdirSync(pagesDir).length === 0) {
         fs.rmdirSync(pagesDir);
+      }
+      const sitePagesOut = resolve(outDir, 'site-pages');
+      if (
+        fs.existsSync(sitePagesOut) &&
+        fs.readdirSync(sitePagesOut).length === 0
+      ) {
+        fs.rmdirSync(sitePagesOut);
       }
       const srcDir = resolve(outDir, 'src');
       if (fs.existsSync(srcDir) && fs.readdirSync(srcDir).length === 0) {
@@ -1041,6 +1072,8 @@ export default defineConfig(({ command }) => {
             __dirname,
             'src/pages/bates-numbering.html'
           ),
+          // Plyleaf pages built by scripts/site/build-pages.mjs; they replace BentoPDF pages of the same name
+          ...plyleafPageInputs(),
         },
         output: {
           assetFileNames: (assetInfo) => {

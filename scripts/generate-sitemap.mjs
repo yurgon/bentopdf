@@ -34,7 +34,14 @@ for (const lang of languages) {
 
 const isPageTranslated = createTranslationChecker(toolsByLang, toCamelCase);
 
+// Plyleaf pages: English only (no alternates), last change date from their content file
+const PLYLEAF_META_PATH = path.resolve(__dirname, '../site-pages/_meta.json');
+const PLYLEAF_PAGES = fs.existsSync(PLYLEAF_META_PATH)
+  ? JSON.parse(fs.readFileSync(PLYLEAF_META_PATH, 'utf-8')).pages
+  : {};
+
 function alternateLangsFor(pageName) {
+  if (PLYLEAF_PAGES[pageName]) return [];
   return languages.filter((l) => isPageTranslated(pageName, l));
 }
 
@@ -98,6 +105,8 @@ function generateSitemap() {
   const lastModCache = new Map();
   const getLastMod = (pageName) => {
     if (lastModCache.has(pageName)) return lastModCache.get(pageName);
+    if (PLYLEAF_PAGES[pageName]?.updated)
+      return PLYLEAF_PAGES[pageName].updated;
     const fileName = `${pageName}.html`;
     const candidates = [
       path.join(projectRoot, 'src', 'pages', fileName),
@@ -162,8 +171,11 @@ function generateSitemap() {
     }
 
     const defaultUrl = buildUrl('en', pageName);
-    sitemap += `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultUrl}"/>
-  </url>
+    if (!PLYLEAF_PAGES[pageName]) {
+      sitemap += `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultUrl}"/>
+`;
+    }
+    sitemap += `  </url>
 `;
   }
 

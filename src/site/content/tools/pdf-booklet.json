@@ -1,0 +1,60 @@
+{
+  "slug": "pdf-booklet",
+  "section": "for-printing",
+  "mainQuery": "pdf booklet",
+  "title": "PDF Booklet Maker: Print a PDF as a Booklet, Free",
+  "description": "Turn a PDF into a fold-and-staple booklet (A5, half Letter, A4) with a print guide for your printer. Free, no upload: the file stays on your device.",
+  "h1": "PDF Booklet Maker",
+  "crumb": "PDF booklet",
+  "promise": "Make a PDF booklet you can fold and staple, with a print guide for your printer. The file stays on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "No page limit"],
+  "workArea": "booklet",
+  "script": "/src/site/js/tools/booklet.ts",
+  "app": {
+    "name": "PDF Booklet Maker",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Booklet imposition for A5 from A4, half Letter from Letter and A4 from A3",
+      "Left or right binding",
+      "Two-pass output for printers without two-sided printing",
+      "Runs in the browser, files are never uploaded"
+    ]
+  },
+  "outline": [
+    { "id": "how-to", "label": "How to make a booklet" },
+    { "id": "result-example", "label": "What you get" },
+    { "id": "printing", "label": "Printing at home" },
+    { "id": "how-it-works", "label": "How it works" },
+    { "id": "uses", "label": "Uses and limits" },
+    { "id": "faq", "label": "Questions" },
+    { "id": "related", "label": "Related tools" }
+  ],
+  "related": [
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Put the cover, chapters and back page into one file first."
+    },
+    {
+      "slug": "page-numbers",
+      "icon": "hash",
+      "name": "Add page numbers",
+      "why": "Number the pages before you make the booklet, so readers can find their place."
+    },
+    {
+      "slug": "split-pdf",
+      "icon": "split",
+      "name": "Split PDF",
+      "why": "Break a long document into 32- or 40-page parts that fold flat."
+    },
+    {
+      "slug": "n-up-pdf",
+      "icon": "grid",
+      "name": "Several pages per sheet",
+      "why": "Print a handout with two or four pages on each side when you do not need to fold it."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

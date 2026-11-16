@@ -80,6 +80,8 @@ export const downloadFile = (blob: Blob, filename: string): void => {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+  // Plyleaf: a saved result counts as one finished operation (src/site/js/stats.ts)
+  window.dispatchEvent(new CustomEvent('plyleaf:done'));
 };
 
 export const readFileAsArrayBuffer = (

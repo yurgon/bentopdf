@@ -1,0 +1,72 @@
+// Last Plyleaf build step (after apply-indexing-policy):
+// - robots.txt for this deployment's address, pointing at its sitemap;
+// - long cache for hashed assets in Cloudflare's _headers;
+// - files above Cloudflare Pages' 25 MiB per-file limit split into parts.
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { isIndexingBlocked, resolveSiteUrl } from '../indexing-policy.mjs';
+
+const ROOT = path.resolve(
+  path.dirname(fileURLToPath(import.meta.url)),
+  '../..'
+);
+const DIST = path.join(ROOT, 'dist');
+const SITE_URL = resolveSiteUrl().replace(/\/+$/, '');
+const LIMIT = 25 * 1024 * 1024;
+
+// robots.txt: crawlers may read every page (noindex only works on pages they can fetch)
+fs.writeFileSync(
+  path.join(DIST, 'robots.txt'),
+  `# ${isIndexingBlocked() ? 'Test deployment: every page carries noindex.' : 'Plyleaf'}
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.wasm$
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`
+);
+
+// cache: hashed build assets never change; pages and the sitemap are revalidated
+const headersPath = path.join(DIST, '_headers');
+let headers = fs.existsSync(headersPath)
+  ? fs.readFileSync(headersPath, 'utf8')
+  : '';
+if (!headers.includes('/assets/*')) {
+  headers += `
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=86400
+`;
+  fs.writeFileSync(headersPath, headers);
+}
+
+// files above Cloudflare Pages' limit are split into parts that the LibreOffice loader
+// reassembles (src/js/utils/libreoffice-loader.ts): <name>.part0…N and <name>.parts (the count)
+const PART = 24 * 1024 * 1024;
+const big = [];
+const walk = (dir) => {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) walk(p);
+    else if (fs.statSync(p).size > LIMIT) big.push(p);
+  }
+};
+walk(DIST);
+for (const p of big) {
+  const data = fs.readFileSync(p);
+  const count = Math.ceil(data.length / PART);
+  for (let i = 0; i < count; i++)
+    fs.writeFileSync(`${p}.part${i}`, data.subarray(i * PART, (i + 1) * PART));
+  fs.writeFileSync(`${p}.parts`, String(count));
+  fs.rmSync(p);
+}
+console.log(
+  `✔ Plyleaf finalize: robots.txt for ${SITE_URL}, cache headers` +
+    (big.length
+      ? `; split ${big.length} file(s) over 25 MiB: ${big.map((p) => path.relative(DIST, p)).join(', ')}`
+      : '')
+);

@@ -1,0 +1,201 @@
+{
+  "_note": "Home page groups. A tool is listed only if its page exists (our page in src/site/content/tools or a BentoPDF page in src/pages). Every other BentoPDF tool page is added automatically under 'More PDF tools'.",
+  "groups": [
+    {
+      "id": "g-print",
+      "title": "For printing",
+      "icon": "printer",
+      "section": "for-printing",
+      "accent": true,
+      "tools": [
+        {
+          "slug": "pdf-booklet",
+          "name": "PDF booklet",
+          "line": "Fold-and-staple booklets with a print guide"
+        },
+        {
+          "slug": "posterize-pdf",
+          "name": "Poster printing",
+          "line": "Print one page across several sheets"
+        },
+        {
+          "slug": "n-up-pdf",
+          "name": "Several pages per sheet",
+          "line": "Two, four or more pages on one side of paper"
+        },
+        {
+          "slug": "fix-page-size",
+          "name": "Fix page size",
+          "line": "Make every page A4 or Letter before printing"
+        },
+        {
+          "slug": "pdf-to-greyscale",
+          "name": "Black and white PDF",
+          "line": "Save colour ink on drafts and handouts"
+        }
+      ]
+    },
+    {
+      "id": "g-read",
+      "title": "For e-readers",
+      "icon": "book",
+      "section": "for-e-readers",
+      "accent": true,
+      "tools": [
+        {
+          "slug": "epub-to-pdf",
+          "name": "EPUB to PDF",
+          "line": "Print or archive an e-book"
+        },
+        {
+          "slug": "mobi-to-pdf",
+          "name": "MOBI to PDF",
+          "line": "Open old Kindle books anywhere"
+        },
+        {
+          "slug": "fb2-to-pdf",
+          "name": "FB2 to PDF",
+          "line": "FictionBook files as a printable PDF"
+        },
+        {
+          "slug": "cbz-to-pdf",
+          "name": "CBZ to PDF",
+          "line": "Comic archives into one PDF"
+        }
+      ]
+    },
+    {
+      "id": "g-sign",
+      "title": "Sign and protect",
+      "icon": "sign",
+      "tools": [
+        {
+          "slug": "sign-pdf",
+          "name": "Sign PDF",
+          "line": "Place your signature on a document"
+        },
+        {
+          "slug": "protect-pdf",
+          "name": "Protect PDF",
+          "line": "Add a password"
+        },
+        {
+          "slug": "unlock-pdf",
+          "name": "Unlock PDF",
+          "line": "Remove a password you know"
+        },
+        {
+          "slug": "remove-metadata",
+          "name": "Remove metadata",
+          "line": "Strip author, software and hidden data"
+        },
+        {
+          "slug": "sanitize-pdf",
+          "name": "Sanitize PDF",
+          "line": "Remove scripts, attachments and hidden layers"
+        }
+      ]
+    },
+    {
+      "id": "g-edit",
+      "title": "Edit and organize",
+      "icon": "edit",
+      "tools": [
+        {
+          "slug": "edit-pdf",
+          "name": "Edit PDF",
+          "line": "Change text, add images and notes"
+        },
+        {
+          "slug": "merge-pdf",
+          "name": "Merge PDF",
+          "line": "Combine files in the order you want"
+        },
+        {
+          "slug": "split-pdf",
+          "name": "Split PDF",
+          "line": "By pages, ranges or size"
+        },
+        {
+          "slug": "rotate-pdf",
+          "name": "Rotate pages",
+          "line": "Fix sideways and upside-down pages"
+        },
+        {
+          "slug": "page-numbers",
+          "name": "Add page numbers",
+          "line": "Position, style and starting number"
+        },
+        {
+          "slug": "compare-pdfs",
+          "name": "Compare PDFs",
+          "line": "See every change between two versions"
+        }
+      ]
+    },
+    {
+      "id": "g-convert",
+      "title": "Convert",
+      "icon": "file",
+      "tools": [
+        {
+          "slug": "pdf-to-word",
+          "name": "PDF to Word",
+          "line": "Editable DOCX"
+        },
+        {
+          "slug": "pdf-to-jpg",
+          "name": "PDF to JPG",
+          "line": "Every page as an image"
+        },
+        {
+          "slug": "jpg-to-pdf",
+          "name": "JPG to PDF",
+          "line": "Photos and scans into one file"
+        },
+        {
+          "slug": "word-to-pdf",
+          "name": "Word to PDF",
+          "line": "DOCX to PDF, layout kept"
+        },
+        {
+          "slug": "pdf-to-excel",
+          "name": "PDF to Excel",
+          "line": "Tables into spreadsheets"
+        },
+        {
+          "slug": "email-to-pdf",
+          "name": "Email to PDF",
+          "line": "Save .eml messages as PDF"
+        }
+      ]
+    },
+    {
+      "id": "g-scan",
+      "title": "Scan and optimize",
+      "icon": "scan",
+      "tools": [
+        {
+          "slug": "compress-pdf",
+          "name": "Compress PDF",
+          "line": "Smaller files, or an exact target size"
+        },
+        {
+          "slug": "ocr-pdf",
+          "name": "PDF OCR",
+          "line": "Make scanned PDFs searchable"
+        },
+        {
+          "slug": "deskew-pdf",
+          "name": "Straighten scans",
+          "line": "Fix tilted scanned pages"
+        },
+        {
+          "slug": "remove-blank-pages",
+          "name": "Remove blank pages",
+          "line": "Clean up scanned stacks"
+        }
+      ]
+    }
+  ]
+}

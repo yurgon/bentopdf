@@ -26,10 +26,7 @@ let converterInstance: LibreOfficeConverter | null = null;
 const GZIP_MAGIC_FIRST = 0x1f;
 const GZIP_MAGIC_SECOND = 0x8b;
 
-async function fetchAsDecompressedUrl(
-  url: string,
-  mimeType: string
-): Promise<string> {
+async function fetchOk(url: string): Promise<Response> {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(
@@ -39,8 +36,38 @@ async function fetchAsDecompressedUrl(
       })
     );
   }
+  return response;
+}
 
-  let blob = await response.blob();
+// Plyleaf: hosts with a per-file size limit (Cloudflare Pages: 25 MiB) get large files split
+// at build time into <name>.part0, .part1, … plus <name>.parts with the count
+// (scripts/site/finalize.mjs). Try the whole file first, then the parts.
+async function fetchWhole(url: string): Promise<Blob> {
+  const response = await fetch(url);
+  if (response.ok) return response.blob();
+  const manifest = await fetch(`${url}.parts`);
+  if (!manifest.ok) {
+    throw new Error(
+      trText('Failed to fetch {{url}}: HTTP {{status}}', {
+        url,
+        status: response.status,
+      })
+    );
+  }
+  const count = parseInt(await manifest.text(), 10);
+  const parts = await Promise.all(
+    Array.from({ length: count }, (_, i) =>
+      fetchOk(`${url}.part${i}`).then((r) => r.blob())
+    )
+  );
+  return new Blob(parts);
+}
+
+async function fetchAsDecompressedUrl(
+  url: string,
+  mimeType: string
+): Promise<string> {
+  let blob = await fetchWhole(url);
   const head = new Uint8Array(await blob.slice(0, 2).arrayBuffer());
   if (head[0] === GZIP_MAGIC_FIRST && head[1] === GZIP_MAGIC_SECOND) {
     const decompressed = blob

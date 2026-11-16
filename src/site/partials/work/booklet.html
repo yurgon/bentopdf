@@ -1,0 +1,166 @@
+<section class="work" id="tool" aria-label="Booklet maker">
+  <div class="work-body">
+    <!-- empty state -->
+    <div class="drop" id="drop-zone" data-state="idle">
+      <input
+        type="file"
+        id="file-input"
+        accept="application/pdf,.pdf"
+        aria-label="Choose a PDF file"
+      />
+      <div class="drop-icon">
+        <svg class="i"><use href="#upload" /></svg>
+      </div>
+      <div>
+        <p class="drop-title">Drop a PDF here</p>
+        <p class="drop-sub">
+          or choose a file. It is read on this device and never uploaded.
+        </p>
+      </div>
+      <div class="drop-actions">
+        <span class="btn btn-sm" aria-hidden="true">Choose PDF</span>
+        <button
+          class="btn btn-sm btn-ghost raise"
+          type="button"
+          id="sample-btn"
+        >
+          Try a sample file
+        </button>
+      </div>
+      <p class="drop-error" id="drop-error" role="alert" hidden></p>
+    </div>
+
+    <!-- file chosen -->
+    <div id="file-display-area" hidden>
+      <div class="file-row">
+        <div class="file-thumb" aria-hidden="true"></div>
+        <div class="file-meta">
+          <p class="file-name" id="file-name">field-notes.pdf</p>
+          <p class="file-info tnum" id="file-info">14 pages · 2.1 MB</p>
+        </div>
+        <button
+          class="btn btn-sm btn-ghost"
+          type="button"
+          id="remove-file"
+          aria-label="Remove file"
+        >
+          <svg class="i i-sm"><use href="#x" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="tool-options" class="options" hidden>
+      <div class="opt-grid">
+        <div class="field">
+          <span class="label" id="lbl-size">Booklet size</span>
+          <div class="seg" role="radiogroup" aria-labelledby="lbl-size">
+            <input
+              type="radio"
+              name="size"
+              id="size-a5"
+              value="a5"
+              checked
+            /><label for="size-a5">A5 from A4</label>
+            <input type="radio" name="size" id="size-hl" value="hl" /><label
+              for="size-hl"
+              >Half Letter</label
+            >
+            <input type="radio" name="size" id="size-a4" value="a4" /><label
+              for="size-a4"
+              >A4 from A3</label
+            >
+          </div>
+        </div>
+        <div class="field">
+          <span class="label" id="lbl-bind">Binding</span>
+          <div class="seg" role="radiogroup" aria-labelledby="lbl-bind">
+            <input
+              type="radio"
+              name="bind"
+              id="bind-l"
+              value="l"
+              checked
+            /><label for="bind-l">Left</label>
+            <input type="radio" name="bind" id="bind-r" value="r" /><label
+              for="bind-r"
+              >Right</label
+            >
+          </div>
+        </div>
+      </div>
+      <fieldset class="field" style="border: 0; margin: 0; padding: 0">
+        <legend class="label" style="margin-bottom: 6px; padding: 0">
+          Your printer
+        </legend>
+        <div class="choices choices-2">
+          <label class="choice"
+            ><input type="radio" name="duplex" value="auto" checked /><strong
+              >Prints both sides</strong
+            ><span>Flip on the short edge. One pass.</span></label
+          >
+          <label class="choice"
+            ><input type="radio" name="duplex" value="manual" /><strong
+              >One side at a time</strong
+            ><span
+              >We split it into two passes and tell you how to turn the
+              stack.</span
+            ></label
+          >
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <div class="preview-head">
+          <span class="label">Preview</span>
+          <span class="hint tnum" id="preview-sum"
+            >16 pages on 4 sheets · 2 blank pages added</span
+          >
+        </div>
+        <div class="sheets" id="booklet-preview" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <p class="drop-error" id="make-error" role="alert" hidden></p>
+
+    <div class="progress" id="progress" hidden>
+      <div class="progress-track">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-text">
+        <span id="progress-label">Reading pages</span
+        ><span class="tnum" id="progress-pct">0%</span>
+      </div>
+    </div>
+
+    <div class="result appear" id="result" hidden>
+      <div class="result-icon">
+        <svg class="i"><use href="#check" /></svg>
+      </div>
+      <p class="result-title" id="result-title">Booklet ready</p>
+      <p class="result-sub tnum" id="result-sub">
+        field-notes-booklet.pdf · 4 sheets · A5
+      </p>
+      <div class="result-actions">
+        <button class="btn btn-primary" type="button" id="download-btn">
+          <svg class="i">
+            <use href="#upload" transform="rotate(180 10 10)" /></svg
+          >Download booklet
+        </button>
+        <a class="btn" href="#printing">How to print it</a>
+        <button class="btn btn-ghost" type="button" id="restart-btn">
+          Start over
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="work-foot">
+    <span class="privacy-note"
+      ><svg class="i"><use href="#device" /></svg>Processed in your browser.
+      Nothing is uploaded.</span
+    >
+    <span class="spacer"></span>
+    <button class="btn btn-primary btn-lg" type="button" id="make-btn" disabled>
+      Make booklet
+    </button>
+  </div>
+</section>

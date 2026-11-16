@@ -1,0 +1,51 @@
+/* Plyleaf look for BentoPDF's own pages, without touching their markup.
+   BentoPDF is a dark UI built on Tailwind's gray and indigo scales. Remapping those scales to the
+   Plyleaf tokens gives every legacy page our light/dark theme, font and amber accent at once.
+   Unlayered :root rules win over Tailwind's @layer theme, so this file can be updated independently. */
+@import '../site/css/tokens.css';
+
+:root {
+  --font-sans: var(--font);
+  /* gray: 900 = page, 800 = surface, 700 = raised surface/line, 600 = strong line, 500/400 = captions, 300 = secondary, 200..50 = text */
+  --color-gray-950: var(--bg);
+  --color-gray-900: var(--bg);
+  --color-gray-850: var(--surface);
+  --color-gray-800: var(--surface);
+  --color-gray-700: var(--surface-2);
+  --color-gray-600: var(--line-strong);
+  --color-gray-500: var(--ink-3);
+  --color-gray-400: var(--ink-3);
+  --color-gray-300: var(--ink-2);
+  --color-gray-200: var(--ink);
+  --color-gray-100: var(--ink);
+  --color-gray-50: var(--ink);
+  /* white text sat on dark gray; on our surfaces it must be ink */
+  --color-white: var(--ink);
+  /* indigo accent becomes honey amber */
+  --color-indigo-50: var(--accent-soft);
+  --color-indigo-100: var(--accent-soft);
+  --color-indigo-200: var(--accent-line);
+  --color-indigo-300: var(--accent-ink);
+  --color-indigo-400: var(--accent-ink);
+  --color-indigo-500: var(--accent);
+  --color-indigo-600: var(--accent);
+  --color-indigo-700: var(--accent-hover);
+  --color-indigo-800: var(--accent-press);
+  --color-indigo-900: var(--accent-soft);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+}
+
+/* the gradient button was white-on-indigo; it reads as ink-on-amber */
+.btn-gradient {
+  color: var(--on-accent) !important;
+  background: var(--accent) !important;
+  background-image: none !important;
+}
+.btn-gradient:hover:not(:disabled) {
+  background: var(--accent-hover) !important;
+}

@@ -106,10 +106,17 @@ function isBlogPage(rel) {
   return rel.startsWith('blog/');
 }
 
+// Plyleaf pages are English only: every language copy is noindex with the English canonical
+const PLYLEAF_META_PATH = path.resolve(__dirname, '../site-pages/_meta.json');
+const PLYLEAF_PAGES = fs.existsSync(PLYLEAF_META_PATH)
+  ? JSON.parse(fs.readFileSync(PLYLEAF_META_PATH, 'utf-8')).pages
+  : {};
+
 function expectedCanonicalForFile(rel) {
   const parts = rel.split('/');
   const fileName = parts.pop();
   const baseName = fileName.replace(/\.html$/, '');
+  if (PLYLEAF_PAGES[baseName]) parts.length = 0;
   const slug = baseName === 'index' ? '' : baseName;
   if (isBlogPage(rel)) {
     return `${OFFICIAL_SITE_URL}/blog${slug ? `/${slug}` : ''}`;
@@ -224,7 +231,8 @@ function auditHtml(file, knownSlugs) {
     /noindex/i.test(robots) &&
     !isIndexingBlocked() &&
     !NOINDEX_ALLOWLIST.has(file.rel) &&
-    !NOINDEX_ALLOWLIST.has(path.basename(file.rel))
+    !NOINDEX_ALLOWLIST.has(path.basename(file.rel)) &&
+    !(isLocalized && PLYLEAF_PAGES[path.basename(file.rel, '.html')])
   ) {
     fail(
       'robots',

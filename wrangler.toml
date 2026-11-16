@@ -1,0 +1,10 @@
+# Cloudflare Pages project for the Plyleaf site (static files in dist/, functions/ for the usage counter).
+# Deploy: npm run build:plyleaf, then npx wrangler pages deploy (see docs/hosting.md).
+name = "plyleaf"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "STATS"
+database_name = "plyleaf-stats"
+database_id = "c58cfc98-0759-44a7-9c93-38d4e8ebdb76"

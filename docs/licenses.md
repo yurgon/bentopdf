@@ -29,6 +29,7 @@
 | Шрифт                                                  | Где используется                                        | Лицензия                                            |
 | ------------------------------------------------------ | ------------------------------------------------------- | --------------------------------------------------- |
 | DM Sans, Lato, Merriweather                            | Интерфейс, тексты                                       | OFL-1.1                                             |
+| Hanken Grotesk (`@fontsource/hanken-grotesk` 5.3.0)    | Шрифт сайта Plyleaf, раздаём со своего адреса           | OFL-1.1                                             |
 | Allura, Alex Brush, Sacramento, Handlee, Kalam         | Подпись в PDF.js (`public/pdfjs-viewer/standard_fonts`) | OFL-1.1 (Google Fonts)                              |
 | Cedarville Cursive, Dancing Script, Great Vibes, Kalam | Подпись, пакеты `@fontsource/*`                         | OFL-1.1                                             |
 | Liberation Sans                                        | Стандартные шрифты PDF.js                               | OFL-1.1 (файл `LICENSE_LIBERATION`)                 |

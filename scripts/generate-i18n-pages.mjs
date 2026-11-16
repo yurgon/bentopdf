@@ -7,6 +7,11 @@ import { ENGLISH_ONLY_PAGES, processPage } from './content-segments.mjs';
 import { completeDocsLanguages } from './docs-languages.mjs';
 import { createTranslationChecker } from './page-translation.mjs';
 import { canonicalBasePath } from './indexing-policy.mjs';
+import {
+  isPlyleafPage,
+  withoutLanguageRedirect,
+  writeEnglishOnlyCopy,
+} from './site/i18n-hook.mjs';
 import { applyServerTranslations } from './server-translations.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -526,6 +531,16 @@ async function generateI18nPages() {
   for (const file of htmlFiles) {
     const filePath = path.join(DIST_DIR, file);
     const originalContent = fs.readFileSync(filePath, 'utf-8');
+    // Plyleaf: English-only pages get noindex copies, see scripts/site/i18n-hook.mjs
+    if (isPlyleafPage(originalContent)) {
+      fs.writeFileSync(filePath, withoutLanguageRedirect(originalContent));
+      for (const lang of languages) {
+        if (lang === 'en') continue;
+        writeEnglishOnlyCopy(originalContent, file, path.join(DIST_DIR, lang));
+        processed++;
+      }
+      continue;
+    }
     const translatedLangs = translatedLangsForFile(
       file.replace('.html', ''),
       translations
