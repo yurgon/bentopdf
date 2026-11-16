@@ -610,14 +610,16 @@ async function launchEditor(file: File) {
           PdfEngine: { fallbackFonts: Map<string, Uint8Array> };
         };
       setupFallbackFonts(appModule, PdfEngine.fallbackFonts);
+      // after Export the file downloads and the editor stays open for more changes;
+      // a short note in the editor's own toast instead of a dialog
       appModule.setOnSaved((kb) => {
-        showAlert(
-          t('common.success'),
-          t('tools:editPdfText.saved', { size: kb }),
-          'success',
-          () => {
-            closeEditor();
-          }
+        const note = document.getElementById('toast');
+        if (!note) return;
+        note.textContent = t('tools:editPdfText.saved', { size: kb });
+        note.hidden = false;
+        window.clearTimeout(Number(note.dataset.timer));
+        note.dataset.timer = String(
+          window.setTimeout(() => (note.hidden = true), 3000)
         );
       });
       relocateAddText();
