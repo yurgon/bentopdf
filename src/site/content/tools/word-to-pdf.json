@@ -1,0 +1,88 @@
+{
+  "slug": "word-to-pdf",
+  "mainQuery": "word to pdf",
+  "title": "Word to PDF: Convert DOCX to PDF Free, No Upload",
+  "description": "Convert Word to PDF in your browser: DOCX, DOC, ODT and RTF, several files at once. Layout and links are kept. Free, and nothing is uploaded.",
+  "h1": "Word to PDF Converter",
+  "crumb": "Word to PDF",
+  "promise": "Convert Word to PDF right in your browser: a DOCX, DOC, ODT or RTF in, a print-ready PDF out. Your documents are not uploaded anywhere.",
+  "facts": ["Nothing is uploaded", "Free, no account", "DOCX, DOC, ODT, RTF"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Word to PDF Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "DOCX, DOC, ODT and RTF to PDF",
+      "Several documents at once, downloaded as a ZIP",
+      "Keeps layout, images, tables and hyperlinks",
+      "Converts with LibreOffice running in the browser",
+      "Files are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert Word to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "first-load",
+      "label": "The first conversion"
+    },
+    {
+      "id": "fonts",
+      "label": "Fonts and layout"
+    },
+    {
+      "id": "formats",
+      "label": "Which files work"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-word",
+      "icon": "file",
+      "name": "PDF to Word",
+      "why": "Turn a PDF back into an editable document."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Put the letter, CV and certificates into one file."
+    },
+    {
+      "slug": "excel-to-pdf",
+      "icon": "grid",
+      "name": "Excel to PDF",
+      "why": "Convert spreadsheets the same way."
+    },
+    {
+      "slug": "sign-pdf",
+      "icon": "sign",
+      "name": "Sign PDF",
+      "why": "Add your signature to the finished PDF."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline after the first conversion"
+}

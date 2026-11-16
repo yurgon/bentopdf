@@ -1,0 +1,87 @@
+{
+  "slug": "epub-to-pdf",
+  "mainQuery": "epub to pdf",
+  "title": "EPUB to PDF: Convert eBooks to PDF Free, No Upload",
+  "description": "Convert EPUB to PDF in your browser to print an ebook or read it on any device. Several books at once, free, and the files never leave your device.",
+  "h1": "EPUB to PDF Converter",
+  "crumb": "EPUB to PDF",
+  "promise": "Convert EPUB to PDF to print an ebook, read it on a device without an ebook app, or send it to anyone. The book stays on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Several books at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "EPUB to PDF Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "EPUB ebooks to PDF",
+      "Keeps chapters, images and text styles",
+      "Several books at once, downloaded as a ZIP",
+      "Runs in the browser, files are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert EPUB to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "layout",
+      "label": "How the pages are laid out"
+    },
+    {
+      "id": "drm",
+      "label": "Protected ebooks"
+    },
+    {
+      "id": "print",
+      "label": "Printing an ebook"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-booklet",
+      "icon": "fold",
+      "name": "PDF booklet maker",
+      "why": "Print the converted book as a booklet you can fold and staple."
+    },
+    {
+      "slug": "cbz-to-pdf",
+      "icon": "book",
+      "name": "CBZ to PDF",
+      "why": "Turn comic book archives into a PDF too."
+    },
+    {
+      "slug": "mobi-to-pdf",
+      "icon": "book",
+      "name": "MOBI to PDF",
+      "why": "Convert DRM-free Kindle files."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink an illustrated book before sending it."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

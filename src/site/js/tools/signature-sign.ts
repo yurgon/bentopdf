@@ -184,7 +184,7 @@ function drawSpots(): void {
         'aria-label',
         'Signature. Drag or use arrow keys to move, plus and minus to resize, Delete to remove.'
       );
-      el.innerHTML = `<img src="${pngUrl}" alt="" /><span class="sig-handle" aria-hidden="true"></span><button type="button" class="sig-del" aria-label="Remove this signature"><svg class="i i-sm" aria-hidden="true"><use href="#x" /></svg></button>`;
+      el.innerHTML = `<img src="${pngUrl}" alt="" /><span class="sig-handle" aria-hidden="true"></span><button type="button" class="sig-del" aria-label="Remove this signature"><svg class="i i-sm" aria-hidden="true"><use href="#i-x" /></svg></button>`;
       place(el, s);
       layer.append(el);
 

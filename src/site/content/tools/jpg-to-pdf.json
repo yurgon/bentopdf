@@ -1,0 +1,87 @@
+{
+  "slug": "jpg-to-pdf",
+  "mainQuery": "jpg to pdf",
+  "title": "JPG to PDF: Convert Images to PDF Free, No Upload",
+  "description": "Convert JPG to PDF in your browser. Put many photos into one PDF and choose the quality. Free, no sign up, and your images never leave your device.",
+  "h1": "JPG to PDF Converter",
+  "crumb": "JPG to PDF",
+  "promise": "Convert JPG to PDF: turn one photo or a whole batch into a single PDF, one picture per page. The images stay on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Many images at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "JPG to PDF Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Many JPG images into one PDF, one per page",
+      "JPG, JPEG and JPEG 2000 (JP2, JPX)",
+      "High, medium or low quality",
+      "Runs in the browser, images are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert JPG to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "quality",
+      "label": "Which quality to choose"
+    },
+    {
+      "id": "page-size",
+      "label": "Page size and order"
+    },
+    {
+      "id": "phone",
+      "label": "Photos from a phone"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "png-to-pdf",
+      "icon": "image",
+      "name": "PNG to PDF",
+      "why": "Convert screenshots and graphics, transparency included."
+    },
+    {
+      "slug": "heic-to-pdf",
+      "icon": "image",
+      "name": "HEIC to PDF",
+      "why": "Turn iPhone photos into a PDF without converting them first."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Mix photos and PDFs in one file and drag them into order."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a PDF of photos to fit an email or upload limit."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

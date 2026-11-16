@@ -15,7 +15,7 @@ function paintToggle(): void {
     'aria-label',
     d ? 'Switch to light theme' : 'Switch to dark theme'
   );
-  toggle.querySelector('use')?.setAttribute('href', d ? '#sun' : '#moon');
+  toggle.querySelector('use')?.setAttribute('href', d ? '#i-sun' : '#i-moon');
 }
 paintToggle();
 toggle?.addEventListener('click', () => {

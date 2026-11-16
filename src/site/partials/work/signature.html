@@ -9,17 +9,17 @@
         value="type"
         checked
       /><label for="mode-type"
-        ><svg class="i i-sm" aria-hidden="true"><use href="#type" /></svg
+        ><svg class="i i-sm" aria-hidden="true"><use href="#i-type" /></svg
         >Type</label
       >
       <input type="radio" name="mode" id="mode-draw" value="draw" /><label
         for="mode-draw"
-        ><svg class="i i-sm" aria-hidden="true"><use href="#pen" /></svg
+        ><svg class="i i-sm" aria-hidden="true"><use href="#i-pen" /></svg
         >Draw</label
       >
       <input type="radio" name="mode" id="mode-photo" value="photo" /><label
         for="mode-photo"
-        ><svg class="i i-sm" aria-hidden="true"><use href="#camera" /></svg
+        ><svg class="i i-sm" aria-hidden="true"><use href="#i-camera" /></svg
         >Photo</label
       >
     </div>
@@ -57,7 +57,8 @@
       </div>
       <div class="sig-pad-tools">
         <button class="btn btn-sm" type="button" id="pad-undo" disabled>
-          <svg class="i i-sm" aria-hidden="true"><use href="#undo" /></svg>Undo
+          <svg class="i i-sm" aria-hidden="true"><use href="#i-undo" /></svg
+          >Undo
         </button>
         <button
           class="btn btn-sm btn-ghost"
@@ -81,7 +82,7 @@
           aria-label="Choose a photo of your signature"
         />
         <div class="drop-icon">
-          <svg class="i"><use href="#camera" /></svg>
+          <svg class="i"><use href="#i-camera" /></svg>
         </div>
         <div>
           <p class="drop-title">Photo of your signature on paper</p>
@@ -189,7 +190,7 @@
         aria-label="Choose a PDF to sign"
       />
       <div class="drop-icon">
-        <svg class="i"><use href="#upload" /></svg>
+        <svg class="i"><use href="#i-upload" /></svg>
       </div>
       <div>
         <p class="drop-title">Drop the PDF you want to sign</p>
@@ -210,7 +211,7 @@
           aria-label="Previous page"
         >
           <svg class="i i-sm" aria-hidden="true" style="transform: scaleX(-1)">
-            <use href="#arrow" />
+            <use href="#i-arrow" />
           </svg>
         </button>
         <span class="tnum" id="page-label" aria-live="polite">Page 1 of 1</span>
@@ -220,11 +221,11 @@
           id="page-next"
           aria-label="Next page"
         >
-          <svg class="i i-sm" aria-hidden="true"><use href="#arrow" /></svg>
+          <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow" /></svg>
         </button>
         <span class="spacer"></span>
         <button class="btn btn-sm" type="button" id="place-add">
-          <svg class="i i-sm" aria-hidden="true"><use href="#plus" /></svg>Add
+          <svg class="i i-sm" aria-hidden="true"><use href="#i-plus" /></svg>Add
           to this page
         </button>
       </div>
@@ -241,14 +242,14 @@
 
     <div class="result appear" id="sign-result" hidden>
       <div class="result-icon">
-        <svg class="i"><use href="#check" /></svg>
+        <svg class="i"><use href="#i-check" /></svg>
       </div>
       <p class="result-title">Signed PDF ready</p>
       <p class="result-sub tnum" id="sign-result-sub"></p>
       <div class="result-actions">
         <button class="btn btn-primary" type="button" id="signed-download">
           <svg class="i">
-            <use href="#upload" transform="rotate(180 10 10)" /></svg
+            <use href="#i-upload" transform="rotate(180 10 10)" /></svg
           >Download signed PDF
         </button>
         <button class="btn btn-ghost" type="button" id="sign-again">
@@ -260,8 +261,8 @@
 
   <div class="work-foot" id="foot-make">
     <span class="privacy-note"
-      ><svg class="i"><use href="#device" /></svg>Made in your browser. Nothing
-      is uploaded or stored.</span
+      ><svg class="i"><use href="#i-device" /></svg>Made in your browser.
+      Nothing is uploaded or stored.</span
     >
     <span class="spacer"></span>
     <div class="sig-downloads">
@@ -278,7 +279,7 @@
   <div class="work-foot" id="foot-sign" hidden>
     <button class="btn btn-ghost" type="button" id="back-make">
       <svg class="i i-sm" aria-hidden="true" style="transform: scaleX(-1)">
-        <use href="#arrow" /></svg
+        <use href="#i-arrow" /></svg
       >Change signature
     </button>
     <span class="spacer"></span>

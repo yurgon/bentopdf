@@ -9,7 +9,7 @@ export const esc = (s) =>
     .replace(/"/g, '&quot;');
 
 const icon = (id, cls = 'i') =>
-  `<svg class="${cls}" aria-hidden="true"><use href="#${id}" /></svg>`;
+  `<svg class="${cls}" aria-hidden="true"><use href="#i-${id}" /></svg>`;
 
 export const longDate = (iso) =>
   new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', {
@@ -53,7 +53,7 @@ export function head(site, page) {
     <meta name="theme-color" content="#1c1a17" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="/images/plyleaf-mark.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/images/plyleaf-touch.png" />
-    <script src="/plyleaf-theme.js"></script>
+    <script src="/plyleaf-theme.js"></script>${(page.styles || []).map((h) => `\n    <link rel="stylesheet" href="${h}" />`).join('')}
     <link rel="stylesheet" href="/src/site/css/plyleaf.css" />
     <script type="module" src="/src/site/js/site.ts"></script>${page.script ? `\n    <script type="module" src="${page.script}"></script>` : ''}
     ${page.jsonLd.map(jsonLd).join('\n    ')}
@@ -71,7 +71,7 @@ export function headerBar(site, current, { skipLink = true } = {}) {
   return `${skipLink ? '\n    <a class="visually-hidden" href="#main">Skip to content</a>' : ''}
     <header class="site-header">
       <div class="wrap">
-        <a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="#mark" /></svg>${esc(site.name)}</a>
+        <a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="#i-mark" /></svg>${esc(site.name)}</a>
         <nav class="nav" aria-label="Main">
         ${nav}
         <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme">${icon('moon', 'i i-sm')}</button>
@@ -103,7 +103,7 @@ export function footerBar(site) {
     <footer class="site-footer">
       <div class="wrap">
         <div class="about">
-          <a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="#mark" /></svg>${esc(site.name)}</a>
+          <a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="#i-mark" /></svg>${esc(site.name)}</a>
           <p class="footer-line">${esc(site.description)}</p>
         </div>${cols}
       </div>

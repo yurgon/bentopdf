@@ -1,0 +1,92 @@
+{
+  "slug": "pdf-to-word",
+  "mainQuery": "pdf to word",
+  "title": "PDF to Word: Convert PDF to Editable DOCX, Free",
+  "description": "Convert PDF to Word (DOCX) in your browser. Text, tables and images become editable. Several files at once, free, and nothing is uploaded.",
+  "h1": "PDF to Word Converter",
+  "crumb": "PDF to Word",
+  "promise": "Convert PDF to Word and get an editable DOCX with paragraphs, tables and pictures in place. The conversion runs in your browser.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Several files at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to Word Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "PDF to editable DOCX",
+      "Keeps paragraphs, tables, images and columns where possible",
+      "Several PDFs at once, downloaded as a ZIP",
+      "Password-protected PDFs with the password",
+      "Runs in the browser, files are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PDF to Word"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "formatting",
+      "label": "What keeps its formatting"
+    },
+    {
+      "id": "scanned",
+      "label": "Scanned PDFs"
+    },
+    {
+      "id": "open-in-word",
+      "label": "Opening a PDF in Word"
+    },
+    {
+      "id": "edit-instead",
+      "label": "When you do not need Word"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "Turn the edited document back into a PDF."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "OCR PDF",
+      "why": "Recognise the text in a scan before converting it."
+    },
+    {
+      "slug": "edit-pdf",
+      "icon": "edit",
+      "name": "PDF editor",
+      "why": "Fix a few words in the PDF itself, no conversion needed."
+    },
+    {
+      "slug": "pdf-to-excel",
+      "icon": "grid",
+      "name": "PDF to Excel",
+      "why": "Get tables out of a PDF as a spreadsheet."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline after the first conversion"
+}

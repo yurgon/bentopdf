@@ -56,3 +56,9 @@ body {
   max-width: 880px !important;
   margin-inline: auto;
 }
+
+/* Dialog backdrops: BentoPDF writes "bg-gray-900 bg-opacity-90" (Tailwind 3 syntax, a no-op in
+   Tailwind 4), which left an opaque page-coloured sheet behind every alert. Dim the page instead. */
+.fixed.inset-0.bg-gray-900.bg-opacity-90 {
+  background-color: color-mix(in oklab, var(--ink) 45%, transparent);
+}

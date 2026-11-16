@@ -1,0 +1,92 @@
+{
+  "slug": "merge-pdf",
+  "mainQuery": "merge pdf",
+  "title": "Merge PDF: Combine PDF Files Free, No Upload",
+  "description": "Merge PDF files into one in your browser. Drag to reorder, keep only the pages you need, add JPG or PNG images. Free, no account, nothing is uploaded.",
+  "h1": "Merge PDF Files",
+  "crumb": "Merge PDF",
+  "promise": "Merge PDF files into one document: put them in order, keep only the pages you need, and save. Your files never leave your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "No file limit"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Merge PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Combine any number of PDF files into one",
+      "Reorder whole files or single pages by dragging",
+      "Page ranges per file, such as 1-3, 5",
+      "Add JPG and PNG images as pages",
+      "Runs in the browser, files are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to merge PDFs"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "modes",
+      "label": "Whole files or single pages"
+    },
+    {
+      "id": "page-ranges",
+      "label": "Merge only some pages"
+    },
+    {
+      "id": "images",
+      "label": "Merge PDF and JPG"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "devices",
+      "label": "On Mac, Windows and phones"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "split-pdf",
+      "icon": "split",
+      "name": "Split PDF",
+      "why": "Break a long PDF into parts, or take a few pages out of it."
+    },
+    {
+      "slug": "organize-pdf",
+      "icon": "grid",
+      "name": "Organize pages",
+      "why": "Reorder, rotate and delete pages after merging."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Make the merged file small enough to email or upload."
+    },
+    {
+      "slug": "page-numbers",
+      "icon": "hash",
+      "name": "Add page numbers",
+      "why": "Number the pages of the combined document."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

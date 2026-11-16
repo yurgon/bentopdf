@@ -979,7 +979,7 @@ function initializePage() {
     stage.addEventListener('touchcancel', endPinch);
   }
 
-  const mainEl = document.getElementById('main');
+  const mainEl = document.querySelector<HTMLElement>('#text-editor-app #main');
   if (mainEl) {
     const DRAG_SEL =
       '.obj-handle,.rot-handle,.para-handle,.edit-move,.multi-box,.obj-box,.sel-para';

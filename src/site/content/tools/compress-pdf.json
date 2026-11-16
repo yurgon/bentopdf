@@ -1,0 +1,92 @@
+{
+  "slug": "compress-pdf",
+  "mainQuery": "compress pdf",
+  "title": "Compress PDF: Reduce PDF File Size Free, No Upload",
+  "description": "Compress PDF files in your browser. Pick a level or a target size such as 1 MB, and text, links and forms keep working. Free, nothing is uploaded.",
+  "h1": "Compress PDF",
+  "crumb": "Compress PDF",
+  "promise": "Compress PDF files to a size you can email or upload, with text, links and forms still working. Everything runs on your device.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Target size in KB or MB"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Compress PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Four compression levels and custom settings",
+      "Target file size in KB or MB",
+      "Recompresses images, subsets and merges fonts, removes unused data",
+      "Text, links and forms keep working",
+      "Several files at once; runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to compress a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "levels",
+      "label": "Which level to choose"
+    },
+    {
+      "id": "target",
+      "label": "Compress to a size"
+    },
+    {
+      "id": "why-large",
+      "label": "Why PDFs get large"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "compress-pdf-for-email",
+      "icon": "compress",
+      "name": "Compress PDF for email",
+      "why": "Get a file under the usual attachment limit in one step."
+    },
+    {
+      "slug": "split-pdf",
+      "icon": "split",
+      "name": "Split PDF",
+      "why": "Send a file that will not shrink enough in several parts."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine documents first, then compress them together."
+    },
+    {
+      "slug": "protect-pdf",
+      "icon": "lock",
+      "name": "Protect PDF",
+      "why": "Add a password before you send the file."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

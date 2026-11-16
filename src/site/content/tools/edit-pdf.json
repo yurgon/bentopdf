@@ -1,0 +1,96 @@
+{
+  "slug": "edit-pdf",
+  "mainQuery": "pdf editor",
+  "title": "PDF Editor: Edit Text in a PDF Online, Free",
+  "description": "Free PDF editor in your browser: click a paragraph to change or delete text, add text boxes and images, find and replace. No upload, no account.",
+  "h1": "PDF Editor",
+  "crumb": "Edit PDF",
+  "promise": "A free PDF editor that changes the text itself: click a paragraph, retype it, and the lines reflow. Your file never leaves your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Edits the real text"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Plyleaf PDF Editor",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Edit existing text in place with reflow",
+      "Fonts, size, colour, bold, italic, lists and alignment",
+      "Add text boxes and images, replace images",
+      "Find and replace, spell check",
+      "Runs in the browser, files are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to edit a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "edit-text",
+      "label": "Change or delete text"
+    },
+    {
+      "id": "add",
+      "label": "Add text and images"
+    },
+    {
+      "id": "find-replace",
+      "label": "Find and replace"
+    },
+    {
+      "id": "fonts",
+      "label": "Fonts"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "devices",
+      "label": "On Mac, Windows and phones"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "annotate-pdf",
+      "icon": "pen",
+      "name": "Annotate PDF",
+      "why": "Highlight, comment and draw on a PDF without changing its text."
+    },
+    {
+      "slug": "sign-pdf",
+      "icon": "sign",
+      "name": "Sign PDF",
+      "why": "Add your signature, initials and the date after editing."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "OCR PDF",
+      "why": "Turn a scanned PDF into real text you can then edit."
+    },
+    {
+      "slug": "form-filler",
+      "icon": "type",
+      "name": "Fill PDF forms",
+      "why": "Type into the fields of a fillable form instead."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

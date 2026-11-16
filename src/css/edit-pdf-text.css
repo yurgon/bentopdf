@@ -2361,3 +2361,17 @@
     z-index: 55;
   }
 }
+
+/* Inside the Plyleaf page template the site's own .btn rule also matches the editor's buttons;
+   undo the properties the editor does not set itself. */
+#text-editor-app .btn {
+  min-height: 0;
+  font-weight: inherit;
+  line-height: normal;
+  white-space: nowrap;
+  transform: none;
+  transition: background 120ms ease;
+}
+body:has(#text-editor-app:not([hidden])) {
+  overflow: hidden;
+}

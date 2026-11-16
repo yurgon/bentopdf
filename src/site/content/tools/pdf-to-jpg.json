@@ -1,0 +1,88 @@
+{
+  "slug": "pdf-to-jpg",
+  "mainQuery": "pdf to jpg",
+  "title": "PDF to JPG: Convert PDF Pages to Images, Free",
+  "description": "Convert PDF to JPG in your browser: every page becomes a JPG image, with a quality slider. Free, no sign up, and the PDF never leaves your device.",
+  "h1": "PDF to JPG Converter",
+  "crumb": "PDF to JPG",
+  "promise": "Convert PDF to JPG: each page of your document becomes a separate image you can post, paste or send. The PDF stays on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Every page at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to JPG Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Every PDF page to a JPG image",
+      "Quality slider from 10% to 100%",
+      "Rendered at 144 pixels per inch",
+      "Multi-page PDFs downloaded as a ZIP",
+      "Runs in the browser, files are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PDF to JPG"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "quality",
+      "label": "Quality and file size"
+    },
+    {
+      "id": "one-page",
+      "label": "Only one page"
+    },
+    {
+      "id": "jpg-or-png",
+      "label": "JPG or PNG"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-png",
+      "icon": "image",
+      "name": "PDF to PNG",
+      "why": "Lossless images at up to three times the size."
+    },
+    {
+      "slug": "extract-images",
+      "icon": "image",
+      "name": "Extract images",
+      "why": "Save the photos inside a PDF at their own resolution."
+    },
+    {
+      "slug": "extract-pages",
+      "icon": "split",
+      "name": "Extract pages",
+      "why": "Take out only the pages you want to convert."
+    },
+    {
+      "slug": "jpg-to-pdf",
+      "icon": "file",
+      "name": "JPG to PDF",
+      "why": "Turn the images back into one PDF."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

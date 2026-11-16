@@ -266,6 +266,62 @@ function howToLd(doc, url) {
   };
 }
 
+// ---------- BentoPDF tools inside our template ----------
+// Takes the working part of a BentoPDF page (the tool card and its dialogs) and the scripts that
+// drive it. Its own title, subtitle and "Back to Tools" button give way to our hero; the SEO
+// blocks under it are replaced by ours. Class "btn" is renamed: ours would restyle its buttons.
+function legacyTool(slug) {
+  const src = fs.readFileSync(
+    path.join(ROOT, 'src/pages', `${slug}.html`),
+    'utf8'
+  );
+  const body = src.slice(src.indexOf('{{> navbar }}') + '{{> navbar }}'.length);
+  const endMarks = ['<!-- How It Works', '<section', '{{> footer }}']
+    .map((m) => body.indexOf(m))
+    .filter((i) => i >= 0);
+  const part = body.slice(0, Math.min(...endMarks));
+  const dom = new JSDOM(`<body>${part}</body>`);
+  const d = dom.window.document;
+  const card = d.getElementById('tool-uploader');
+  if (!card) fail(slug, 'legacy page has no #tool-uploader');
+  const h1 = card.querySelector('h1');
+  const sub = h1?.nextElementSibling;
+  if (sub && sub.tagName === 'P') sub.remove();
+  h1?.remove();
+  const back = d.getElementById('back-to-tools');
+  if (back) back.hidden = true;
+  const wrap = d.getElementById('uploader');
+  if (wrap) wrap.className = 'legacy-uploader';
+  card.classList.add('legacy-card');
+  for (const el of d.querySelectorAll('.btn')) {
+    el.classList.remove('btn');
+    el.classList.add('legacy-btn');
+  }
+  const scripts = [
+    ...src.matchAll(/<script type="module" src="([^"]+)"><\/script>/g),
+  ]
+    .map((m) => m[1])
+    .filter((s) => !/full-width|simple-mode-footer|mobileMenu/.test(s));
+  const styles = [
+    ...src.matchAll(/<link href="(\/src\/css\/[^"]+\.css)" rel="stylesheet"/g),
+  ].map((m) => m[1]);
+  // Markup after the footer (the PDF editor's full-screen app, its dialogs) is kept as it is:
+  // that app styles its own .btn and toggles it from script.
+  const footAt = body.indexOf('{{> footer }}');
+  const tail =
+    footAt >= 0 && footAt >= Math.min(...endMarks)
+      ? body
+          .slice(footAt + '{{> footer }}'.length)
+          .split('<script')[0]
+          .trim()
+      : '';
+  const html = `<section class="work legacy" id="tool">
+${d.body.innerHTML.replace(/\{\{&gt;/g, '{{>')}
+</section>${tail ? `\n${tail}` : ''}
+${scripts.map((s) => `<script type="module" src="${s}"></script>`).join('\n')}`;
+  return { html, styles };
+}
+
 // ---------- render ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
@@ -304,10 +360,15 @@ for (const f of toolFiles) {
     path.join(CONTENT, 'tools', `${t.slug}.html`),
     'utf8'
   );
-  const workHtml = fs.readFileSync(
-    path.join(SITE_DIR, 'partials/work', `${t.workArea}.html`),
-    'utf8'
-  );
+  // "legacy": the working tool is BentoPDF's own (src/pages/<slug>.html), placed in our template
+  const legacy =
+    t.workArea === 'legacy' ? legacyTool(t.legacySource || t.slug) : null;
+  const workHtml = legacy
+    ? legacy.html
+    : fs.readFileSync(
+        path.join(SITE_DIR, 'partials/work', `${t.workArea}.html`),
+        'utf8'
+      );
   for (const r of t.related)
     if (!known.has(r.slug)) fail(name, `related tool ${r.slug} has no page`);
   const probe = new JSDOM(articleHtml).window.document;
@@ -333,7 +394,13 @@ for (const f of toolFiles) {
   ];
   const doc = page(
     t.slug,
-    { ...t, url, ogImage: ogFor(t.slug), jsonLd: ld },
+    {
+      ...t,
+      url,
+      ogImage: ogFor(t.slug),
+      jsonLd: ld,
+      styles: legacy?.styles,
+    },
     toolPage({ ...t, breadcrumb, articleHtml, workHtml }),
     t.section ? `/${t.section}` : null
   );

@@ -1,0 +1,91 @@
+{
+  "slug": "png-to-pdf",
+  "mainQuery": "png to pdf",
+  "title": "PNG to PDF: Convert PNG Images to PDF, Free",
+  "description": "Convert PNG to PDF in your browser: screenshots, scans and graphics in one PDF, a page per image. Free, no sign up, and images never leave your device.",
+  "h1": "PNG to PDF Converter",
+  "crumb": "PNG to PDF",
+  "promise": "Convert PNG to PDF: put screenshots, scans or graphics into one document, a page per image, with no loss at high quality. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Lossless at high quality"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "PNG to PDF Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Many PNG images into one PDF, one per page",
+      "Lossless at high quality, transparency kept",
+      "Medium and low quality for smaller files",
+      "Runs in the browser, images are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PNG to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "what-is-png",
+      "label": "PNG and PDF"
+    },
+    {
+      "id": "quality",
+      "label": "Quality and transparency"
+    },
+    {
+      "id": "screenshots",
+      "label": "Screenshots from a phone"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "jpg-to-pdf",
+      "icon": "image",
+      "name": "JPG to PDF",
+      "why": "Convert photos the same way."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Reorder pages or add other PDFs to the result."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "OCR PDF",
+      "why": "Make the text in screenshots searchable."
+    },
+    {
+      "slug": "pdf-to-png",
+      "icon": "image",
+      "name": "PDF to PNG",
+      "why": "Turn PDF pages back into PNG images."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

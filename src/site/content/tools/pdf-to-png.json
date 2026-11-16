@@ -1,0 +1,92 @@
+{
+  "slug": "pdf-to-png",
+  "mainQuery": "pdf to png",
+  "title": "PDF to PNG: Convert PDF Pages to PNG Images, Free",
+  "description": "Convert PDF to PNG in your browser. Each page becomes a sharp, lossless PNG at up to 3x scale. Free, no sign up, no watermark, nothing is uploaded.",
+  "h1": "PDF to PNG Converter",
+  "crumb": "PDF to PNG",
+  "promise": "Convert PDF to PNG and get a lossless image of every page, as large as you need. Your document stays on your device.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Up to 216 pixels per inch"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to PNG Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Every PDF page to a PNG image",
+      "Scale from 1x to 3x (72 to 216 pixels per inch)",
+      "Lossless, crisp text and line art",
+      "Multi-page PDFs downloaded as a ZIP",
+      "Runs in the browser, files are never uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PDF to PNG"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "scale",
+      "label": "Which scale to choose"
+    },
+    {
+      "id": "png-or-jpg",
+      "label": "PNG or JPG"
+    },
+    {
+      "id": "iphone",
+      "label": "On iPhone and Android"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-jpg",
+      "icon": "image",
+      "name": "PDF to JPG",
+      "why": "Smaller images for photos and scans."
+    },
+    {
+      "slug": "pdf-to-svg",
+      "icon": "image",
+      "name": "PDF to SVG",
+      "why": "Keep vector artwork sharp at any size."
+    },
+    {
+      "slug": "png-to-pdf",
+      "icon": "file",
+      "name": "PNG to PDF",
+      "why": "Turn the images back into a PDF."
+    },
+    {
+      "slug": "extract-pages",
+      "icon": "split",
+      "name": "Extract pages",
+      "why": "Convert only the pages you need."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}
