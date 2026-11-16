@@ -1,6 +1,7 @@
 // Last Plyleaf build step (after apply-indexing-policy):
 // - robots.txt for this deployment's address, pointing at its sitemap;
 // - long cache for hashed assets in Cloudflare's _headers;
+// - _redirects for pages that moved;
 // - files above Cloudflare Pages' 25 MiB per-file limit split into parts.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -43,6 +44,20 @@ if (!headers.includes('/assets/*')) {
 `;
   fs.writeFileSync(headersPath, headers);
 }
+
+// moved pages: the text editor took over /edit-pdf, the annotator moved to /annotate-pdf
+const moved = [['edit-pdf-text', 'edit-pdf']];
+fs.writeFileSync(
+  path.join(DIST, '_redirects'),
+  moved
+    .flatMap(([from, to]) => [
+      `/${from} /${to} 301`,
+      `/${from}.html /${to} 301`,
+      `/:lang/${from} /:lang/${to} 301`,
+      `/:lang/${from}.html /:lang/${to} 301`,
+    ])
+    .join('\n') + '\n'
+);
 
 // BentoPDF's own pages carry its name and address in hidden metadata (tab title suffix,
 // author, site name, its X account, breadcrumb data on bentopdf.com): rewrite them to ours

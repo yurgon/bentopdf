@@ -921,7 +921,7 @@ export default defineConfig(({ command }) => {
             'src/pages/compress-pdf-for-email.html'
           ),
           'edit-pdf': resolve(__dirname, 'src/pages/edit-pdf.html'),
-          'edit-pdf-text': resolve(__dirname, 'src/pages/edit-pdf-text.html'),
+          'annotate-pdf': resolve(__dirname, 'src/pages/annotate-pdf.html'),
           'jpg-to-pdf': resolve(__dirname, 'src/pages/jpg-to-pdf.html'),
           'sign-pdf': resolve(__dirname, 'src/pages/sign-pdf.html'),
           'crop-pdf': resolve(__dirname, 'src/pages/crop-pdf.html'),

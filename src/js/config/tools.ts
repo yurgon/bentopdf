@@ -4,11 +4,11 @@ const baseCategories = [
     name: 'Popular Tools',
     tools: [
       {
-        href: import.meta.env.BASE_URL + 'edit-pdf-text.html',
-        name: 'Edit PDF Text',
+        href: import.meta.env.BASE_URL + 'edit-pdf.html',
+        name: 'Edit PDF',
         icon: 'ph-cursor-text',
         subtitle:
-          'Click any paragraph and edit it in place with live reflow, fonts, and styling.',
+          'Change, delete or add text right in the PDF, with the rest of the paragraph reflowing.',
       },
       {
         href: import.meta.env.BASE_URL + 'pdf-workflow.html',
@@ -43,8 +43,8 @@ const baseCategories = [
         subtitle: 'Reduce the file size of your PDF.',
       },
       {
-        href: import.meta.env.BASE_URL + 'edit-pdf.html',
-        name: 'PDF Editor',
+        href: import.meta.env.BASE_URL + 'annotate-pdf.html',
+        name: 'Annotate PDF',
         icon: 'ph-pencil-simple',
         subtitle:
           'Annotate, highlight, redact, comment, add shapes/images, search, and view PDFs.',
@@ -91,18 +91,18 @@ const baseCategories = [
     name: 'Edit & Annotate',
     tools: [
       {
-        href: import.meta.env.BASE_URL + 'edit-pdf.html',
-        name: 'PDF Editor',
+        href: import.meta.env.BASE_URL + 'annotate-pdf.html',
+        name: 'Annotate PDF',
         icon: 'ph-pencil-simple',
         subtitle:
           'Annotate, highlight, redact, comment, add shapes/images, search, and view PDFs.',
       },
       {
-        href: import.meta.env.BASE_URL + 'edit-pdf-text.html',
-        name: 'Edit PDF Text',
+        href: import.meta.env.BASE_URL + 'edit-pdf.html',
+        name: 'Edit PDF',
         icon: 'ph-cursor-text',
         subtitle:
-          'Click any paragraph and edit it in place with live reflow, fonts, and styling.',
+          'Change, delete or add text right in the PDF, with the rest of the paragraph reflowing.',
       },
       {
         href: import.meta.env.BASE_URL + 'bookmark.html',

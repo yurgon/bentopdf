@@ -35,7 +35,7 @@ You can even check this yourself. Open your browser's developer tools, go to the
 
 ## How to edit the actual text in a PDF
 
-If you want to change words that are already in the PDF, use [Edit PDF Text](/edit-pdf-text).
+If you want to change words that are already in the PDF, use [Edit PDF](/edit-pdf).
 
 1. Open the tool.
 2. Drop in your PDF.

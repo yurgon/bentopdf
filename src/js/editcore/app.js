@@ -1,18 +1,25 @@
-window.addEventListener('error', (e) => {
-  if (!document.title.startsWith('E2E') && !document.title.startsWith('REPRO'))
+// debug aid: errors in the tab title, only in local development (in production a harmless
+// rejection, such as an interrupted page transition, would replace the page title)
+if (import.meta.env.DEV) {
+  window.addEventListener('error', (e) => {
+    if (
+      !document.title.startsWith('E2E') &&
+      !document.title.startsWith('REPRO')
+    )
+      document.title =
+        'JSERROR: ' +
+        e.message +
+        ' @' +
+        (e.filename || '').split('/').pop() +
+        ':' +
+        e.lineno;
+  });
+  window.addEventListener('unhandledrejection', (e) => {
     document.title =
-      'JSERROR: ' +
-      e.message +
-      ' @' +
-      (e.filename || '').split('/').pop() +
-      ':' +
-      e.lineno;
-});
-window.addEventListener('unhandledrejection', (e) => {
-  document.title =
-    'UNHANDLED: ' +
-    ((e.reason && (e.reason.stack || e.reason.message)) || e.reason);
-});
+      'UNHANDLED: ' +
+      ((e.reason && (e.reason.stack || e.reason.message)) || e.reason);
+  });
+}
 import { PdfEngine, OBJ } from './core.js';
 import { applyTagSurgery } from './tagsurgery.js';
 import { pageHasPatternFill, protectPatternArtwork } from './shadingsurgery.js';

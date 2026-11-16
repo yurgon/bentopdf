@@ -109,7 +109,12 @@
         {
           "slug": "edit-pdf",
           "name": "Edit PDF",
-          "line": "Change text, add images and notes"
+          "line": "Change or delete the text itself"
+        },
+        {
+          "slug": "annotate-pdf",
+          "name": "Annotate PDF",
+          "line": "Highlight, comment and black out"
         },
         {
           "slug": "merge-pdf",

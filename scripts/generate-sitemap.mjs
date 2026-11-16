@@ -56,6 +56,7 @@ const PRIORITY_MAP = {
   'split-pdf': 0.9,
   'compress-pdf': 0.9,
   'edit-pdf': 0.9,
+  'annotate-pdf': 0.8,
   'word-to-pdf': 0.9,
   'excel-to-pdf': 0.9,
   'powerpoint-to-pdf': 0.9,

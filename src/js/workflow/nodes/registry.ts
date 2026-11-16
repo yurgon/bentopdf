@@ -605,7 +605,7 @@ export const nodeRegistry: Record<string, NodeRegistryEntry> = {
     icon: 'ph-eye-slash',
     description: 'Redact text from PDF',
     factory: () => new RedactNode(),
-    toolPageId: 'edit-pdf',
+    toolPageId: 'annotate-pdf',
   },
   DownloadNode: {
     label: 'Download',
