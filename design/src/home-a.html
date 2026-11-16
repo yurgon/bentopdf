@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Plyleaf — Free PDF Tools That Never Upload Your Files</title>
+    <meta
+      name="description"
+      content="Merge, sign, redact, compress and convert PDFs, make booklets, bingo cards and graph paper. Free, no account, files stay on your device."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/plyleaf.css" />
+    <style>
+      /* Home A "Calm": a centered promise and a search field, then every tool as quiet grouped lists. */
+      .home-hero {
+        text-align: center;
+        padding-block: var(--s-20) var(--s-12);
+      }
+      .home-hero h1 {
+        font-size: var(--t-hero);
+        letter-spacing: -0.03em;
+        line-height: 1.08;
+        max-width: 18ch;
+        margin-inline: auto;
+      }
+      .home-hero p {
+        font-size: var(--t-lg);
+        color: var(--ink-2);
+        max-width: 50ch;
+        margin: var(--s-5) auto 0;
+      }
+      .search {
+        position: relative;
+        max-width: 520px;
+        margin: var(--s-8) auto 0;
+      }
+      .search .i {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--ink-3);
+        pointer-events: none;
+      }
+      .search .input {
+        min-height: 52px;
+        padding-left: 44px;
+        font-size: 1.0625rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-1);
+      }
+      .proof {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--s-2) var(--s-6);
+        margin-top: var(--s-6);
+        font-size: var(--t-sm);
+        color: var(--ink-2);
+      }
+      .proof span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .proof .i {
+        width: 16px;
+        height: 16px;
+        color: var(--ok);
+      }
+
+      .groups {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--s-12) var(--s-10);
+        margin-top: var(--s-8);
+      }
+      .group h2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: var(--t-base);
+        padding-bottom: var(--s-3);
+        border-bottom: 1px solid var(--line);
+      }
+      .group h2 .i {
+        color: var(--ink-3);
+      }
+      .group ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .group a {
+        display: grid;
+        gap: 1px;
+        padding: 10px 0;
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+      }
+      .group a b {
+        font-weight: var(--w-medium);
+        transition: color var(--dur) var(--ease);
+      }
+      .group a span {
+        font-size: var(--t-sm);
+        color: var(--ink-2);
+      }
+      .group a:hover b {
+        color: var(--accent-ink);
+      }
+      #g-print h2 .i,
+      #g-read h2 .i {
+        color: var(--accent-ink);
+      }
+      .search-empty {
+        text-align: center;
+        color: var(--ink-2);
+        margin-top: var(--s-8);
+      }
+
+      .why {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: var(--s-8);
+        margin-top: var(--s-24);
+        padding-top: var(--s-12);
+        border-top: 1px solid var(--line);
+      }
+      .why h3 {
+        font-size: var(--t-base);
+        margin-bottom: var(--s-2);
+      }
+      .why p {
+        color: var(--ink-2);
+        font-size: var(--t-sm);
+        line-height: 1.6;
+      }
+      @media (max-width: 560px) {
+        .home-hero {
+          padding-block: var(--s-10) var(--s-6);
+          text-align: left;
+        }
+        .home-hero h1 {
+          font-size: 2.125rem;
+          margin-inline: 0;
+        }
+        .home-hero p {
+          font-size: var(--t-base);
+          margin-inline: 0;
+        }
+        .search {
+          margin-inline: 0;
+        }
+        .proof {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{SPRITE}} {{HEADER}}
+    <main id="main">
+      <div class="wrap">
+        <section class="home-hero">
+          <h1>PDF tools that never upload your files</h1>
+          <p>
+            Booklets, signatures, redaction, bingo cards, e-books and 100 more
+            tools. Everything runs in your browser, for free.
+          </p>
+          <div class="search">
+            <svg class="i"><use href="#search" /></svg>
+            <label class="visually-hidden" for="tool-search">Find a tool</label>
+            <input
+              class="input"
+              id="tool-search"
+              type="search"
+              placeholder="Find a tool: booklet, merge, sign…"
+              autocomplete="off"
+            />
+          </div>
+          <div class="proof">
+            <span
+              ><svg class="i"><use href="#device" /></svg>Files stay on your
+              device</span
+            ><span
+              ><svg class="i"><use href="#check" /></svg>No account</span
+            ><span
+              ><svg class="i"><use href="#check" /></svg>No ads</span
+            ><span
+              ><svg class="i"><use href="#check" /></svg>Open source</span
+            >
+          </div>
+        </section>
+        {{TOOLS}}
+        <section class="why" aria-label="Why it is free and private">
+          <div>
+            <h3>Your files stay with you</h3>
+            <p>
+              Each tool runs inside the browser tab. Nothing is sent to a
+              server, so there is nothing to delete afterwards and nothing to
+              leak.
+            </p>
+          </div>
+          <div>
+            <h3>Free without a catch</h3>
+            <p>
+              No account, no daily limit, no watermark. The code is open, so
+              anyone can check what it does.
+            </p>
+          </div>
+          <div>
+            <h3>Every page explains itself</h3>
+            <p>
+              Under each tool: step-by-step instructions, an example of the
+              result and honest notes on what it cannot do.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    {{FOOTER}}
+    <script src="assets/plyleaf.js"></script>
+  </body>
+</html>

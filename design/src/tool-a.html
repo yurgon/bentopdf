@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>PDF Booklet Maker — Print a PDF as a Booklet, Free</title>
+    <meta
+      name="description"
+      content="Turn a PDF into a fold-and-staple booklet (A5, half Letter, A4) with a print guide for your printer. Free, no upload: the file stays on your device."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/plyleaf.css" />
+    <style>
+      /* Variant A "Calm": centered hero, the work surface as the single object on a white page,
+   long text with a sticky outline on the left. */
+      .hero-a {
+        text-align: center;
+        padding-block: var(--s-16) var(--s-10);
+      }
+      .hero-a .crumbs {
+        justify-content: center;
+        margin-bottom: var(--s-6);
+      }
+      .hero-a h1 {
+        font-size: clamp(2rem, 1.5rem + 2vw, 2.875rem);
+        letter-spacing: -0.025em;
+      }
+      .hero-a .promise {
+        font-size: var(--t-lg);
+        color: var(--ink-2);
+        max-width: 46ch;
+        margin: var(--s-4) auto 0;
+        line-height: 1.5;
+      }
+      .hero-a .facts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--s-2);
+        margin-top: var(--s-6);
+      }
+      .tool-a {
+        max-width: 880px;
+        margin-inline: auto;
+      }
+
+      .doc-a {
+        display: grid;
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: var(--s-16);
+        margin-top: var(--s-24);
+      }
+      .toc {
+        position: sticky;
+        top: calc(84px + env(safe-area-inset-top, 0px));
+        align-self: start;
+        font-size: var(--t-sm);
+      }
+      .toc p {
+        font-weight: var(--w-semi);
+        margin-bottom: var(--s-3);
+      }
+      .toc ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 2px;
+        border-left: 1px solid var(--line);
+      }
+      .toc a {
+        display: block;
+        padding: 6px 0 6px 14px;
+        margin-left: -1px;
+        border-left: 1px solid transparent;
+        color: var(--ink-2);
+        text-decoration: none;
+        transition:
+          color var(--dur) var(--ease),
+          border-color var(--dur) var(--ease);
+      }
+      .toc a:hover {
+        color: var(--ink);
+        border-left-color: var(--line-strong);
+      }
+      .toc a[aria-current='true'] {
+        color: var(--ink);
+        border-left-color: var(--accent-ink);
+        font-weight: var(--w-medium);
+      }
+      .doc-a .content {
+        max-width: 760px;
+        display: grid;
+        gap: var(--s-20);
+      }
+      .block-title {
+        font-size: var(--t-2xl);
+        letter-spacing: -0.02em;
+        margin-bottom: var(--s-6);
+        scroll-margin-top: 84px;
+      }
+      .block-prose .prose h2:first-of-type {
+        margin-top: 1.6em;
+      }
+      .doc-a .steps {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: var(--s-8) var(--s-5);
+      }
+      .block-updated {
+        padding-top: var(--s-6);
+        border-top: 1px solid var(--line);
+      }
+      @media (max-width: 900px) {
+        .doc-a {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0;
+          margin-top: var(--s-16);
+        }
+        .toc {
+          display: none;
+        }
+      }
+      @media (max-width: 560px) {
+        .hero-a {
+          padding-block: var(--s-6) var(--s-6);
+          text-align: left;
+        }
+        .hero-a .crumbs,
+        .hero-a .facts {
+          justify-content: flex-start;
+        }
+        .hero-a .crumbs {
+          margin-bottom: var(--s-4);
+        }
+        .hero-a .promise {
+          font-size: var(--t-base);
+          margin-inline: 0;
+          margin-top: var(--s-3);
+        }
+        .hero-a .facts {
+          display: none;
+        }
+        .doc-a .content {
+          gap: var(--s-16);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{SPRITE}} {{HEADER}}
+    <main id="main">
+      <div class="wrap">
+        <section class="hero-a">
+          <ol class="crumbs" aria-label="Breadcrumb">
+            <li><a href="{{home}}">Home</a></li>
+            <li><a href="#">For printing</a></li>
+            <li aria-current="page">PDF booklet</li>
+          </ol>
+          <h1>PDF Booklet Maker</h1>
+          <p class="promise">
+            Turn any PDF into a booklet you can fold and staple, with a print
+            guide for your printer. The file stays on your device.
+          </p>
+          <div class="facts">
+            <span class="badge badge-ok"
+              ><svg class="i"><use href="#device" /></svg>Nothing is
+              uploaded</span
+            >
+            <span class="badge"
+              ><svg class="i"><use href="#check" /></svg>Free, no account</span
+            >
+            <span class="badge"
+              ><svg class="i"><use href="#check" /></svg>No page limit</span
+            >
+          </div>
+        </section>
+        <div class="tool-a">{{TOOL}}</div>
+        <div class="doc-a">
+          <nav class="toc" aria-label="On this page">
+            <p>On this page</p>
+            <ol>
+              <li><a href="#how-to">How to make a booklet</a></li>
+              <li><a href="#result-example">What you get</a></li>
+              <li><a href="#printing">Printing at home</a></li>
+              <li><a href="#how-it-works">How it works</a></li>
+              <li><a href="#uses">Uses and limits</a></li>
+              <li><a href="#faq">Questions</a></li>
+              <li><a href="#related">Related tools</a></li>
+            </ol>
+          </nav>
+          <div class="content">{{ARTICLE}}</div>
+        </div>
+      </div>
+    </main>
+    {{FOOTER}}
+    <script src="assets/plyleaf.js"></script>
+    <script>
+      // outline: highlight the section in view
+      (function () {
+        const links = [...document.querySelectorAll('.toc a')];
+        const map = new Map(
+          links.map((a) => [a.getAttribute('href').slice(1), a])
+        );
+        const io = new IntersectionObserver(
+          (es) => {
+            es.forEach((e) => {
+              if (e.isIntersecting) {
+                links.forEach((l) => l.removeAttribute('aria-current'));
+                map.get(e.target.id)?.setAttribute('aria-current', 'true');
+              }
+            });
+          },
+          { rootMargin: '-20% 0px -70% 0px' }
+        );
+        map.forEach((a, id) => {
+          const el = document.getElementById(id);
+          el && io.observe(el);
+        });
+      })();
+    </script>
+  </body>
+</html>

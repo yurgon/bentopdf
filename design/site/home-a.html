@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Plyleaf — Free PDF Tools That Never Upload Your Files</title>
+    <meta
+      name="description"
+      content="Merge, sign, redact, compress and convert PDFs, make booklets, bingo cards and graph paper. Free, no account, files stay on your device."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/plyleaf.css" />
+    <style>
+      /* Home A "Calm": a centered promise and a search field, then every tool as quiet grouped lists. */
+      .home-hero {
+        text-align: center;
+        padding-block: var(--s-20) var(--s-12);
+      }
+      .home-hero h1 {
+        font-size: var(--t-hero);
+        letter-spacing: -0.03em;
+        line-height: 1.08;
+        max-width: 18ch;
+        margin-inline: auto;
+      }
+      .home-hero p {
+        font-size: var(--t-lg);
+        color: var(--ink-2);
+        max-width: 50ch;
+        margin: var(--s-5) auto 0;
+      }
+      .search {
+        position: relative;
+        max-width: 520px;
+        margin: var(--s-8) auto 0;
+      }
+      .search .i {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--ink-3);
+        pointer-events: none;
+      }
+      .search .input {
+        min-height: 52px;
+        padding-left: 44px;
+        font-size: 1.0625rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-1);
+      }
+      .proof {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--s-2) var(--s-6);
+        margin-top: var(--s-6);
+        font-size: var(--t-sm);
+        color: var(--ink-2);
+      }
+      .proof span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .proof .i {
+        width: 16px;
+        height: 16px;
+        color: var(--ok);
+      }
+
+      .groups {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--s-12) var(--s-10);
+        margin-top: var(--s-8);
+      }
+      .group h2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: var(--t-base);
+        padding-bottom: var(--s-3);
+        border-bottom: 1px solid var(--line);
+      }
+      .group h2 .i {
+        color: var(--ink-3);
+      }
+      .group ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .group a {
+        display: grid;
+        gap: 1px;
+        padding: 10px 0;
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+      }
+      .group a b {
+        font-weight: var(--w-medium);
+        transition: color var(--dur) var(--ease);
+      }
+      .group a span {
+        font-size: var(--t-sm);
+        color: var(--ink-2);
+      }
+      .group a:hover b {
+        color: var(--accent-ink);
+      }
+      #g-print h2 .i,
+      #g-read h2 .i {
+        color: var(--accent-ink);
+      }
+      .search-empty {
+        text-align: center;
+        color: var(--ink-2);
+        margin-top: var(--s-8);
+      }
+
+      .why {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: var(--s-8);
+        margin-top: var(--s-24);
+        padding-top: var(--s-12);
+        border-top: 1px solid var(--line);
+      }
+      .why h3 {
+        font-size: var(--t-base);
+        margin-bottom: var(--s-2);
+      }
+      .why p {
+        color: var(--ink-2);
+        font-size: var(--t-sm);
+        line-height: 1.6;
+      }
+      @media (max-width: 560px) {
+        .home-hero {
+          padding-block: var(--s-10) var(--s-6);
+          text-align: left;
+        }
+        .home-hero h1 {
+          font-size: 2.125rem;
+          margin-inline: 0;
+        }
+        .home-hero p {
+          font-size: var(--t-base);
+          margin-inline: 0;
+        }
+        .search {
+          margin-inline: 0;
+        }
+        .proof {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="mark" viewBox="0 0 24 24">
+          <rect
+            x="3.5"
+            y="5.5"
+            width="13"
+            height="16"
+            rx="2.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          />
+          <path
+            d="M8 2.5h10.5a2.5 2.5 0 0 1 2.5 2.5v13.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+          <path
+            d="M3.5 13.5 10 9.5l6.5 4"
+            fill="none"
+            stroke="oklch(0.74 0.15 76)"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          />
+        </symbol>
+        <symbol id="upload" viewBox="0 0 20 20">
+          <path
+            d="M10 13V3.5M6 7.5l4-4 4 4M3.5 12.5v2a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-2"
+          />
+        </symbol>
+        <symbol id="file" viewBox="0 0 20 20">
+          <path
+            d="M11.5 2.5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7z"
+          />
+          <path d="M11.5 2.5V7H16" />
+        </symbol>
+        <symbol id="device" viewBox="0 0 20 20">
+          <rect x="3" y="4" width="14" height="9.5" rx="1.5" />
+          <path d="M1.5 16.5h17M8 9.5l1.5 1.5 3-3" />
+        </symbol>
+        <symbol id="printer" viewBox="0 0 20 20">
+          <path
+            d="M5.5 7.5v-4h9v4M5.5 14H4a1.5 1.5 0 0 1-1.5-1.5V9A1.5 1.5 0 0 1 4 7.5h12A1.5 1.5 0 0 1 17.5 9v3.5A1.5 1.5 0 0 1 16 14h-1.5"
+          />
+          <path d="M5.5 11.5h9v5h-9z" />
+        </symbol>
+        <symbol id="book" viewBox="0 0 20 20">
+          <path
+            d="M10 5.5C8.5 4.2 6.5 3.5 3 3.5v11c3.5 0 5.5.7 7 2 1.5-1.3 3.5-2 7-2v-11c-3.5 0-5.5.7-7 2zM10 5.5v11"
+          />
+        </symbol>
+        <symbol id="check" viewBox="0 0 20 20">
+          <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+        </symbol>
+        <symbol id="arrow" viewBox="0 0 20 20">
+          <path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" />
+        </symbol>
+        <symbol id="plus" viewBox="0 0 20 20">
+          <path d="M10 4v12M4 10h12" />
+        </symbol>
+        <symbol id="x" viewBox="0 0 20 20">
+          <path d="M5.5 5.5l9 9M14.5 5.5l-9 9" />
+        </symbol>
+        <symbol id="sun" viewBox="0 0 20 20">
+          <circle cx="10" cy="10" r="3.5" />
+          <path
+            d="M10 2v1.5M10 16.5V18M2 10h1.5M16.5 10H18M4.3 4.3l1 1M14.7 14.7l1 1M4.3 15.7l1-1M14.7 5.3l1-1"
+          />
+        </symbol>
+        <symbol id="moon" viewBox="0 0 20 20">
+          <path d="M16.5 12.2A6.5 6.5 0 0 1 7.8 3.5a6.5 6.5 0 1 0 8.7 8.7z" />
+        </symbol>
+        <symbol id="merge" viewBox="0 0 20 20">
+          <rect x="2.5" y="3" width="6" height="8" rx="1" />
+          <rect x="11.5" y="3" width="6" height="8" rx="1" />
+          <path
+            d="M5.5 11v2.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V11M10 15v2.5"
+          />
+        </symbol>
+        <symbol id="split" viewBox="0 0 20 20">
+          <rect x="5" y="2.5" width="10" height="15" rx="1.5" />
+          <path d="M2.5 10h3M14.5 10h3M8 10h4" stroke-dasharray="1.5 2" />
+        </symbol>
+        <symbol id="hash" viewBox="0 0 20 20">
+          <path d="M7.5 3.5 6 16.5M14 3.5l-1.5 13M3.5 7.5h13M3 12.5h13" />
+        </symbol>
+        <symbol id="testpage" viewBox="0 0 20 20">
+          <rect x="4" y="2.5" width="12" height="15" rx="1.5" />
+          <path d="M7 6.5h6M7 9.5h6M7 12.5h3" />
+          <circle cx="13" cy="13" r="1" />
+        </symbol>
+        <symbol id="grid" viewBox="0 0 20 20">
+          <rect x="3" y="3" width="14" height="14" rx="1.5" />
+          <path d="M3 7.7h14M3 12.3h14M7.7 3v14M12.3 3v14" />
+        </symbol>
+        <symbol id="pen" viewBox="0 0 20 20">
+          <path
+            d="M3.5 16.5c2-3 4.5-1 6.5-3s4.5-6 6-9.5c-3.5 1.5-7.5 4-9.5 6s0 4.5-3 6.5z"
+          />
+        </symbol>
+        <symbol id="sign" viewBox="0 0 20 20">
+          <path
+            d="M2.5 13c1.5-4 3-6 4-6 1.5 0 0 6 1.5 6s2-3 3-3 .5 3 2 3 2-1.5 3-1.5M2.5 16.5h15"
+          />
+        </symbol>
+        <symbol id="scan" viewBox="0 0 20 20">
+          <path
+            d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13M6.5 8h7M6.5 12h5"
+          />
+        </symbol>
+        <symbol id="redact" viewBox="0 0 20 20">
+          <path d="M3.5 5.5h13M3.5 14.5h7" />
+          <rect
+            x="3"
+            y="8.3"
+            width="11"
+            height="3.4"
+            rx=".8"
+            fill="currentColor"
+            stroke="none"
+          />
+        </symbol>
+        <symbol id="compare" viewBox="0 0 20 20">
+          <rect x="2.5" y="3" width="6.5" height="14" rx="1" />
+          <rect x="11" y="3" width="6.5" height="14" rx="1" />
+          <path d="M5 7h2M13.5 7h2M5 10h2M13.5 10h2" />
+        </symbol>
+        <symbol id="compress" viewBox="0 0 20 20">
+          <path
+            d="M10 2.5v5M7.5 5.5 10 8l2.5-2.5M10 17.5v-5M7.5 14.5 10 12l2.5 2.5M4 10h12"
+          />
+        </symbol>
+        <symbol id="image" viewBox="0 0 20 20">
+          <rect x="2.5" y="3.5" width="15" height="13" rx="1.5" />
+          <circle cx="7" cy="8" r="1.5" />
+          <path d="M17.5 13.5l-4-4-7.5 7" />
+        </symbol>
+        <symbol id="edit" viewBox="0 0 20 20">
+          <path d="M12.5 4.5l3 3L7 16H4v-3zM11 6l3 3" />
+        </symbol>
+        <symbol id="lock" viewBox="0 0 20 20">
+          <rect x="4" y="8.5" width="12" height="9" rx="1.5" />
+          <path d="M6.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5" />
+        </symbol>
+        <symbol id="rotate" viewBox="0 0 20 20">
+          <path d="M15.5 9.5A5.5 5.5 0 1 1 13.8 5.6M15.8 3v3.5h-3.5" />
+        </symbol>
+        <symbol id="search" viewBox="0 0 20 20">
+          <circle cx="9" cy="9" r="5.5" />
+          <path d="M13 13l4 4" />
+        </symbol>
+        <symbol id="fold" viewBox="0 0 20 20">
+          <path d="M3 4.5h14v11H3zM10 4.5v11" />
+          <path d="M10 4.5 13.5 3v11L10 15.5" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="home-a.html"
+          ><svg class="brand-mark"><use href="#mark" /></svg>Plyleaf</a
+        >
+        <nav class="nav" aria-label="Main">
+          <a href="#">All tools</a>
+          <a href="#" class="nav-hide">For printing</a>
+          <a href="#" class="nav-hide">For e-readers</a>
+          <a href="#" class="nav-hide">About</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            id="theme-toggle"
+            aria-label="Switch to dark theme"
+          >
+            <svg class="i i-sm"><use href="#moon" /></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <section class="home-hero">
+          <h1>PDF tools that never upload your files</h1>
+          <p>
+            Booklets, signatures, redaction, bingo cards, e-books and 100 more
+            tools. Everything runs in your browser, for free.
+          </p>
+          <div class="search">
+            <svg class="i"><use href="#search" /></svg>
+            <label class="visually-hidden" for="tool-search">Find a tool</label>
+            <input
+              class="input"
+              id="tool-search"
+              type="search"
+              placeholder="Find a tool: booklet, merge, sign…"
+              autocomplete="off"
+            />
+          </div>
+          <div class="proof">
+            <span
+              ><svg class="i"><use href="#device" /></svg>Files stay on your
+              device</span
+            ><span
+              ><svg class="i"><use href="#check" /></svg>No account</span
+            ><span
+              ><svg class="i"><use href="#check" /></svg>No ads</span
+            ><span
+              ><svg class="i"><use href="#check" /></svg>Open source</span
+            >
+          </div>
+        </section>
+        <div class="groups">
+          <section class="group" data-group id="g-print">
+            <h2>
+              <svg class="i"><use href="#printer" /></svg>For printing
+            </h2>
+            <ul>
+              <li data-tool>
+                <a href="tool-a.html"
+                  ><b>PDF booklet</b
+                  ><span>Fold-and-staple booklets with a print guide</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Printer test page</b
+                  ><span
+                    >Color, black, alignment and two-sided test sheets</span
+                  ></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Graph paper</b
+                  ><span>Grid paper in mm or inches, any line weight</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Bingo card generator</b
+                  ><span>Sets of unique cards with a caller sheet</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Name tracing worksheets</b
+                  ><span>A tracing sheet for every child in the class</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Poster printing</b
+                  ><span>Print one page across several sheets</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="group" data-group id="g-read">
+            <h2>
+              <svg class="i"><use href="#book" /></svg>For e-readers
+            </h2>
+            <ul>
+              <li data-tool>
+                <a href="#"
+                  ><b>PDF to EPUB</b
+                  ><span
+                    >Reflowable books with chapters and clean paragraphs</span
+                  ></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>PDF for Kindle</b
+                  ><span>Get a PDF onto a Kindle and make it readable</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>EPUB to PDF</b><span>Print or archive an e-book</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>DjVu to PDF</b
+                  ><span>Open old scanned books anywhere</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="group" data-group>
+            <h2>
+              <svg class="i"><use href="#sign" /></svg>Sign and protect
+            </h2>
+            <ul>
+              <li data-tool>
+                <a href="#"
+                  ><b>Signature generator</b
+                  ><span>Type, draw or photograph a signature</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Sign PDF</b
+                  ><span>Place your signature on a document</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Redact PDF</b
+                  ><span>Remove text for good, not just cover it</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"><b>Protect PDF</b><span>Add a password</span></a>
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Remove metadata</b
+                  ><span>Strip author, software and hidden data</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="group" data-group>
+            <h2>
+              <svg class="i"><use href="#edit" /></svg>Edit and organize
+            </h2>
+            <ul>
+              <li data-tool>
+                <a href="#"
+                  ><b>Edit PDF</b
+                  ><span>Change text, add images and notes</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Merge PDF</b
+                  ><span>Combine files in the order you want</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Split PDF</b><span>By pages, ranges or size</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Rotate pages</b
+                  ><span>Fix sideways and upside-down pages</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Add page numbers</b
+                  ><span>Position, style and starting number</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Compare PDFs</b
+                  ><span>See every change between two versions</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="group" data-group>
+            <h2>
+              <svg class="i"><use href="#file" /></svg>Convert
+            </h2>
+            <ul>
+              <li data-tool>
+                <a href="#"><b>PDF to Word</b><span>Editable DOCX</span></a>
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>PDF to JPG</b><span>Every page as an image</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>JPG to PDF</b
+                  ><span>Photos and scans into one file</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Word to PDF</b><span>DOCX to PDF, layout kept</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>PDF to Excel</b><span>Tables into spreadsheets</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Email to PDF</b><span>Save .eml messages as PDF</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="group" data-group>
+            <h2>
+              <svg class="i"><use href="#scan" /></svg>Scan and optimize
+            </h2>
+            <ul>
+              <li data-tool>
+                <a href="#"
+                  ><b>Compress PDF</b
+                  ><span>Smaller files, or an exact target size</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>PDF OCR</b><span>Make scanned PDFs searchable</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Straighten scans</b
+                  ><span>Fix tilted scanned pages</span></a
+                >
+              </li>
+              <li data-tool>
+                <a href="#"
+                  ><b>Remove blank pages</b
+                  ><span>Clean up scanned stacks</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+        <p class="search-empty" id="search-empty" hidden>
+          No tool matches that. Try a shorter word, like “merge” or “print”.
+        </p>
+
+        <section class="why" aria-label="Why it is free and private">
+          <div>
+            <h3>Your files stay with you</h3>
+            <p>
+              Each tool runs inside the browser tab. Nothing is sent to a
+              server, so there is nothing to delete afterwards and nothing to
+              leak.
+            </p>
+          </div>
+          <div>
+            <h3>Free without a catch</h3>
+            <p>
+              No account, no daily limit, no watermark. The code is open, so
+              anyone can check what it does.
+            </p>
+          </div>
+          <div>
+            <h3>Every page explains itself</h3>
+            <p>
+              Under each tool: step-by-step instructions, an example of the
+              result and honest notes on what it cannot do.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="about">
+          <a class="brand" href="home-a.html"
+            ><svg class="brand-mark"><use href="#mark" /></svg>Plyleaf</a
+          >
+          <p style="margin-top: 12px; max-width: 34ch">
+            Free PDF tools that run in your browser. Your files are never
+            uploaded. No account, no ads, no limits.
+          </p>
+        </div>
+        <div>
+          <h3>For printing</h3>
+          <ul>
+            <li><a href="#">PDF booklet</a></li>
+            <li><a href="#">Printer test page</a></li>
+            <li><a href="#">Graph paper</a></li>
+            <li><a href="#">Bingo cards</a></li>
+            <li><a href="#">Name tracing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>For e-readers</h3>
+          <ul>
+            <li><a href="#">PDF to EPUB</a></li>
+            <li><a href="#">PDF for Kindle</a></li>
+            <li><a href="#">EPUB to PDF</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Plyleaf</h3>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Source code</a></li>
+            <li><a href="#">For AI assistants</a></li>
+          </ul>
+        </div>
+        <div class="fine">
+          <span>Open source under AGPL-3.0, built on BentoPDF.</span
+          ><span>Design prototype, 16 November 2026.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/plyleaf.js"></script>
+  </body>
+</html>

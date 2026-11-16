@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Plyleaf Design Foundation</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/plyleaf.css" />
+    <style>
+      /* Foundation page: the specimen of every token and component, plus links to the two page variants. */
+      .f-hero {
+        padding-block: var(--s-16) var(--s-10);
+        display: grid;
+        gap: var(--s-4);
+      }
+      .f-hero h1 {
+        font-size: var(--t-3xl);
+        letter-spacing: -0.025em;
+      }
+      .f-hero p {
+        color: var(--ink-2);
+        font-size: var(--t-lg);
+        max-width: 60ch;
+      }
+      .variants {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: var(--s-4);
+        margin-top: var(--s-6);
+      }
+      .variant {
+        display: grid;
+        gap: var(--s-3);
+        padding: var(--s-6);
+        border: 1px solid var(--line);
+        border-radius: var(--r-xl);
+        background: var(--surface);
+      }
+      .variant h2 {
+        font-size: var(--t-lg);
+      }
+      .variant p {
+        color: var(--ink-2);
+        font-size: var(--t-sm);
+      }
+      .variant .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s-2);
+        margin-top: var(--s-2);
+      }
+      .variant-b {
+        background: var(--stage);
+        color: var(--stage-ink);
+        border-color: var(--stage);
+      }
+      .variant-b p {
+        color: var(--stage-ink-2);
+      }
+
+      .sec {
+        padding-block: var(--s-16);
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: var(--s-8);
+      }
+      .sec > header {
+        display: grid;
+        gap: var(--s-2);
+        max-width: 64ch;
+      }
+      .sec h2 {
+        font-size: var(--t-2xl);
+        letter-spacing: -0.02em;
+      }
+      .sec > header p {
+        color: var(--ink-2);
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s-3);
+        align-items: center;
+      }
+      .cols {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--s-6);
+        align-items: start;
+      }
+      .cap {
+        font-size: var(--t-xs);
+        color: var(--ink-3);
+        margin-top: var(--s-2);
+      }
+
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--s-3);
+      }
+      .sw {
+        border: 1px solid var(--line);
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        background: var(--bg);
+      }
+      .sw i {
+        display: block;
+        height: 64px;
+        border-bottom: 1px solid var(--line);
+      }
+      .sw div {
+        padding: 10px 12px;
+        font-size: var(--t-xs);
+      }
+      .sw b {
+        display: block;
+        font-size: var(--t-sm);
+        font-weight: var(--w-medium);
+      }
+      .sw span {
+        color: var(--ink-3);
+      }
+
+      .type-row {
+        display: grid;
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: var(--s-6);
+        align-items: baseline;
+        padding-block: var(--s-3);
+        border-bottom: 1px solid var(--line);
+      }
+      .type-row code {
+        font-size: var(--t-xs);
+        color: var(--ink-3);
+        font-family: ui-monospace, Menlo, monospace;
+      }
+      .space-row {
+        display: flex;
+        align-items: center;
+        gap: var(--s-4);
+        font-size: var(--t-xs);
+        color: var(--ink-3);
+      }
+      .space-row i {
+        display: block;
+        height: 12px;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+      .radii {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s-4);
+      }
+      .radii div {
+        width: 88px;
+        height: 64px;
+        border: 1px solid var(--line-strong);
+        background: var(--surface);
+        display: grid;
+        place-items: center;
+        font-size: var(--t-xs);
+        color: var(--ink-2);
+      }
+      .stage-demo {
+        border-radius: var(--r-xl);
+        padding: var(--s-8);
+        display: grid;
+        gap: var(--s-5);
+      }
+      .stage-demo p {
+        color: var(--ink-2);
+        max-width: 56ch;
+      }
+      @media (max-width: 560px) {
+        .type-row {
+          grid-template-columns: minmax(0, 1fr);
+          gap: var(--s-1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{SPRITE}} {{HEADER}}
+    <main id="main">
+      <div class="wrap">
+        <section class="f-hero">
+          <h1>Design foundation</h1>
+          <p>
+            One typeface in three weights, a white page with warm-grey neutrals,
+            and one honey-amber accent kept for the main action. Every page is
+            built from the parts below. Switch the theme in the top right to see
+            the dark version.
+          </p>
+          <div class="variants">
+            <div class="variant">
+              <h2>Variant A · Calm</h2>
+              <p>
+                Light from top to bottom. The tool sits alone in the middle of a
+                white page, the long text has an outline on the left.
+              </p>
+              <div class="links">
+                <a class="btn btn-primary btn-sm" href="tool-a.html"
+                  >Tool page A</a
+                ><a class="btn btn-sm" href="home-a.html">Home page A</a>
+              </div>
+            </div>
+            <div class="variant variant-b">
+              <h2>Variant B · Stage</h2>
+              <p>
+                A dark band holds the title and the tool side by side, like a
+                product screen. The reading part below is light.
+              </p>
+              <div class="links stage" style="background: none">
+                <a class="btn btn-primary btn-sm" href="tool-b.html"
+                  >Tool page B</a
+                ><a class="btn btn-sm" href="home-b.html">Home page B</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-color">
+          <header>
+            <h2 id="s-color">Color</h2>
+            <p>
+              Neutrals carry a trace of the accent’s hue so the greys feel
+              chosen. Amber appears only on the main button, the current
+              selection and progress. Body text is at least 4.5:1 in both
+              themes.
+            </p>
+          </header>
+          <div class="swatches">
+            <div class="sw">
+              <i style="background: var(--bg)"></i>
+              <div><b>Page</b><span>--bg</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--surface)"></i>
+              <div><b>Surface</b><span>--surface</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--surface-2)"></i>
+              <div><b>Surface 2</b><span>--surface-2</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--line-strong)"></i>
+              <div><b>Line</b><span>--line, --line-strong</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--ink)"></i>
+              <div><b>Text</b><span>--ink · 17:1</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--ink-2)"></i>
+              <div><b>Secondary text</b><span>--ink-2 · 8:1</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--ink-3)"></i>
+              <div><b>Captions</b><span>--ink-3 · 5:1</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--accent)"></i>
+              <div><b>Accent</b><span>--accent, main action</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--accent-ink)"></i>
+              <div><b>Accent text</b><span>--accent-ink, links</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--accent-soft)"></i>
+              <div><b>Selection</b><span>--accent-soft</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--ok)"></i>
+              <div><b>Done, private</b><span>--ok</span></div>
+            </div>
+            <div class="sw">
+              <i style="background: var(--danger)"></i>
+              <div><b>Error</b><span>--danger</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-type">
+          <header>
+            <h2 id="s-type">Type</h2>
+            <p>
+              Hanken Grotesk, an open-source (OFL) grotesque, in regular, medium
+              and semibold. Fixed sizes for the interface, a slightly larger
+              size and wider leading for long text.
+            </p>
+          </header>
+          <div>
+            <div class="type-row">
+              <code>Hero 38–56</code
+              ><span
+                style="
+                  font-size: var(--t-hero);
+                  font-weight: 600;
+                  letter-spacing: -0.03em;
+                  line-height: 1.05;
+                "
+                >Print it as a booklet</span
+              >
+            </div>
+            <div class="type-row">
+              <code>H1 38</code
+              ><span
+                style="
+                  font-size: var(--t-3xl);
+                  font-weight: 600;
+                  letter-spacing: -0.025em;
+                "
+                >PDF Booklet Maker</span
+              >
+            </div>
+            <div class="type-row">
+              <code>H2 30</code
+              ><span
+                style="
+                  font-size: var(--t-2xl);
+                  font-weight: 600;
+                  letter-spacing: -0.02em;
+                "
+                >How to print a booklet at home</span
+              >
+            </div>
+            <div class="type-row">
+              <code>H3 20</code
+              ><span style="font-size: var(--t-lg); font-weight: 600"
+                >If your printer prints both sides</span
+              >
+            </div>
+            <div class="type-row">
+              <code>Prose 17</code
+              ><span
+                style="
+                  font-size: var(--t-prose);
+                  line-height: 1.7;
+                  max-width: 62ch;
+                "
+                >Most printing trouble comes from one setting: which edge the
+                printer flips the paper on. For a booklet it has to flip on the
+                short edge.</span
+              >
+            </div>
+            <div class="type-row">
+              <code>UI 16 / 14</code
+              ><span
+                >Make booklet ·
+                <span style="font-size: var(--t-sm); color: var(--ink-2)"
+                  >16 pages on 4 sheets of A4</span
+                ></span
+              >
+            </div>
+            <div class="type-row">
+              <code>Caption 13</code
+              ><span style="font-size: var(--t-xs); color: var(--ink-3)"
+                >Updated 16 November 2026</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-space">
+          <header>
+            <h2 id="s-space">Space and corners</h2>
+            <p>
+              A 4-pixel grid. Small gaps inside controls, generous gaps between
+              sections. Corners grow with the size of the object.
+            </p>
+          </header>
+          <div class="cols">
+            <div style="display: grid; gap: 10px">
+              <div class="space-row">
+                <i style="width: 8px"></i>8 · inside controls
+              </div>
+              <div class="space-row">
+                <i style="width: 16px"></i>16 · between fields
+              </div>
+              <div class="space-row">
+                <i style="width: 24px"></i>24 · inside panels
+              </div>
+              <div class="space-row">
+                <i style="width: 48px"></i>48 · between groups
+              </div>
+              <div class="space-row">
+                <i style="width: 80px"></i>80 · between sections
+              </div>
+            </div>
+            <div class="radii">
+              <div style="border-radius: 6px">6 chips</div>
+              <div style="border-radius: 8px">8 buttons</div>
+              <div style="border-radius: 12px">12 panels</div>
+              <div style="border-radius: 16px">16 tool</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-btn">
+          <header>
+            <h2 id="s-btn">Buttons</h2>
+            <p>
+              One amber button per screen: the main action. Everything else is
+              neutral. Every button has hover, pressed, focus, disabled and busy
+              states.
+            </p>
+          </header>
+          <div class="row">
+            <button class="btn btn-primary btn-lg" type="button">
+              Make booklet
+            </button>
+            <button class="btn btn-primary" type="button">Download</button>
+            <button class="btn" type="button">How to print it</button>
+            <button class="btn btn-ghost" type="button">Start over</button>
+            <button class="btn btn-primary" type="button" disabled>
+              Make booklet
+            </button>
+            <button class="btn btn-primary" type="button" data-loading="true">
+              <span class="spinner" aria-hidden="true"></span>Making booklet
+            </button>
+            <button class="btn btn-sm" type="button">Small</button>
+          </div>
+          <div class="row">
+            <span class="badge badge-ok"
+              ><svg class="i"><use href="#device" /></svg>Nothing is
+              uploaded</span
+            >
+            <span class="badge"
+              ><svg class="i"><use href="#check" /></svg>No page limit</span
+            >
+            <a class="link" href="#">Text link</a>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-form">
+          <header>
+            <h2 id="s-form">Settings</h2>
+            <p>
+              Few settings, shown as visible choices rather than hidden menus. A
+              choice with a consequence gets one line of explanation.
+            </p>
+          </header>
+          <div class="cols">
+            <div style="display: grid; gap: 20px">
+              <div class="field">
+                <label class="label" for="f-title">Card title</label
+                ><input
+                  class="input"
+                  id="f-title"
+                  value="Classroom bingo"
+                /><span class="hint">Shown at the top of every card</span>
+              </div>
+              <div class="field">
+                <label class="label" for="f-sel">Paper</label
+                ><select class="select" id="f-sel">
+                  <option>A4 (210 × 297 mm)</option>
+                  <option>US Letter (8.5 × 11 in)</option>
+                </select>
+              </div>
+              <div class="field">
+                <span class="label" id="f-seg">Grid</span>
+                <div class="seg" role="radiogroup" aria-labelledby="f-seg">
+                  <input type="radio" name="g" id="g3" /><label for="g3"
+                    >3 × 3</label
+                  ><input type="radio" name="g" id="g4" /><label for="g4"
+                    >4 × 4</label
+                  ><input type="radio" name="g" id="g5" checked /><label
+                    for="g5"
+                    >5 × 5</label
+                  >
+                </div>
+              </div>
+              <label class="switch"
+                ><input type="checkbox" checked id="f-free" /> Free space in the
+                middle</label
+              >
+            </div>
+            <div class="choices">
+              <label class="choice"
+                ><input type="radio" name="dx" checked /><strong
+                  >Prints both sides</strong
+                ><span>Flip on the short edge. One pass.</span></label
+              >
+              <label class="choice"
+                ><input type="radio" name="dx" /><strong
+                  >One side at a time</strong
+                ><span
+                  >Two passes with instructions for turning the stack.</span
+                ></label
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-drop">
+          <header>
+            <h2 id="s-drop">Work area</h2>
+            <p>
+              The one object on the screen. Upload zone, the chosen file,
+              progress and the result share one frame, with the privacy note
+              always in view.
+            </p>
+          </header>
+          <div class="cols">
+            <div>
+              <div class="drop" data-state="idle" style="min-height: 180px">
+                <div class="drop-icon">
+                  <svg class="i"><use href="#upload" /></svg>
+                </div>
+                <div>
+                  <p class="drop-title">Drop a PDF here</p>
+                  <p class="drop-sub">or choose a file</p>
+                </div>
+              </div>
+              <p class="cap">Waiting</p>
+            </div>
+            <div>
+              <div class="drop" data-state="over" style="min-height: 180px">
+                <div class="drop-icon">
+                  <svg class="i"><use href="#upload" /></svg>
+                </div>
+                <div>
+                  <p class="drop-title">Release to add</p>
+                  <p class="drop-sub">field-notes.pdf</p>
+                </div>
+              </div>
+              <p class="cap">Dragging a file over</p>
+            </div>
+            <div>
+              <div class="drop" data-state="error" style="min-height: 180px">
+                <div class="drop-icon">
+                  <svg class="i"><use href="#file" /></svg>
+                </div>
+                <div>
+                  <p class="drop-title">That file is not a PDF</p>
+                  <p class="drop-error">
+                    “photo.heic” is an image. Use JPG to PDF first.
+                  </p>
+                </div>
+              </div>
+              <p class="cap">Wrong file</p>
+            </div>
+          </div>
+          <div class="cols">
+            <div style="display: grid; gap: 16px">
+              <div class="file-row">
+                <div class="file-thumb" aria-hidden="true"></div>
+                <div class="file-meta">
+                  <p class="file-name">annual-report-2026-final-v3.pdf</p>
+                  <p class="file-info tnum">48 pages · 6.4 MB</p>
+                </div>
+                <button
+                  class="btn btn-sm btn-ghost"
+                  type="button"
+                  aria-label="Remove file"
+                >
+                  <svg class="i i-sm"><use href="#x" /></svg>
+                </button>
+              </div>
+              <div class="progress">
+                <div class="progress-track">
+                  <div class="progress-bar" style="width: 62%"></div>
+                </div>
+                <div class="progress-text">
+                  <span>Arranging pages on sheets</span
+                  ><span class="tnum">62%</span>
+                </div>
+              </div>
+            </div>
+            <div class="result">
+              <div class="result-icon">
+                <svg class="i"><use href="#check" /></svg>
+              </div>
+              <p class="result-title">Booklet ready</p>
+              <p class="result-sub tnum">
+                field-notes-booklet.pdf · 4 sheets · A5
+              </p>
+              <div class="result-actions">
+                <button class="btn btn-primary btn-sm" type="button">
+                  Download booklet</button
+                ><button class="btn btn-sm" type="button">
+                  How to print it
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-text">
+          <header>
+            <h2 id="s-text">Reading blocks</h2>
+            <p>
+              The text under each tool is set like a good article: a line of
+              about 68 characters, clear subheadings, real tables, numbered
+              steps that each have their own diagram.
+            </p>
+          </header>
+          <ol
+            class="steps"
+            style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"
+          >
+            <li class="step">
+              <div class="step-fig" aria-hidden="true">
+                <svg viewBox="0 0 160 100">
+                  <rect
+                    class="f-zone"
+                    x="20"
+                    y="14"
+                    width="120"
+                    height="72"
+                    rx="8"
+                  />
+                  <rect
+                    class="f-page"
+                    x="66"
+                    y="26"
+                    width="28"
+                    height="36"
+                    rx="2"
+                  />
+                  <path class="f-stroke" d="M80 78V66M75 71l5-5 5 5" />
+                </svg>
+              </div>
+              <div class="step-head">
+                <span class="step-num"></span>
+                <h3>Add your PDF</h3>
+              </div>
+              <p>Drop the file onto the page or choose it.</p>
+            </li>
+            <li class="step">
+              <div class="step-fig" aria-hidden="true">
+                <svg viewBox="0 0 160 100">
+                  <rect
+                    class="f-page"
+                    x="22"
+                    y="18"
+                    width="52"
+                    height="68"
+                    rx="2"
+                  />
+                  <rect
+                    class="f-accent"
+                    x="86"
+                    y="18"
+                    width="52"
+                    height="68"
+                    rx="2"
+                  />
+                  <path class="f-fold" d="M112 18v68" />
+                </svg>
+              </div>
+              <div class="step-head">
+                <span class="step-num"></span>
+                <h3>Pick the size</h3>
+              </div>
+              <p>A4 folds into A5, Letter into half Letter.</p>
+            </li>
+            <li class="step">
+              <div class="step-fig" aria-hidden="true">
+                <svg viewBox="0 0 160 100">
+                  <path class="f-page" d="M30 30 80 22l50 8v48l-50-8-50 8z" />
+                  <path class="f-fold" d="M80 22v48" />
+                </svg>
+              </div>
+              <div class="step-head">
+                <span class="step-num"></span>
+                <h3>Print and fold</h3>
+              </div>
+              <p>Two-sided, flip on the short edge.</p>
+            </li>
+          </ol>
+          <div class="cols">
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Pages</th>
+                    <th>Sheets</th>
+                    <th>Blank pages</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>21</td>
+                    <td>6</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="faq">
+              <details open>
+                <summary>
+                  Is my file uploaded?<svg class="i"><use href="#plus" /></svg>
+                </summary>
+                <div class="answer">
+                  No. The PDF is read and rearranged in your browser and saved
+                  straight to your device.
+                </div>
+              </details>
+              <details>
+                <summary>
+                  How many pages does a booklet need?<svg class="i">
+                    <use href="#plus" />
+                  </svg>
+                </summary>
+                <div class="answer">
+                  A multiple of four. Blank pages are added at the end if
+                  needed.
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="related" style="max-width: 640px">
+            <a href="#"
+              ><span class="rel-icon"
+                ><svg class="i"><use href="#testpage" /></svg></span
+              ><span
+                ><span class="rel-name">Printer test page</span><br /><span
+                  class="rel-why"
+                  >See how your printer flips paper first.</span
+                ></span
+              ><svg class="i i-arrow"><use href="#arrow" /></svg
+            ></a>
+            <a href="#"
+              ><span class="rel-icon"
+                ><svg class="i"><use href="#merge" /></svg></span
+              ><span
+                ><span class="rel-name">Merge PDF</span><br /><span
+                  class="rel-why"
+                  >Put the cover and chapters into one file.</span
+                ></span
+              ><svg class="i i-arrow"><use href="#arrow" /></svg
+            ></a>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-icons">
+          <header>
+            <h2 id="s-icons">Icons</h2>
+            <p>
+              Our own set: a 20-pixel grid, one stroke weight, round ends. Used
+              to label tools and states, never as decoration.
+            </p>
+          </header>
+          <div class="row" style="gap: 18px; color: var(--ink-2)">
+            <svg class="i"><use href="#upload" /></svg
+            ><svg class="i"><use href="#file" /></svg
+            ><svg class="i"><use href="#device" /></svg
+            ><svg class="i"><use href="#printer" /></svg
+            ><svg class="i"><use href="#book" /></svg
+            ><svg class="i"><use href="#merge" /></svg
+            ><svg class="i"><use href="#split" /></svg
+            ><svg class="i"><use href="#hash" /></svg
+            ><svg class="i"><use href="#testpage" /></svg
+            ><svg class="i"><use href="#grid" /></svg
+            ><svg class="i"><use href="#pen" /></svg
+            ><svg class="i"><use href="#sign" /></svg
+            ><svg class="i"><use href="#scan" /></svg
+            ><svg class="i"><use href="#redact" /></svg
+            ><svg class="i"><use href="#compare" /></svg
+            ><svg class="i"><use href="#compress" /></svg
+            ><svg class="i"><use href="#image" /></svg
+            ><svg class="i"><use href="#edit" /></svg
+            ><svg class="i"><use href="#lock" /></svg
+            ><svg class="i"><use href="#rotate" /></svg
+            ><svg class="i"><use href="#search" /></svg>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="s-stage">
+          <header>
+            <h2 id="s-stage">Dark band (variant B only)</h2>
+            <p>
+              The same components on a band that stays dark in both themes.
+              Variant A does without it.
+            </p>
+          </header>
+          <div class="stage stage-demo">
+            <p>
+              Turn any PDF into a booklet you can fold and staple. The file
+              stays on your device.
+            </p>
+            <div class="row">
+              <button class="btn btn-primary" type="button">Make booklet</button
+              ><button class="btn" type="button">Try a sample</button
+              ><span class="badge badge-ok"
+                ><svg class="i"><use href="#device" /></svg>Nothing is
+                uploaded</span
+              >
+            </div>
+            <div class="seg" role="radiogroup" aria-label="Booklet size">
+              <input type="radio" name="sz" id="sz1" checked /><label for="sz1"
+                >A5 from A4</label
+              ><input type="radio" name="sz" id="sz2" /><label for="sz2"
+                >Half Letter</label
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    {{FOOTER}}
+    <script src="assets/plyleaf.js"></script>
+  </body>
+</html>

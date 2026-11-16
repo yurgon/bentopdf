@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>PDF Booklet Maker — Print a PDF as a Booklet, Free</title>
+    <meta
+      name="description"
+      content="Turn a PDF into a fold-and-staple booklet (A5, half Letter, A4) with a print guide for your printer. Free, no upload: the file stays on your device."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/plyleaf.css" />
+    <style>
+      /* Variant B "Stage": a dark band holds the title and the tool side by side,
+   like a product screen; the reading part below is light, with a sticky sidebar on the right. */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0 0 auto;
+        height: env(safe-area-inset-top, 0px);
+        z-index: 30;
+        background: var(--stage);
+      }
+      .stage-top {
+        border-bottom: 1px solid var(--line);
+      }
+      .stage-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        gap: var(--s-12);
+        align-items: start;
+        padding-block: var(--s-16) var(--s-20);
+      }
+      .stage-hero .crumbs {
+        margin-bottom: var(--s-8);
+      }
+      .stage-hero h1 {
+        font-size: var(--t-hero);
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+      }
+      .stage-hero .promise {
+        font-size: var(--t-lg);
+        color: var(--ink-2);
+        margin-top: var(--s-5);
+        line-height: 1.5;
+        max-width: 38ch;
+      }
+      .ticks {
+        list-style: none;
+        margin: var(--s-10) 0 0;
+        padding: var(--s-6) 0 0;
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: var(--s-4);
+        font-size: var(--t-sm);
+        color: var(--ink-2);
+      }
+      .ticks li {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        gap: var(--s-3);
+      }
+      .ticks strong {
+        color: var(--ink);
+        font-weight: var(--w-medium);
+        display: block;
+      }
+      .ticks .i {
+        color: var(--accent-ink);
+        margin-top: 1px;
+      }
+      .stage-hero .work {
+        margin-top: 4px;
+      }
+
+      .doc-b {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: var(--s-16);
+        padding-top: var(--s-20);
+      }
+      .doc-b .content {
+        display: grid;
+        gap: var(--s-20);
+        min-width: 0;
+      }
+      .aside-b {
+        position: sticky;
+        top: calc(84px + env(safe-area-inset-top, 0px));
+        align-self: start;
+        display: grid;
+        gap: var(--s-6);
+        font-size: var(--t-sm);
+      }
+      .aside-b h2 {
+        font-size: var(--t-sm);
+        margin-bottom: var(--s-3);
+      }
+      .aside-b ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 2px;
+      }
+      .aside-b ol a {
+        display: block;
+        padding: 6px 10px;
+        border-radius: var(--r-sm);
+        color: var(--ink-2);
+        text-decoration: none;
+        transition:
+          background var(--dur) var(--ease),
+          color var(--dur) var(--ease);
+      }
+      .aside-b ol a:hover {
+        background: var(--surface-2);
+        color: var(--ink);
+      }
+      .aside-b ol a[aria-current='true'] {
+        background: var(--surface-2);
+        color: var(--ink);
+        font-weight: var(--w-medium);
+      }
+      .aside-b .panel {
+        padding: var(--s-5);
+        display: grid;
+        gap: var(--s-3);
+      }
+      .aside-b .panel p {
+        color: var(--ink-2);
+        line-height: 1.5;
+      }
+      .aside-b .panel strong {
+        color: var(--ink);
+      }
+
+      .block-title {
+        font-size: var(--t-2xl);
+        letter-spacing: -0.02em;
+        margin-bottom: var(--s-8);
+        scroll-margin-top: 84px;
+      }
+      /* steps as rows: figure left, text right */
+      .doc-b .steps {
+        gap: 0;
+        border-top: 1px solid var(--line);
+      }
+      .doc-b .step {
+        grid-template-columns: 200px minmax(0, 1fr);
+        grid-template-rows: auto 1fr;
+        column-gap: var(--s-8);
+        row-gap: var(--s-2);
+        padding-block: var(--s-6);
+        border-bottom: 1px solid var(--line);
+      }
+      .doc-b .step-fig {
+        grid-row: span 2;
+        aspect-ratio: 16 / 10;
+      }
+      .doc-b .step-head {
+        align-self: end;
+      }
+      .doc-b .step p {
+        font-size: var(--t-base);
+        max-width: 52ch;
+      }
+      /* FAQ in two columns */
+      .faq-b {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .block-updated {
+        padding-top: var(--s-6);
+        border-top: 1px solid var(--line);
+      }
+
+      @media (max-width: 1000px) {
+        .stage-hero {
+          grid-template-columns: minmax(0, 1fr);
+          gap: var(--s-8);
+          padding-block: var(--s-10) var(--s-12);
+        }
+        .ticks {
+          display: none;
+        }
+        .stage-hero .crumbs {
+          margin-bottom: var(--s-5);
+        }
+        .doc-b {
+          grid-template-columns: minmax(0, 1fr);
+          padding-top: var(--s-16);
+        }
+        .aside-b {
+          display: none;
+        }
+      }
+      @media (max-width: 560px) {
+        .stage-hero {
+          padding-block: var(--s-5) var(--s-8);
+          gap: var(--s-5);
+        }
+        .stage-hero h1 {
+          font-size: 2rem;
+        }
+        .stage-hero .promise {
+          font-size: var(--t-base);
+          margin-top: var(--s-3);
+        }
+        .stage-hero .crumbs {
+          margin-bottom: var(--s-3);
+        }
+        .doc-b .step {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .doc-b .step-fig {
+          grid-row: auto;
+          max-width: 260px;
+        }
+        .doc-b .content {
+          gap: var(--s-16);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{SPRITE}}
+    <div class="stage stage-top">
+      {{HEADER}}
+      <div class="wrap">
+        <section class="stage-hero">
+          <div>
+            <ol class="crumbs" aria-label="Breadcrumb">
+              <li><a href="{{home}}">Home</a></li>
+              <li><a href="#">For printing</a></li>
+              <li aria-current="page">PDF booklet</li>
+            </ol>
+            <h1>PDF Booklet Maker</h1>
+            <p class="promise">
+              Turn any PDF into a booklet you can fold and staple, with a print
+              guide for your printer. The file stays on your device.
+            </p>
+            <ul class="ticks">
+              <li>
+                <svg class="i"><use href="#device" /></svg
+                ><span
+                  ><strong>Nothing is uploaded</strong>The PDF is rearranged in
+                  this browser tab.</span
+                >
+              </li>
+              <li>
+                <svg class="i"><use href="#printer" /></svg
+                ><span
+                  ><strong>Prints right the first time</strong>A guide for
+                  printers with and without two-sided printing.</span
+                >
+              </li>
+              <li>
+                <svg class="i"><use href="#check" /></svg
+                ><span
+                  ><strong>Free, no account, no page limit</strong>Your device’s
+                  memory is the only limit.</span
+                >
+              </li>
+            </ul>
+          </div>
+          {{TOOL}}
+        </section>
+      </div>
+    </div>
+    <main id="main">
+      <div class="wrap">
+        <div class="doc-b">
+          <div class="content">{{ARTICLE}}</div>
+          <aside class="aside-b" aria-label="On this page">
+            <div>
+              <h2>On this page</h2>
+              <ol>
+                <li><a href="#how-to">How to make a booklet</a></li>
+                <li><a href="#result-example">What you get</a></li>
+                <li><a href="#printing">Printing at home</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#uses">Uses and limits</a></li>
+                <li><a href="#faq">Questions</a></li>
+                <li><a href="#related">Related tools</a></li>
+              </ol>
+            </div>
+            <div class="panel">
+              <p>
+                <strong>First booklet?</strong> Print the two-sided test sheet.
+                It takes one sheet of paper and shows which way your printer
+                turns the page.
+              </p>
+              <a class="btn btn-sm" href="#">Open the test sheet</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+    {{FOOTER}}
+    <script src="assets/plyleaf.js"></script>
+    <script>
+      (function () {
+        const links = [...document.querySelectorAll('.aside-b ol a')];
+        const map = new Map(
+          links.map((a) => [a.getAttribute('href').slice(1), a])
+        );
+        const io = new IntersectionObserver(
+          (es) => {
+            es.forEach((e) => {
+              if (e.isIntersecting) {
+                links.forEach((l) => l.removeAttribute('aria-current'));
+                map.get(e.target.id)?.setAttribute('aria-current', 'true');
+              }
+            });
+          },
+          { rootMargin: '-20% 0px -70% 0px' }
+        );
+        map.forEach((a, id) => {
+          const el = document.getElementById(id);
+          el && io.observe(el);
+        });
+      })();
+    </script>
+  </body>
+</html>
