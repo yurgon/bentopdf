@@ -62,3 +62,4 @@ bentopdf-pymupdf-wasm/
 /dist-*.zip
 /docs/.vitepress/cache/
 site-pages/
+.wrangler/
