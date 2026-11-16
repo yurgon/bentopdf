@@ -203,7 +203,7 @@ export function toolList(group, { heading = 'h2', withIcon = true } = {}) {
       ${group.tools
         .map(
           (t) =>
-            `<li data-tool><a href="/${t.slug}"><b>${esc(t.name)}</b><span>${esc(t.line)}</span></a></li>`
+            `<li data-tool><a href="/${t.slug}"${group.id === 'g-more' && t.line ? ` title="${esc(t.line)}"` : ''}><b>${esc(t.name)}</b><span>${esc(t.line)}</span></a></li>`
         )
         .join('\n      ')}
     </ul>

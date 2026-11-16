@@ -107,12 +107,42 @@ const toolLike = [...bentoPages].filter(
     !hidden.has(s) &&
     !ourSlugs.has(s)
 );
+// BentoPDF names mix "Pdf to zip", "Compress pdf to 1mb": make them read like the rest
+const SMALL = new Set([
+  'a',
+  'an',
+  'and',
+  'by',
+  'for',
+  'in',
+  'of',
+  'or',
+  'to',
+  'with',
+]);
+const tidyName = (n) =>
+  n
+    .split(' ')
+    .map((w, i) =>
+      /^pdf(\/a)?$/i.test(w)
+        ? w.toUpperCase()
+        : /^\d+(kb|mb)$/i.test(w)
+          ? w.replace(/(kb|mb)$/i, (u) => ` ${u.toUpperCase()}`)
+          : /^(txt|csv|json|xml|svg|rtf|odg|vsd|wpd|wps|bmp|cbz|png|tiff)$/i.test(
+                w
+              )
+            ? w.toUpperCase()
+            : i > 0 && SMALL.has(w.toLowerCase())
+              ? w.toLowerCase()
+              : w[0].toUpperCase() + w.slice(1)
+    )
+    .join(' ');
 const more = toolLike
   .map((slug) => {
     const t = enTools[camel(slug)] || {};
     const name =
       t.name || slug.replace(/-/g, ' ').replace(/^./, (c) => c.toUpperCase());
-    return { slug, name, line: t.subtitle || '' };
+    return { slug, name: tidyName(name), line: t.subtitle || '' };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
 const home = readJson(path.join(CONTENT, 'home.json'));

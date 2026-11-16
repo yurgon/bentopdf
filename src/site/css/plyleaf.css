@@ -1340,6 +1340,39 @@ textarea {
 .group li a:hover b {
   color: var(--accent-ink);
 }
+/* "More PDF tools": the long tail, full width after the main groups, names only in columns
+   (the one-line description stays in the markup for search and as a tooltip) */
+#g-more {
+  grid-column: 1 / -1;
+}
+#g-more ul {
+  columns: 4 210px;
+  column-gap: var(--s-10);
+}
+#g-more li {
+  break-inside: avoid;
+}
+@media (max-width: 640px) {
+  #g-more ul {
+    columns: 2;
+    column-gap: var(--s-4);
+  }
+}
+#g-more li a {
+  padding: 7px 0;
+}
+#g-more li a span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+#g-more li a b {
+  font-weight: var(--w-regular, 400);
+  font-size: var(--t-sm);
+}
 #g-print h2 .i,
 #g-read h2 .i {
   color: var(--accent-ink);
