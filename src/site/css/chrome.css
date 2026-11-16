@@ -150,15 +150,6 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.site-footer .fine {
-  grid-column: 1 / -1;
-  padding-top: var(--s-6);
-  border-top: 1px solid var(--line);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-2) var(--s-6);
-  color: var(--ink-3);
-}
 @media (max-width: 720px) {
   .site-footer .wrap {
     grid-template-columns: 1fr 1fr;

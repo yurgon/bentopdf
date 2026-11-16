@@ -106,9 +106,6 @@ export function footerBar(site) {
           <a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="#mark" /></svg>${esc(site.name)}</a>
           <p class="footer-line">${esc(site.description)}</p>
         </div>${cols}
-        <div class="fine">
-          <span>Free and open source (${esc(site.license)}), based on BentoPDF.</span>
-        </div>
       </div>
     </footer>`;
 }
