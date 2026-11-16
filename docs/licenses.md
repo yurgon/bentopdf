@@ -26,17 +26,17 @@
 
 ## Шрифты
 
-| Шрифт                                                  | Где используется                                        | Лицензия                                            |
-| ------------------------------------------------------ | ------------------------------------------------------- | --------------------------------------------------- |
-| DM Sans, Lato, Merriweather                            | Интерфейс, тексты                                       | OFL-1.1                                             |
-| Hanken Grotesk (`@fontsource/hanken-grotesk` 5.3.0)    | Шрифт сайта Plyleaf, раздаём со своего адреса           | OFL-1.1                                             |
-| Allura, Alex Brush, Sacramento, Handlee, Kalam         | Подпись в PDF.js (`public/pdfjs-viewer/standard_fonts`) | OFL-1.1 (Google Fonts)                              |
-| Cedarville Cursive, Dancing Script, Great Vibes, Kalam | Подпись, пакеты `@fontsource/*`                         | OFL-1.1                                             |
-| Liberation Sans                                        | Стандартные шрифты PDF.js                               | OFL-1.1 (файл `LICENSE_LIBERATION`)                 |
-| Foxit (pfb)                                            | Стандартные шрифты PDF.js                               | Лицензия Foxit, BSD-подобная (файл `LICENSE_FOXIT`) |
-| Noto Sans, Noto CJK, Noto Naskh Arabic                 | Текстовый слой OCR, редактор (jsDelivr, githack)        | OFL-1.1                                             |
+| Шрифт                                                                                                                                                                                                                                   | Где используется                                                     | Лицензия                                            |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
+| DM Sans, Lato, Merriweather                                                                                                                                                                                                             | Интерфейс, тексты                                                    | OFL-1.1                                             |
+| Hanken Grotesk (`@fontsource/hanken-grotesk` 5.3.0)                                                                                                                                                                                     | Шрифт сайта Plyleaf, раздаём со своего адреса                        | OFL-1.1                                             |
+| Allura, Alex Brush, Sacramento, Handlee, Kalam                                                                                                                                                                                          | Подпись в PDF.js (`public/pdfjs-viewer/standard_fonts`)              | OFL-1.1 (Google Fonts)                              |
+| Alex Brush, Allura, Cedarville Cursive, Dancing Script, Great Vibes, Herr Von Muellerhoff, Kristi, La Belle Aurore, Monsieur La Doulaise, Mrs Saint Delafield, Parisienne, Pinyon Script, Sacramento, Whisper (`@fontsource/*` 5.2–5.3) | Генератор подписи (`/signature-generator`), раздаём со своего адреса | OFL-1.1                                             |
+| Liberation Sans                                                                                                                                                                                                                         | Стандартные шрифты PDF.js                                            | OFL-1.1 (файл `LICENSE_LIBERATION`)                 |
+| Foxit (pfb)                                                                                                                                                                                                                             | Стандартные шрифты PDF.js                                            | Лицензия Foxit, BSD-подобная (файл `LICENSE_FOXIT`) |
+| Noto Sans, Noto CJK, Noto Naskh Arabic                                                                                                                                                                                                  | Текстовый слой OCR, редактор (jsDelivr, githack)                     | OFL-1.1                                             |
 
-Итого рукописных шрифтов для генератора подписи с OFL: 8. Нужно не меньше 10: добавить ещё 2–4 с OFL с Google Fonts. Кандидаты проверим на этапе подписи.
+В генераторе подписи 14 рукописных шрифтов, все с OFL-1.1 (лицензия есть в каждом пакете `@fontsource/*`). Kalam (`@fontsource/kalam`) остаётся в старом интерфейсе BentoPDF и в подписи PDF.js.
 
 Для прописей шрифтов в проекте нет. Кандидат: семейство Playwrite (Google Fonts, OFL-1.1) — школьные почерки разных стран. Пунктирные «шрифты для обводки» с сайтов шрифтов почти всегда только для личного использования, их не берём; пунктир рисуем сами по контуру.
 

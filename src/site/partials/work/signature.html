@@ -1,0 +1,294 @@
+<section class="work sig" id="tool" aria-label="Signature generator">
+  <!-- step 1: make the signature -->
+  <div class="work-body" id="sig-make">
+    <div class="sig-modes seg" role="radiogroup" aria-label="How to make it">
+      <input
+        type="radio"
+        name="mode"
+        id="mode-type"
+        value="type"
+        checked
+      /><label for="mode-type"
+        ><svg class="i i-sm" aria-hidden="true"><use href="#type" /></svg
+        >Type</label
+      >
+      <input type="radio" name="mode" id="mode-draw" value="draw" /><label
+        for="mode-draw"
+        ><svg class="i i-sm" aria-hidden="true"><use href="#pen" /></svg
+        >Draw</label
+      >
+      <input type="radio" name="mode" id="mode-photo" value="photo" /><label
+        for="mode-photo"
+        ><svg class="i i-sm" aria-hidden="true"><use href="#camera" /></svg
+        >Photo</label
+      >
+    </div>
+
+    <!-- type -->
+    <div class="sig-panel" id="panel-type">
+      <div class="field">
+        <label class="label" for="sig-name">Your name</label>
+        <input
+          class="input sig-name"
+          id="sig-name"
+          type="text"
+          autocomplete="name"
+          spellcheck="false"
+          maxlength="40"
+          value="Alex Morgan"
+        />
+      </div>
+      <fieldset class="field sig-fonts-field">
+        <legend class="label">Handwriting style</legend>
+        <div class="sig-fonts" id="sig-fonts"></div>
+      </fieldset>
+    </div>
+
+    <!-- draw -->
+    <div class="sig-panel" id="panel-draw" hidden>
+      <div class="sig-pad-wrap">
+        <canvas
+          class="sig-pad"
+          id="sig-pad"
+          aria-label="Drawing area: sign here with your finger, pen or mouse"
+        ></canvas>
+        <p class="sig-pad-hint" id="pad-hint" aria-hidden="true">Sign here</p>
+        <span class="sig-pad-line" aria-hidden="true"></span>
+      </div>
+      <div class="sig-pad-tools">
+        <button class="btn btn-sm" type="button" id="pad-undo" disabled>
+          <svg class="i i-sm" aria-hidden="true"><use href="#undo" /></svg>Undo
+        </button>
+        <button
+          class="btn btn-sm btn-ghost"
+          type="button"
+          id="pad-clear"
+          disabled
+        >
+          Clear
+        </button>
+        <span class="hint">Tip: turn your phone sideways for more room.</span>
+      </div>
+    </div>
+
+    <!-- photo -->
+    <div class="sig-panel" id="panel-photo" hidden>
+      <div class="drop" id="photo-drop" data-state="idle">
+        <input
+          type="file"
+          id="photo-input"
+          accept="image/*"
+          aria-label="Choose a photo of your signature"
+        />
+        <div class="drop-icon">
+          <svg class="i"><use href="#camera" /></svg>
+        </div>
+        <div>
+          <p class="drop-title">Photo of your signature on paper</p>
+          <p class="drop-sub">
+            Sign on white paper, take a photo in good light, then choose it
+            here. It is cleaned on this device and never uploaded.
+          </p>
+        </div>
+        <div class="drop-actions">
+          <span class="btn btn-sm" aria-hidden="true">Choose photo</span>
+        </div>
+      </div>
+      <div class="field" id="photo-tune" hidden>
+        <div class="sig-photo-row">
+          <label class="label" for="photo-level">Clean-up</label>
+          <span class="hint"
+            >Move left if lines break, right if specks remain</span
+          >
+        </div>
+        <input
+          class="range"
+          id="photo-level"
+          type="range"
+          min="-30"
+          max="30"
+          value="0"
+        />
+        <button class="btn btn-sm btn-ghost" type="button" id="photo-again">
+          Use another photo
+        </button>
+      </div>
+      <p class="drop-error" id="photo-error" role="alert" hidden></p>
+    </div>
+
+    <!-- shared settings -->
+    <div class="sig-settings">
+      <div class="field">
+        <span class="label" id="lbl-ink">Ink</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-ink">
+          <input
+            type="radio"
+            name="ink"
+            id="ink-black"
+            value="black"
+            checked
+          /><label for="ink-black"
+            ><span class="sig-dot" style="--c: #1a1a1a"></span>Black</label
+          >
+          <input type="radio" name="ink" id="ink-blue" value="blue" /><label
+            for="ink-blue"
+            ><span class="sig-dot" style="--c: #1f3a93"></span>Blue</label
+          >
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="sig-weight">Thickness</label>
+        <input
+          class="range"
+          id="sig-weight"
+          type="range"
+          min="1"
+          max="9"
+          value="4"
+        />
+      </div>
+      <div class="field">
+        <label class="label" for="sig-slant">Slant</label>
+        <input
+          class="range"
+          id="sig-slant"
+          type="range"
+          min="-20"
+          max="30"
+          value="0"
+        />
+      </div>
+    </div>
+
+    <!-- result -->
+    <div class="field">
+      <div class="preview-head">
+        <span class="label">Your signature</span>
+        <span class="hint tnum" id="sig-size">Transparent background</span>
+      </div>
+      <div class="sig-preview" id="sig-preview" aria-live="polite">
+        <canvas
+          id="sig-out"
+          role="img"
+          aria-label="Preview of your signature"
+        ></canvas>
+        <p class="sig-empty" id="sig-empty" hidden>
+          Your signature will appear here.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- step 2: sign a PDF -->
+  <div class="work-body" id="sig-sign" hidden>
+    <div class="drop" id="pdf-drop" data-state="idle">
+      <input
+        type="file"
+        id="pdf-input"
+        accept="application/pdf,.pdf"
+        aria-label="Choose a PDF to sign"
+      />
+      <div class="drop-icon">
+        <svg class="i"><use href="#upload" /></svg>
+      </div>
+      <div>
+        <p class="drop-title">Drop the PDF you want to sign</p>
+        <p class="drop-sub">or choose a file. It stays on this device.</p>
+      </div>
+      <div class="drop-actions">
+        <span class="btn btn-sm" aria-hidden="true">Choose PDF</span>
+      </div>
+      <p class="drop-error" id="pdf-error" role="alert" hidden></p>
+    </div>
+
+    <div id="placer" hidden>
+      <div class="sig-pager">
+        <button
+          class="btn btn-sm btn-ghost"
+          type="button"
+          id="page-prev"
+          aria-label="Previous page"
+        >
+          <svg class="i i-sm" aria-hidden="true" style="transform: scaleX(-1)">
+            <use href="#arrow" />
+          </svg>
+        </button>
+        <span class="tnum" id="page-label" aria-live="polite">Page 1 of 1</span>
+        <button
+          class="btn btn-sm btn-ghost"
+          type="button"
+          id="page-next"
+          aria-label="Next page"
+        >
+          <svg class="i i-sm" aria-hidden="true"><use href="#arrow" /></svg>
+        </button>
+        <span class="spacer"></span>
+        <button class="btn btn-sm" type="button" id="place-add">
+          <svg class="i i-sm" aria-hidden="true"><use href="#plus" /></svg>Add
+          to this page
+        </button>
+      </div>
+      <p class="hint" id="place-hint">
+        Drag the signature into place. Pull the corner to resize it.
+      </p>
+      <div class="sig-stage" id="sig-stage">
+        <canvas id="page-canvas" aria-label="Page preview"></canvas>
+        <div class="sig-layer" id="sig-layer"></div>
+      </div>
+    </div>
+
+    <p class="drop-error" id="sign-error" role="alert" hidden></p>
+
+    <div class="result appear" id="sign-result" hidden>
+      <div class="result-icon">
+        <svg class="i"><use href="#check" /></svg>
+      </div>
+      <p class="result-title">Signed PDF ready</p>
+      <p class="result-sub tnum" id="sign-result-sub"></p>
+      <div class="result-actions">
+        <button class="btn btn-primary" type="button" id="signed-download">
+          <svg class="i">
+            <use href="#upload" transform="rotate(180 10 10)" /></svg
+          >Download signed PDF
+        </button>
+        <button class="btn btn-ghost" type="button" id="sign-again">
+          Sign another PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="work-foot" id="foot-make">
+    <span class="privacy-note"
+      ><svg class="i"><use href="#device" /></svg>Made in your browser. Nothing
+      is uploaded or stored.</span
+    >
+    <span class="spacer"></span>
+    <div class="sig-downloads">
+      <button class="btn" type="button" id="dl-png" disabled>PNG</button>
+      <button class="btn" type="button" id="dl-png-hd" disabled>
+        PNG, large
+      </button>
+      <button class="btn" type="button" id="dl-svg" disabled>SVG</button>
+    </div>
+    <button class="btn btn-primary btn-lg" type="button" id="to-sign" disabled>
+      Sign a PDF with it
+    </button>
+  </div>
+  <div class="work-foot" id="foot-sign" hidden>
+    <button class="btn btn-ghost" type="button" id="back-make">
+      <svg class="i i-sm" aria-hidden="true" style="transform: scaleX(-1)">
+        <use href="#arrow" /></svg
+      >Change signature
+    </button>
+    <span class="spacer"></span>
+    <button
+      class="btn btn-primary btn-lg"
+      type="button"
+      id="sign-make"
+      disabled
+    >
+      Save signed PDF
+    </button>
+  </div>
+</section>

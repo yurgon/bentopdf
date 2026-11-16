@@ -1,0 +1,66 @@
+{
+  "slug": "signature-generator",
+  "mainQuery": "signature generator",
+  "title": "Signature Generator: Make a Handwritten Signature Online",
+  "description": "Type your name, draw with a finger or photograph your signature on paper. Get a transparent PNG or SVG and sign a PDF. Free, nothing is uploaded.",
+  "h1": "Signature Generator",
+  "crumb": "Signature generator",
+  "promise": "A free signature generator: type your name, draw with your finger or turn a photo of your paper signature into a clean image with a transparent background, then sign a PDF with it.",
+  "facts": ["Nothing is uploaded", "Free, no account", "PNG and SVG"],
+  "workArea": "signature",
+  "script": "/src/site/js/tools/signature.ts",
+  "app": {
+    "name": "Signature Generator",
+    "category": "DesignApplication",
+    "featureList": [
+      "Type a name in 14 handwriting fonts, all previewed at once",
+      "Draw with a finger, pen or mouse, with smoothing and undo",
+      "Clean a photo of a paper signature into a transparent image",
+      "Black or blue ink, thickness and slant",
+      "Transparent PNG in two sizes and a vector SVG",
+      "Place the signature on any page of a PDF",
+      "Runs in the browser, nothing is uploaded or stored"
+    ]
+  },
+  "outline": [
+    { "id": "how-to", "label": "How to make a signature" },
+    { "id": "result-example", "label": "What you get" },
+    { "id": "type", "label": "Type your name" },
+    { "id": "draw", "label": "Draw it" },
+    { "id": "photo", "label": "Use a photo" },
+    { "id": "sign-pdf", "label": "Sign a PDF" },
+    { "id": "how-it-works", "label": "How it works" },
+    { "id": "legal", "label": "Is it legally valid?" },
+    { "id": "uses", "label": "Uses and limits" },
+    { "id": "faq", "label": "Questions" },
+    { "id": "related", "label": "Related tools" }
+  ],
+  "related": [
+    {
+      "slug": "sign-pdf",
+      "icon": "sign",
+      "name": "Sign PDF with form fields",
+      "why": "Fill in a form and add text, dates and initials next to your signature."
+    },
+    {
+      "slug": "jpg-to-pdf",
+      "icon": "image",
+      "name": "Photos to PDF",
+      "why": "Turn photos of a paper contract into one PDF, then sign it here."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Make the signed file small enough to email or upload to a portal."
+    },
+    {
+      "slug": "protect-pdf",
+      "icon": "lock",
+      "name": "Protect PDF",
+      "why": "Add a password before you send a signed document by email."
+    }
+  ],
+  "updated": "2026-11-16",
+  "updatedNote": "Works offline once the page has loaded"
+}

@@ -261,8 +261,9 @@ for (const f of toolFiles) {
   const t = readJson(path.join(CONTENT, 'tools', f));
   const name = t.slug;
   checkMeta(name, t);
-  const section = sections[t.section];
-  if (!section) fail(name, `unknown section ${t.section}`);
+  // a tool may stand on its own (signature generator) or sit in a section
+  const section = t.section ? sections[t.section] : null;
+  if (t.section && !section) fail(name, `unknown section ${t.section}`);
   const breadcrumb = [
     homeCrumb,
     ...(section ? [{ name: section.crumb, path: `/${section.slug}` }] : []),
@@ -304,10 +305,10 @@ for (const f of toolFiles) {
     t.slug,
     { ...t, url, ogImage: ogFor(t.slug), jsonLd: ld },
     toolPage({ ...t, breadcrumb, articleHtml, workHtml }),
-    `/${t.section}`
+    t.section ? `/${t.section}` : null
   );
   checkNineBlocks(name, t, doc);
-  meta[t.slug].section = t.section;
+  meta[t.slug].section = t.section || null;
   meta[t.slug].kind = 'tool';
 }
 

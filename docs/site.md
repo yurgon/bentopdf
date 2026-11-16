@@ -5,7 +5,7 @@
 Every Plyleaf page (home, section indexes, tool pages, About, Privacy, Contact) is rendered from one template by `scripts/site/build-pages.mjs`, the first step of `npm run build`.
 
 - `src/site/site.json`: name, address, navigation, footer.
-- `src/site/content/tools/<slug>.json` + `<slug>.html`: one tool page. The JSON holds the search title and description, H1, promise line, outline, related tools and update date; the HTML holds the instructions, example result, article and questions.
+- `src/site/content/tools/<slug>.json` + `<slug>.html`: one tool page. `section` is optional: a tool without one (the signature generator) has only Home in its breadcrumbs. The JSON holds the search title and description, H1, promise line, outline, related tools and update date; the HTML holds the instructions, example result, article and questions.
 - `src/site/content/sections/*.json`: section indexes ("For printing", "For e-readers"); their tool lists come from `content/catalog.json`.
 - `src/site/content/pages/*`: About, Privacy, Contact.
 - `src/site/content/catalog.json`: the tool groups on the home page. Every BentoPDF tool page not listed there is added under "More PDF tools", so the home page links to every tool.

@@ -1,0 +1,415 @@
+/* Signature generator: work area pieces that only this tool needs.
+   Handwriting fonts (all SIL OFL 1.1, see docs/licenses.md). Each CSS file declares
+   latin and latin-ext faces with unicode-range, so the browser fetches only what a name needs. */
+@import '@fontsource/alex-brush/400.css';
+@import '@fontsource/allura/400.css';
+@import '@fontsource/cedarville-cursive/400.css';
+@import '@fontsource/dancing-script/400.css';
+@import '@fontsource/great-vibes/400.css';
+@import '@fontsource/herr-von-muellerhoff/400.css';
+@import '@fontsource/kristi/400.css';
+@import '@fontsource/la-belle-aurore/400.css';
+@import '@fontsource/monsieur-la-doulaise/400.css';
+@import '@fontsource/mrs-saint-delafield/400.css';
+@import '@fontsource/parisienne/400.css';
+@import '@fontsource/pinyon-script/400.css';
+@import '@fontsource/sacramento/400.css';
+@import '@fontsource/whisper/400.css';
+
+.sig .work-body {
+  display: grid;
+  gap: var(--s-5, 20px);
+}
+.sig-modes {
+  display: flex;
+  width: 100%;
+}
+.sig-modes label {
+  flex: 1;
+  justify-content: center;
+  min-height: 44px;
+}
+.sig-name {
+  font-size: var(--t-lg);
+}
+
+/* font choices: every style previewed at once */
+.sig-fonts-field {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.sig-fonts-field legend {
+  padding: 0;
+  margin-bottom: 6px;
+}
+.sig-fonts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+}
+.sig-font {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-height: 76px;
+  padding: 8px 12px 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md, 10px);
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.sig-font input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.sig-font:hover {
+  border-color: var(--line-strong);
+}
+.sig-font:has(input:checked) {
+  border-color: var(--accent-ink);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--accent) 45%, transparent);
+  background: var(--accent-soft);
+}
+.sig-font:has(input:focus-visible) {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+.sig-font-sample {
+  display: block;
+  width: 100%;
+  font-size: 27px;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  /* long names fade out instead of ending in an ellipsis */
+  mask-image: linear-gradient(90deg, #000 85%, transparent);
+}
+.sig-font-name {
+  font-size: var(--t-xs);
+  color: var(--ink-3);
+}
+@media (max-width: 640px) {
+  .sig-fonts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sig-font {
+    min-height: 60px;
+    padding: 6px 10px 5px;
+  }
+  .sig-font-sample {
+    font-size: 21px;
+  }
+}
+
+/* drawing pad */
+.sig-pad-wrap {
+  position: relative;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-md, 10px);
+  background: var(--bg);
+  overflow: hidden;
+}
+.sig-pad {
+  display: block;
+  width: 100%;
+  height: clamp(180px, 34vw, 260px);
+  touch-action: none;
+  cursor: crosshair;
+  position: relative;
+  z-index: 1;
+}
+.sig-pad-line {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 28%;
+  border-bottom: 1px solid var(--line-strong);
+  pointer-events: none;
+}
+.sig-pad-hint {
+  position: absolute;
+  left: 8%;
+  bottom: calc(28% + 6px);
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  pointer-events: none;
+}
+.sig-pad-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.sig-pad-tools .hint {
+  margin-left: auto;
+}
+
+.sig-photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+#photo-tune {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+#photo-tune[hidden] {
+  display: none;
+}
+
+/* settings */
+.sig-settings {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: var(--s-4, 16px);
+  align-items: start;
+}
+@media (max-width: 640px) {
+  .sig-settings {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sig-settings .field:first-child {
+    grid-column: 1 / -1;
+  }
+}
+.sig-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: inset 0 0 0 1px oklch(1 0 0 / 0.25);
+}
+
+/* range slider in the house style */
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  cursor: pointer;
+}
+.range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--line-strong);
+}
+.range::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--line-strong);
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent-ink);
+  box-shadow: var(--shadow-1);
+}
+.range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent-ink);
+  box-shadow: var(--shadow-1);
+}
+.range:focus-visible {
+  outline: none;
+}
+.range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent) 40%, transparent);
+}
+.range:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent) 40%, transparent);
+}
+
+/* preview on a checkerboard, so the transparent background is visible */
+.sig-preview {
+  --sq: color-mix(in oklch, var(--line) 70%, transparent);
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md, 10px);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(45deg, var(--sq) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--sq) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--sq) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--sq) 75%);
+  background-size: 16px 16px;
+  background-position:
+    0 0,
+    0 8px,
+    8px -8px,
+    -8px 0;
+}
+.sig-preview canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 180px;
+  height: auto;
+}
+.sig-empty {
+  margin: 0;
+  color: var(--ink-3);
+  font-size: var(--t-sm);
+}
+/* dark theme: ink stays dark on a light card, like on paper */
+:root[data-theme='dark'] .sig-preview,
+:root[data-theme='dark'] .sig-pad-wrap {
+  --sq: oklch(0.9 0.005 80);
+  background-color: oklch(0.97 0.004 80);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .sig-preview,
+  :root:not([data-theme='light']) .sig-pad-wrap {
+    --sq: oklch(0.9 0.005 80);
+    background-color: oklch(0.97 0.004 80);
+  }
+}
+
+.sig-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sig .work-foot {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media (max-width: 640px) {
+  .sig .work-foot .spacer {
+    display: none;
+  }
+  .sig .work-foot .privacy-note {
+    width: 100%;
+  }
+  .sig-downloads {
+    width: 100%;
+  }
+  .sig-downloads .btn {
+    flex: 1;
+  }
+  #to-sign,
+  #sign-make {
+    width: 100%;
+  }
+}
+
+/* signing: page with draggable signatures on top */
+.sig-pager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sig-pager .spacer {
+  flex: 1;
+}
+#placer {
+  display: grid;
+  gap: 10px;
+}
+#placer[hidden] {
+  display: none;
+}
+#place-hint {
+  margin: 0;
+}
+.sig-stage {
+  position: relative;
+  justify-self: center;
+  max-width: 100%;
+  box-shadow: var(--shadow-2);
+  border: 1px solid var(--line);
+  background: oklch(1 0 0);
+  line-height: 0;
+}
+.sig-stage canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.sig-layer {
+  position: absolute;
+  inset: 0;
+}
+.sig-item {
+  position: absolute;
+  touch-action: none;
+  cursor: grab;
+  outline: 1.5px dashed var(--accent-ink);
+  outline-offset: 2px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.sig-item:active {
+  cursor: grabbing;
+}
+.sig-item:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+}
+.sig-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.sig-handle,
+.sig-del {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: var(--shadow-1);
+  touch-action: none;
+}
+.sig-handle {
+  right: -16px;
+  bottom: -16px;
+  cursor: nwse-resize;
+}
+.sig-handle::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+.sig-del {
+  right: -16px;
+  top: -16px;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  cursor: pointer;
+}
