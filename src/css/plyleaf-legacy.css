@@ -3,6 +3,7 @@
    Plyleaf tokens gives every legacy page our light/dark theme, font and amber accent at once.
    Unlayered :root rules win over Tailwind's @layer theme, so this file can be updated independently. */
 @import '../site/css/tokens.css';
+@import '../site/css/chrome.css';
 
 :root {
   --font-sans: var(--font);
@@ -48,4 +49,10 @@ body {
 }
 .btn-gradient:hover:not(:disabled) {
   background: var(--accent-hover) !important;
+}
+
+/* tool area as wide as on our own pages (BentoPDF stretched it to the full window) */
+#tool-uploader {
+  max-width: 880px !important;
+  margin-inline: auto;
 }

@@ -2,41 +2,97 @@
   "name": "Plyleaf",
   "url": "https://plyleaf.pages.dev",
   "description": "Free PDF tools that run in your browser. Your files are never uploaded. No account, no ads, no limits.",
-  "sourceCode": "https://github.com/yurgon/bentopdf",
   "license": "AGPL-3.0",
   "statsEndpoint": "/api/e",
   "nav": [
-    { "href": "/", "label": "All tools" },
-    { "href": "/for-printing", "label": "For printing", "wide": true },
-    { "href": "/for-e-readers", "label": "For e-readers", "wide": true },
-    { "href": "/about", "label": "About", "wide": true }
+    {
+      "href": "/",
+      "label": "All tools"
+    },
+    {
+      "href": "/for-printing",
+      "label": "For printing",
+      "wide": true
+    },
+    {
+      "href": "/for-e-readers",
+      "label": "For e-readers",
+      "wide": true
+    },
+    {
+      "href": "/about",
+      "label": "About",
+      "wide": true
+    }
   ],
   "footer": [
     {
       "title": "For printing",
       "links": [
-        { "href": "/for-printing", "label": "All printing tools" },
-        { "href": "/pdf-booklet", "label": "PDF booklet" },
-        { "href": "/posterize-pdf", "label": "Poster printing" },
-        { "href": "/n-up-pdf", "label": "Several pages per sheet" }
+        {
+          "href": "/for-printing",
+          "label": "All printing tools"
+        },
+        {
+          "href": "/pdf-booklet",
+          "label": "PDF booklet"
+        },
+        {
+          "href": "/posterize-pdf",
+          "label": "Poster printing"
+        },
+        {
+          "href": "/n-up-pdf",
+          "label": "Several pages per sheet"
+        }
       ]
     },
     {
       "title": "For e-readers",
       "links": [
-        { "href": "/for-e-readers", "label": "All e-reader tools" },
-        { "href": "/epub-to-pdf", "label": "EPUB to PDF" },
-        { "href": "/mobi-to-pdf", "label": "MOBI to PDF" }
+        {
+          "href": "/for-e-readers",
+          "label": "All e-reader tools"
+        },
+        {
+          "href": "/epub-to-pdf",
+          "label": "EPUB to PDF"
+        },
+        {
+          "href": "/mobi-to-pdf",
+          "label": "MOBI to PDF"
+        }
       ]
     },
     {
       "title": "Plyleaf",
       "links": [
-        { "href": "/about", "label": "About" },
-        { "href": "/privacy", "label": "Privacy" },
-        { "href": "/contact", "label": "Contact" },
-        { "href": "https://github.com/yurgon/bentopdf", "label": "Source code" }
+        {
+          "href": "/about",
+          "label": "About"
+        },
+        {
+          "href": "/privacy",
+          "label": "Privacy"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
+        }
       ]
     }
+  ],
+  "dropBentoPages": [
+    "licensing",
+    "kura",
+    "hyper-compress",
+    "advertise",
+    "faq",
+    "terms",
+    "pdf-converter",
+    "pdf-editor",
+    "pdf-security",
+    "pdf-merge-split",
+    "blog-*"
   ]
 }

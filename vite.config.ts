@@ -550,6 +550,24 @@ function plyleafPageInputs(): Record<string, string> {
   );
 }
 
+// Plyleaf: BentoPDF pages we do not publish (product ads, licence sales, its blog and hubs),
+// listed in src/site/site.json as dropBentoPages; a trailing * matches a prefix
+function withoutDroppedPages(
+  input: Record<string, string>
+): Record<string, string> {
+  const drop: string[] =
+    JSON.parse(
+      fs.readFileSync(resolve(__dirname, 'src/site/site.json'), 'utf-8')
+    ).dropBentoPages || [];
+  const dropped = (key: string) =>
+    drop.some((d) =>
+      d.endsWith('*') ? key.startsWith(d.slice(0, -1)) : key === d
+    );
+  return Object.fromEntries(
+    Object.entries(input).filter(([key]) => !dropped(key))
+  );
+}
+
 function flattenPagesPlugin(): Plugin {
   return {
     name: 'flatten-pages',
@@ -736,7 +754,11 @@ export default defineConfig(({ command }) => {
     plugins: [
       // basicSsl(),
       handlebars({
-        partialDirectory: resolve(__dirname, 'src/partials'),
+        // Plyleaf: site-pages/partials (our header and footer) override BentoPDF's
+        partialDirectory: [
+          resolve(__dirname, 'src/partials'),
+          resolve(__dirname, 'site-pages/partials'),
+        ],
         context: {
           baseUrl: (process.env.BASE_URL || '/').replace(/\/?$/, '/'),
           docsUrl,
@@ -828,7 +850,7 @@ export default defineConfig(({ command }) => {
     },
     build: {
       rollupOptions: {
-        input: {
+        input: withoutDroppedPages({
           main:
             process.env.SIMPLE_MODE === 'true'
               ? resolve(__dirname, 'simple-index.html')
@@ -1074,7 +1096,7 @@ export default defineConfig(({ command }) => {
           ),
           // Plyleaf pages built by scripts/site/build-pages.mjs; they replace BentoPDF pages of the same name
           ...plyleafPageInputs(),
-        },
+        }),
         output: {
           assetFileNames: (assetInfo) => {
             const name = assetInfo.names?.[0] ?? '';

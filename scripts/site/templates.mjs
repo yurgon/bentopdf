@@ -60,17 +60,15 @@ export function head(site, page) {
   </head>`;
 }
 
-export function header(site, sprite, current) {
+/** The header bar alone; also used as the navbar partial on BentoPDF's pages. */
+export function headerBar(site, current, { skipLink = true } = {}) {
   const nav = site.nav
     .map(
       (n) =>
         `<a href="${n.href}"${n.wide ? ' class="nav-hide"' : ''}${n.href === current ? ' aria-current="page"' : ''}>${esc(n.label)}</a>`
     )
     .join('\n        ');
-  return `
-  <body>
-    ${sprite}
-    <a class="visually-hidden" href="#main">Skip to content</a>
+  return `${skipLink ? '\n    <a class="visually-hidden" href="#main">Skip to content</a>' : ''}
     <header class="site-header">
       <div class="wrap">
         <a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="#mark" /></svg>${esc(site.name)}</a>
@@ -82,7 +80,14 @@ export function header(site, sprite, current) {
     </header>`;
 }
 
-export function footer(site) {
+export function header(site, sprite, current) {
+  return `
+  <body>
+    ${sprite}${headerBar(site, current)}`;
+}
+
+/** The footer alone; also used as the footer partial on BentoPDF's pages. */
+export function footerBar(site) {
   const cols = site.footer
     .map(
       (c) => `
@@ -102,10 +107,14 @@ export function footer(site) {
           <p class="footer-line">${esc(site.description)}</p>
         </div>${cols}
         <div class="fine">
-          <span>Open source under ${esc(site.license)}, built on <a href="https://github.com/alam00000/bentopdf">BentoPDF</a>.</span>
+          <span>Free and open source (${esc(site.license)}), based on BentoPDF.</span>
         </div>
       </div>
-    </footer>
+    </footer>`;
+}
+
+export function footer(site) {
+  return `${footerBar(site)}
   </body>
 </html>
 `;

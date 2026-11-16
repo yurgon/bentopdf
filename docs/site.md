@@ -26,6 +26,10 @@ Our pages are English only. By the brief, a language gets search pages only afte
 
 BentoPDF's tool pages keep their markup. `src/css/plyleaf-legacy.css` remaps Tailwind's gray and indigo scales to the Plyleaf tokens, so they get the same light/dark theme, font and amber accent. Name and logo come from `VITE_BRAND_NAME` and `VITE_BRAND_LOGO` (`npm run build:plyleaf`).
 
+Header and footer: `build-pages.mjs` writes `site-pages/partials/navbar.html`, `footer.html` and `footer-compact.html` from `site.json`. `vite.config.ts` lists `site-pages/partials` after `src/partials`, so these replace BentoPDF's partials of the same name: every page has the same header, footer and 1168px width, with no GitHub, Products or BentoPDF promo links. The upload area of tool pages is capped at 880px in `plyleaf-legacy.css`.
+
+Dropped pages: `dropBentoPages` in `site.json` lists BentoPDF pages we do not publish (licensing, FAQ, terms, product promos, blog, hub pages). `vite.config.ts` removes them from the build inputs; a trailing `*` matches a prefix.
+
 ## Usage counter
 
 `src/site/js/stats.ts` sends one beacon per page view and one per finished job (`plyleaf:done` event; BentoPDF's `downloadFile()` fires it too) to `/api/e`. The Pages Function `functions/api/e.ts` adds 1 to a daily total in the D1 database `plyleaf-stats` (day, kind, tool, language). No cookies, IP addresses, user agents or identifiers.

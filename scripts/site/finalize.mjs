@@ -44,6 +44,43 @@ if (!headers.includes('/assets/*')) {
   fs.writeFileSync(headersPath, headers);
 }
 
+// BentoPDF's own pages carry its name and address in hidden metadata (tab title suffix,
+// author, site name, its X account, breadcrumb data on bentopdf.com): rewrite them to ours
+const BRAND = process.env.VITE_BRAND_NAME || '';
+if (BRAND) {
+  let rebranded = 0;
+  const pages = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) pages(p);
+      else if (e.name.endsWith('.html')) {
+        const html = fs.readFileSync(p, 'utf8');
+        const rename = (block) => block.replace(/BentoPDF/g, BRAND);
+        const out = html
+          .replace(/https:\/\/www\.bentopdf\.com/g, SITE_URL)
+          .replace(
+            /\s*<meta name="twitter:(site|creator)" content="@BentoPDF"\s*\/?>/g,
+            ''
+          )
+          // metadata and structured data only; visible credits to BentoPDF stay
+          .replace(/<head>[\s\S]*?<\/head>/, rename)
+          .replace(
+            /<script type="application\/ld\+json"[\s\S]*?<\/script>/g,
+            rename
+          );
+        if (out !== html) {
+          fs.writeFileSync(p, out);
+          rebranded++;
+        }
+      }
+    }
+  };
+  pages(DIST);
+  console.log(
+    `✔ Plyleaf finalize: ${rebranded} BentoPDF pages renamed to ${BRAND} in titles and metadata`
+  );
+}
+
 // files above Cloudflare Pages' limit are split into parts that the LibreOffice loader
 // reassembles (src/js/utils/libreoffice-loader.ts): <name>.part0…N and <name>.parts (the count)
 const PART = 24 * 1024 * 1024;

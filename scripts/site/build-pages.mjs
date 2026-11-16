@@ -11,7 +11,9 @@ import {
   esc,
   head,
   header,
+  headerBar,
   footer,
+  footerBar,
   toolPage,
   homePage,
   sectionPage,
@@ -67,6 +69,11 @@ const ourSlugs = new Set([
   'index',
   ...[...toolFiles, ...sectionFiles, ...textFiles].map((f) => f.slice(0, -5)),
 ]);
+const dropped = (slug) =>
+  (site.dropBentoPages || []).some((d) =>
+    d.endsWith('*') ? slug.startsWith(d.slice(0, -1)) : slug === d
+  );
+for (const s of [...bentoPages]) if (dropped(s)) bentoPages.delete(s);
 const known = new Set([...bentoPages, ...ourSlugs]);
 const hidden = new Set([
   '404',
@@ -392,6 +399,35 @@ page(
   '/'
 );
 meta.index.kind = 'home';
+
+// our header and footer replace BentoPDF's navbar and footer partials on its tool pages
+// (vite.config.ts registers site-pages/partials after src/partials, so these win)
+fs.mkdirSync(path.join(OUT, 'partials'), { recursive: true });
+fs.writeFileSync(
+  path.join(OUT, 'partials/navbar.html'),
+  `<script src="/plyleaf-theme.js"></script>\n${sprite}${headerBar(site, '', { skipLink: false })}\n`
+);
+fs.writeFileSync(
+  path.join(OUT, 'partials/footer.html'),
+  `${footerBar(site)}\n`
+);
+// full-screen apps (multi-tool, workflow) use a one-line footer: same links, nothing else
+const compactLinks = site.footer
+  .at(-1)
+  .links.map((l) => `<a href="${l.href}">${l.label}</a>`)
+  .join('\n    ');
+fs.writeFileSync(
+  path.join(OUT, 'partials/footer-compact.html'),
+  `{{#unless simpleMode}}
+<footer class="site-footer-compact">
+  <nav aria-label="Site links">
+    <a href="/">${site.name}</a>
+    ${compactLinks}
+  </nav>
+</footer>
+{{/unless}}
+`
+);
 
 fs.writeFileSync(
   path.join(OUT, '_meta.json'),

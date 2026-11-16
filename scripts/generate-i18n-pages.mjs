@@ -107,15 +107,10 @@ function injectOrganizationLd(document) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'BentoPDF',
+    // Plyleaf: our own name and logo, no links to BentoPDF's social accounts
+    name: process.env.VITE_BRAND_NAME || 'BentoPDF',
     url: SITE_URL,
-    logo: `${SITE_URL}/images/favicon.svg`,
-    sameAs: [
-      'https://github.com/alam00000/bentopdf',
-      'https://x.com/BentoPDF',
-      'https://www.linkedin.com/company/bentopdf/',
-      'https://www.instagram.com/thebentopdf/',
-    ],
+    logo: `${SITE_URL}/${process.env.VITE_BRAND_LOGO || 'images/favicon.svg'}`,
   };
   const script = document.createElement('script');
   script.setAttribute('type', 'application/ld+json');
