@@ -1529,3 +1529,12 @@
     background: #fff !important;
   }
 }
+
+/* Markdown editor on right-to-left pages: each line and block takes its own direction, so
+   Markdown symbols stay at the start of English lines and Arabic or Persian text reads RTL */
+.md-editor-textarea,
+.md-editor-preview
+  :is(p, h1, h2, h3, h4, h5, h6, li, td, th, blockquote, dd, dt) {
+  unicode-bidi: plaintext;
+  text-align: start;
+}
