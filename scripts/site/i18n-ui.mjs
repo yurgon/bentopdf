@@ -163,7 +163,7 @@ const PAGE_DICT_DIR = path.join(DICT_DIR, 'pages');
  * piece of its text has a translation in src/site/i18n/pages/<lang>.json; until then the copy
  * stays as before (English page text, noindex).
  */
-export const OPEN_LANGS = ['pt', 'id', 'tr', 'es', 'de', 'fr', 'vi'];
+export const OPEN_LANGS = Object.keys(UI_LANGS).filter((l) => l !== 'en');
 const META_TEXT = [
   'meta[name="description"]',
   'meta[property="og:title"]',
