@@ -90,18 +90,23 @@ function isMixed(el) {
   return text && inline;
 }
 
-/**
- * Walks the interface regions. With a dictionary, replaces what it has; always returns the
- * keys it met (so the same walk lists what needs translating).
- */
-export function walkInterface(document, dict = null) {
-  const keys = new Set();
+/** One walker for both kinds of text: records each key met and, with a dictionary, replaces it. */
+function makeVisitor(
+  keys,
+  dict,
+  { letters = hasLetters, skip = () => false } = {}
+) {
   const visit = (el) => {
-    if (SKIP.has(el.tagName) || el.getAttribute('translate') === 'no') return;
+    if (
+      SKIP.has(el.tagName) ||
+      el.getAttribute('translate') === 'no' ||
+      skip(el)
+    )
+      return;
     for (const a of ATTRS) {
       if (el.hasAttribute(`data-i18n-${a}`)) continue; // BentoPDF's locales handle it
       const v = el.getAttribute(a);
-      if (!v || !hasLetters(v)) continue;
+      if (!v || !letters(v)) continue;
       const k = norm(v);
       keys.add(k);
       if (dict && typeof dict[k] === 'string') el.setAttribute(a, dict[k]);
@@ -119,7 +124,7 @@ export function walkInterface(document, dict = null) {
     }
     for (const n of [...el.childNodes]) {
       if (n.nodeType === 1) visit(n);
-      else if (n.nodeType === 3 && hasLetters(n.textContent)) {
+      else if (n.nodeType === 3 && letters(n.textContent)) {
         const k = norm(n.textContent);
         keys.add(k);
         if (dict && typeof dict[k] === 'string') {
@@ -130,6 +135,16 @@ export function walkInterface(document, dict = null) {
       }
     }
   };
+  return visit;
+}
+
+/**
+ * Walks the interface regions. With a dictionary, replaces what it has; always returns the
+ * keys it met (so the same walk lists what needs translating).
+ */
+export function walkInterface(document, dict = null) {
+  const keys = new Set();
+  const visit = makeVisitor(keys, dict);
   const seen = new Set();
   for (const sel of REGIONS)
     for (const el of document.querySelectorAll(sel)) {
@@ -138,6 +153,113 @@ export function walkInterface(document, dict = null) {
       visit(el);
     }
   return keys;
+}
+
+// ---------- page text ----------
+
+const PAGE_DICT_DIR = path.join(DICT_DIR, 'pages');
+/**
+ * Languages whose pages may be opened to search. A page opens in one of them only when every
+ * piece of its text has a translation in src/site/i18n/pages/<lang>.json; until then the copy
+ * stays as before (English page text, noindex).
+ */
+export const OPEN_LANGS = ['pt', 'id', 'tr', 'es', 'de', 'fr', 'vi'];
+const META_TEXT = [
+  'meta[name="description"]',
+  'meta[property="og:title"]',
+  'meta[property="og:description"]',
+  'meta[property="og:image:alt"]',
+  'meta[name="twitter:title"]',
+  'meta[name="twitter:description"]',
+];
+const LD_TEXT = new Set([
+  'name',
+  'description',
+  'text',
+  'featureList',
+  'headline',
+  'browserRequirements',
+  'operatingSystem',
+]);
+// page text: anything with letters, numbered steps included
+const pageLetters = (s) => /\p{L}{2,}/u.test(s);
+
+/**
+ * Walks the page's own text: title, descriptions, structured data and <main> without the
+ * interface regions. Same contract as walkInterface.
+ */
+export function walkPage(document, dict = null, slug = '') {
+  const keys = new Set();
+  const lookup = pageLookup(dict, slug);
+  const tr = (v) => {
+    if (!v || !pageLetters(v)) return v;
+    const k = norm(v);
+    keys.add(k);
+    return lookup?.[k] ?? v;
+  };
+  const title = document.querySelector('title');
+  if (title) title.textContent = tr(title.textContent);
+  for (const sel of META_TEXT)
+    for (const m of document.querySelectorAll(sel))
+      m.setAttribute('content', tr(m.getAttribute('content')));
+  for (const s of document.querySelectorAll(
+    'script[type="application/ld+json"]'
+  )) {
+    let data;
+    try {
+      data = JSON.parse(s.textContent);
+    } catch {
+      continue;
+    }
+    const walk = (o) => {
+      if (Array.isArray(o)) return o.map(walk);
+      if (!o || typeof o !== 'object') return o;
+      for (const [k, v] of Object.entries(o)) {
+        if (LD_TEXT.has(k) && typeof v === 'string') o[k] = tr(v);
+        else if (LD_TEXT.has(k) && Array.isArray(v))
+          o[k] = v.map((x) => (typeof x === 'string' ? tr(x) : walk(x)));
+        else o[k] = walk(v);
+      }
+      return o;
+    };
+    data = walk(data);
+    if (dict) s.textContent = JSON.stringify(data).replace(/</g, '\\u003c');
+  }
+  const main = document.querySelector('main');
+  if (main)
+    makeVisitor(keys, lookup, {
+      letters: pageLetters,
+      skip: (el) => REGIONS.some((sel) => el.matches(sel)),
+    })(main);
+  return keys;
+}
+
+/**
+ * A page dictionary maps English text to its translation; `"@pages": { slug: { … } }` holds the
+ * few pieces a page translates differently (the same English word can need another gender or
+ * term on one page). Returns a plain lookup object for one page.
+ */
+function pageLookup(dict, slug) {
+  if (!dict) return null;
+  const own = dict['@pages']?.[slug];
+  return own ? { ...dict, ...own } : dict;
+}
+
+const pageDicts = {};
+export function loadPageDict(lang) {
+  if (!(lang in pageDicts)) {
+    const f = path.join(PAGE_DICT_DIR, `${lang}.json`);
+    pageDicts[lang] = fs.existsSync(f)
+      ? JSON.parse(fs.readFileSync(f, 'utf8'))
+      : null;
+  }
+  return pageDicts[lang];
+}
+
+/** The page text keys of an English page that still have no translation in `lang`. */
+export function missingPageKeys(document, lang, slug) {
+  const dict = pageLookup(loadPageDict(lang) || {}, slug);
+  return [...walkPage(document)].filter((k) => typeof dict[k] !== 'string');
 }
 
 /** Keys used by the page scripts: the English arguments of t(), tn(), tp() and tpn(). */
@@ -185,7 +307,9 @@ let jsKeys = null;
 
 /**
  * Turns an English Plyleaf page into its copy for `lang`: interface translated where a
- * dictionary exists, page text left in English, noindex, self canonical, links kept in the language.
+ * dictionary exists, self canonical, links kept in the language. Page text is translated and the
+ * copy is open to search when the page dictionary covers all of it (see OPEN_LANGS); otherwise
+ * the page text stays English and the copy is noindex.
  */
 export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
   const dom = new JSDOM(html);
@@ -194,27 +318,63 @@ export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
   const pagePath = slug === 'index' ? '' : slug;
   const url = `${siteUrl}/${lang}${pagePath ? `/${pagePath}` : ''}`;
 
+  // a page opens to search in its language only when all of its text is translated
+  const localized =
+    OPEN_LANGS.includes(lang) &&
+    !!dict &&
+    missingPageKeys(d, lang, slug).length === 0;
+
   d.documentElement.lang = lang;
   d.documentElement.dir = ['ar', 'fa'].includes(lang) ? 'rtl' : 'ltr'; // header and footer follow the language
   d.querySelector('script[data-language-redirect]')?.remove();
   const robots = d.querySelector('meta[name="robots"]');
-  if (robots) robots.setAttribute('content', 'noindex, follow');
+  if (robots && !localized) robots.setAttribute('content', 'noindex, follow');
   d.querySelector('link[rel="canonical"]')?.setAttribute('href', url);
   d.querySelector('meta[property="og:url"]')?.setAttribute('content', url);
   d.querySelector('meta[name="twitter:url"]')?.setAttribute('content', url);
   d.querySelectorAll('link[rel="alternate"][hreflang]').forEach((e) =>
     e.remove()
   );
-  // structured data describes the English page; the copy is not for search
-  d.querySelectorAll('script[type="application/ld+json"]').forEach((e) =>
-    e.remove()
-  );
-
-  // page text stays English; the working tool speaks the page's language
-  const main = d.querySelector('main');
-  main?.setAttribute('lang', 'en');
-  main?.setAttribute('dir', 'ltr');
   const rtl = ['ar', 'fa'].includes(lang);
+  const main = d.querySelector('main');
+  if (localized) {
+    // the whole page speaks the language: text, descriptions and structured data
+    walkPage(d, loadPageDict(lang), slug);
+    d.querySelector('meta[name="plyleaf:content"]')?.setAttribute(
+      'content',
+      lang
+    );
+    const own = (u) =>
+      typeof u === 'string' &&
+      u.startsWith(`${siteUrl}/`) &&
+      !/\.[a-z0-9]{2,5}$/i.test(u) &&
+      !new RegExp(`^${siteUrl}/(${languages.join('|')})(/|$)`).test(u);
+    const relink = (o) => {
+      if (Array.isArray(o)) return o.forEach(relink);
+      if (!o || typeof o !== 'object') return;
+      for (const [k, v] of Object.entries(o)) {
+        if ((k === 'url' || k === 'item') && own(v)) {
+          const rest = v.slice(siteUrl.length + 1);
+          o[k] = `${siteUrl}/${lang}${rest ? `/${rest}` : ''}`;
+        } else relink(v);
+      }
+    };
+    for (const s of d.querySelectorAll('script[type="application/ld+json"]')) {
+      const data = JSON.parse(s.textContent);
+      relink(data);
+      s.textContent = JSON.stringify(data).replace(/</g, '\\u003c');
+    }
+    main?.setAttribute('lang', lang);
+    main?.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+  } else {
+    // structured data describes the English page; the copy is not for search
+    d.querySelectorAll('script[type="application/ld+json"]').forEach((e) =>
+      e.remove()
+    );
+    // page text stays English; the working tool speaks the page's language
+    main?.setAttribute('lang', 'en');
+    main?.setAttribute('dir', 'ltr');
+  }
   for (const w of d.querySelectorAll('.work')) {
     w.setAttribute('lang', lang);
     w.setAttribute('dir', rtl ? 'rtl' : 'ltr');
@@ -265,8 +425,55 @@ export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
   return out;
 }
 
+// ---------- page text report ----------
+// `node scripts/site/i18n-ui.mjs --pages` shows, for each open language, which pages are fully
+// translated. `--export-pages <dir>` writes <dir>/<slug>.json: the English text keys of each page
+// in page order, to translate into src/site/i18n/pages/<lang>.json.
+function pageReport() {
+  const pagesDir = path.join(ROOT, 'site-pages');
+  const docs = fs
+    .readdirSync(pagesDir)
+    .filter((x) => x.endsWith('.html'))
+    .map((f) => [
+      f.replace(/\.html$/, ''),
+      new JSDOM(fs.readFileSync(path.join(pagesDir, f), 'utf8')).window
+        .document,
+    ]);
+  const exp = process.argv.indexOf('--export-pages');
+  if (exp > 0) {
+    const dir = process.argv[exp + 1];
+    fs.mkdirSync(dir, { recursive: true });
+    for (const [slug, d] of docs)
+      fs.writeFileSync(
+        path.join(dir, `${slug}.json`),
+        JSON.stringify([...walkPage(d)], null, 1) + '\n'
+      );
+    console.log(`${docs.length} pages exported to ${dir}`);
+  }
+  for (const lang of OPEN_LANGS) {
+    const missing = docs.map(([slug, d]) => [
+      slug,
+      missingPageKeys(d, lang, slug),
+    ]);
+    const done = missing.filter(([, m]) => !m.length).length;
+    const left = missing.reduce((n, [, m]) => n + m.length, 0);
+    console.log(
+      `${lang.padEnd(6)} ${done}/${docs.length} pages translated` +
+        (left ? `, ${left} pieces missing` : '')
+    );
+    if (process.argv.includes('--missing'))
+      for (const [slug, m] of missing)
+        for (const k of m) console.log(`   ${slug}: ${k}`);
+  }
+}
+
 // ---------- report: `node scripts/site/i18n-ui.mjs [--keys]` ----------
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+if (
+  process.argv[1] === fileURLToPath(import.meta.url) &&
+  (process.argv.includes('--pages') || process.argv.includes('--export-pages'))
+) {
+  pageReport();
+} else if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const pagesDir = path.join(ROOT, 'site-pages');
   const html = new Set(UNCHECKED_KEYS);
   for (const f of fs.readdirSync(pagesDir).filter((x) => x.endsWith('.html'))) {

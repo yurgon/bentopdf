@@ -4,6 +4,7 @@ import { execFileSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { OFFICIAL_SITE_URL, canonicalBasePath } from './indexing-policy.mjs';
 import { createTranslationChecker } from './page-translation.mjs';
+import { localizedPages } from './site/localized.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -44,7 +45,11 @@ const PLYLEAF_PAGES = fs.existsSync(PLYLEAF_META_PATH)
   : {};
 
 const ENGLISH_ONLY_SITEMAP = true;
+// Our pages whose language copies were translated in full: those copies are listed too, with
+// hreflang alternates (scripts/site/localized.mjs).
+const OPEN_PAGES = localizedPages(DIST_DIR);
 function alternateLangsFor(pageName) {
+  if (OPEN_PAGES[pageName]) return ['en', ...OPEN_PAGES[pageName]];
   if (ENGLISH_ONLY_SITEMAP || PLYLEAF_PAGES[pageName]) return [];
   return languages.filter((l) => isPageTranslated(pageName, l));
 }
@@ -158,30 +163,35 @@ function generateSitemap() {
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 `;
 
+  let langUrls = 0;
   for (const pageName of htmlFiles) {
     const priority = getPriority(pageName);
-    const url = buildUrl('en', pageName);
     const lastmod = getLastMod(pageName);
-
-    sitemap += `  <url>
-    <loc>${url}</loc>
+    const alts = alternateLangsFor(pageName);
+    const defaultUrl = buildUrl('en', pageName);
+    const withDefault =
+      OPEN_PAGES[pageName] ||
+      (!ENGLISH_ONLY_SITEMAP && !PLYLEAF_PAGES[pageName]);
+    // one <url> for English and one for each open language copy, all naming each other
+    for (const lang of OPEN_PAGES[pageName] ? alts : ['en']) {
+      sitemap += `  <url>
+    <loc>${buildUrl(lang, pageName)}</loc>
     <lastmod>${lastmod}</lastmod>
     <priority>${priority}</priority>
 `;
-
-    for (const altLang of alternateLangsFor(pageName)) {
-      const altUrl = buildUrl(altLang, pageName);
-      sitemap += `    <xhtml:link rel="alternate" hreflang="${altLang}" href="${altUrl}"/>
+      for (const altLang of alts) {
+        const altUrl = buildUrl(altLang, pageName);
+        sitemap += `    <xhtml:link rel="alternate" hreflang="${altLang}" href="${altUrl}"/>
 `;
+      }
+      if (withDefault) {
+        sitemap += `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultUrl}"/>
+`;
+      }
+      sitemap += `  </url>
+`;
+      if (lang !== 'en') langUrls++;
     }
-
-    const defaultUrl = buildUrl('en', pageName);
-    if (!ENGLISH_ONLY_SITEMAP && !PLYLEAF_PAGES[pageName]) {
-      sitemap += `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultUrl}"/>
-`;
-    }
-    sitemap += `  </url>
-`;
   }
 
   const blogDir = path.join(DIST_DIR, 'blog');
@@ -236,7 +246,7 @@ function generateSitemap() {
   fs.writeFileSync(publicSitemapPath, sitemap);
 
   console.log(
-    `✅ Sitemap generated with ${htmlFiles.length} canonical URLs (English only, no hreflang)`
+    `✅ Sitemap generated with ${htmlFiles.length} English URLs and ${langUrls} translated language URLs`
   );
 }
 

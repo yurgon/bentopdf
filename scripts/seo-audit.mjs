@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { localizedPages, hreflangLinks } from './site/localized.mjs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { canonicalBasePath, isIndexingBlocked } from './indexing-policy.mjs';
@@ -136,9 +137,22 @@ function expectedCanonicalForFile(rel) {
   return segments.join('/').replace(/\/+$/, '') || SITE_URL;
 }
 
+// Our pages whose language copies were translated in full: those copies are for search, and
+// they and their English page carry the same hreflang set (scripts/site/localized.mjs).
+let OPEN_PAGES = null;
+
 function auditHtml(file, knownSlugs) {
   const html = fs.readFileSync(file.full, 'utf-8');
   const isLocalized = file.rel.split('/').some((seg) => LOCALE_DIRS.has(seg));
+  OPEN_PAGES ??= localizedPages(DIST_DIR);
+  const parts = file.rel.split('/');
+  const slug = parts[parts.length - 1].replace(/\.html$/, '');
+  const openLangs = OPEN_PAGES[slug];
+  const isOpen =
+    !!openLangs &&
+    (parts.length === 1 ||
+      (parts.length === 2 && openLangs.includes(parts[0])));
+  const isClosedCopy = isLocalized && !isOpen;
 
   if (!isLocalized && /[—–]/.test(html)) {
     fail(
@@ -235,7 +249,7 @@ function auditHtml(file, knownSlugs) {
     !isIndexingBlocked() &&
     !NOINDEX_ALLOWLIST.has(file.rel) &&
     !NOINDEX_ALLOWLIST.has(path.basename(file.rel)) &&
-    !isLocalized
+    !isClosedCopy
   ) {
     fail(
       'robots',
@@ -251,8 +265,8 @@ function auditHtml(file, knownSlugs) {
     );
   }
 
-  if (isLocalized && !isIndexingBlocked() && !/noindex/i.test(robots || ''))
-    fail('robots', `${file.rel}: language page must be noindex`);
+  if (isClosedCopy && !isIndexingBlocked() && !/noindex/i.test(robots || ''))
+    fail('robots', `${file.rel}: untranslated language page must be noindex`);
 
   const aggregateRating = html.includes('"aggregateRating"');
   if (aggregateRating) {
@@ -264,10 +278,33 @@ function auditHtml(file, knownSlugs) {
       /<link[^>]+rel=["']alternate["'][^>]*hreflang=["'][^"']+["'][^>]*>/g
     ),
   ].map((m) => m[0]);
-  if (hreflangTags.length)
+  if (isOpen && !isIndexingBlocked()) {
+    const want = hreflangLinks(SITE_URL, slug, openLangs)
+      .map((l) =>
+        l
+          .match(/hreflang="([^"]+)" href="([^"]+)"/)
+          .slice(1)
+          .join(' ')
+      )
+      .sort()
+      .join('\n');
+    const have = hreflangTags
+      .map((t) => {
+        const l = t.match(/hreflang=["']([^"']+)["']/)[1];
+        const h = t.match(/href=["']([^"']+)["']/)?.[1];
+        return `${l} ${h}`;
+      })
+      .sort()
+      .join('\n');
+    if (want !== have)
+      fail(
+        'hreflang',
+        `${file.rel}: hreflang set does not match its open languages`
+      );
+  } else if (hreflangTags.length)
     fail(
       'hreflang',
-      `${file.rel}: has hreflang links (language pages are not for search yet)`
+      `${file.rel}: has hreflang links (this page is not open in other languages)`
     );
   for (const tag of hreflangTags) {
     const m = tag.match(/href=["']([^"']+)["']/);
