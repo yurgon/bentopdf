@@ -244,6 +244,9 @@ function removeFileEntry(documentId: string) {
   }
 }
 
+/** Redact PDF page: the editor opens in redaction mode (data-editor-mode on the tool area). */
+const redactMode = !!document.querySelector('[data-editor-mode="redact"]');
+
 onPageReady(initializePage);
 
 function initializePage() {
@@ -375,6 +378,13 @@ async function handleFiles(files: FileList) {
           const docId = data?.id;
           const docKey = data?.name;
           if (!docId) return;
+          // Plyleaf's Redact PDF page opens the same editor straight in redaction mode
+          if (redactMode) {
+            const cmds = registry.getPlugin('commands')?.provides() as
+              | { execute?: (id: string, documentId?: string) => void }
+              | undefined;
+            setTimeout(() => cmds?.execute?.('mode:redact', docId), 0);
+          }
           const pendingEntry = fileDisplayArea.querySelector(
             `[data-pending-name="${CSS.escape(docKey)}"]`
           ) as HTMLElement;
@@ -496,6 +506,7 @@ async function handleFiles(files: FileList) {
               console.error('Font embed pass failed:', err);
             }
           }
+          let scrubbed = false;
           const appliedTexts =
             documentId && redactionTracker
               ? redactionTracker.appliedTexts(documentId)
@@ -517,6 +528,7 @@ async function handleFiles(files: FileList) {
               if (!shouldDownload) return;
             } else {
               showLoader('Removing redacted text from document data...');
+              scrubbed = true;
               try {
                 outBytes = await scrubRedactedText(
                   outBytes,
@@ -534,10 +546,33 @@ async function handleFiles(files: FileList) {
               }
             }
           }
+          // read the finished file back and make sure no blacked-out phrase can be found
+          const terms = scrubbed ? redactionScrubTerms(appliedTexts) : [];
+          let checked: { title: string; message: string } | null = null;
+          if (terms.length > 0) {
+            showLoader('Checking the redacted file...');
+            try {
+              const { findLeftovers, checkedMessage, leftoverMessage } =
+                await import('../../site/js/tools/redact-check.js');
+              const left = await findLeftovers(new Uint8Array(outBytes), terms);
+              if (left.length > 0) {
+                const m = leftoverMessage(left);
+                hideLoader();
+                showAlert(m.title, m.message);
+                return;
+              }
+              checked = checkedMessage(terms.length);
+            } catch (err) {
+              console.error('Redaction check failed:', err);
+            } finally {
+              hideLoader();
+            }
+          }
           const blob = new Blob([new Uint8Array(outBytes)], {
             type: 'application/pdf',
           });
           downloadFile(blob, currentFileName);
+          if (checked) showAlert(checked.title, checked.message, 'success');
         } catch (err) {
           console.error('Error downloading PDF:', err);
           showAlert('Error', 'Failed to download the edited PDF.');
