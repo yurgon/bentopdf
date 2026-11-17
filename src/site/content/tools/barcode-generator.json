@@ -1,0 +1,97 @@
+{
+  "slug": "barcode-generator",
+  "section": "for-printing",
+  "mainQuery": "barcode generator",
+  "title": "Barcode Generator: Free UPC, EAN, Code 128, QR",
+  "description": "Make UPC, EAN-13, Code 128, Code 39, ITF-14 and QR barcodes with check digits. PNG, SVG, PDF, batches and label sheets. Free, no sign-up.",
+  "h1": "Barcode Generator",
+  "crumb": "Barcodes",
+  "promise": "A free barcode generator: type a number, get a UPC, EAN, Code 128, Code 39, ITF-14 or QR code with the check digit worked out, as PNG, SVG or PDF, in batches or on sheets of labels.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Check digits done for you"
+  ],
+  "workArea": "barcode",
+  "script": "/src/site/js/tools/barcode.ts",
+  "app": {
+    "name": "Barcode Generator",
+    "category": "BusinessApplication",
+    "featureList": [
+      "UPC-A, EAN-13, Code 128, Code 39, ITF-14 and QR codes",
+      "Check digit added or checked, with clear messages",
+      "Width, bar height, margin and text under the code",
+      "PNG at 300 to 1200 dpi, SVG and PDF",
+      "A list or a numbered range, as one ZIP or one PDF",
+      "Sheets of self-adhesive labels on A4 or Letter, with a test sheet"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to make a barcode"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "types",
+      "label": "Barcode types"
+    },
+    {
+      "id": "upc-ean",
+      "label": "UPC and EAN: check digits and GS1"
+    },
+    {
+      "id": "batch",
+      "label": "Many barcodes at once"
+    },
+    {
+      "id": "labels",
+      "label": "Label sheets"
+    },
+    {
+      "id": "size",
+      "label": "Size and printing"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "printer-test-page",
+      "icon": "testpage",
+      "name": "Printer test page",
+      "why": "Check alignment and scaling before printing labels."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine label sheets or product sheets into one file."
+    },
+    {
+      "slug": "n-up-pdf",
+      "icon": "grid",
+      "name": "Several pages per sheet",
+      "why": "Put several barcode pages on one sheet of paper."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

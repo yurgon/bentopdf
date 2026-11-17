@@ -1,0 +1,490 @@
+<section class="work gen" id="tool" aria-label="Barcode generator">
+  <div class="work-body">
+    <form class="gen-controls" id="gen-form">
+      <div class="field">
+        <span class="label" id="lbl-kind">Barcode type</span>
+        <div class="seg seg-wrap" role="radiogroup" aria-labelledby="lbl-kind">
+          <input type="radio" name="kind" id="k-upca" value="upca" /><label
+            for="k-upca"
+            >UPC-A</label
+          >
+          <input
+            type="radio"
+            name="kind"
+            id="k-ean13"
+            value="ean13"
+            checked
+          /><label for="k-ean13">EAN-13</label>
+          <input
+            type="radio"
+            name="kind"
+            id="k-code128"
+            value="code128"
+          /><label for="k-code128">Code 128</label>
+          <input type="radio" name="kind" id="k-code39" value="code39" /><label
+            for="k-code39"
+            >Code 39</label
+          >
+          <input type="radio" name="kind" id="k-itf14" value="itf14" /><label
+            for="k-itf14"
+            >ITF-14</label
+          >
+          <input type="radio" name="kind" id="k-qr" value="qr" /><label
+            for="k-qr"
+            >QR</label
+          >
+        </div>
+      </div>
+      <div class="field">
+        <span class="label" id="lbl-src">How many codes</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-src">
+          <input
+            type="radio"
+            name="source"
+            id="src-one"
+            value="one"
+            checked
+          /><label for="src-one">One</label>
+          <input type="radio" name="source" id="src-list" value="list" /><label
+            for="src-list"
+            >A list</label
+          >
+          <input
+            type="radio"
+            name="source"
+            id="src-range"
+            value="range"
+          /><label for="src-range">A range</label>
+        </div>
+      </div>
+      <div class="field" data-source="one">
+        <label class="label" for="value">Value</label>
+        <input
+          class="input"
+          type="text"
+          id="value"
+          name="value"
+          value="590123412345"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <span class="hint" data-kind="upca ean13 itf14"
+          >Type the number without its last digit and the check digit is added,
+          or type it in full and it is checked.</span
+        >
+      </div>
+      <div class="field" data-source="list" hidden>
+        <label class="label" for="list">Values, one per line</label>
+        <textarea
+          class="input"
+          id="list"
+          name="list"
+          rows="7"
+          spellcheck="false"
+        >
+590123412345
+400638133393
+501234567890</textarea
+        >
+        <span class="hint"
+          >Paste a column from a spreadsheet. A second column, after a tab,
+          becomes the text under that code.</span
+        >
+      </div>
+      <div class="gen-row" data-source="range" hidden>
+        <div class="field">
+          <label class="label" for="from">Start at</label>
+          <input
+            class="input"
+            type="text"
+            id="from"
+            name="from"
+            value="590123412345"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+        <div class="field">
+          <label class="label" for="count">How many</label>
+          <input
+            class="input"
+            type="number"
+            id="count"
+            name="count"
+            value="50"
+            min="1"
+            max="100000"
+            step="1"
+            inputmode="numeric"
+          />
+        </div>
+      </div>
+      <p class="gen-tip" data-source="range" hidden>
+        The last group of digits counts up: SKU-0099, SKU-0100. Each UPC, EAN or
+        ITF-14 number gets its own check digit.
+      </p>
+      <div class="gen-row">
+        <div class="field">
+          <label class="label" for="width"
+            ><span data-kind="upca ean13 code128 code39 itf14">Width, mm</span
+            ><span data-kind="qr" hidden>Size, mm</span></label
+          >
+          <input
+            class="input"
+            type="number"
+            id="width"
+            name="width"
+            value="31.4"
+            min="5"
+            max="500"
+            step="0.1"
+            inputmode="decimal"
+          />
+        </div>
+        <div class="field" data-kind="upca ean13 code128 code39 itf14">
+          <label class="label" for="height">Bar height, mm</label>
+          <input
+            class="input"
+            type="number"
+            id="height"
+            name="height"
+            value="22"
+            min="3"
+            max="300"
+            step="0.5"
+            inputmode="decimal"
+          />
+        </div>
+        <div class="field">
+          <label class="label" for="margin">Margin, mm</label>
+          <input
+            class="input"
+            type="number"
+            id="margin"
+            name="margin"
+            value=""
+            placeholder="Auto"
+            min="0"
+            max="50"
+            step="0.5"
+            inputmode="decimal"
+          />
+        </div>
+      </div>
+      <span class="hint"
+        >Auto margin leaves the blank space scanners need on each side.</span
+      >
+      <div class="field">
+        <span class="label" id="lbl-cap">Text under the code</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-cap">
+          <input
+            type="radio"
+            name="caption"
+            id="cap-num"
+            value="number"
+            checked
+          /><label for="cap-num">The value</label>
+          <input type="radio" name="caption" id="cap-text" value="text" /><label
+            for="cap-text"
+            >Value and a line</label
+          >
+          <input type="radio" name="caption" id="cap-none" value="none" /><label
+            for="cap-none"
+            >None</label
+          >
+        </div>
+      </div>
+      <div class="field" hidden>
+        <label class="label" for="captext">Line of text</label>
+        <input
+          class="input"
+          type="text"
+          id="captext"
+          name="captext"
+          value=""
+          maxlength="60"
+          placeholder="Product name or price"
+          autocomplete="off"
+        />
+      </div>
+      <label class="gen-check" data-kind="code39" hidden
+        ><input type="checkbox" name="c39check" /><span
+          >Add a check character<small
+            >Mod 43, for systems that ask for it</small
+          ></span
+        ></label
+      >
+      <label class="gen-check" data-kind="itf14" hidden
+        ><input type="checkbox" name="bearer" checked /><span
+          >Bearer bars<small
+            >The frame that protects ITF-14 codes on boxes</small
+          ></span
+        ></label
+      >
+      <div class="field" data-kind="qr" hidden>
+        <label class="label" for="eclevel">Error correction</label>
+        <select class="select" id="eclevel" name="eclevel">
+          <option value="L">Low, 7%</option>
+          <option value="M" selected>Medium, 15%</option>
+          <option value="Q">High, 25%</option>
+          <option value="H">Highest, 30%</option>
+        </select>
+      </div>
+      <div class="field">
+        <span class="label" id="lbl-layout">Result</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-layout">
+          <input
+            type="radio"
+            name="layout"
+            id="lay-codes"
+            value="codes"
+            checked
+          /><label for="lay-codes">Separate codes</label>
+          <input
+            type="radio"
+            name="layout"
+            id="lay-labels"
+            value="labels"
+          /><label for="lay-labels">Label sheet</label>
+        </div>
+      </div>
+      <div data-layout="codes">
+        <div class="field">
+          <span class="label" id="lbl-paper">Paper for printing</span>
+          <div class="seg" role="radiogroup" aria-labelledby="lbl-paper">
+            <input
+              type="radio"
+              name="paper"
+              id="paper-a4"
+              value="a4"
+              checked
+            /><label for="paper-a4">A4</label>
+            <input
+              type="radio"
+              name="paper"
+              id="paper-letter"
+              value="letter"
+            /><label for="paper-letter">Letter</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="dpi">PNG resolution</label>
+          <select class="select" id="dpi" name="dpi">
+            <option value="300" selected>300 dpi</option>
+            <option value="600">600 dpi</option>
+            <option value="1200">1200 dpi</option>
+          </select>
+        </div>
+      </div>
+      <div data-layout="labels" hidden>
+        <div class="field">
+          <label class="label" for="sheet">Label sheet</label>
+          <select class="select" id="sheet" name="sheet"></select>
+          <span class="hint"
+            >Numbers in brackets are the usual product codes of sheets with this
+            layout.</span
+          >
+        </div>
+        <div class="field" data-sheet-field>
+          <span class="label" id="lbl-lpaper">Paper</span>
+          <div class="seg" role="radiogroup" aria-labelledby="lbl-lpaper">
+            <input
+              type="radio"
+              name="lpaper"
+              id="lp-a4"
+              value="a4"
+              checked
+            /><label for="lp-a4">A4</label>
+            <input
+              type="radio"
+              name="lpaper"
+              id="lp-letter"
+              value="letter"
+            /><label for="lp-letter">Letter</label>
+          </div>
+        </div>
+        <div class="gen-row" data-sheet-field>
+          <div class="field">
+            <label class="label" for="cols">Columns</label
+            ><input
+              class="input"
+              type="number"
+              id="cols"
+              name="cols"
+              min="1"
+              max="20"
+              step="1"
+              inputmode="numeric"
+            />
+          </div>
+          <div class="field">
+            <label class="label" for="rows">Rows</label
+            ><input
+              class="input"
+              type="number"
+              id="rows"
+              name="rows"
+              min="1"
+              max="40"
+              step="1"
+              inputmode="numeric"
+            />
+          </div>
+        </div>
+        <div class="gen-row" data-sheet-field>
+          <div class="field">
+            <label class="label" for="lw">Label width, mm</label
+            ><input
+              class="input"
+              type="number"
+              id="lw"
+              name="lw"
+              min="5"
+              max="300"
+              step="0.1"
+              inputmode="decimal"
+            />
+          </div>
+          <div class="field">
+            <label class="label" for="lh">Label height, mm</label
+            ><input
+              class="input"
+              type="number"
+              id="lh"
+              name="lh"
+              min="5"
+              max="300"
+              step="0.1"
+              inputmode="decimal"
+            />
+          </div>
+        </div>
+        <div class="gen-row" data-sheet-field>
+          <div class="field">
+            <label class="label" for="top">Top margin, mm</label
+            ><input
+              class="input"
+              type="number"
+              id="top"
+              name="top"
+              min="0"
+              max="200"
+              step="0.1"
+              inputmode="decimal"
+            />
+          </div>
+          <div class="field">
+            <label class="label" for="left">Left margin, mm</label
+            ><input
+              class="input"
+              type="number"
+              id="left"
+              name="left"
+              min="0"
+              max="200"
+              step="0.1"
+              inputmode="decimal"
+            />
+          </div>
+        </div>
+        <div class="gen-row" data-sheet-field>
+          <div class="field">
+            <label class="label" for="hp">Across pitch, mm</label
+            ><input
+              class="input"
+              type="number"
+              id="hp"
+              name="hp"
+              min="5"
+              max="300"
+              step="0.01"
+              inputmode="decimal"
+            />
+          </div>
+          <div class="field">
+            <label class="label" for="vp">Down pitch, mm</label
+            ><input
+              class="input"
+              type="number"
+              id="vp"
+              name="vp"
+              min="5"
+              max="300"
+              step="0.01"
+              inputmode="decimal"
+            />
+          </div>
+        </div>
+        <span class="hint"
+          >Pitch is the distance from the edge of one label to the same edge of
+          the next, gap included.</span
+        >
+        <div class="gen-row">
+          <div class="field">
+            <label class="label" for="skip">Skip used labels</label
+            ><input
+              class="input"
+              type="number"
+              id="skip"
+              name="skip"
+              value="0"
+              min="0"
+              max="500"
+              step="1"
+              inputmode="numeric"
+            />
+          </div>
+          <div class="field">
+            <label class="label" for="copies">Copies of each code</label
+            ><input
+              class="input"
+              type="number"
+              id="copies"
+              name="copies"
+              value="1"
+              min="1"
+              max="500"
+              step="1"
+              inputmode="numeric"
+            />
+          </div>
+        </div>
+      </div>
+      <span class="hint" id="words-info" aria-live="polite"></span>
+    </form>
+    <div class="gen-stage">
+      <div class="preview-head">
+        <span class="label">Preview</span>
+        <span class="hint tnum" id="gen-sum"></span>
+      </div>
+      <p class="drop-error" id="gen-error" role="alert" hidden></p>
+      <div class="gen-pages" id="gen-pages" aria-live="polite"></div>
+      <div class="drop-actions" style="justify-content: flex-start">
+        <button class="btn btn-sm" type="button" id="test-btn" hidden>
+          <svg class="i i-sm"><use href="#i-printer" /></svg>Print a test sheet
+        </button>
+      </div>
+      <p class="gen-tip" data-layout="labels" hidden>
+        Print the test sheet on plain paper first, lay it over a label sheet and
+        hold both against the light. If the outlines sit on the labels, print
+        the real sheet at 100% scale.
+      </p>
+    </div>
+  </div>
+  <div class="work-foot">
+    <span class="privacy-note"
+      ><svg class="i"><use href="#i-device" /></svg>Made in your browser.
+      Nothing is uploaded.</span
+    >
+    <span class="spacer"></span>
+    <button class="btn" type="button" id="png-btn">PNG</button>
+    <button class="btn" type="button" id="svg-btn">SVG</button>
+    <button class="btn" type="button" id="pdf-btn">
+      <svg class="i"><use href="#i-upload" transform="rotate(180 10 10)" /></svg
+      >PDF
+    </button>
+    <button class="btn btn-primary btn-lg" type="button" id="print-btn">
+      <svg class="i"><use href="#i-printer" /></svg>Print
+    </button>
+  </div>
+</section>

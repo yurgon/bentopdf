@@ -17,6 +17,8 @@ export interface Built {
   summary: string;
   /** optional problem to show instead of the preview */
   error?: string;
+  /** what Print sends to paper, when it differs from the PDF pages */
+  printPages?: Page[];
 }
 
 export interface GenOptions {
@@ -82,7 +84,7 @@ export function mountGenerator(o: GenOptions): { refresh: () => void } {
   printBtn.addEventListener('click', async () => {
     draw();
     if (current.error) return;
-    await printPages(current.pages);
+    await printPages(current.printPages ?? current.pages);
     done('print');
   });
   pdfBtn.addEventListener('click', async () => {

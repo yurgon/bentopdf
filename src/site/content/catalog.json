@@ -24,6 +24,11 @@
           "line": "Grid, millimeter, dot, isometric and lined paper"
         },
         {
+          "slug": "barcode-generator",
+          "name": "Barcode generator",
+          "line": "UPC, EAN, Code 128, QR, batches and label sheets"
+        },
+        {
           "slug": "bingo-card-generator",
           "name": "Bingo cards",
           "line": "Sets of different cards with a caller sheet"

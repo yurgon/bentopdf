@@ -207,3 +207,7 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+/* six barcode types: three per row */
+.gen-controls .seg-wrap label {
+  flex: 1 0 30%;
+}

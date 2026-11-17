@@ -1,0 +1,391 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to make a barcode</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-accent" x="10" y="14" width="44" height="18" rx="4" />
+          <text class="f-s" x="32" y="27" text-anchor="middle">EAN-13</text>
+          <rect class="f-page" x="58" y="14" width="44" height="18" rx="4" />
+          <text class="f-s" x="80" y="27" text-anchor="middle">UPC-A</text>
+          <rect class="f-page" x="106" y="14" width="44" height="18" rx="4" />
+          <text class="f-s" x="128" y="27" text-anchor="middle">QR</text>
+          <rect class="f-page" x="10" y="40" width="140" height="20" rx="4" />
+          <text class="f-s" x="18" y="54">590123412345</text>
+          <text class="f-s" x="18" y="80">+ check digit 7</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Pick the type</h3>
+      </div>
+      <p>
+        EAN-13 or UPC-A for retail, Code 128 or Code 39 for stock and shipping,
+        ITF-14 for cartons, QR for links.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="30" y="8" width="100" height="84" rx="4" />
+          <text class="f-s" x="40" y="26">SKU-0001</text>
+          <text class="f-s" x="40" y="42">SKU-0002</text>
+          <text class="f-s" x="40" y="58">SKU-0003</text>
+          <text class="f-s" x="40" y="74">… 50</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Type the value</h3>
+      </div>
+      <p>
+        The check digit is added or checked for you. For many codes, paste a
+        list or count up from a number.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(40 18)">
+            <path
+              class="f-line"
+              style="stroke-width: 3"
+              d="M2 0v52M8 0v52M12 0v46M18 0v46M22 0v46M30 0v46M36 0v46M40 0v52M44 0v52M50 0v46M56 0v46M62 0v46M68 0v46M72 0v46M78 0v52M82 0v52"
+            />
+            <text class="f-s" x="42" y="64" text-anchor="middle">
+              5 901234 123457
+            </text>
+          </g>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Set size and text</h3>
+      </div>
+      <p>Width, bar height, margin and the line of text under the code.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="44" y="6" width="72" height="88" rx="2" />
+          <g class="f-accent">
+            <rect x="50" y="12" width="18" height="10" rx="1" />
+            <rect x="71" y="12" width="18" height="10" rx="1" />
+            <rect x="92" y="12" width="18" height="10" rx="1" />
+            <rect x="50" y="25" width="18" height="10" rx="1" />
+            <rect x="71" y="25" width="18" height="10" rx="1" />
+            <rect x="92" y="25" width="18" height="10" rx="1" />
+            <rect x="50" y="38" width="18" height="10" rx="1" />
+            <rect x="71" y="38" width="18" height="10" rx="1" />
+            <rect x="92" y="38" width="18" height="10" rx="1" />
+          </g>
+          <path class="f-line" d="M50 55h60M50 68h60M50 81h60" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Download or print labels</h3>
+      </div>
+      <p>
+        PNG, SVG or PDF, all codes in one ZIP or PDF, or a full sheet of labels.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a product number typed without its check digit"
+      >
+        <rect class="f-page" x="30" y="40" width="120" height="30" rx="4" />
+        <text class="f-s" x="40" y="60">590123412345</text>
+        <text class="f-s" x="170" y="60">A product number</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: an EAN-13 barcode with the check digit added, and a sheet of labels with one code each"
+      >
+        <g transform="translate(24 20)">
+          <path
+            class="f-line"
+            style="stroke-width: 3"
+            d="M2 0v62M8 0v62M12 0v56M18 0v56M22 0v56M30 0v56M36 0v56M40 0v62M44 0v62M50 0v56M56 0v56M62 0v56M68 0v56M72 0v56M78 0v62M82 0v62"
+          />
+          <text class="f-s" x="42" y="74" text-anchor="middle">
+            5 901234 123457
+          </text>
+        </g>
+        <g transform="translate(170 8)">
+          <rect class="f-page" width="84" height="104" rx="2" />
+          <g class="f-accent">
+            <rect x="6" y="6" width="22" height="12" rx="1" />
+            <rect x="31" y="6" width="22" height="12" rx="1" />
+            <rect x="56" y="6" width="22" height="12" rx="1" />
+            <rect x="6" y="21" width="22" height="12" rx="1" />
+            <rect x="31" y="21" width="22" height="12" rx="1" />
+            <rect x="56" y="21" width="22" height="12" rx="1" />
+            <rect x="6" y="36" width="22" height="12" rx="1" />
+            <rect x="31" y="36" width="22" height="12" rx="1" />
+            <rect x="56" y="36" width="22" height="12" rx="1" />
+            <rect x="6" y="51" width="22" height="12" rx="1" />
+            <rect x="31" y="51" width="22" height="12" rx="1" />
+            <rect x="56" y="51" width="22" height="12" rx="1" />
+          </g>
+        </g>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      This barcode generator draws UPC-A, EAN-13, Code 128, Code 39, ITF-14 and
+      QR codes from the numbers you type, works out the check digit, and saves
+      them as PNG, SVG or PDF, one at a time, in batches or on a sheet of sticky
+      labels. It is free, needs no account and runs in your browser, so your
+      product numbers are never uploaded.
+    </p>
+
+    <h2 id="types">Barcode types</h2>
+    <table class="table">
+      <caption class="visually-hidden">
+        Barcode types and their uses
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Type</th>
+          <th scope="col">Holds</th>
+          <th scope="col">Used for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>UPC-A</td>
+          <td>12 digits</td>
+          <td>Products sold in stores in the US and Canada</td>
+        </tr>
+        <tr>
+          <td>EAN-13</td>
+          <td>13 digits</td>
+          <td>Products sold in stores in most other countries, books (ISBN)</td>
+        </tr>
+        <tr>
+          <td>Code 128</td>
+          <td>Letters, digits, symbols</td>
+          <td>
+            Stock numbers, shipping labels, inventory, Amazon FNSKU style codes
+          </td>
+        </tr>
+        <tr>
+          <td>Code 39</td>
+          <td>A to Z, 0 to 9, a few symbols</td>
+          <td>Older warehouse, library and ID card systems</td>
+        </tr>
+        <tr>
+          <td>ITF-14</td>
+          <td>14 digits</td>
+          <td>Outer cartons and cases of products</td>
+        </tr>
+        <tr>
+          <td>QR code</td>
+          <td>Any text or link</td>
+          <td>Links, contact details, menus, phones</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="upc-ean">UPC and EAN: check digits and GS1</h2>
+    <p>
+      The last digit of a UPC, EAN or ITF-14 number is a check digit, worked out
+      from the others so a scanner can catch a misread. Type 11 digits for
+      UPC-A, 12 for EAN-13 or 13 for ITF-14 and the generator adds it. Type the
+      full number and it is checked: if the last digit does not match, you see
+      which digit it should be, so a typo never ends up on a thousand printed
+      labels.
+    </p>
+    <p>
+      <strong>An honest note:</strong> this generator draws the barcode for the
+      number you type. It does not issue, sell or register numbers. UPC and EAN
+      numbers for products sold in stores are issued by
+      <a href="https://www.gs1.org/standards/get-barcodes" rel="noopener">GS1</a
+      >, the organization that runs the system, through its office in your
+      country. A made-up number scans fine, but stores and marketplaces can
+      reject it because it is not registered to your company.
+    </p>
+
+    <h2 id="batch">Many barcodes at once</h2>
+    <p>
+      Choose <strong>A list</strong> and paste a column of values from Excel or
+      Google Sheets, one per line; a second column becomes the text under each
+      code, such as a product name or price. Choose <strong>A range</strong> to
+      count up from a starting value: from SKU-0001, fifty codes run to
+      SKU-0050, and from a 12-digit EAN prefix each new number gets its own
+      check digit. Every value is checked before anything is drawn, and a wrong
+      line is named with its number.
+    </p>
+    <p>
+      Download all codes as one ZIP of PNG or SVG files, named after their
+      values, or as one PDF with a page per code, ready to place in a design
+      program.
+    </p>
+
+    <h2 id="labels">Label sheets</h2>
+    <p>
+      Choose <strong>Label sheet</strong> to lay the codes out on sheets of
+      self-adhesive labels. Ready layouts cover common Letter sheets (30, 80,
+      20, 14 and 10 per sheet) and A4 sheets (65, 24, 21, 14 and 10 per sheet);
+      the codes in brackets are the product numbers most makers use for that
+      layout. Every size can be changed: columns, rows, label size, top and left
+      margins, and the pitch, the distance from one label to the next. Skip
+      labels already used on a sheet, or print several copies of each code.
+    </p>
+    <p>
+      Before using a label sheet, press <strong>Print a test sheet</strong>. It
+      prints the outline of every label on plain paper with a 100 mm line across
+      the middle. Lay it over a label sheet and hold both against the light: if
+      the outlines sit on the labels and the line measures 100 mm, the real
+      sheet will match.
+    </p>
+
+    <h2 id="size">Size and printing</h2>
+    <p>
+      A retail EAN-13 or UPC-A is normally about 37 mm (1.5 in) wide including
+      its blank margins, and can be printed from 80% to 200% of that. Smaller
+      bars are harder to scan: the tool warns when a single bar gets thinner
+      than about 0.19 mm. Keep the margin on Auto unless you have a reason not
+      to, because scanners need blank space on both sides. Print at 100% scale
+      with any fit-to-page option turned off, in black on white or a light
+      color.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      The bars are worked out with the open source barcode engine bwip-js and
+      drawn as vector shapes in your browser. The same drawing makes the
+      preview, the print, the SVG and the PDF, so every copy is sharp at any
+      size. PNG files are rendered at 300, 600 or 1200 dpi and carry their print
+      size, so they come out at the right size in other programs. Nothing is
+      sent to a server.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Labels for products, shelves and bins, stock and asset tags, shipping
+      cartons, library and ID cards, event tickets, and QR codes for menus and
+      links.
+    </p>
+    <ul>
+      <li>
+        <strong>Numbers for retail</strong> are not provided: get them from GS1
+        (see above).
+      </li>
+      <li>
+        <strong>Other types</strong> such as UPC-E, Data Matrix, PDF417 and
+        GS1-128 with application identifiers are not offered yet.
+      </li>
+      <li>
+        <strong>Thermal label printers</strong> with roll labels work through
+        the PDF, but this tool has no driver of its own for them.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        Is this barcode generator free?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Make as many barcodes as you need, in PNG, SVG or PDF, with no
+        account, no watermark and no limit on the number of codes.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Do you sell or issue UPC numbers?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No. The generator draws the code for a number you already have. UPC and
+        EAN numbers for retail products come from GS1 in your country.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What is the check digit?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        The last digit of a UPC, EAN or ITF-14 number, worked out from the
+        others. Leave it out and it is added; type it and it is checked.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Which barcode type should I use?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        UPC-A in the US and Canada and EAN-13 elsewhere for products in stores,
+        Code 128 for your own stock numbers, ITF-14 for cartons, QR for links.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I make many barcodes at once?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Paste a list or count up from a starting number, then download a
+        ZIP of images, one PDF, or label sheets.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Which label sheets does it support?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Common Letter and A4 sheets with 10 to 80 labels, and any other sheet
+        once you enter its sizes. Print the test sheet first to check the fit.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will my phone scan it?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, if it is printed at a sensible size with its blank margins. Phone
+        camera apps read QR codes, and most barcode scanner apps read all six
+        types.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my data uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. Codes are made on your device. Nothing you type is sent anywhere.
+      </div>
+    </details>
+  </div>
+</section>
