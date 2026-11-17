@@ -400,4 +400,17 @@ tool.addEventListener('change', (e) => {
   }
 });
 make.addEventListener('click', () => void makeBooklet());
+
+// the same two-sided test sheet as the printer test page, on the paper this booklet prints on
+$('duplex-test-btn').addEventListener('click', async () => {
+  const [{ duplexSheets }, { toPdf, download: save }] = await Promise.all([
+    import('../print/test-sheets'),
+    import('../print/sheet'),
+  ]);
+  const { sheet, from } = SIZES[val('size')];
+  const blob = await toPdf(duplexSheets(sheet[0], sheet[1]), {
+    title: 'Two-sided printing test',
+  });
+  save(blob, `two-sided-test-${from.toLowerCase()}.pdf`);
+});
 $('download-btn').addEventListener('click', download);

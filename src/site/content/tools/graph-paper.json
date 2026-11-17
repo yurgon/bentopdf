@@ -1,0 +1,98 @@
+{
+  "slug": "graph-paper",
+  "section": "for-printing",
+  "mainQuery": "graph paper",
+  "title": "Graph Paper: Free Printable Grid Paper Generator",
+  "description": "Make printable graph paper: 1/4 inch, 5 mm or any size, millimeter paper, dot grid, isometric or lined. Pick line color and margins, print or get a PDF.",
+  "h1": "Graph Paper Generator",
+  "crumb": "Graph paper",
+  "promise": "Printable graph paper with squares of exactly the size you choose: 1/4 inch, 5 mm, 1 cm or your own, plus millimeter paper, dot grid, isometric and lined paper. Print it now or save a PDF.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Exact square size"],
+  "workArea": "graph-paper",
+  "script": "/src/site/js/tools/graph-paper.ts",
+  "app": {
+    "name": "Graph Paper Generator",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Square grid in millimeters or inches, any size from 1 mm",
+      "Millimeter paper with bold lines every 5 and 10 mm",
+      "Dot grid, isometric and lined writing paper",
+      "Line thickness, color, margins and bold lines every N squares",
+      "A4 and Letter, portrait or landscape, print or PDF"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to make graph paper"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "sizes",
+      "label": "Common square sizes"
+    },
+    {
+      "id": "millimeter",
+      "label": "Millimeter paper"
+    },
+    {
+      "id": "options",
+      "label": "Color, thickness and margins"
+    },
+    {
+      "id": "exact",
+      "label": "Will the squares be exact?"
+    },
+    {
+      "id": "other-papers",
+      "label": "Dot grid, isometric and lined"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "printer-test-page",
+      "icon": "testpage",
+      "name": "Printer test page",
+      "why": "Check with a 100 mm ruler that your printer keeps sizes exact."
+    },
+    {
+      "slug": "name-tracing-worksheets",
+      "icon": "pen",
+      "name": "Name tracing worksheets",
+      "why": "Handwriting sheets with school ruling and a child’s name to trace."
+    },
+    {
+      "slug": "pdf-booklet",
+      "icon": "book",
+      "name": "PDF booklet",
+      "why": "Turn several pages of grid paper into a small stapled notebook."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Put grid, dot and lined pages into one file to print together."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

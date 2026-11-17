@@ -1,0 +1,97 @@
+{
+  "slug": "bingo-card-generator",
+  "section": "for-printing",
+  "mainQuery": "bingo card generator",
+  "title": "Bingo Card Generator: Free Printable Bingo Cards",
+  "description": "Make printable bingo cards with your own words, a theme or numbers 1 to 75. 3×3 to 5×5, every card different, with a caller sheet. Free, no sign-up.",
+  "h1": "Bingo Card Generator",
+  "crumb": "Bingo cards",
+  "promise": "A free bingo card generator: type your words, pick a theme or use numbers, and print a set of cards that are all different, with a caller sheet and calling cards to cut out.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Every card different"],
+  "workArea": "bingo",
+  "script": "/src/site/js/tools/bingo.ts",
+  "app": {
+    "name": "Bingo Card Generator",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Your own words, ten ready themes or classic numbers 1 to 75",
+      "3×3, 4×4 or 5×5 grids with an optional free center square",
+      "Any number of cards, all different",
+      "Caller sheet and cut-out calling cards",
+      "Title, color and text size; long words shrink and wrap to fit",
+      "1, 2 or 4 cards per page on A4 or Letter, print or PDF"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to make bingo cards"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "own-words",
+      "label": "Bingo with your own words"
+    },
+    {
+      "id": "numbers",
+      "label": "Number bingo 1 to 75"
+    },
+    {
+      "id": "grids",
+      "label": "Grid sizes and the free space"
+    },
+    {
+      "id": "unique",
+      "label": "A set of unique cards"
+    },
+    {
+      "id": "calling",
+      "label": "Caller sheet and calling cards"
+    },
+    {
+      "id": "themes",
+      "label": "Ideas for parties and classrooms"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "name-tracing-worksheets",
+      "icon": "pen",
+      "name": "Name tracing worksheets",
+      "why": "Handwriting sheets for each child in the class, from a list of names."
+    },
+    {
+      "slug": "graph-paper",
+      "icon": "grid",
+      "name": "Graph paper",
+      "why": "Printable grid, dot and lined paper for games and classwork."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine bingo cards with rules or a cover page into one file."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

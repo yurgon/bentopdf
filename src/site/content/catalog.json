@@ -14,6 +14,26 @@
           "line": "Fold-and-staple booklets with a print guide"
         },
         {
+          "slug": "printer-test-page",
+          "name": "Printer test page",
+          "line": "Black and white, color, alignment and two-sided checks"
+        },
+        {
+          "slug": "graph-paper",
+          "name": "Graph paper",
+          "line": "Grid, millimeter, dot, isometric and lined paper"
+        },
+        {
+          "slug": "bingo-card-generator",
+          "name": "Bingo cards",
+          "line": "Sets of different cards with a caller sheet"
+        },
+        {
+          "slug": "name-tracing-worksheets",
+          "name": "Name tracing worksheets",
+          "line": "Dashed letters with start dots, for a whole class"
+        },
+        {
           "slug": "posterize-pdf",
           "name": "Poster printing",
           "line": "Print one page across several sheets"

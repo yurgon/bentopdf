@@ -1,0 +1,94 @@
+{
+  "slug": "printer-test-page",
+  "section": "for-printing",
+  "mainQuery": "printer test page",
+  "title": "Printer Test Page: Color and Black and White Test Sheets",
+  "description": "Print a free printer test page: black and white, color CMYK, alignment and two-sided sheets on A4 or Letter. Find streaks and missing colors fast.",
+  "h1": "Printer Test Page",
+  "crumb": "Printer test page",
+  "promise": "A free printer test page in four sheets: black and white, color, alignment and margins, and two-sided printing. Print it straight from this page, then read the result with the guide below.",
+  "facts": ["Nothing is uploaded", "Free, no account", "A4 and Letter"],
+  "workArea": "printer-test",
+  "script": "/src/site/js/tools/printer-test.ts",
+  "app": {
+    "name": "Printer Test Page",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Black and white sheet: solid black, gray steps, line widths, small text",
+      "Color sheet: cyan, magenta, yellow and black bars, tints and a spectrum",
+      "Alignment sheet: 100 mm ruler, square grid and edge frames",
+      "Two-sided test with front and back arrows",
+      "A4 and Letter, print in one click or save as PDF"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to print a test page"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "sheets",
+      "label": "The four sheets"
+    },
+    {
+      "id": "reading",
+      "label": "How to read your test page"
+    },
+    {
+      "id": "fixes",
+      "label": "Streaks, faded or missing colors"
+    },
+    {
+      "id": "built-in",
+      "label": "The built-in test page in Windows and macOS"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-booklet",
+      "icon": "book",
+      "name": "PDF booklet",
+      "why": "Print a fold-and-staple booklet once the two-sided test comes out right."
+    },
+    {
+      "slug": "graph-paper",
+      "icon": "grid",
+      "name": "Graph paper",
+      "why": "Print grid paper with squares of an exact size, checked by the ruler on this page."
+    },
+    {
+      "slug": "pdf-to-greyscale",
+      "icon": "printer",
+      "name": "Black and white PDF",
+      "why": "Turn a color document gray to save color ink on drafts."
+    },
+    {
+      "slug": "fix-page-size",
+      "icon": "testpage",
+      "name": "Fix page size",
+      "why": "Make every page A4 or Letter so nothing is cut off at the edges."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

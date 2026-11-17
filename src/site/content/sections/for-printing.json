@@ -1,10 +1,10 @@
 {
   "slug": "for-printing",
-  "title": "PDF Tools for Printing: Booklets, Posters, Handouts",
-  "description": "Free tools to print PDFs the way you need: fold-and-staple booklets, posters across several sheets, handouts with several pages per sheet. No upload.",
+  "title": "Printable Tools: Test Page, Graph Paper, Bingo, Booklets",
+  "description": "Free printables and print tools: printer test page, graph paper, bingo cards, name tracing worksheets, PDF booklets and posters. Nothing is uploaded.",
   "h1": "PDF tools for printing",
   "crumb": "For printing",
-  "intro": "Tools that prepare a PDF for paper: arrange pages for a booklet, spread a poster over several sheets, fit more pages on one side or fix page sizes before you print. Each one runs in your browser, so the file never leaves your device.",
+  "intro": "Make something to print or get a PDF ready for paper: test your printer, print graph paper, bingo cards and name tracing worksheets, arrange pages for a booklet or spread a poster over several sheets. Everything runs in your browser, so nothing leaves your device.",
   "groupId": "g-print",
-  "updated": "2026-11-16"
+  "updated": "2026-11-17"
 }

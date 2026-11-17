@@ -30,6 +30,16 @@ Header and footer: `build-pages.mjs` writes `site-pages/partials/navbar.html`, `
 
 Dropped pages: `dropBentoPages` in `site.json` lists BentoPDF pages we do not publish (licensing, FAQ, terms, product promos, blog, hub pages). `vite.config.ts` removes them from the build inputs; a trailing `*` matches a prefix.
 
+## Printing generators
+
+The printer test page, graph paper, bingo cards and name tracing worksheets make their sheets in the browser instead of reading a file. They share three modules in `src/site/js/print/`:
+
+- `sheet.ts`: a page is a list of drawing operations (paths, rectangles, circles, text) in PDF points. The same list becomes the preview (SVG), the print (the same SVG at real size in millimetres, with an `@page` rule per sheet size) and the PDF (pdf-lib, loaded on first download). Colours written as `cmyk(...)` stay CMYK in the PDF. Text uses Liberation Sans from `public/pdfjs-viewer/standard_fonts`, measured with the same font in the preview, so what fits on screen fits on paper.
+- `gen.ts`: the work area controller: reads the form (`#gen-form`), redraws the preview on every change, Print and Download PDF buttons, the `plyleaf:done` event, and the paper default (Letter for the US, Canada, Mexico and a few others, A4 elsewhere).
+- `test-sheets.ts`: the four test sheets. `duplexSheets()` is also used by the booklet maker's "two-sided test sheet" link, on the booklet's own paper size.
+
+Tool scripts: `src/site/js/tools/printer-test.ts`, `graph-paper.ts`, `bingo.ts` (ready word lists in `print/bingo-themes.ts`; `CARD_LIMIT` caps the cards per set and is `null`, off), `tracing.ts` (letters from `print/hershey.json`, see docs/licenses.md; print letters are reordered into the stroke order children are taught). Styles: `src/site/css/print-tools.css`.
+
 ## Usage counter
 
 `src/site/js/stats.ts` sends one beacon per page view and one per finished job (`plyleaf:done` event; BentoPDF's `downloadFile()` fires it too) to `/api/e`. The Pages Function `functions/api/e.ts` adds 1 to a daily total in the D1 database `plyleaf-stats` (day, kind, tool, language). No cookies, IP addresses, user agents or identifiers.

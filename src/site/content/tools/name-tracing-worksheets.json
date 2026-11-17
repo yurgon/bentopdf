@@ -1,0 +1,97 @@
+{
+  "slug": "name-tracing-worksheets",
+  "section": "for-printing",
+  "mainQuery": "name tracing worksheets",
+  "title": "Name Tracing Worksheets: Free Printable Name Tracing",
+  "description": "Make name tracing worksheets: dashed or dotted letters, start dots and arrows, print or cursive. One file for a whole class from a list of names. Free.",
+  "h1": "Name Tracing Worksheets",
+  "crumb": "Name tracing",
+  "promise": "Make name tracing worksheets in seconds: type a name, choose print or cursive letters with start dots and arrows, and print. A list of names gives one file with a sheet for every child.",
+  "facts": [
+    "Names are not uploaded",
+    "Free, no account",
+    "Whole class in one file"
+  ],
+  "workArea": "tracing",
+  "script": "/src/site/js/tools/tracing.ts",
+  "app": {
+    "name": "Name Tracing Worksheet Maker",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Dashed or dotted letters on school ruling",
+      "Start dots, stroke numbers and direction arrows",
+      "Print and cursive letters in three sizes",
+      "Rows to trace and empty rows to write alone",
+      "A list of names makes one PDF with a sheet per name",
+      "A4 and Letter, print or PDF"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to make a name worksheet"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "letters",
+      "label": "Dotted or dashed letters, start dots and arrows"
+    },
+    {
+      "id": "cursive",
+      "label": "Print and cursive letters"
+    },
+    {
+      "id": "class",
+      "label": "Worksheets for a whole class"
+    },
+    {
+      "id": "independent",
+      "label": "Lines for writing alone"
+    },
+    {
+      "id": "tips",
+      "label": "Tips for practicing"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "graph-paper",
+      "icon": "grid",
+      "name": "Lined and graph paper",
+      "why": "Plain lined paper for writing practice once the name is learned."
+    },
+    {
+      "slug": "bingo-card-generator",
+      "icon": "grid",
+      "name": "Bingo cards",
+      "why": "Word bingo with first reading words or the names of the class."
+    },
+    {
+      "slug": "pdf-booklet",
+      "icon": "book",
+      "name": "PDF booklet",
+      "why": "Fold several practice sheets into a small booklet."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}
