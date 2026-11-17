@@ -94,5 +94,8 @@
     "pdf-security",
     "pdf-merge-split",
     "blog-*"
-  ]
+  ],
+  "verification": {
+    "google": "d9D_i74MT2G6DMvV8tGU8HoMUSg43f9kZwaPG-UfgnE"
+  }
 }

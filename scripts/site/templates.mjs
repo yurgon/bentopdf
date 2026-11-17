@@ -36,7 +36,7 @@ export function head(site, page) {
     <meta name="description" content="${esc(page.description)}" />
     <meta name="robots" content="${page.robots || 'index, follow, max-image-preview:large, max-snippet:-1'}" />
     <link rel="canonical" href="${esc(url)}" />
-    <meta name="plyleaf:content" content="en" />
+${site.verification?.google ? `    <meta name="google-site-verification" content="${esc(site.verification.google)}" />\n` : ''}    <meta name="plyleaf:content" content="en" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="${esc(site.name)}" />
     <meta property="og:url" content="${esc(url)}" />
