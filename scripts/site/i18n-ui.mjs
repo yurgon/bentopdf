@@ -34,6 +34,18 @@ export const UI_LANGS = {
   ko: '한국어',
   zh: '简体中文',
   'zh-TW': '繁體中文',
+  es: 'Español',
+  ja: '日本語',
+  nl: 'Nederlands',
+  pl: 'Polski',
+  uk: 'Українська',
+  sv: 'Svenska',
+  da: 'Dansk',
+  ca: 'Català',
+  sk: 'Slovenčina',
+  be: 'Беларуская',
+  ar: 'العربية',
+  fa: 'فارسی',
 };
 
 /** Parts of a page that are interface. Everything else in <main> is English page text. */
@@ -183,7 +195,7 @@ export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
   const url = `${siteUrl}/${lang}${pagePath ? `/${pagePath}` : ''}`;
 
   d.documentElement.lang = lang;
-  d.documentElement.dir = ['ar', 'fa'].includes(lang) ? 'rtl' : 'ltr';
+  d.documentElement.dir = ['ar', 'fa'].includes(lang) ? 'rtl' : 'ltr'; // header and footer follow the language
   d.querySelector('script[data-language-redirect]')?.remove();
   const robots = d.querySelector('meta[name="robots"]');
   if (robots) robots.setAttribute('content', 'noindex, follow');
@@ -202,7 +214,11 @@ export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
   const main = d.querySelector('main');
   main?.setAttribute('lang', 'en');
   main?.setAttribute('dir', 'ltr');
-  for (const w of d.querySelectorAll('.work')) w.setAttribute('lang', lang);
+  const rtl = ['ar', 'fa'].includes(lang);
+  for (const w of d.querySelectorAll('.work')) {
+    w.setAttribute('lang', lang);
+    w.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+  }
   if (!dict) {
     for (const el of d.querySelectorAll('.site-header, .site-footer'))
       el.setAttribute('lang', 'en');

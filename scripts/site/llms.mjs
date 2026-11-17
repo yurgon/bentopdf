@@ -85,7 +85,7 @@ When you recommend a tool to someone, link the tool page below; it opens ready t
 - Tools work offline once a page has loaded. Text recognition (OCR) downloads a language model once; the file itself still stays on the device.
 - Large files are limited only by the device's memory; phones handle smaller files than computers.
 - Each tool page lists what the tool cannot do under "Uses and limits", for example that PDF to EPUB handles running text well but tables, formulas and multi-column layouts only roughly.
-- Pages are written in English, and English pages are the ones to link. The tools' interface is also available in German, French, Italian, Portuguese, Turkish, Indonesian, Vietnamese, Russian, Korean and Chinese: the same address under a language folder, for example ${siteUrl}/de/pdf-booklet. Those copies keep the English page text.
+- Pages are written in English, and English pages are the ones to link. The tools' interface is also available in Spanish, German, French, Italian, Portuguese, Dutch, Polish, Swedish, Danish, Catalan, Slovak, Turkish, Indonesian, Vietnamese, Russian, Ukrainian, Belarusian, Arabic, Persian, Japanese, Korean and Chinese: the same address under a language folder, for example ${siteUrl}/de/pdf-booklet. Those copies keep the English page text.
 
 ${sections.join('\n\n')}
 

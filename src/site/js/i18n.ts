@@ -65,8 +65,9 @@ export function langName(code: string, english: string): string {
 }
 
 // Text drawn on printed sheets uses Liberation Sans (Latin, Cyrillic, Greek, Vietnamese).
-// Chinese, Japanese and Korean have no glyphs there, so printed text stays English for them.
-const printable = !/^(zh|ja|ko)/.test(lang);
+// Chinese, Japanese, Korean, Arabic and Persian have no glyphs there, so printed text stays
+// English for them.
+const printable = !/^(zh|ja|ko|ar|fa)/.test(lang);
 /** t() for text drawn on a printed sheet or PDF page. */
 export const tp = (en: string, v: Vars = {}) =>
   printable ? t(en, v) : fill(en, v);
