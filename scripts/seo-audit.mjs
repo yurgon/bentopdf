@@ -106,7 +106,9 @@ function isBlogPage(rel) {
   return rel.startsWith('blog/');
 }
 
-// Plyleaf pages are English only: every language copy is noindex with the English canonical
+// Plyleaf: only English pages are for search. Every /<lang>/ page is noindex with a self
+// canonical (our pages; BentoPDF's untranslated ones keep the English canonical), and no page
+// carries hreflang (scripts/apply-indexing-policy.mjs, scripts/site/i18n-ui.mjs).
 const PLYLEAF_META_PATH = path.resolve(__dirname, '../site-pages/_meta.json');
 const PLYLEAF_PAGES = fs.existsSync(PLYLEAF_META_PATH)
   ? JSON.parse(fs.readFileSync(PLYLEAF_META_PATH, 'utf-8')).pages
@@ -116,7 +118,8 @@ function expectedCanonicalForFile(rel) {
   const parts = rel.split('/');
   const fileName = parts.pop();
   const baseName = fileName.replace(/\.html$/, '');
-  if (PLYLEAF_PAGES[baseName]) parts.length = 0;
+  const ownCopy =
+    PLYLEAF_PAGES[baseName] && parts.some((d) => LOCALE_DIRS.has(d));
   const slug = baseName === 'index' ? '' : baseName;
   if (isBlogPage(rel)) {
     return `${OFFICIAL_SITE_URL}/blog${slug ? `/${slug}` : ''}`;
@@ -126,7 +129,7 @@ function expectedCanonicalForFile(rel) {
   if (canonicalBase) segments.push(canonicalBase.replace(/^\//, ''));
   for (const dir of parts) {
     if (LOCALE_DIRS.has(dir)) {
-      if (isPageTranslated(baseName, dir)) segments.push(dir);
+      if (ownCopy || isPageTranslated(baseName, dir)) segments.push(dir);
     }
   }
   if (slug) segments.push(slug);
@@ -232,7 +235,7 @@ function auditHtml(file, knownSlugs) {
     !isIndexingBlocked() &&
     !NOINDEX_ALLOWLIST.has(file.rel) &&
     !NOINDEX_ALLOWLIST.has(path.basename(file.rel)) &&
-    !(isLocalized && PLYLEAF_PAGES[path.basename(file.rel, '.html')])
+    !isLocalized
   ) {
     fail(
       'robots',
@@ -248,6 +251,9 @@ function auditHtml(file, knownSlugs) {
     );
   }
 
+  if (isLocalized && !isIndexingBlocked() && !/noindex/i.test(robots || ''))
+    fail('robots', `${file.rel}: language page must be noindex`);
+
   const aggregateRating = html.includes('"aggregateRating"');
   if (aggregateRating) {
     fail('aggregateRating', `${file.rel}: contains aggregateRating JSON-LD`);
@@ -258,6 +264,11 @@ function auditHtml(file, knownSlugs) {
       /<link[^>]+rel=["']alternate["'][^>]*hreflang=["'][^"']+["'][^>]*>/g
     ),
   ].map((m) => m[0]);
+  if (hreflangTags.length)
+    fail(
+      'hreflang',
+      `${file.rel}: has hreflang links (language pages are not for search yet)`
+    );
   for (const tag of hreflangTags) {
     const m = tag.match(/href=["']([^"']+)["']/);
     if (!m) continue;
@@ -393,7 +404,7 @@ function auditSitemap() {
     .readdirSync(LOCALES_DIR)
     .filter((d) => fs.statSync(path.join(LOCALES_DIR, d)).isDirectory());
   for (const lang of expectedLocales) {
-    if (lang === 'en') continue;
+    if (lang) continue; // Plyleaf: the sitemap is English only by design
     const hreflangPattern = new RegExp(`hreflang="${lang}"`);
     if (!hreflangPattern.test(xml)) {
       warn('sitemap', `sitemap has no hreflang entry for locale "${lang}"`);

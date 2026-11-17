@@ -10,7 +10,7 @@ import { canonicalBasePath } from './indexing-policy.mjs';
 import {
   isPlyleafPage,
   withoutLanguageRedirect,
-  writeEnglishOnlyCopy,
+  writeLanguageCopy,
 } from './site/i18n-hook.mjs';
 import { applyServerTranslations } from './server-translations.mjs';
 
@@ -526,12 +526,20 @@ async function generateI18nPages() {
   for (const file of htmlFiles) {
     const filePath = path.join(DIST_DIR, file);
     const originalContent = fs.readFileSync(filePath, 'utf-8');
-    // Plyleaf: English-only pages get noindex copies, see scripts/site/i18n-hook.mjs
+    // Plyleaf: English pages get noindex language copies, see scripts/site/i18n-hook.mjs
     if (isPlyleafPage(originalContent)) {
       fs.writeFileSync(filePath, withoutLanguageRedirect(originalContent));
       for (const lang of languages) {
         if (lang === 'en') continue;
-        writeEnglishOnlyCopy(originalContent, file, path.join(DIST_DIR, lang));
+        writeLanguageCopy(originalContent, file, path.join(DIST_DIR, lang), {
+          lang,
+          siteUrl: buildUrl('', ''),
+          languages,
+          server: {
+            apply: applyServerTranslations,
+            resources: translations[lang],
+          },
+        });
         processed++;
       }
       continue;

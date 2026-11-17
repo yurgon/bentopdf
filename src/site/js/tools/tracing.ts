@@ -18,6 +18,7 @@ import {
   type Paper,
 } from '../print/sheet';
 import HERSHEY from '../print/hershey.json';
+import { t, tn, tp } from '../i18n';
 
 presetPaper();
 
@@ -370,7 +371,7 @@ function sheet(
       x: m,
       y: hy,
       size: 11,
-      text: 'Name',
+      text: tp('Name'),
       fill: '#444444',
     });
     ops.push({
@@ -384,7 +385,7 @@ function sheet(
       x: m + usableW * 0.66,
       y: hy,
       size: 11,
-      text: 'Date',
+      text: tp('Date'),
       fill: '#444444',
     });
     ops.push({
@@ -436,14 +437,17 @@ function build(): Built {
     return {
       pages: [],
       summary: '',
-      error: 'Type a name to make a worksheet.',
+      error: t('Type a name to make a worksheet.'),
     };
   const bad = missingChars(style, names);
   if (bad.length)
     return {
       pages: [],
       summary: '',
-      error: `These letters are not in the tracing letters yet: ${bad.join(' ')}. Latin letters, including accented ones like é and ñ, work.`,
+      error: t(
+        'These letters are not in the tracing letters yet: {letters}. Latin letters, including accented ones like é and ñ, work.',
+        { letters: bad.join(' ') }
+      ),
     };
   const [W, H] = PAPER[(formVal('paper') || 'a4') as Paper];
   const capMm = SIZES[formVal('size')] ?? 24;
@@ -472,17 +476,17 @@ function build(): Built {
   }
   const fitNote =
     rows < traced + empty
-      ? ` · ${rows} rows fit at this size`
-      : ` · ${rows} rows`;
+      ? ` · ${tn(rows, '{n} row fits at this size', '{n} rows fit at this size')}`
+      : ` · ${tn(rows, '{n} row', '{n} rows')}`;
   return {
     pages,
-    summary: `${pages.length} ${pages.length === 1 ? 'sheet' : 'sheets'}${fitNote}${shrunk ? ` · ${shrunk === 1 ? 'a long name was' : `${shrunk} long names were`} made smaller to fit` : ''}`,
+    summary: `${tn(pages.length, '{n} sheet', '{n} sheets')}${fitNote}${shrunk ? ` · ${tn(shrunk, 'a long name was made smaller to fit', '{n} long names were made smaller to fit')}` : ''}`,
   };
 }
 
 mountGenerator({
   tool: 'name-tracing-worksheets',
-  title: 'Name tracing worksheets',
+  title: t('Name tracing worksheets'),
   fileName: () => {
     const first = formVal('names')
       .split(/\r?\n/)[0]

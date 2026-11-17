@@ -1,25 +1,25 @@
-// Plyleaf pages are written in English only. By the brief, a language gets pages for search only after
-// its own keyword research; until then a language copy is the English page, marked noindex, with the
-// canonical pointing to the English URL and no hreflang links. The copies exist so that links from
-// translated BentoPDF pages (/de/pdf-booklet and so on) do not lead to a 404.
+// Plyleaf pages are written in English. By the brief, a language gets pages for search only after
+// its own keyword research; until then a language copy keeps the English page text, translates
+// the interface where we have a dictionary (scripts/site/i18n-ui.mjs), and is noindex with a
+// self canonical and no hreflang. Copies also keep links from translated BentoPDF pages
+// (/de/pdf-booklet and so on) from leading to a 404.
 import fs from 'node:fs';
 import path from 'node:path';
+import { languageCopy } from './i18n-ui.mjs';
 
 const MARK = /<meta\s+name="plyleaf:content"\s+content="en"\s*\/?>/i;
-const ROBOTS = /<meta\s+name="robots"[^>]*>/i;
-
 const REDIRECT = /<script[^>]*data-language-redirect[^>]*><\/script>\s*/i;
 
 export const isPlyleafPage = (html) => MARK.test(html);
 
-// No automatic jump to a language copy: until a language has its own pages, the copy is the same English page.
+// No automatic jump to a language copy: the visitor picks a language in the footer.
 export const withoutLanguageRedirect = (html) => html.replace(REDIRECT, '');
 
-export function writeEnglishOnlyCopy(html, file, langDir) {
-  const out = withoutLanguageRedirect(html).replace(
-    ROBOTS,
-    '<meta name="robots" content="noindex, follow" />'
-  );
+export function writeLanguageCopy(html, file, langDir, opts) {
+  const out = languageCopy(withoutLanguageRedirect(html), {
+    ...opts,
+    slug: file.replace(/\.html$/, ''),
+  });
   fs.mkdirSync(langDir, { recursive: true });
   fs.writeFileSync(path.join(langDir, file), out);
 }

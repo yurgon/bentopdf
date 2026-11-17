@@ -34,14 +34,18 @@ for (const lang of languages) {
 
 const isPageTranslated = createTranslationChecker(toolsByLang, toCamelCase);
 
-// Plyleaf pages: English only (no alternates), last change date from their content file
+// Plyleaf: the sitemap lists English pages only. By the brief, other languages get pages for
+// search only after their own keyword research; until then every /<lang>/ page is noindex
+// (scripts/apply-indexing-policy.mjs), so no hreflang alternates point at them.
+// Last change date of our pages comes from their content file.
 const PLYLEAF_META_PATH = path.resolve(__dirname, '../site-pages/_meta.json');
 const PLYLEAF_PAGES = fs.existsSync(PLYLEAF_META_PATH)
   ? JSON.parse(fs.readFileSync(PLYLEAF_META_PATH, 'utf-8')).pages
   : {};
 
+const ENGLISH_ONLY_SITEMAP = true;
 function alternateLangsFor(pageName) {
-  if (PLYLEAF_PAGES[pageName]) return [];
+  if (ENGLISH_ONLY_SITEMAP || PLYLEAF_PAGES[pageName]) return [];
   return languages.filter((l) => isPageTranslated(pageName, l));
 }
 
@@ -172,7 +176,7 @@ function generateSitemap() {
     }
 
     const defaultUrl = buildUrl('en', pageName);
-    if (!PLYLEAF_PAGES[pageName]) {
+    if (!ENGLISH_ONLY_SITEMAP && !PLYLEAF_PAGES[pageName]) {
       sitemap += `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultUrl}"/>
 `;
     }
@@ -232,7 +236,7 @@ function generateSitemap() {
   fs.writeFileSync(publicSitemapPath, sitemap);
 
   console.log(
-    `✅ Sitemap generated with ${htmlFiles.length} canonical URLs (${languages.length} hreflang alternates each)`
+    `✅ Sitemap generated with ${htmlFiles.length} canonical URLs (English only, no hreflang)`
   );
 }
 

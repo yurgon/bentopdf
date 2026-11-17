@@ -15,8 +15,33 @@ function listHtml(dir) {
   });
 }
 
+// Language folders (/de/, /fr/, …): interface translations only, no pages researched for search
+// in that language yet, so they stay out of the index and nothing points at them with hreflang.
+const LANGS = new Set(
+  fs
+    .readdirSync(path.resolve(__dirname, '../public/locales'))
+    .filter((d) => d !== 'en')
+);
+const HREFLANG = /[ \t]*<link\s+rel=["']alternate["'][^>]*hreflang=[^>]*>\s*/gi;
+
 if (!isIndexingBlocked()) {
-  console.log('Indexing policy: search engines may index this build.');
+  let langPages = 0;
+  for (const file of listHtml(DIST_DIR)) {
+    const rel = path.relative(DIST_DIR, file).split(path.sep);
+    const html = fs.readFileSync(file, 'utf-8');
+    let next = html.replace(HREFLANG, '');
+    if (rel.length > 1 && LANGS.has(rel[0])) {
+      const robots = /<meta\s+name=["']robots["'][^>]*>/i;
+      next = robots.test(next)
+        ? next.replace(robots, NOINDEX_META)
+        : next.replace(/<\/head>/i, `  ${NOINDEX_META}\n  </head>`);
+      langPages++;
+    }
+    if (next !== html) fs.writeFileSync(file, next);
+  }
+  console.log(
+    `Indexing policy: English pages may be indexed; ${langPages} language pages are noindex, hreflang removed.`
+  );
 } else {
   let updated = 0;
   for (const file of listHtml(DIST_DIR)) {

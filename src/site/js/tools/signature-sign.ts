@@ -3,6 +3,7 @@
 // (corner handle, or + and − keys) and removed. Saving stamps the PNG onto each chosen
 // spot with pdf-lib, so the result looks the same in every PDF reader.
 import type { PDFDocumentProxy, PageViewport } from 'pdfjs-dist';
+import { href, t, tn } from '../i18n';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
@@ -87,7 +88,7 @@ async function takePdf(file: File | undefined): Promise<void> {
   pdfErr.hidden = true;
   err.hidden = true;
   if (file.type !== 'application/pdf' && !/\.pdf$/i.test(file.name)) {
-    showError('That is not a PDF. Choose a .pdf file.', pdfErr);
+    showError(t('That is not a PDF. Choose a .pdf file.'), pdfErr);
     return;
   }
   try {
@@ -100,8 +101,11 @@ async function takePdf(file: File | undefined): Promise<void> {
     const locked = (e as { name?: string })?.name === 'PasswordException';
     showError(
       locked
-        ? 'This PDF is protected with a password. <a href="/unlock-pdf">Unlock it</a> first, then sign it here.'
-        : 'This file could not be opened as a PDF. It may be damaged.',
+        ? t(
+            'This PDF is protected with a password. <a href="{link}">Unlock it</a> first, then sign it here.',
+            { link: href('/unlock-pdf') }
+          )
+        : t('This file could not be opened as a PDF. It may be damaged.'),
       pdfErr
     );
     return;
@@ -137,7 +141,10 @@ async function showPage(n: number): Promise<void> {
   ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
   await page.render({ canvasContext: ctx, viewport: view, canvas: pageCanvas })
     .promise;
-  $('page-label').textContent = `Page ${pageNo + 1} of ${pageCount}`;
+  $('page-label').textContent = t('Page {a} of {b}', {
+    a: pageNo + 1,
+    b: pageCount,
+  });
   $<HTMLButtonElement>('page-prev').disabled = pageNo === 0;
   $<HTMLButtonElement>('page-next').disabled = pageNo === pageCount - 1;
   drawSpots();
@@ -182,9 +189,11 @@ function drawSpots(): void {
       el.setAttribute('role', 'group');
       el.setAttribute(
         'aria-label',
-        'Signature. Drag or use arrow keys to move, plus and minus to resize, Delete to remove.'
+        t(
+          'Signature. Drag or use arrow keys to move, plus and minus to resize, Delete to remove.'
+        )
       );
-      el.innerHTML = `<img src="${pngUrl}" alt="" /><span class="sig-handle" aria-hidden="true"></span><button type="button" class="sig-del" aria-label="Remove this signature"><svg class="i i-sm" aria-hidden="true"><use href="#i-x" /></svg></button>`;
+      el.innerHTML = `<img src="${pngUrl}" alt="" /><span class="sig-handle" aria-hidden="true"></span><button type="button" class="sig-del" aria-label="${t('Remove this signature')}"><svg class="i i-sm" aria-hidden="true"><use href="#i-x" /></svg></button>`;
       place(el, s);
       layer.append(el);
 
@@ -254,8 +263,12 @@ function drawSpots(): void {
     });
   const total = spots.length;
   $('place-hint').textContent = total
-    ? `${total === 1 ? '1 signature' : `${total} signatures`} placed. Drag to move, pull the corner to resize.`
-    : 'No signature placed yet. Use “Add to this page”.';
+    ? tn(
+        total,
+        '{n} signature placed. Drag to move, pull the corner to resize.',
+        '{n} signatures placed. Drag to move, pull the corner to resize.'
+      )
+    : t('No signature placed yet. Use “Add to this page”.');
   saveBtn.disabled = total === 0;
 }
 
@@ -269,7 +282,7 @@ async function saveSigned(): Promise<void> {
   if (!pdf || !bytes || !png || !spots.length) return;
   err.hidden = true;
   saveBtn.disabled = true;
-  saveBtn.textContent = 'Saving…';
+  saveBtn.textContent = t('Saving…');
   try {
     const { PDFDocument, degrees } = await import('pdf-lib');
     const doc = await PDFDocument.load(bytes);
@@ -299,8 +312,13 @@ async function saveSigned(): Promise<void> {
       name,
     };
     const pages = new Set(spots.map((s) => s.page + 1));
-    $('sign-result-sub').textContent =
-      `${name} · signed on ${pages.size === 1 ? `page ${[...pages][0]}` : `pages ${[...pages].sort((a, b) => a - b).join(', ')}`}`;
+    $('sign-result-sub').textContent = `${name} · ${
+      pages.size === 1
+        ? t('signed on page {p}', { p: [...pages][0] })
+        : t('signed on pages {p}', {
+            p: [...pages].sort((a, b) => a - b).join(', '),
+          })
+    }`;
     result.hidden = false;
     $('signed-download').focus({ preventScroll: true });
     result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -309,11 +327,16 @@ async function saveSigned(): Promise<void> {
     const locked = /encrypt/i.test(String(e));
     showError(
       locked
-        ? 'This PDF has editing restrictions, so a signature cannot be added. <a href="/unlock-pdf">Remove them</a> first.'
-        : 'Could not save the signed PDF. Try again, or tell us at hello@yurgon.app.'
+        ? t(
+            'This PDF has editing restrictions, so a signature cannot be added. <a href="{link}">Remove them</a> first.',
+            { link: href('/unlock-pdf') }
+          )
+        : t(
+            'Could not save the signed PDF. Try again, or tell us at hello@yurgon.app.'
+          )
     );
   } finally {
-    saveBtn.textContent = 'Save signed PDF';
+    saveBtn.textContent = t('Save signed PDF');
     saveBtn.disabled = spots.length === 0;
   }
 }

@@ -20,6 +20,7 @@ import {
   type Paper,
 } from '../print/sheet';
 import { THEMES } from '../print/bingo-themes';
+import { t, tn, tp, tpn } from '../i18n';
 
 /** Most cards in one set. null = no limit (the brief keeps the switch, turned off). */
 const CARD_LIMIT: number | null = null;
@@ -29,7 +30,7 @@ presetPaper();
 const form = document.getElementById('gen-form') as HTMLFormElement;
 const themeSel = form.querySelector<HTMLSelectElement>('select[name="theme"]')!;
 themeSel.innerHTML = Object.entries(THEMES)
-  .map(([k, t]) => `<option value="${k}">${t.name}</option>`)
+  .map(([k, th]) => `<option value="${k}">${th.name}</option>`)
   .join('');
 const wordsInfo = document.getElementById('words-info')!;
 const freeBox = form.querySelector<HTMLInputElement>('input[name="free"]')!;
@@ -55,8 +56,17 @@ function syncControls(): void {
     const need = cellsNeeded(size);
     wordsInfo.textContent =
       n >= need
-        ? `${n} ${n === 1 ? 'word' : 'words'}. Each card uses ${need}.`
-        : `${n} of at least ${need} words for a ${size}×${size} card.`;
+        ? tn(
+            n,
+            '{n} word. Each card uses {need}.',
+            '{n} words. Each card uses {need}.',
+            { need }
+          )
+        : t('{n} of at least {need} words for a {size}×{size} card.', {
+            n,
+            need,
+            size,
+          });
   }
 }
 form.addEventListener('input', syncControls, true);
@@ -115,7 +125,10 @@ function makeCards(
   let tries = 0;
   while (cards.length < count) {
     if (++tries > count * 200 + 1000)
-      return `Only ${cards.length} different cards are possible with these settings. Add more words or make fewer cards.`;
+      return t(
+        'Only {n} different cards are possible with these settings. Add more words or make fewer cards.',
+        { n: cards.length }
+      );
     let items: string[];
     if (pool) items = shuffle(pool.slice(), r).slice(0, need);
     else {
@@ -309,7 +322,7 @@ function drawCard(
     x: x0 + gw,
     y: gy + gw + footH * 0.95,
     size: Math.min(9, footH * 0.8),
-    text: `Card ${no} of ${total}`,
+    text: tp('Card {a} of {b}', { a: no, b: total }),
     fill: '#6b6b6b',
     anchor: 'end',
   });
@@ -357,7 +370,7 @@ function callerSheets(
       x: m,
       y: m + 14,
       size: 17,
-      text: `Caller sheet${cont ? ' (continued)' : ''}`,
+      text: cont ? tp('Caller sheet (continued)') : tp('Caller sheet'),
       bold: true,
       fill: s.color,
     });
@@ -366,7 +379,11 @@ function callerSheets(
       x: m,
       y: m + 30,
       size: 9,
-      text: `${s.title || 'BINGO'} · ${pool.length} ${numbers ? 'numbers' : 'words'} · tick each one as you call it`,
+      text: `${s.title || 'BINGO'} · ${
+        numbers
+          ? tpn(pool.length, '{n} number', '{n} numbers')
+          : tpn(pool.length, '{n} word', '{n} words')
+      } · ${tp('tick each one as you call it')}`,
       fill: '#555555',
     });
   };
@@ -519,7 +536,10 @@ function build(): Built {
     return {
       pages: [],
       summary: '',
-      error: `A ${size}×${size} card needs ${need} different words. Add ${need - pool.length} more, one per line.`,
+      error: t(
+        'A {size}×{size} card needs {need} different words. Add {more} more, one per line.',
+        { size, need, more: need - pool.length }
+      ),
     };
   const cards = makeCards(count, size, free, pool, rng(seed));
   if (typeof cards === 'string')
@@ -544,7 +564,7 @@ function build(): Built {
   if (formOn('caller')) {
     const cs = callerSheets(W, H, all, style, numbers);
     pages.push(...cs);
-    extra += ` + caller sheet`;
+    extra += ` + ${t('caller sheet')}`;
   }
   if (formOn('calls')) {
     const labels =
@@ -553,18 +573,18 @@ function build(): Built {
         : all;
     const cc = callingCards(W, H, labels, style);
     pages.push(...cc);
-    extra += ` + ${cc.length} ${cc.length === 1 ? 'page' : 'pages'} of calling cards`;
+    extra += ` + ${tn(cc.length, '{n} page of calling cards', '{n} pages of calling cards')}`;
   }
   return {
     pages,
-    summary: `${cards.length} ${cards.length === 1 ? 'card' : 'cards'} on ${cardPages} ${cardPages === 1 ? 'page' : 'pages'}${extra}`,
+    summary: `${tn(cards.length, '{n} card', '{n} cards')} · ${tn(cardPages, '{n} page', '{n} pages')}${extra}`,
   };
 }
 
 syncControls();
 const gen = mountGenerator({
   tool: 'bingo-card-generator',
-  title: 'Bingo cards',
+  title: t('Bingo cards'),
   fileName: () => `bingo-cards-${formVal('size')}x${formVal('size')}.pdf`,
   previewMax: 4,
   build,

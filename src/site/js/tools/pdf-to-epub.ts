@@ -6,6 +6,7 @@ import type { PDFDocumentProxy } from 'pdfjs-dist';
 import type { Book, Extracted, Picture, StructureOptions } from '../epub/model';
 import type { Progress } from '../epub/extract';
 import { OCR_LANGS } from '../epub/ocr';
+import { href, langName, t, tn } from '../i18n';
 
 type Extract = typeof import('../epub/extract');
 type Structure = typeof import('../epub/structure');
@@ -53,8 +54,6 @@ let stopOcr: (() => Promise<void>) | null = null;
 let shownChapter = 0;
 const picUrls = new Map<Picture, string>();
 
-const plural = (n: number, one: string, many: string) =>
-  `${n.toLocaleString('en-US')} ${n === 1 ? one : many}`;
 const fmtSize = (b: number) =>
   b > 1e6
     ? `${(b / 1e6).toFixed(1)} MB`
@@ -66,11 +65,11 @@ const escapeHtml = (s: string) =>
     (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!
   );
 const fmtTime = (sec: number) => {
-  if (sec < 50) return 'less than a minute';
+  if (sec < 50) return t('less than a minute');
   const m = Math.round(sec / 60);
-  if (m < 60) return plural(m, 'minute', 'minutes');
+  if (m < 60) return tn(m, '{n} minute', '{n} minutes');
   const h = Math.floor(m / 60);
-  return `${plural(h, 'hour', 'hours')} ${m % 60 ? plural(m % 60, 'minute', 'minutes') : ''}`.trim();
+  return `${tn(h, '{n} hour', '{n} hours')} ${m % 60 ? tn(m % 60, '{n} minute', '{n} minutes') : ''}`.trim();
 };
 const slowDevice = () =>
   matchMedia('(pointer: coarse)').matches ||
@@ -111,7 +110,7 @@ function reset(): void {
   err.hidden = true;
   make.hidden = false;
   make.disabled = true;
-  make.textContent = 'Make EPUB';
+  make.textContent = t('Make EPUB');
 }
 
 let started = 0;
@@ -128,7 +127,9 @@ function showProgress(label: string, done: number, total: number): void {
     const per = (performance.now() - started) / 1000 / done;
     const left = per * (total - done);
     pEta.textContent =
-      left < 50 ? 'Less than a minute left' : `About ${fmtTime(left)} left`;
+      left < 50
+        ? t('Less than a minute left')
+        : t('About {time} left', { time: fmtTime(left) });
   } else pEta.textContent = '';
 }
 
@@ -138,7 +139,9 @@ async function openFile(f: File): Promise<void> {
   if (job) return;
   if (!/pdf$/i.test(f.type) && !/\.pdf$/i.test(f.name)) {
     showError(
-      `“${escapeHtml(f.name)}” is not a PDF. Choose a file that ends in .pdf.`
+      t('“{name}” is not a PDF. Choose a file that ends in .pdf.', {
+        name: escapeHtml(f.name),
+      })
     );
     return;
   }
@@ -151,11 +154,17 @@ async function openFile(f: File): Promise<void> {
     const name = (e as { name?: string })?.name;
     if (name === 'PasswordException')
       showError(
-        'This PDF is password-protected. Remove the password with <a href="/unlock-pdf">Unlock PDF</a>, then convert it.'
+        t(
+          'This PDF is password-protected. Remove the password with <a href="{link}">Unlock PDF</a>, then convert it.',
+          { link: href('/unlock-pdf') }
+        )
       );
     else
       showError(
-        'This file could not be read as a PDF. It may be damaged. Try <a href="/repair-pdf">Repair PDF</a> first.'
+        t(
+          'This file could not be read as a PDF. It may be damaged. Try <a href="{link}">Repair PDF</a> first.',
+          { link: href('/repair-pdf') }
+        )
       );
     return;
   }
@@ -164,7 +173,7 @@ async function openFile(f: File): Promise<void> {
   fileArea.hidden = false;
   $('file-name').textContent = f.name;
   $('file-info').textContent =
-    `${plural(pdf.numPages, 'page', 'pages')} · ${fmtSize(f.size)}`;
+    `${tn(pdf.numPages, '{n} page', '{n} pages')} · ${fmtSize(f.size)}`;
   make.disabled = true;
   await read();
 }
@@ -174,13 +183,16 @@ async function read(): Promise<void> {
   const { ex } = await loadMods();
   job = new AbortController();
   const me = file;
-  showProgress('Reading pages', 0, me.pdf.numPages);
+  showProgress(t('Reading pages'), 0, me.pdf.numPages);
   try {
     me.ex = await ex.extract(me.pdf, {
       signal: job.signal,
       onProgress: (p: Progress) =>
         showProgress(
-          `Reading page ${Math.min(p.done + 1, p.total)} of ${p.total}`,
+          t('Reading page {a} of {b}', {
+            a: Math.min(p.done + 1, p.total),
+            b: p.total,
+          }),
           p.done,
           p.total
         ),
@@ -190,7 +202,10 @@ async function read(): Promise<void> {
     if (e instanceof ex.Cancelled) reset();
     else
       showError(
-        'Something went wrong while reading this PDF. It may be damaged. Try <a href="/repair-pdf">Repair PDF</a> first.'
+        t(
+          'Something went wrong while reading this PDF. It may be damaged. Try <a href="{link}">Repair PDF</a> first.',
+          { link: href('/repair-pdf') }
+        )
       );
     return;
   } finally {
@@ -208,18 +223,28 @@ function offerOcr(n: number): void {
   const ex = file.ex;
   const all = n === ex.pages.length;
   $('scan-title').textContent = all
-    ? `This book is scanned: ${plural(n, 'page is an image', 'pages are images')}`
-    : `${plural(n, 'page is a scanned image', 'pages are scanned images')}`;
+    ? tn(
+        n,
+        'This book is scanned: {n} page is an image',
+        'This book is scanned: {n} pages are images'
+      )
+    : tn(n, '{n} page is a scanned image', '{n} pages are scanned images');
   const per = slowDevice() ? 10 : 4;
   $('scan-sub').textContent =
-    `Their text has to be recognized before it can flow on an e-reader. On this device that takes about ${fmtTime(n * per)}. ` +
-    `The recognition model for the language (about 2 to 15 MB) is downloaded once; your file stays here.`;
-  if (!langSel.options.length) {
-    const names = Object.entries(OCR_LANGS).sort((a, b) =>
-      a[1].name.localeCompare(b[1].name)
+    t(
+      'Their text has to be recognized before it can flow on an e-reader. On this device that takes about {time}.',
+      { time: fmtTime(n * per) }
+    ) +
+    ' ' +
+    t(
+      'The recognition model for the language (about 2 to 15 MB) is downloaded once; your file stays here.'
     );
+  if (!langSel.options.length) {
+    const names = Object.entries(OCR_LANGS)
+      .map(([k, v]) => [k, langName(k, v.name)] as const)
+      .sort((a, b) => a[1].localeCompare(b[1]));
     langSel.innerHTML = names
-      .map(([k, v]) => `<option value="${k}">${escapeHtml(v.name)}</option>`)
+      .map(([k, name]) => `<option value="${k}">${escapeHtml(name)}</option>`)
       .join('');
   }
   const hasText = ex.lines.length > 30;
@@ -243,7 +268,7 @@ async function runOcr(): Promise<void> {
   const signal = job.signal;
   scan.hidden = true;
   const lang = langSel.value;
-  showProgress('Loading the text recognition model', 0, 1);
+  showProgress(t('Loading the text recognition model'), 0, 1);
   try {
     const ocr = await createOcr(lang, (p) => {
       if (!signal.aborted) {
@@ -259,7 +284,10 @@ async function runOcr(): Promise<void> {
       ocr: (c, s, p) => ocr.recognize(c, s, p),
       onProgress: (p) =>
         showProgress(
-          `Recognizing text: page ${Math.min(p.done + 1, total)} of ${total}`,
+          t('Recognizing text: page {a} of {b}', {
+            a: Math.min(p.done + 1, total),
+            b: total,
+          }),
           p.done,
           total
         ),
@@ -279,8 +307,9 @@ async function runOcr(): Promise<void> {
       offerOcr(ex.pages.filter((p) => p.ocr).length);
     } else {
       offerOcr(ex.pages.filter((p) => p.ocr).length);
-      makeErr.textContent =
-        'Text recognition could not start. Check the internet connection (the language model is downloaded once) and try again.';
+      makeErr.textContent = t(
+        'Text recognition could not start. Check the internet connection (the language model is downloaded once) and try again.'
+      );
       makeErr.hidden = false;
     }
     return;
@@ -330,28 +359,43 @@ function refresh(): void {
   $('ch-hint').textContent =
     o.chapters === 'auto'
       ? hasMarks
-        ? `Chapters come from the ${plural(file.ex.outline.length, 'bookmark', 'bookmarks')} in the PDF.`
+        ? tn(
+            file.ex.outline.length,
+            'Chapters come from the {n} bookmark in the PDF.',
+            'Chapters come from the {n} bookmarks in the PDF.'
+          )
         : s.chapterSource === 'fonts'
-          ? 'This PDF has no bookmarks, so chapters were found by heading size.'
-          : 'No bookmarks or clear headings found, so the book is split every 20 pages.'
+          ? t(
+              'This PDF has no bookmarks, so chapters were found by heading size.'
+            )
+          : t(
+              'No bookmarks or clear headings found, so the book is split every 20 pages.'
+            )
       : o.chapters === 'fonts'
         ? s.chapterSource === 'fonts'
-          ? 'Lines set larger or bolder than the text start chapters and sections.'
-          : 'No clear headings found, so the book is split every 20 pages.'
-        : 'No chapter detection: one table of contents entry per 20 pages.';
+          ? t(
+              'Lines set larger or bolder than the text start chapters and sections.'
+            )
+          : t('No clear headings found, so the book is split every 20 pages.')
+        : t('No chapter detection: one table of contents entry per 20 pages.');
   const parts = [
-    plural(book.chapters.length, 'chapter', 'chapters'),
-    plural(s.paragraphs, 'paragraph', 'paragraphs'),
+    tn(book.chapters.length, '{n} chapter', '{n} chapters'),
+    tn(s.paragraphs, '{n} paragraph', '{n} paragraphs'),
   ];
   if (o.cleanHeaders && s.removedLines)
     parts.push(
-      `${plural(s.removedLines, 'running head or page number', 'running heads and page numbers')} removed`
+      tn(
+        s.removedLines,
+        '{n} running head or page number removed',
+        '{n} running heads and page numbers removed'
+      )
     );
-  if (o.notes && s.notes) parts.push(plural(s.notes, 'footnote', 'footnotes'));
+  if (o.notes && s.notes)
+    parts.push(tn(s.notes, '{n} footnote', '{n} footnotes'));
   if (o.pictures && s.pictures)
-    parts.push(plural(s.pictures, 'picture', 'pictures'));
+    parts.push(tn(s.pictures, '{n} picture', '{n} pictures'));
   if (s.ocrPages)
-    parts.push(`${plural(s.ocrPages, 'page', 'pages')} recognized`);
+    parts.push(tn(s.ocrPages, '{n} page recognized', '{n} pages recognized'));
   $('preview-sum').textContent = parts.join(' · ');
   renderToc();
   // open the first chapter that has text, often after a title page
@@ -404,8 +448,7 @@ function renderChapter(i: number): void {
   shownChapter = i;
   const ch = book.chapters[i];
   if (!ch) {
-    pageEl.innerHTML =
-      '<p class="epub-more">No text was found in this PDF.</p>';
+    pageEl.innerHTML = `<p class="epub-more">${t('No text was found in this PDF.')}</p>`;
     return;
   }
   const LIMIT = 80;
@@ -422,7 +465,11 @@ function renderChapter(i: number): void {
   });
   const more =
     ch.blocks.length > LIMIT
-      ? `<p class="epub-more">The chapter goes on in the EPUB: ${plural(ch.blocks.length - LIMIT, 'more block', 'more blocks')}.</p>`
+      ? `<p class="epub-more">${tn(
+          ch.blocks.length - LIMIT,
+          'The chapter goes on in the EPUB: {n} more block.',
+          'The chapter goes on in the EPUB: {n} more blocks.'
+        )}</p>`
       : '';
   pageEl.innerHTML = html + more;
   pageEl.scrollTop = 0;
@@ -439,8 +486,7 @@ function renderChapter(i: number): void {
 async function makeEpub(): Promise<void> {
   if (!file?.ex || !book || !mods) return;
   make.disabled = true;
-  make.innerHTML =
-    '<span class="spinner" aria-hidden="true"></span>Making EPUB';
+  make.innerHTML = `<span class="spinner" aria-hidden="true"></span>${t('Making EPUB')}`;
   try {
     const o = options();
     const blob = await mods.bd.buildEpub(book, {
@@ -453,19 +499,20 @@ async function makeEpub(): Promise<void> {
     fileArea.hidden = false;
     result.hidden = false;
     make.hidden = true;
-    $('result-title').textContent = 'EPUB ready';
+    $('result-title').textContent = t('EPUB ready');
     $('result-sub').textContent =
-      `${output.name} · ${plural(book.chapters.length, 'chapter', 'chapters')} · ${fmtSize(blob.size)}`;
+      `${output.name} · ${tn(book.chapters.length, '{n} chapter', '{n} chapters')} · ${fmtSize(blob.size)}`;
     window.dispatchEvent(
       new CustomEvent('plyleaf:done', { detail: { tool: 'pdf-to-epub' } })
     );
   } catch {
-    makeErr.textContent =
-      'The EPUB could not be written. Try turning off pictures, or try again.';
+    makeErr.textContent = t(
+      'The EPUB could not be written. Try turning off pictures, or try again.'
+    );
     makeErr.hidden = false;
   } finally {
     make.disabled = false;
-    make.textContent = 'Make EPUB';
+    make.textContent = t('Make EPUB');
   }
 }
 
@@ -492,7 +539,9 @@ async function sampleFile(): Promise<void> {
     );
   } catch {
     showError(
-      'The sample book could not be loaded. Choose a PDF of your own instead.'
+      t(
+        'The sample book could not be loaded. Choose a PDF of your own instead.'
+      )
     );
   }
 }

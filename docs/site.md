@@ -20,7 +20,17 @@ Structured data is generated from the content: WebApplication, BreadcrumbList, F
 
 ## Languages
 
-Our pages are English only. By the brief, a language gets search pages only after its own keyword research. Until then each language copy (`/de/pdf-booklet` and so on) is the English page with `noindex` and the canonical pointing to the English address, and no hreflang links (`scripts/site/i18n-hook.mjs`). BentoPDF's own translated pages keep their language versions and hreflang links.
+Pages are written in English, and only English pages are for search. By the brief, a language gets search pages only after its own keyword research for that country; until then a language gets an interface translation only.
+
+- **Interface languages** (machine translation, marked as unchecked on every copy): German, French, Italian, Portuguese, Turkish, Indonesian, Vietnamese, Russian, Korean, Chinese (simplified and traditional). Dictionaries: `src/site/i18n/<lang>.json`, keyed by the English text; counted phrases hold plural forms (`one`, `few`, `many`, `other`).
+- **What is translated:** the header, the footer, the working tool (its markup and the messages its script shows, via `t()`/`tn()` in `src/site/js/i18n.ts`), and text drawn on printed sheets (`tp()`/`tpn()`; Chinese and Korean keep English there because the print font has no CJK glyphs). The page text (hero, guide, FAQ) stays English and is marked `lang="en"`. Bingo theme word lists are English.
+- **Build:** `scripts/site/i18n-ui.mjs` turns each English page into `/<lang>/<slug>`: translates the interface, adds the note, puts the script strings into a JSON block (`#pl-i18n`, no inline script for the CSP), keeps links inside the language. The footer links every page to its language copies.
+- **Search markup:** every `/<lang>/` page is `noindex, follow` with a self canonical; no page carries hreflang; the sitemap lists English pages only (`scripts/apply-indexing-policy.mjs`, `scripts/generate-sitemap.mjs`). BentoPDF's own translated pages follow the same rule.
+- **Adding or changing text:** after editing a partial or a script string, run `node scripts/site/i18n-ui.mjs --keys` (writes `src/site/i18n/_keys.json` and shows what each language is missing; `--missing` lists the strings). Missing strings fall back to English.
+
+## AI assistants
+
+`dist/llms.txt` (built by `scripts/site/llms.mjs` from the catalog and each page's title and description) describes the site and lists every English tool page. `robots.txt` welcomes search and AI crawlers by name and points to it.
 
 ## BentoPDF pages
 

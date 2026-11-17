@@ -9,6 +9,7 @@ import {
   download,
   type Page,
 } from './sheet';
+import { t, tn } from '../i18n';
 
 export interface Built {
   pages: Page[];
@@ -58,11 +59,11 @@ export function mountGenerator(o: GenOptions): { refresh: () => void } {
       shown
         .map(
           (p, i) =>
-            `<figure class="gen-page" style="aspect-ratio:${p.w}/${p.h}">${pageToSvg(p, false, `Page ${i + 1} of ${current.pages.length}`)}</figure>`
+            `<figure class="gen-page" style="aspect-ratio:${p.w}/${p.h}">${pageToSvg(p, false, t('Page {a} of {b}', { a: i + 1, b: current.pages.length }))}</figure>`
         )
         .join('') +
       (more > 0
-        ? `<p class="gen-more tnum">and ${more} more ${more === 1 ? 'page' : 'pages'}</p>`
+        ? `<p class="gen-more tnum">${tn(more, 'and {n} more page', 'and {n} more pages')}</p>`
         : '');
   };
   const refresh = () => {
@@ -89,14 +90,16 @@ export function mountGenerator(o: GenOptions): { refresh: () => void } {
     if (current.error) return;
     const label = pdfBtn.innerHTML;
     pdfBtn.disabled = true;
-    pdfBtn.textContent = 'Making PDF…';
+    pdfBtn.textContent = t('Making PDF…');
     try {
       const blob = await toPdf(current.pages, { title: o.title });
       download(blob, o.fileName());
       done('pdf');
     } catch (e) {
       err.hidden = false;
-      err.textContent = `Could not make the PDF: ${(e as Error).message}`;
+      err.textContent = t('Could not make the PDF: {why}', {
+        why: (e as Error).message,
+      });
     } finally {
       pdfBtn.innerHTML = label;
       pdfBtn.disabled = false;

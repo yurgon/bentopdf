@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isIndexingBlocked, resolveSiteUrl } from '../indexing-policy.mjs';
+import { writeLlmsTxt } from './llms.mjs';
 
 const ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -20,14 +21,31 @@ const LIMIT = 25 * 1024 * 1024;
 fs.writeFileSync(
   path.join(DIST, 'robots.txt'),
   `# ${isIndexingBlocked() ? 'Test deployment: every page carries noindex.' : 'Plyleaf'}
+# AI assistants and their crawlers are welcome; a summary of the site is at ${SITE_URL}/llms.txt
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /*.wasm$
 
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+
 Sitemap: ${SITE_URL}/sitemap.xml
 `
 );
+
+// llms.txt for AI assistants
+const llms = writeLlmsTxt({ root: ROOT, dist: DIST, siteUrl: SITE_URL });
+console.log(`✔ Plyleaf finalize: llms.txt with ${llms.tools} tools`);
 
 // cache: hashed build assets never change; pages and the sitemap are revalidated
 const headersPath = path.join(DIST, '_headers');

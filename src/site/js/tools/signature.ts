@@ -4,6 +4,7 @@
 // Everything happens on this device; nothing is sent or stored.
 import '../../css/signature.css';
 import { photoMask, grow, bbox, tracePath, type Mask } from './signature-trace';
+import { t } from '../i18n';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) =>
   document.getElementById(id) as T;
@@ -248,7 +249,7 @@ async function render(): Promise<void> {
   $('sig-empty').hidden = has;
   out.hidden = !has;
   if (!current) {
-    sizeHint.textContent = 'Transparent background';
+    sizeHint.textContent = t('Transparent background');
     return;
   }
   const k = Math.min(1, 1200 / current.width);
@@ -258,7 +259,12 @@ async function render(): Promise<void> {
   ctx.imageSmoothingQuality = 'high';
   ctx.drawImage(current, 0, 0, out.width, out.height);
   const r = current.height / current.width;
-  sizeHint.textContent = `PNG ${PNG_W} × ${Math.round(PNG_W * r)} or ${PNG_HD_W} × ${Math.round(PNG_HD_W * r)} px, transparent`;
+  sizeHint.textContent = t('PNG {a} × {b} or {c} × {d} px, transparent', {
+    a: PNG_W,
+    b: Math.round(PNG_W * r),
+    c: PNG_HD_W,
+    d: Math.round(PNG_HD_W * r),
+  });
 }
 
 // ---------- drawing pad ----------
@@ -349,8 +355,9 @@ async function takePhoto(file: File | undefined): Promise<void> {
     !file.type.startsWith('image/') &&
     !/\.(jpe?g|png|webp|heic|heif|gif|bmp)$/i.test(file.name)
   ) {
-    photoErr.textContent =
-      'That is not an image. Choose a JPG or PNG photo of your signature.';
+    photoErr.textContent = t(
+      'That is not an image. Choose a JPG or PNG photo of your signature.'
+    );
     photoErr.hidden = false;
     return;
   }
@@ -359,8 +366,9 @@ async function takePhoto(file: File | undefined): Promise<void> {
     photo = await createImageBitmap(file, { imageOrientation: 'from-image' });
   } catch {
     photo = null;
-    photoErr.textContent =
-      'This browser cannot open that photo. HEIC photos from an iPhone open in Safari; elsewhere, save the photo as JPG first.';
+    photoErr.textContent = t(
+      'This browser cannot open that photo. HEIC photos from an iPhone open in Safari; elsewhere, save the photo as JPG first.'
+    );
     photoErr.hidden = false;
     return;
   }

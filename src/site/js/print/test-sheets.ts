@@ -9,6 +9,7 @@ import {
   type Op,
   type Page,
 } from './sheet';
+import { tp } from '../i18n';
 
 const INK = '#000000';
 const MUTED = '#555555';
@@ -71,7 +72,10 @@ function header(
   });
   label(
     ops,
-    `Printer test page ${n} · ${paper} · print at 100% (Actual size)`,
+    tp('Printer test page {n} · {paper} · print at 100% (Actual size)', {
+      n,
+      paper,
+    }),
     m,
     m + 28,
     'start',
@@ -114,7 +118,7 @@ const paperName = (w: number, h: number) => {
   return Math.abs(s - 595.28) < 2
     ? 'A4'
     : Math.abs(s - 612) < 2
-      ? 'Letter'
+      ? tp('Letter')
       : Math.abs(s - 841.89) < 2
         ? 'A3'
         : `${Math.round(w / MM)} × ${Math.round(h / MM)} mm`;
@@ -125,14 +129,14 @@ export function blackSheet(W: number, H: number): Page {
   const ops: Op[] = [];
   const m = 14 * MM;
   const cw = W - 2 * m;
-  let y = header(ops, W, m, 'Black and white', '1', paperName(W, H));
+  let y = header(ops, W, m, tp('Black and white'), '1', paperName(W, H));
 
-  heading(ops, 'Solid black', m, y);
+  heading(ops, tp('Solid black'), m, y);
   y += 8;
   ops.push({ t: 'rect', x: m, y, w: cw, h: 64, fill: 'cmyk(0,0,0,1)' });
   y += 64 + 26;
 
-  heading(ops, 'Gray steps, 0 to 100%', m, y);
+  heading(ops, tp('Gray steps, 0 to 100%'), m, y);
   y += 8;
   const steps = 11;
   const pw = cw / steps;
@@ -151,12 +155,12 @@ export function blackSheet(W: number, H: number): Page {
   }
   y += 47 + 24;
 
-  heading(ops, 'Smooth gradient', m, y);
+  heading(ops, tp('Smooth gradient'), m, y);
   y += 8;
   strips(ops, m, y, cw, 26, 240, (t) => `cmyk(0,0,0,${t.toFixed(3)})`);
   y += 26 + 26;
 
-  heading(ops, 'Line widths', m, y);
+  heading(ops, tp('Line widths'), m, y);
   y += 12;
   const widths = [0.1, 0.25, 0.5, 1, 2, 4];
   const colW = cw / 2;
@@ -178,9 +182,9 @@ export function blackSheet(W: number, H: number): Page {
   });
   y += 6 * 13 + 18;
 
-  heading(ops, 'Text sizes', m, y);
+  heading(ops, tp('Text sizes'), m, y);
   y += 6;
-  const sample = 'The quick brown fox jumps over the lazy dog 0123456789';
+  const sample = tp('The quick brown fox jumps over the lazy dog 0123456789');
   for (const s of [4, 5, 6, 8, 10, 12, 16]) {
     y += s * 1.35;
     let t = sample;
@@ -194,8 +198,8 @@ export function blackSheet(W: number, H: number): Page {
   // fine pattern and a circle: banding, smearing and stretched printing show up here
   const box = Math.min(110, H - m - y - 70);
   if (box > 50) {
-    heading(ops, 'Fine pattern', m, y);
-    heading(ops, 'Circle, should be round', m + box + 40, y);
+    heading(ops, tp('Fine pattern'), m, y);
+    heading(ops, tp('Circle, should be round'), m + box + 40, y);
     y += 8;
     const cell = 2;
     let d = '';
@@ -223,7 +227,7 @@ export function blackSheet(W: number, H: number): Page {
     });
     label(
       ops,
-      `${Math.round((box - 2) / MM)} mm across both ways`,
+      tp('{mm} mm across both ways', { mm: Math.round((box - 2) / MM) }),
       cx,
       y + box + 12,
       'middle'
@@ -233,7 +237,9 @@ export function blackSheet(W: number, H: number): Page {
 
   para(
     ops,
-    'Good print: the black block is even with no white lines, all 11 grey steps look different, the 0.1 pt line is visible and the 4 pt text is readable. White lines across the black block usually mean a clogged nozzle or worn drum: run the printer’s cleaning cycle.',
+    tp(
+      'Good print: the black block is even with no white lines, all 11 grey steps look different, the 0.1 pt line is visible and the 4 pt text is readable. White lines across the black block usually mean a clogged nozzle or worn drum: run the printer’s cleaning cycle.'
+    ),
     m,
     Math.max(y, H - m - 26),
     cw,
@@ -265,15 +271,15 @@ export function colorSheet(W: number, H: number): Page {
   const ops: Op[] = [];
   const m = 14 * MM;
   const cw = W - 2 * m;
-  let y = header(ops, W, m, 'Color', '2', paperName(W, H));
+  let y = header(ops, W, m, tp('Color'), '2', paperName(W, H));
 
-  heading(ops, 'Cyan, magenta, yellow, black', m, y);
+  heading(ops, tp('Cyan, magenta, yellow, black'), m, y);
   y += 8;
   const inks: [string, Color][] = [
-    ['Cyan', 'cmyk(1,0,0,0)'],
-    ['Magenta', 'cmyk(0,1,0,0)'],
-    ['Yellow', 'cmyk(0,0,1,0)'],
-    ['Black', 'cmyk(0,0,0,1)'],
+    [tp('Cyan'), 'cmyk(1,0,0,0)'],
+    [tp('Magenta'), 'cmyk(0,1,0,0)'],
+    [tp('Yellow'), 'cmyk(0,0,1,0)'],
+    [tp('Black'), 'cmyk(0,0,0,1)'],
   ];
   const bw = cw / 4;
   inks.forEach(([n, c], i) => {
@@ -282,15 +288,15 @@ export function colorSheet(W: number, H: number): Page {
   });
   y += 82 + 22;
 
-  heading(ops, 'Mixed colors', m, y);
+  heading(ops, tp('Mixed colors'), m, y);
   y += 8;
   const mixes: [string, Color][] = [
-    ['Red', 'cmyk(0,1,1,0)'],
-    ['Green', 'cmyk(1,0,1,0)'],
-    ['Blue', 'cmyk(1,1,0,0)'],
-    ['Orange', 'cmyk(0,0.5,1,0)'],
-    ['Purple', 'cmyk(0.5,1,0,0)'],
-    ['Teal', 'cmyk(1,0,0.5,0)'],
+    [tp('Red'), 'cmyk(0,1,1,0)'],
+    [tp('Green'), 'cmyk(1,0,1,0)'],
+    [tp('Blue'), 'cmyk(1,1,0,0)'],
+    [tp('Orange'), 'cmyk(0,0.5,1,0)'],
+    [tp('Purple'), 'cmyk(0.5,1,0,0)'],
+    [tp('Teal'), 'cmyk(1,0,0.5,0)'],
   ];
   const mw = cw / mixes.length;
   mixes.forEach(([n, c], i) => {
@@ -299,7 +305,7 @@ export function colorSheet(W: number, H: number): Page {
   });
   y += 51 + 22;
 
-  heading(ops, 'Tints, 10 to 100%', m, y);
+  heading(ops, tp('Tints, 10 to 100%'), m, y);
   y += 8;
   const rows: [string, (t: number) => Color][] = [
     ['C', (t) => `cmyk(${t},0,0,0)`],
@@ -322,12 +328,17 @@ export function colorSheet(W: number, H: number): Page {
   });
   y += 4 * 22 + 20;
 
-  heading(ops, 'Spectrum', m, y);
+  heading(ops, tp('Spectrum'), m, y);
   y += 8;
   strips(ops, m, y, cw, 30, 180, (t) => hsl(t * 330, 1, 0.5));
   y += 30 + 24;
 
-  heading(ops, 'Gray from color inks (top) and from black ink (bottom)', m, y);
+  heading(
+    ops,
+    tp('Gray from color inks (top) and from black ink (bottom)'),
+    m,
+    y
+  );
   y += 8;
   strips(
     ops,
@@ -350,7 +361,7 @@ export function colorSheet(W: number, H: number): Page {
   );
   y += 42 + 24;
 
-  heading(ops, 'Photo-like tones', m, y);
+  heading(ops, tp('Photo-like tones'), m, y);
   y += 8;
   const tones = [
     hsl(25, 0.45, 0.78),
@@ -370,7 +381,9 @@ export function colorSheet(W: number, H: number): Page {
 
   para(
     ops,
-    'Good print: each of the four ink bars is solid and the right color, the tints rise evenly and the spectrum has no gaps. A missing or wrong-colored bar means that cartridge is empty, dried or clogged: clean the print head or replace it. If the top gray strip looks tinted next to the bottom one, the color inks are out of balance.',
+    tp(
+      'Good print: each of the four ink bars is solid and the right color, the tints rise evenly and the spectrum has no gaps. A missing or wrong-colored bar means that cartridge is empty, dried or clogged: clean the print head or replace it. If the top gray strip looks tinted next to the bottom one, the color inks are out of balance.'
+    ),
     m,
     Math.max(y, H - m - 36),
     cw,
@@ -412,13 +425,16 @@ export function alignSheet(W: number, H: number): Page {
     x: m,
     y: m + 14,
     size: 17,
-    text: 'Alignment and margins',
+    text: tp('Alignment and margins'),
     bold: true,
     fill: INK,
   });
   label(
     ops,
-    `Printer test page 3 · ${paperName(W, H)} · print at 100% (Actual size)`,
+    tp('Printer test page {n} · {paper} · print at 100% (Actual size)', {
+      n: 3,
+      paper: paperName(W, H),
+    }),
     m,
     m + 28,
     'start',
@@ -428,7 +444,12 @@ export function alignSheet(W: number, H: number): Page {
   // 100 mm rulers: if they measure shorter, the print dialog scaled the page
   const rx = m;
   let y = m + 66;
-  heading(ops, 'This line is 100 mm long. Check it with a ruler.', rx, y - 18);
+  heading(
+    ops,
+    tp('This line is 100 mm long. Check it with a ruler.'),
+    rx,
+    y - 18
+  );
   let d = line(rx, y, rx + 100 * MM, y);
   for (let i = 0; i <= 100; i++) {
     const len = i % 10 === 0 ? 10 : i % 5 === 0 ? 6.5 : 3.5;
@@ -484,10 +505,18 @@ export function alignSheet(W: number, H: number): Page {
 
   y += g * MM + 30;
   const tips = [
-    'Frames: the outer frame sits on the paper edge, the others 3, 5 and 10 mm in. Frames that are cut off show your printer’s margin. Keep text and lines inside the last frame that printed whole.',
-    'The 100 mm line: if it is shorter, the page was shrunk. Print again with Actual size or 100% instead of Fit to page.',
-    'Squares: if the 10 mm squares come out as rectangles, the paper is slipping. Check the paper guides and use a fresh, flat stack.',
-    'Center mark: fold the sheet in half both ways. The folds should cross on the mark. If they do not, the print is shifted.',
+    tp(
+      'Frames: the outer frame sits on the paper edge, the others 3, 5 and 10 mm in. Frames that are cut off show your printer’s margin. Keep text and lines inside the last frame that printed whole.'
+    ),
+    tp(
+      'The 100 mm line: if it is shorter, the page was shrunk. Print again with Actual size or 100% instead of Fit to page.'
+    ),
+    tp(
+      'Squares: if the 10 mm squares come out as rectangles, the paper is slipping. Check the paper guides and use a fresh, flat stack.'
+    ),
+    tp(
+      'Center mark: fold the sheet in half both ways. The folds should cross on the mark. If they do not, the print is shifted.'
+    ),
   ];
   for (const t of tips) y = para(ops, t, rx, y, cw - 50, 8.5) + 7;
   return { w: W, h: H, ops };
@@ -563,7 +592,7 @@ export function duplexSheets(pw: number, ph: number): Page[] {
       x: side === 'front' ? W * 0.3 : W * 0.7,
       y: H * 0.74 + 22,
       size: 11,
-      text: side === 'front' ? 'Side 1 of 2' : 'Side 2 of 2',
+      text: side === 'front' ? tp('Side 1 of 2') : tp('Side 2 of 2'),
       fill: MUTED,
       anchor: 'middle',
     });
@@ -572,7 +601,9 @@ export function duplexSheets(pw: number, ph: number): Page[] {
     let y = H * 0.24;
     heading(
       ops,
-      side === 'front' ? 'Two-sided printing test' : 'Reading the result',
+      side === 'front'
+        ? tp('Two-sided printing test')
+        : tp('Reading the result'),
       tx,
       y
     );
@@ -580,14 +611,26 @@ export function duplexSheets(pw: number, ph: number): Page[] {
     const text =
       side === 'front'
         ? [
-            'Print both pages of this file on one sheet with the same settings you will use for your booklet.',
-            'Printer that prints both sides: choose two-sided, flip on the short edge.',
-            'Printer that prints one side: print this page, put the sheet back in the tray, print the back page. Note which way up you put it back.',
+            tp(
+              'Print both pages of this file on one sheet with the same settings you will use for your booklet.'
+            ),
+            tp(
+              'Printer that prints both sides: choose two-sided, flip on the short edge.'
+            ),
+            tp(
+              'Printer that prints one side: print this page, put the sheet back in the tray, print the back page. Note which way up you put it back.'
+            ),
           ]
         : [
-            'Hold the sheet up to a window. The arrows on both sides should point to the same edge, the TOP EDGE.',
-            'Back upside down: switch between flip on short edge and flip on long edge, or turn the stack the other way before the second pass.',
-            'Circles at the corners should line up front to back. A few millimeters off is normal for home printers.',
+            tp(
+              'Hold the sheet up to a window. The arrows on both sides should point to the same edge, the TOP EDGE.'
+            ),
+            tp(
+              'Back upside down: switch between flip on short edge and flip on long edge, or turn the stack the other way before the second pass.'
+            ),
+            tp(
+              'Circles at the corners should line up front to back. A few millimeters off is normal for home printers.'
+            ),
           ];
     for (const t of text) y = para(ops, t, tx, y, tw, 9.5) + 8;
     pages.push({ w: W, h: H, ops });
@@ -596,7 +639,7 @@ export function duplexSheets(pw: number, ph: number): Page[] {
 }
 
 export const SHEETS = {
-  black: { name: 'Black and white', build: blackSheet },
-  color: { name: 'Color', build: colorSheet },
-  align: { name: 'Alignment and margins', build: alignSheet },
+  black: { name: tp('Black and white'), build: blackSheet },
+  color: { name: tp('Color'), build: colorSheet },
+  align: { name: tp('Alignment and margins'), build: alignSheet },
 } as const;

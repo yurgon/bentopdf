@@ -196,3 +196,33 @@
   color: var(--ink);
   text-decoration: underline;
 }
+
+/* language links under the footer, and the note on language copies (scripts/site/i18n-ui.mjs) */
+.site-footer .langs-row {
+  display: block;
+  margin-top: var(--s-8);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--line);
+}
+.langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+}
+.site-footer .langs a[aria-current] {
+  color: var(--ink);
+  font-weight: var(--w-semi);
+}
+.lang-note {
+  max-width: 62ch;
+  margin: 0 auto var(--s-6);
+  text-align: center;
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+}
+@media (max-width: 720px) {
+  .lang-note {
+    text-align: left;
+    margin-inline: 0;
+  }
+}

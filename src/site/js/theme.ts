@@ -1,5 +1,7 @@
 // Light/dark toggle in the site header. System theme by default; an explicit choice is remembered
 // (and applied before first paint by /plyleaf-theme.js).
+import { t } from './i18n';
+
 const root = document.documentElement;
 
 // ---- theme: system by default, an explicit choice is remembered (applied early by /plyleaf-theme.js)
@@ -13,7 +15,7 @@ function paintToggle(): void {
   const d = dark();
   toggle.setAttribute(
     'aria-label',
-    d ? 'Switch to light theme' : 'Switch to dark theme'
+    d ? t('Switch to light theme') : t('Switch to dark theme')
   );
   toggle.querySelector('use')?.setAttribute('href', d ? '#i-sun' : '#i-moon');
 }

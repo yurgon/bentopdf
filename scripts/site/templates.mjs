@@ -1,3 +1,5 @@
+import { UI_LANGS } from './i18n-ui.mjs';
+
 // Plyleaf page templates. Pure functions: data in, HTML string out.
 // Every page shares head(), header() and footer(); page bodies are toolPage(), sectionPage(), homePage(), textPage().
 
@@ -86,8 +88,19 @@ export function header(site, sprite, current) {
     ${sprite}${headerBar(site, current)}`;
 }
 
-/** The footer alone; also used as the footer partial on BentoPDF's pages. */
-export function footerBar(site) {
+/** Links to this page in every interface language (the copies are noindex, see i18n-ui.mjs). */
+function langLinks(slug) {
+  const p = slug === 'index' ? '' : slug;
+  return Object.entries(UI_LANGS)
+    .map(([code, name]) => {
+      const href = code === 'en' ? `/${p}` : `/${code}/${p}`;
+      return `<a href="${href}" hreflang="${code}" lang="${code}" translate="no"${code === 'en' ? ' aria-current="true"' : ''}>${esc(name)}</a>`;
+    })
+    .join('\n          ');
+}
+
+/** The footer alone; also used as the footer partial on BentoPDF's pages (no slug: no language links). */
+export function footerBar(site, slug) {
   const cols = site.footer
     .map(
       (c) => `
@@ -106,12 +119,21 @@ export function footerBar(site) {
           <a class="brand" href="/"><svg class="brand-mark" aria-hidden="true"><use href="#i-mark" /></svg>${esc(site.name)}</a>
           <p class="footer-line">${esc(site.description)}</p>
         </div>${cols}
-      </div>
+      </div>${
+        slug
+          ? `
+      <div class="wrap langs-row">
+        <nav class="langs" aria-label="Languages">
+          ${langLinks(slug)}
+        </nav>
+      </div>`
+          : ''
+      }
     </footer>`;
 }
 
-export function footer(site) {
-  return `${footerBar(site)}
+export function footer(site, slug) {
+  return `${footerBar(site, slug)}
   </body>
 </html>
 `;

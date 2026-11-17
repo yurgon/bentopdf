@@ -8,6 +8,7 @@ import {
   presetPaper,
   defaultPaper,
 } from '../print/gen';
+import { t, tn } from '../i18n';
 import {
   PAPER,
   MM,
@@ -95,7 +96,7 @@ function syncControls(): void {
     presets.innerHTML = list
       .map(
         ([l, v]) =>
-          `<button type="button" class="btn btn-sm btn-ghost" data-step="${v}">${l}</button>`
+          `<button type="button" class="btn btn-sm btn-ghost" data-step="${v}">${l.replace(/^(Wide|College|Narrow)/, (w) => t(w))}</button>`
       )
       .join('');
     // when the unit or type changes, start from a sensible step
@@ -154,14 +155,14 @@ function build(): { pages: Page[]; summary: string; error?: string } {
     return {
       pages: [],
       summary: '',
-      error: 'That step is too small to print clearly. Use 1 mm or more.',
+      error: t('That step is too small to print clearly. Use 1 mm or more.'),
     };
   const area = { x: margin, y: margin, w: W - 2 * margin, h: H - 2 * margin };
   if (area.w < step * 2 || area.h < step * 2)
     return {
       pages: [],
       summary: '',
-      error: 'The margins leave no room for the grid. Make them smaller.',
+      error: t('The margins leave no room for the grid. Make them smaller.'),
     };
 
   const ops: Op[] = [];
@@ -190,7 +191,11 @@ function build(): { pages: Page[]; summary: string; error?: string } {
         for (let j = 0; j <= ny; j++)
           d += circlePath(x0 + i * step, y0 + j * step, r);
       ops.push({ t: 'path', d, fill: color });
-      summary = `${fmtStep} dot grid, ${nx + 1} × ${ny + 1} dots`;
+      summary = t('{step} dot grid, {a} × {b} dots', {
+        step: fmtStep,
+        a: nx + 1,
+        b: ny + 1,
+      });
     } else {
       // three weights: fine lines, medium every 5 mm on millimeter paper, bold on the major lines
       const fine: string[] = [];
@@ -225,8 +230,11 @@ function build(): { pages: Page[]; summary: string; error?: string } {
         });
       summary =
         kind === 'mm'
-          ? `1 mm grid, bold every 1 cm, ${(gw / MM) | 0} × ${(gh / MM) | 0} mm`
-          : `${fmtStep} squares, ${nx} × ${ny}`;
+          ? t('1 mm grid, bold every 1 cm, {a} × {b} mm', {
+              a: (gw / MM) | 0,
+              b: (gh / MM) | 0,
+            })
+          : t('{step} squares, {a} × {b}', { step: fmtStep, a: nx, b: ny });
     }
   } else if (kind === 'iso') {
     // vertical lines plus two families at 30 degrees: equilateral triangles of side `step`
@@ -260,7 +268,7 @@ function build(): { pages: Page[]; summary: string; error?: string } {
       }
     }
     ops.push({ t: 'path', d: parts.join(''), stroke: color, sw: weight });
-    summary = `${fmtStep} isometric triangles`;
+    summary = t('{step} isometric triangles', { step: fmtStep });
   } else {
     // lined paper: header space, writing lines, optional red margin line
     const top = margin + (formOn('header') ? 18 * MM : 0);
@@ -285,20 +293,22 @@ function build(): { pages: Page[]; summary: string; error?: string } {
         sw: Math.max(0.5, weight),
       });
     }
-    summary = `${n + 1} lines, ${fmtStep} apart`;
+    summary = tn(n + 1, '{n} line, {step} apart', '{n} lines, {step} apart', {
+      step: fmtStep,
+    });
   }
 
-  const paperName = formVal('paper') === 'letter' ? 'Letter' : 'A4';
+  const paperName = formVal('paper') === 'letter' ? t('Letter') : 'A4';
   const pages = Array.from({ length: count }, () => ({ w: W, h: H, ops }));
   return {
     pages,
-    summary: `${summary} · ${paperName}${count > 1 ? ` · ${count} pages` : ''}`,
+    summary: `${summary} · ${paperName}${count > 1 ? ` · ${tn(count, '{n} page', '{n} pages')}` : ''}`,
   };
 }
 
 mountGenerator({
   tool: 'graph-paper',
-  title: 'Graph paper',
+  title: t('Graph paper'),
   fileName: () => {
     const kind = formVal('kind');
     const name =

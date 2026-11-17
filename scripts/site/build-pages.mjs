@@ -171,7 +171,11 @@ function checkLinks(name, html) {
     else if (href.startsWith('#')) {
       if (!ids.has(href.slice(1))) fail(name, `anchor ${href} has no target`);
     } else if (href.startsWith('/')) {
-      const slug = href.slice(1).split(/[?#]/)[0] || 'index';
+      // language switcher: /de/<slug> is the copy of /<slug>, made by i18n-ui.mjs
+      const bare = a.hasAttribute('hreflang')
+        ? href.replace(/^\/[a-z]{2}(-[A-Z]{2})?(?=\/|$)/, '')
+        : href;
+      const slug = bare.slice(1).split(/[?#]/)[0] || 'index';
       if (!known.has(slug)) fail(name, `link to missing page ${href}`);
     }
   }
@@ -332,7 +336,10 @@ fs.mkdirSync(OUT, { recursive: true });
 const meta = {};
 const page = (slug, data, body, current) => {
   const html =
-    head(site, data) + header(site, sprite, current) + body + footer(site);
+    head(site, data) +
+    header(site, sprite, current) +
+    body +
+    footer(site, slug);
   const doc = checkLinks(slug, html);
   fs.writeFileSync(path.join(OUT, `${slug}.html`), html);
   meta[slug] = { updated: data.updated, englishOnly: true };

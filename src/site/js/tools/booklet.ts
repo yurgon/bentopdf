@@ -1,6 +1,7 @@
 // PDF booklet maker: arranges pages for fold-and-staple printing, entirely in the browser.
 // pdf-lib (the heavy part) is loaded only after a file is chosen.
 import type { PDFDocument, PDFPage, PDFEmbeddedPage } from 'pdf-lib';
+import { href, t, tn } from '../i18n';
 
 type PdfLib = typeof import('pdf-lib');
 let lib: PdfLib | null = null;
@@ -46,8 +47,6 @@ let busy = false;
 const val = (name: string): string =>
   (tool.querySelector(`input[name="${name}"]:checked`) as HTMLInputElement)
     .value;
-const plural = (n: number, one: string, many: string) =>
-  `${n} ${n === 1 ? one : many}`;
 const fmtSize = (b: number) =>
   b > 1e6
     ? `${(b / 1e6).toFixed(1)} MB`
@@ -73,7 +72,7 @@ export function sheetsFor(n: number, rtl: boolean) {
 const cell = (p: number, n: number, N: number) => {
   const blank = p > n;
   const cls = blank ? 'blank' : p === 1 || p === N ? 'cover' : '';
-  return `<span class="${cls}" aria-label="${blank ? 'blank page' : `page ${p}`}">${blank ? '·' : p}</span>`;
+  return `<span class="${cls}" aria-label="${blank ? t('blank page') : t('page {p}', { p })}">${blank ? '·' : p}</span>`;
 };
 function render(): void {
   if (!file) return;
@@ -88,20 +87,28 @@ function render(): void {
           <div class="spread">${cell(sh.front[0], n, N)}${cell(sh.front[1], n, N)}</div>
           <div class="spread">${cell(sh.back[0], n, N)}${cell(sh.back[1], n, N)}</div>
         </div>
-        <div class="sheet-cap tnum"><span>Sheet ${i + 1}</span><span>${twoPass ? 'pass 1 · pass 2' : 'front · back'}</span></div>
+        <div class="sheet-cap tnum"><span>${t('Sheet {n}', { n: i + 1 })}</span><span>${twoPass ? t('pass 1 · pass 2') : t('front · back')}</span></div>
       </div>`
     )
     .join('');
   const blanks = N - n;
   const { from, to } = SIZES[val('size')];
   sum.textContent =
-    `${N} pages on ${plural(sheets.length, 'sheet', 'sheets')} of ${from}` +
+    tn(
+      sheets.length,
+      '{pages} pages on {n} sheet of {paper}',
+      '{pages} pages on {n} sheets of {paper}',
+      {
+        pages: N,
+        paper: t(from),
+      }
+    ) +
     (blanks
-      ? ` · ${plural(blanks, 'blank page', 'blank pages')} added at the end`
+      ? ` · ${tn(blanks, '{n} blank page added at the end', '{n} blank pages added at the end')}`
       : '');
   $('result-sub').textContent =
-    `${baseName(file.name)}-booklet.pdf · ${plural(sheets.length, 'sheet', 'sheets')} · ${to}` +
-    (twoPass ? ' · two passes' : '');
+    `${baseName(file.name)}-booklet.pdf · ${tn(sheets.length, '{n} sheet', '{n} sheets')} · ${t(to)}` +
+    (twoPass ? ` · ${t('two passes')}` : '');
 }
 const baseName = (name: string) => name.replace(/\.pdf$/i, '');
 
@@ -125,7 +132,7 @@ function reset(): void {
   make.hidden = false;
   make.disabled = true;
   make.removeAttribute('data-loading');
-  make.textContent = 'Make booklet';
+  make.textContent = t('Make booklet');
 }
 function setLoaded(f: Loaded): void {
   file = f;
@@ -134,7 +141,7 @@ function setLoaded(f: Loaded): void {
   drop.dataset.state = 'idle';
   $('file-name').textContent = f.name;
   $('file-info').textContent =
-    `${plural(f.pages, 'page', 'pages')} · ${fmtSize(f.size)}`;
+    `${tn(f.pages, '{n} page', '{n} pages')} · ${fmtSize(f.size)}`;
   drop.hidden = true;
   fileArea.hidden = false;
   opts.hidden = false;
@@ -154,7 +161,9 @@ async function openFile(f: File): Promise<void> {
   if (busy) return;
   if (!/pdf$/i.test(f.type) && !/\.pdf$/i.test(f.name)) {
     showError(
-      `“${escapeHtml(f.name)}” is not a PDF. Choose a file that ends in .pdf.`
+      t('“{name}” is not a PDF. Choose a file that ends in .pdf.', {
+        name: escapeHtml(f.name),
+      })
     );
     return;
   }
@@ -171,18 +180,24 @@ async function openFile(f: File): Promise<void> {
     } catch (e) {
       if (e instanceof Error && /encrypt/i.test(e.message)) {
         showError(
-          `This PDF is password-protected. Remove the password with <a href="/unlock-pdf">Unlock PDF</a>, then make the booklet.`
+          t(
+            'This PDF is password-protected. Remove the password with <a href="{link}">Unlock PDF</a>, then make the booklet.',
+            { link: href('/unlock-pdf') }
+          )
         );
       } else {
         showError(
-          `This file could not be read as a PDF. It may be damaged. Try <a href="/repair-pdf">Repair PDF</a> first.`
+          t(
+            'This file could not be read as a PDF. It may be damaged. Try <a href="{link}">Repair PDF</a> first.',
+            { link: href('/repair-pdf') }
+          )
         );
       }
       return;
     }
     const pages = doc.getPageCount();
     if (!pages) {
-      showError('This PDF has no pages.');
+      showError(t('This PDF has no pages.'));
       return;
     }
     setLoaded({ name: f.name, size: f.size, pages, doc });
@@ -267,13 +282,12 @@ async function makeBooklet(): Promise<void> {
   make.disabled = true;
   $('make-error').hidden = true;
   make.dataset.loading = 'true';
-  make.innerHTML =
-    '<span class="spinner" aria-hidden="true"></span>Making booklet';
+  make.innerHTML = `<span class="spinner" aria-hidden="true"></span>${t('Making booklet')}`;
   opts.hidden = true;
   prog.hidden = false;
   try {
     const { PDFDocument, degrees } = await loadLib();
-    setProgress(2, 'Reading pages');
+    setProgress(2, t('Reading pages'));
     await nextFrame();
     const src = file.doc;
     const n = file.pages;
@@ -287,7 +301,7 @@ async function makeBooklet(): Promise<void> {
     out.setCreator('Plyleaf PDF booklet maker');
     const embedded = await out.embedPdf(src, src.getPageIndices());
     const rotation = src.getPages().map((p) => p.getRotation().angle);
-    setProgress(30, 'Arranging pages on sheets');
+    setProgress(30, t('Arranging pages on sheets'));
 
     const side = (pair: [number, number]) => {
       const page = out.addPage([W, H]);
@@ -311,22 +325,26 @@ async function makeBooklet(): Promise<void> {
       if (i % 8 === 7) {
         setProgress(
           30 + (40 * (i + 1)) / order.length,
-          'Arranging pages on sheets'
+          t('Arranging pages on sheets')
         );
         await nextFrame();
       }
     }
-    setProgress(72, 'Writing the PDF');
+    setProgress(72, t('Writing the PDF'));
     await nextFrame();
     const bytes = await out.save();
     output = {
       blob: new Blob([new Uint8Array(bytes)], { type: 'application/pdf' }),
       name: `${baseName(file.name)}-booklet.pdf`,
     };
-    setProgress(100, 'Done');
+    setProgress(100, t('Done'));
     $('result-title').textContent = twoPass
-      ? `Booklet ready: print pages 1 to ${sheets.length} first, then ${sheets.length + 1} to ${sheets.length * 2}`
-      : 'Booklet ready';
+      ? t('Booklet ready: print pages 1 to {a} first, then {b} to {c}', {
+          a: sheets.length,
+          b: sheets.length + 1,
+          c: sheets.length * 2,
+        })
+      : t('Booklet ready');
     prog.hidden = true;
     result.hidden = false;
     make.hidden = true;
@@ -336,13 +354,14 @@ async function makeBooklet(): Promise<void> {
     prog.hidden = true;
     opts.hidden = false;
     const me = $('make-error');
-    me.textContent =
-      'Something went wrong while making the booklet. Try again, or try a smaller file.';
+    me.textContent = t(
+      'Something went wrong while making the booklet. Try again, or try a smaller file.'
+    );
     me.hidden = false;
   } finally {
     busy = false;
     make.removeAttribute('data-loading');
-    make.textContent = 'Make booklet';
+    make.textContent = t('Make booklet');
     make.disabled = !file;
   }
 }
@@ -409,7 +428,7 @@ $('duplex-test-btn').addEventListener('click', async () => {
   ]);
   const { sheet, from } = SIZES[val('size')];
   const blob = await toPdf(duplexSheets(sheet[0], sheet[1]), {
-    title: 'Two-sided printing test',
+    title: t('Two-sided printing test'),
   });
   save(blob, `two-sided-test-${from.toLowerCase()}.pdf`);
 });
