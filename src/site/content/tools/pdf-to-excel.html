@@ -1,0 +1,271 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert PDF to Excel</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <path class="f-line" d="M6 15h18M6 21h18M6 27h12" />
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDF</h3>
+      </div>
+      <p>
+        A statement, invoice, report or price list. It stays on your device.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">Loading engine (first time)</text>
+          <rect class="f-accent" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Finding tables: page 3 of 8</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Convert</h3>
+      </div>
+      <p>
+        Tables are found on every page. The first run downloads the engine once,
+        about 39 MB.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">XLSX</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Open it in Excel</h3>
+      </div>
+      <p>The XLSX workbook is saved to your device, one sheet per table.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a bank statement PDF with transaction tables on several pages"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">statement.pdf, 4 pages</text>
+        <text class="f-s" x="30" y="48">Date | Description | Amount</text>
+        <text class="f-s" x="30" y="66">...42 transactions</text>
+        <text class="f-s" x="160" y="50">Numbers you cannot</text>
+        <text class="f-s" x="160" y="66">sort or add up</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: an Excel workbook with each table on its own sheet"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">statement.xlsx</text>
+        <text class="f-s" x="30" y="48">Table 1 (Page 1)</text>
+        <text class="f-s" x="30" y="66">Table 2 (Page 2) ...</text>
+        <text class="f-s" x="160" y="50">Sort, filter, sum</text>
+        <text class="f-s" x="160" y="66">in Excel or Sheets</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        What converts well
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Your PDF</th>
+          <th scope="col">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Exported from a program, with ruled tables</td>
+          <td>Very good: rows and columns as in the PDF</td>
+        </tr>
+        <tr>
+          <td>Tables without lines, clear columns</td>
+          <td>Usually good; check merged cells</td>
+        </tr>
+        <tr>
+          <td>Scanned or photographed pages</td>
+          <td>No tables found: there is no text inside the scan</td>
+        </tr>
+        <tr>
+          <td>Text without tables</td>
+          <td>No tables found; use <a href="/pdf-to-text">PDF to Text</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Converting a PDF to Excel turns the tables in it into rows and columns you
+      can sort, filter and add up. Copying a table out of a PDF by hand usually
+      lands everything in one column. Here the tables are found automatically,
+      in your browser, so bank statements and invoices are never uploaded.
+    </p>
+
+    <h2 id="tables">Extract tables from a PDF</h2>
+    <p>
+      Each page is searched for tables: ruled grids and neatly aligned columns.
+      Every table found goes on its own sheet, named by its number and page,
+      such as <strong>Table 2 (Page 3)</strong>, so you can match it to the PDF.
+      A PDF with a single table gives a workbook with one sheet.
+    </p>
+
+    <h2 id="statements">Bank statements and invoices</h2>
+    <p>
+      Statements, invoices, price lists and reports exported from software
+      convert best, because their text and lines are stored exactly. A table
+      that runs over several pages comes out as one sheet per page; paste the
+      sheets together in Excel if you need one list. Check dates and amounts
+      once, especially where cells were merged in the PDF.
+    </p>
+
+    <h2 id="sheets">Open the result in Google Sheets or Numbers</h2>
+    <p>
+      The file is a standard XLSX workbook. Open it in Excel, upload it to
+      Google Sheets with File, Import, or open it in Apple Numbers or
+      LibreOffice Calc.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      Tables are detected with MuPDF, a PDF engine running in your browser,
+      which looks at the text positions and lines on each page and works out
+      rows and columns. The cells are written into an XLSX workbook in memory
+      and saved to your device. The first time, the engine (about 39 MB) is
+      downloaded and kept by your browser. Nothing is sent to a server.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Bank and card statements for budgeting or taxes, invoices for bookkeeping,
+      price lists and catalogs, research data from papers, and reports that only
+      exist as PDF.
+    </p>
+    <ul>
+      <li>
+        <strong>Scanned PDFs do not work</strong>: a scan has no text, so no
+        table can be found.
+      </li>
+      <li>
+        <strong>Only tables are converted</strong>, not the text around them.
+      </li>
+      <li>
+        <strong>Formulas, colors and fonts</strong> are not carried over; cells
+        hold the values.
+      </li>
+      <li>
+        <strong>Unusual layouts</strong>, such as tables without lines and
+        uneven spacing, may split or merge columns.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        Can I turn a PDF into an Excel spreadsheet?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Add the PDF on this page and convert; every table is saved to an
+        XLSX workbook, one sheet per table.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How can I convert a PDF to Excel for free?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        On this page it is free, with no account, no email and no limit on
+        files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I convert a PDF to Excel without Adobe?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. It runs in your browser on any computer, with no software to
+        install.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does it work with scanned PDFs?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No. A scan has no text inside, so no table can be found. It works with
+        PDFs made by software.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will formatting be kept?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Values, rows and columns are kept. Colors, fonts and formulas are not.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I open the result in Google Sheets?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Import the XLSX file in Google Sheets, or open it in Numbers or
+        LibreOffice.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my file uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. Tables are found in your browser and your file never leaves your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

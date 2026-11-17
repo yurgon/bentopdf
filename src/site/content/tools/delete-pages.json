@@ -1,0 +1,92 @@
+{
+  "slug": "delete-pages",
+  "mainQuery": "delete pages from pdf",
+  "title": "Delete Pages from PDF: Remove Pages Free, No Upload",
+  "description": "Delete pages from a PDF in your browser: click them on thumbnails or type 2, 4-6, 9, and save the rest. Free, no account, nothing is uploaded.",
+  "h1": "Delete Pages from PDF",
+  "crumb": "Delete Pages",
+  "promise": "Delete pages from PDF files by clicking them or typing their numbers, and keep everything else as it was. Everything runs on your device.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Pick pages on thumbnails"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Delete Pages from PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Click pages on thumbnails or type ranges such as 2, 4-6, 9",
+      "Pages that are not next to each other in one go",
+      "Remaining pages keep text, links and quality",
+      "Shows the total number of pages",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to delete pages from a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "not-next",
+      "label": "Remove pages that are not next to each other"
+    },
+    {
+      "id": "blank",
+      "label": "Delete blank pages"
+    },
+    {
+      "id": "after",
+      "label": "Links, bookmarks and file size"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "organize-pdf",
+      "icon": "grid",
+      "name": "Organize PDF",
+      "why": "Remove, reorder and rotate pages on thumbnails."
+    },
+    {
+      "slug": "remove-blank-pages",
+      "icon": "file",
+      "name": "Remove Blank Pages",
+      "why": "Find and drop empty pages from a scan automatically."
+    },
+    {
+      "slug": "split-pdf",
+      "icon": "split",
+      "name": "Split PDF",
+      "why": "Keep the pages you need as a new file instead."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Add pages from another file after cleaning up."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

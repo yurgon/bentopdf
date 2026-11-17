@@ -1,0 +1,88 @@
+{
+  "slug": "unlock-pdf",
+  "mainQuery": "unlock pdf",
+  "title": "Unlock PDF: Remove a PDF Password, Free, No Upload",
+  "description": "Unlock PDF files in your browser: remove a password you know, or lift print and copy restrictions. Several files at once. Free, nothing uploaded.",
+  "h1": "Unlock PDF",
+  "crumb": "Unlock PDF",
+  "promise": "Unlock PDF files so they open without a password and can be printed and copied. You need the password if the file asks for one when it opens. Everything runs on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Several files at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Unlock PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Removes the open password when you know it",
+      "Lifts print, copy and edit restrictions",
+      "Several PDFs at once, saved as a ZIP",
+      "Pages, text and quality unchanged",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to unlock a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "password",
+      "label": "Remove a password you know"
+    },
+    {
+      "id": "restrictions",
+      "label": "Remove print and copy restrictions"
+    },
+    {
+      "id": "cannot",
+      "label": "What unlocking cannot do"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "protect-pdf",
+      "icon": "lock",
+      "name": "Protect PDF",
+      "why": "Put a new password on the file when you are done."
+    },
+    {
+      "slug": "remove-restrictions",
+      "icon": "lock",
+      "name": "Remove Restrictions",
+      "why": "Only lift print and copy limits, nothing else."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the unlocked file before sending it."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine unlocked statements into one file."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

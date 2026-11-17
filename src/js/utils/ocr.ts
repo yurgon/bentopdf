@@ -25,6 +25,8 @@ export interface OcrOptions {
   psm?: Tesseract.PSM;
   perPageTimeoutMs?: number;
   onProgress?: (status: string, progress: number) => void;
+  /** Stops the run: the worker is shut down and performOcr rejects with an AbortError. */
+  signal?: AbortSignal;
 }
 
 export interface OcrWarning {
@@ -190,7 +192,14 @@ export async function performOcr(
     psm,
     perPageTimeoutMs,
     onProgress,
+    signal,
   } = options;
+  const aborted = () => {
+    const e = new Error('OCR cancelled');
+    e.name = 'AbortError';
+    return e;
+  };
+  if (signal?.aborted) throw aborted();
   const progress = onProgress || (() => {});
   const pageTimeoutMs = perPageTimeoutMs ?? DEFAULT_PER_PAGE_TIMEOUT_MS;
   const warnings: OcrWarning[] = [];
@@ -202,6 +211,14 @@ export async function performOcr(
       progress(m.status, m.progress || 0);
     }
   );
+
+  // cancelling mid-page: shutting the worker down makes the running recognize() fail at once
+  let stopped = false;
+  const stop = () => {
+    stopped = true;
+    worker.terminate().catch(() => {});
+  };
+  signal?.addEventListener('abort', stop, { once: true });
 
   let fullText = '';
   let newPdfDoc: PDFDocument | undefined;
@@ -288,6 +305,7 @@ export async function performOcr(
     }
 
     for (let i = 1; i <= pdf.numPages; i++) {
+      if (signal?.aborted) throw aborted();
       progress(
         trText('Processing page {{i}} of {{numPages}}', {
           i,
@@ -325,6 +343,7 @@ export async function performOcr(
           pageText = result.data.text ?? '';
           pageHocr = result.data.hocr ?? '';
         } catch (err) {
+          if (signal?.aborted) throw aborted();
           const message = err instanceof Error ? err.message : String(err);
           warnings.push({
             page: i,
@@ -365,6 +384,7 @@ export async function performOcr(
 
         fullText += pageText + '\n\n';
       } catch (err) {
+        if (signal?.aborted) throw aborted();
         const message = err instanceof Error ? err.message : String(err);
         warnings.push({ page: i, kind: 'page-error', message });
       } finally {
@@ -376,8 +396,10 @@ export async function performOcr(
       }
     }
   } finally {
-    await worker.terminate();
+    signal?.removeEventListener('abort', stop);
+    if (!stopped) await worker.terminate();
   }
+  if (signal?.aborted) throw aborted();
 
   if (!newPdfDoc) {
     throw new Error(trText('OCR aborted before any page was processed'));

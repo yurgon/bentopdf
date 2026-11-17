@@ -11,11 +11,61 @@ import {
   UnsupportedOcrLanguageError,
 } from '../utils/tesseract-language-availability.js';
 import { initI18n, t, onPageReady } from '../i18n/index.js';
+import { cancelLabel } from '../../site/js/tools/legacy-notes';
+import { packNote, estimateNote } from '../../site/js/tools/ocr-extras';
 
 const pageState: OcrState = {
   file: null,
   searchablePdfBytes: null,
 };
+let pageCount = 0;
+let running: AbortController | null = null;
+
+const selectedCodes = () =>
+  Array.from(document.querySelectorAll('.lang-checkbox:checked')).map(
+    (cb) => (cb as HTMLInputElement).value
+  );
+
+/** Before the run: language data size and a rough time, under the start button. */
+async function updatePlanNote() {
+  const btn = document.getElementById('process-btn');
+  if (!btn) return;
+  let note = document.getElementById('ocr-plan-note');
+  if (!note) {
+    note = document.createElement('p');
+    note.id = 'ocr-plan-note';
+    note.className = 'text-sm text-gray-400 mb-3';
+    note.setAttribute('aria-live', 'polite');
+    btn.before(note);
+  }
+  const codes = selectedCodes();
+  const scale = parseFloat(
+    (document.getElementById('ocr-resolution') as HTMLSelectElement | null)
+      ?.value || '2'
+  );
+  const time = estimateNote(pageCount, scale, Math.max(1, codes.length));
+  note.textContent = time;
+  const size = await packNote(codes);
+  if (selectedCodes().join() === codes.join())
+    note.textContent = [size, time].filter(Boolean).join(' ');
+}
+
+function cancelButton(): HTMLButtonElement | null {
+  const box = document.getElementById('ocr-progress');
+  if (!box) return null;
+  let b = document.getElementById('ocr-cancel') as HTMLButtonElement | null;
+  if (!b) {
+    b = document.createElement('button');
+    b.id = 'ocr-cancel';
+    b.type = 'button';
+    b.className =
+      'mt-4 w-full px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:bg-gray-700';
+    b.textContent = cancelLabel();
+    b.addEventListener('click', () => running?.abort());
+    box.appendChild(b);
+  }
+  return b;
+}
 
 const whitelistPresets: Record<string, string> = {
   alphanumeric:
@@ -153,6 +203,8 @@ async function runOCR() {
 
   if (toolOptions) toolOptions.classList.add('hidden');
   if (ocrProgress) ocrProgress.classList.remove('hidden');
+  running = new AbortController();
+  cancelButton();
 
   try {
     const arrayBuffer = await pageState.file.arrayBuffer();
@@ -164,6 +216,7 @@ async function runOCR() {
       whitelist,
       embedFullFonts,
       onProgress: updateProgress,
+      signal: running.signal,
     });
 
     pageState.searchablePdfBytes = result.pdfBytes;
@@ -179,10 +232,13 @@ async function runOCR() {
     ) as HTMLTextAreaElement;
     if (textOutput) textOutput.value = result.fullText.trim();
   } catch (e) {
-    console.error(e);
-    if (e instanceof UnsupportedOcrLanguageError) {
+    if (e instanceof Error && e.name === 'AbortError') {
+      // cancelled: back to the settings, nothing to report
+    } else if (e instanceof UnsupportedOcrLanguageError) {
+      console.error(e);
       showAlert(t('tools:ocrPdf.languageUnavailableTitle'), e.message);
     } else {
+      console.error(e);
       showAlert(
         t('tools:ocrPdf.ocrErrorTitle'),
         t('tools:ocrPdf.ocrErrorMessage')
@@ -190,6 +246,10 @@ async function runOCR() {
     }
     if (toolOptions) toolOptions.classList.remove('hidden');
     if (ocrProgress) ocrProgress.classList.add('hidden');
+    const log = document.getElementById('progress-log');
+    if (log) log.textContent = '';
+  } finally {
+    running = null;
   }
 }
 
@@ -231,6 +291,7 @@ async function updateUI() {
     createIcons({ icons });
 
     if (toolOptions) toolOptions.classList.remove('hidden');
+    updatePlanNote();
   } else {
     if (toolOptions) toolOptions.classList.add('hidden');
   }
@@ -245,6 +306,7 @@ async function handleFileSelect(files: FileList | null) {
     ) {
       const result = await loadPdfWithPasswordPrompt(file);
       if (!result) return;
+      pageCount = result.pdf.numPages;
       result.pdf.destroy();
       pageState.file = result.file;
       updateUI();
@@ -386,6 +448,7 @@ onPageReady(async function () {
       if (processBtn) {
         processBtn.disabled = selected.length === 0;
       }
+      updatePlanNote();
     });
   }
 
@@ -416,6 +479,10 @@ onPageReady(async function () {
       }
     });
   });
+
+  document
+    .getElementById('ocr-resolution')
+    ?.addEventListener('change', () => updatePlanNote());
 
   // Process button
   if (processBtn) {

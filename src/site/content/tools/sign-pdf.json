@@ -1,0 +1,88 @@
+{
+  "slug": "sign-pdf",
+  "mainQuery": "sign pdf",
+  "title": "Sign PDF: Add Your Signature to a PDF Free, No Upload",
+  "description": "Sign PDF documents in your browser: draw, type or upload your signature, add the date and initials, and download. Free, no account, no upload.",
+  "h1": "Sign PDF",
+  "crumb": "Sign PDF",
+  "promise": "Sign PDF documents yourself in a minute: draw, type or upload your signature, place it on the page, add a date, and download. Everything runs on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Draw, type or upload"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Sign PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Draw, type or upload a signature image",
+      "Place, resize and move it on any page",
+      "Add text such as the date, name or initials",
+      "Optionally flatten so the signature cannot be moved",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to sign a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "create",
+      "label": "Draw, type or upload a signature"
+    },
+    {
+      "id": "date",
+      "label": "Add the date, your name and initials"
+    },
+    {
+      "id": "legal",
+      "label": "Is an electronic signature legally valid?"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "signature-generator",
+      "icon": "pen",
+      "name": "Signature Generator",
+      "why": "Make a clean signature image to reuse in any document."
+    },
+    {
+      "slug": "digital-sign-pdf",
+      "icon": "lock",
+      "name": "Digital Sign PDF",
+      "why": "Sign with a certificate when a cryptographic signature is required."
+    },
+    {
+      "slug": "form-filler",
+      "icon": "edit",
+      "name": "Fill PDF Form",
+      "why": "Fill in the form fields before you sign."
+    },
+    {
+      "slug": "flatten-pdf",
+      "icon": "file",
+      "name": "Flatten PDF",
+      "why": "Lock filled fields and the signature into the page."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

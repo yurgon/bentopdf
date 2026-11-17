@@ -9,6 +9,7 @@ import {
 import { deduplicateFileName } from '../utils/deduplicate-filename.js';
 
 import { trText, onPageReady } from '../i18n/i18n.js';
+import { officeNote } from '../../site/js/tools/legacy-notes';
 
 onPageReady(() => {
   state.files = [];
@@ -22,6 +23,14 @@ onPageReady(() => {
   const clearFilesBtn = document.getElementById('clear-files-btn');
   const backBtn = document.getElementById('back-to-tools');
   const processBtn = document.getElementById('process-btn');
+  // Plyleaf: say before the first run that the converter is a large one-time download
+  if (processBtn && !document.getElementById('office-note')) {
+    const note = document.createElement('p');
+    note.id = 'office-note';
+    note.className = 'text-sm text-gray-400 mb-3';
+    note.textContent = officeNote();
+    processBtn.before(note);
+  }
 
   if (backBtn) {
     backBtn.addEventListener('click', () => {

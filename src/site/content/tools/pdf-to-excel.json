@@ -1,0 +1,88 @@
+{
+  "slug": "pdf-to-excel",
+  "mainQuery": "pdf to excel",
+  "title": "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload",
+  "description": "Convert PDF to Excel in your browser: tables are found on every page and saved to an XLSX file, one sheet per table. Free, nothing is uploaded.",
+  "h1": "PDF to Excel",
+  "crumb": "PDF to Excel",
+  "promise": "Convert PDF to Excel: every table in your PDF is found and saved to an XLSX workbook, one sheet per table, ready to sort and sum. Your file stays on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "One sheet per table"],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to Excel",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Finds tables on every page automatically",
+      "Saves an XLSX workbook, one sheet per table",
+      "Sheets named by table and page number",
+      "Opens in Excel, Google Sheets, Numbers and LibreOffice",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PDF to Excel"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "tables",
+      "label": "Extract tables from a PDF"
+    },
+    {
+      "id": "statements",
+      "label": "Bank statements and invoices"
+    },
+    {
+      "id": "sheets",
+      "label": "Open the result in Google Sheets or Numbers"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-csv",
+      "icon": "file",
+      "name": "PDF to CSV",
+      "why": "Get tables as plain CSV for databases and scripts."
+    },
+    {
+      "slug": "excel-to-pdf",
+      "icon": "file",
+      "name": "Excel to PDF",
+      "why": "Turn the finished spreadsheet back into a PDF."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "PDF OCR",
+      "why": "Make a scanned statement searchable first."
+    },
+    {
+      "slug": "pdf-to-text",
+      "icon": "type",
+      "name": "PDF to Text",
+      "why": "Get the rest of the document as plain text."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

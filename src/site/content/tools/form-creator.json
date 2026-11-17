@@ -1,0 +1,88 @@
+{
+  "slug": "form-creator",
+  "mainQuery": "create fillable pdf",
+  "title": "Create Fillable PDF Forms Free, No Acrobat or Upload",
+  "description": "Create fillable PDF forms in your browser: add text fields, checkboxes, dropdowns, dates and signature fields to your PDF or a blank page. Free.",
+  "h1": "Create Fillable PDF",
+  "crumb": "Create PDF Form",
+  "promise": "Create fillable PDF forms from your own document or a blank page, with ten kinds of fields, no Acrobat and no upload. Everything runs on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Ten field types"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Create Fillable PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Text, checkbox, radio, dropdown, list, date, signature, image, barcode and button fields",
+      "Start from your PDF or a blank Letter, A4 or other page",
+      "Field names, defaults, required and read-only settings",
+      "Works in Adobe Reader, browsers and phone PDF apps",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to create a fillable PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "existing",
+      "label": "Make an existing PDF fillable"
+    },
+    {
+      "id": "blank",
+      "label": "Start from a blank page"
+    },
+    {
+      "id": "works",
+      "label": "Will the form work for everyone?"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "form-filler",
+      "icon": "edit",
+      "name": "Fill PDF Form",
+      "why": "Fill in a form, yours or someone else's."
+    },
+    {
+      "slug": "flatten-pdf",
+      "icon": "file",
+      "name": "Flatten PDF",
+      "why": "Turn filled fields into plain page content."
+    },
+    {
+      "slug": "sign-pdf",
+      "icon": "sign",
+      "name": "Sign PDF",
+      "why": "Sign a filled form before sending it back."
+    },
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "Turn a Word form into a PDF, then add fields here."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

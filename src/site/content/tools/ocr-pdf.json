@@ -1,0 +1,61 @@
+{
+  "slug": "ocr-pdf",
+  "mainQuery": "pdf ocr",
+  "title": "PDF OCR: Make Scanned PDFs Searchable, Free, No Upload",
+  "description": "PDF OCR in your browser: turn a scan into a searchable PDF and a text file. Over 100 languages, no page limit. Free, nothing is uploaded.",
+  "h1": "PDF OCR",
+  "crumb": "PDF OCR",
+  "promise": "PDF OCR that turns a scanned document into a searchable PDF you can copy from, plus a plain text file. It runs on your device, with no page limit.",
+  "facts": ["Nothing is uploaded", "Free, no account", "No page limit"],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF OCR",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Searchable PDF with an invisible text layer over the original pages",
+      "Recognized text as a .txt file or copied to the clipboard",
+      "Over 100 languages, several at once",
+      "Size of the language data and a time estimate shown before the run",
+      "Progress with cancel; no page limit; nothing is uploaded"
+    ]
+  },
+  "outline": [
+    { "id": "how-to", "label": "How to OCR a PDF" },
+    { "id": "result-example", "label": "What you get" },
+    { "id": "searchable", "label": "Make a scan searchable" },
+    { "id": "languages", "label": "Choosing languages" },
+    { "id": "accuracy", "label": "What affects accuracy" },
+    { "id": "how-it-works", "label": "How it works" },
+    { "id": "uses", "label": "Uses and limits" },
+    { "id": "faq", "label": "Questions" },
+    { "id": "related", "label": "Related tools" }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-word",
+      "icon": "file",
+      "name": "PDF to Word",
+      "why": "Edit the recognized document in Word."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Scans are large; shrink the searchable PDF before sending it."
+    },
+    {
+      "slug": "redact-pdf",
+      "icon": "redact",
+      "name": "Redact PDF",
+      "why": "Remove private details once the scan is searchable."
+    },
+    {
+      "slug": "compare-pdfs",
+      "icon": "compare",
+      "name": "Compare PDFs",
+      "why": "Find what changed between two scanned versions."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page and the language data have loaded"
+}

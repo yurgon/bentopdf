@@ -1056,6 +1056,10 @@
   stroke: var(--accent-ink);
   stroke-width: 1.2;
 }
+.f-ink {
+  /* a redaction bar: solid ink in both themes */
+  fill: var(--ink);
+}
 .f-line {
   stroke: var(--line-strong);
   stroke-width: 1.6;
@@ -1501,4 +1505,27 @@
 }
 .group h2 a:hover {
   color: var(--accent-ink);
+}
+
+/* Markdown to PDF saves through the print dialog: only the rendered document may print, so the
+   page around the tool (hero, guide, questions, header, footer) must not leave blank pages */
+@media print {
+  body:has(#markdown-editor-container) .site-header,
+  body:has(#markdown-editor-container) .site-footer,
+  body:has(#markdown-editor-container) .hero-a,
+  body:has(#markdown-editor-container) .doc-a,
+  body:has(#markdown-editor-container) .crumbs,
+  body:has(#markdown-editor-container) main > .wrap > :not(.tool-a) {
+    display: none !important;
+  }
+  body:has(#markdown-editor-container) .tool-a,
+  body:has(#markdown-editor-container) .work,
+  body:has(#markdown-editor-container) main,
+  body:has(#markdown-editor-container) .wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    max-width: none !important;
+    background: #fff !important;
+  }
 }

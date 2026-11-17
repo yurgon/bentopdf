@@ -1,0 +1,65 @@
+{
+  "slug": "compare-pdfs",
+  "mainQuery": "compare pdfs",
+  "title": "Compare PDFs: Find Differences Between Two Files, Free",
+  "description": "Compare two PDF files side by side or as an overlay. Added, deleted, changed and moved text is highlighted, scans too. Free, nothing uploaded.",
+  "h1": "Compare PDFs",
+  "crumb": "Compare PDFs",
+  "promise": "Compare PDFs side by side or laid over each other and see every added, deleted, changed and moved passage, then save a report. Both files stay on your device.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Works on scans with OCR"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Compare PDFs",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Side by side, overlay and flicker views",
+      "Added, deleted, modified and moved text highlighted",
+      "Changes in images, headers, annotations, formatting and backgrounds",
+      "OCR for scanned PDFs",
+      "Comparison report saved as PDF; nothing is uploaded"
+    ]
+  },
+  "outline": [
+    { "id": "how-to", "label": "How to compare two PDFs" },
+    { "id": "result-example", "label": "What you get" },
+    { "id": "views", "label": "Side by side or overlay" },
+    { "id": "changes", "label": "What counts as a change" },
+    { "id": "scans", "label": "Scanned PDFs" },
+    { "id": "how-it-works", "label": "How it works" },
+    { "id": "uses", "label": "Uses and limits" },
+    { "id": "faq", "label": "Questions" },
+    { "id": "related", "label": "Related tools" }
+  ],
+  "related": [
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "PDF OCR",
+      "why": "Make a scan searchable before comparing or quoting it."
+    },
+    {
+      "slug": "redact-pdf",
+      "icon": "redact",
+      "name": "Redact PDF",
+      "why": "Remove private details before you share either version."
+    },
+    {
+      "slug": "edit-pdf",
+      "icon": "edit",
+      "name": "Edit PDF",
+      "why": "Add notes to the changes you found."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Put the report and both versions into one file."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

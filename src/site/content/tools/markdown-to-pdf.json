@@ -1,0 +1,92 @@
+{
+  "slug": "markdown-to-pdf",
+  "mainQuery": "markdown to pdf",
+  "title": "Markdown to PDF: Convert MD Files with Live Preview, Free",
+  "description": "Convert Markdown to PDF in your browser: paste text or open a .md file, see a live preview with tables, code, math and diagrams, save as PDF.",
+  "h1": "Markdown to PDF",
+  "crumb": "Markdown to PDF",
+  "promise": "Convert Markdown to PDF with a live preview: tables, code, math and diagrams come out formatted, and your text never leaves your device.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Tables, code, math, diagrams"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Markdown to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Editor with live preview",
+      "Open .md, .markdown or .txt files",
+      "Tables, task lists, footnotes and code highlighting",
+      "Math with KaTeX and diagrams with Mermaid",
+      "Saves through the browser's print to PDF; nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert Markdown to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "open",
+      "label": "Paste text or open a .md file"
+    },
+    {
+      "id": "features",
+      "label": "Tables, code, math and diagrams"
+    },
+    {
+      "id": "save",
+      "label": "Save as PDF"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-markdown",
+      "icon": "type",
+      "name": "PDF to Markdown",
+      "why": "Turn a PDF back into Markdown text."
+    },
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "Convert documents written in Word instead."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Join several exported notes into one PDF."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a PDF with many images."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

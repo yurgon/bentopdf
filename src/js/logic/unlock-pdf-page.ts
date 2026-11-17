@@ -106,14 +106,11 @@ async function decryptPdf() {
     return;
   }
 
-  const password = (
-    document.getElementById('password-input') as HTMLInputElement
-  )?.value;
-
-  if (!password) {
-    showAlert('Input Required', 'Please enter the PDF password.');
-    return;
-  }
+  // Plyleaf: an empty password is allowed. A PDF that opens freely but blocks printing,
+  // copying or editing has only a permissions password, and it unlocks with an empty one.
+  const password =
+    (document.getElementById('password-input') as HTMLInputElement)?.value ??
+    '';
 
   const loaderModal = document.getElementById('loader-modal');
   const loaderText = document.getElementById('loader-text');

@@ -274,7 +274,7 @@ function howToLd(doc, url) {
 // Takes the working part of a BentoPDF page (the tool card and its dialogs) and the scripts that
 // drive it. Its own title, subtitle and "Back to Tools" button give way to our hero; the SEO
 // blocks under it are replaced by ours. Class "btn" is renamed: ours would restyle its buttons.
-function legacyTool(slug) {
+function legacyTool(slug, editorMode) {
   const src = fs.readFileSync(
     path.join(ROOT, 'src/pages', `${slug}.html`),
     'utf8'
@@ -286,14 +286,21 @@ function legacyTool(slug) {
   const part = body.slice(0, Math.min(...endMarks));
   const dom = new JSDOM(`<body>${part}</body>`);
   const d = dom.window.document;
-  const card = d.getElementById('tool-uploader');
+  // most tools have #tool-uploader; the form creator has #upload-area plus a separate workspace
+  const card =
+    d.getElementById('tool-uploader') ||
+    d.getElementById('upload-area') ||
+    d.getElementById('back-to-tools')?.parentElement;
   if (!card) fail(slug, 'legacy page has no #tool-uploader');
   const h1 = card.querySelector('h1');
   const sub = h1?.nextElementSibling;
   if (sub && sub.tagName === 'P') sub.remove();
   h1?.remove();
-  const back = d.getElementById('back-to-tools');
-  if (back) back.hidden = true;
+  for (const back of d.querySelectorAll('[id^="back-to-tools"]'))
+    back.hidden = true;
+  // a full-screen wrapper around the card would push our page apart
+  for (let el = card.parentElement; el && el !== d.body; el = el.parentElement)
+    if (el.classList.contains('min-h-screen')) el.className = 'legacy-uploader';
   const wrap = d.getElementById('uploader');
   if (wrap) wrap.className = 'legacy-uploader';
   card.classList.add('legacy-card');
@@ -302,7 +309,7 @@ function legacyTool(slug) {
     el.classList.add('legacy-btn');
   }
   const scripts = [
-    ...src.matchAll(/<script type="module" src="([^"]+)"><\/script>/g),
+    ...src.matchAll(/<script\s+type="module"\s+src="([^"]+)"\s*><\/script>/g),
   ]
     .map((m) => m[1])
     .filter((s) => !/full-width|simple-mode-footer|mobileMenu/.test(s));
@@ -323,7 +330,9 @@ function legacyTool(slug) {
   const tailHtml = tail
     ? new JSDOM(`<body>${tail}</body>`).window.document.body.innerHTML
     : '';
-  const html = `<section class="work legacy" id="tool">
+  // editorMode: the PDF editor opens straight in that mode (redact-pdf uses "redact")
+  const modeAttr = editorMode ? ` data-editor-mode="${editorMode}"` : '';
+  const html = `<section class="work legacy" id="tool"${modeAttr}>
 ${d.body.innerHTML.replace(/\{\{&gt;/g, '{{>')}
 </section>${tailHtml ? `\n${tailHtml}` : ''}
 ${scripts.map((s) => `<script type="module" src="${s}"></script>`).join('\n')}`;
@@ -373,7 +382,9 @@ for (const f of toolFiles) {
   );
   // "legacy": the working tool is BentoPDF's own (src/pages/<slug>.html), placed in our template
   const legacy =
-    t.workArea === 'legacy' ? legacyTool(t.legacySource || t.slug) : null;
+    t.workArea === 'legacy'
+      ? legacyTool(t.legacySource || t.slug, t.editorMode)
+      : null;
   const workHtml = legacy
     ? legacy.html
     : fs.readFileSync(

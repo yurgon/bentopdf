@@ -1,0 +1,88 @@
+{
+  "slug": "split-pdf",
+  "mainQuery": "split pdf",
+  "title": "Split PDF: Separate Pages or Extract a Range, Free",
+  "description": "Split PDF files in your browser: extract a page range, save every page as its own file, or split by bookmarks or every N pages. Free, no upload.",
+  "h1": "Split PDF",
+  "crumb": "Split PDF",
+  "promise": "Split PDF files into separate pages, page ranges, chapters or equal parts, with no limit on how many files you get. Everything runs on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Six ways to split"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Split PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Extract page ranges such as 1-3, 7, 12-15",
+      "Save every page as a separate PDF",
+      "Even or odd pages",
+      "Pick pages on thumbnails",
+      "Split by bookmarks or every N pages; runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to split a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "extract",
+      "label": "Extract pages from a PDF"
+    },
+    {
+      "id": "every-page",
+      "label": "Split every page into its own file"
+    },
+    {
+      "id": "bookmarks",
+      "label": "Split by bookmarks or into equal parts"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Put pages from several files back together."
+    },
+    {
+      "slug": "delete-pages",
+      "icon": "file",
+      "name": "Delete Pages",
+      "why": "Remove a few pages and keep the rest in one file."
+    },
+    {
+      "slug": "organize-pdf",
+      "icon": "grid",
+      "name": "Organize PDF",
+      "why": "Reorder, rotate and remove pages on thumbnails."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a part that is still too large to send."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

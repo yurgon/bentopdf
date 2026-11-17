@@ -1,0 +1,88 @@
+{
+  "slug": "heic-to-pdf",
+  "mainQuery": "heic to pdf",
+  "title": "HEIC to PDF: Convert iPhone Photos to PDF, Free",
+  "description": "Convert HEIC to PDF in your browser: put iPhone photos into one PDF, in the order you choose, at full quality. Free, works on Windows, no upload.",
+  "h1": "HEIC to PDF",
+  "crumb": "HEIC to PDF",
+  "promise": "Convert HEIC to PDF: iPhone photos become one PDF, one photo per page, at full quality. Your photos stay on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Works on Windows"],
+  "workArea": "legacy",
+  "app": {
+    "name": "HEIC to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts HEIC and HEIF photos",
+      "Several photos into one PDF, one per page",
+      "Drag to set the order",
+      "Full quality, no recompression to JPG",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert HEIC to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "several",
+      "label": "Several HEIC photos in one PDF"
+    },
+    {
+      "id": "what",
+      "label": "What is a HEIC file?"
+    },
+    {
+      "id": "quality",
+      "label": "Quality and file size"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "jpg-to-pdf",
+      "icon": "image",
+      "name": "JPG to PDF",
+      "why": "Photos already saved as JPG go into a PDF the same way."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Full-quality photo PDFs are large; shrink them for email."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Add the photos to another document."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "PDF OCR",
+      "why": "Make photographed documents searchable."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

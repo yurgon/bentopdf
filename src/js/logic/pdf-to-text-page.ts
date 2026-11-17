@@ -6,6 +6,7 @@ import type { PyMuPDFInstance } from '@/types';
 import { batchDecryptIfNeeded } from '../utils/password-prompt.js';
 import { deduplicateFileName } from '../utils/deduplicate-filename.js';
 
+import { noteBefore, textEngineNote } from '../../site/js/tools/legacy-notes';
 import { trText, onPageReady } from '../i18n/i18n.js';
 
 let files: File[] = [];
@@ -14,6 +15,12 @@ let pymupdf: PyMuPDFInstance | null = null;
 onPageReady(initializePage);
 
 function initializePage() {
+  // Plyleaf: the text engine is a one-time download; say so before the first run
+  noteBefore(
+    document.getElementById('process-btn'),
+    'engine-note',
+    textEngineNote()
+  );
   createIcons({ icons });
 
   const fileInput = document.getElementById('file-input') as HTMLInputElement;

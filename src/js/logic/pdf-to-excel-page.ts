@@ -4,6 +4,7 @@ import { createIcons, icons } from 'lucide';
 import { loadPyMuPDF } from '../utils/pymupdf-loader.js';
 import { loadPdfWithPasswordPrompt } from '../utils/password-prompt.js';
 import * as XLSX from 'xlsx';
+import { noteBefore, textEngineNote } from '../../site/js/tools/legacy-notes';
 import { trText, onPageReady } from '../i18n/i18n.js';
 
 let file: File | null = null;
@@ -157,6 +158,8 @@ onPageReady(() => {
   const fileInput = document.getElementById('file-input') as HTMLInputElement;
   const dropZone = document.getElementById('drop-zone');
   const processBtn = document.getElementById('process-btn');
+  // Plyleaf: the text engine is a one-time download; say so before the first run
+  noteBefore(processBtn, 'engine-note', textEngineNote());
   const backBtn = document.getElementById('back-to-tools');
 
   if (backBtn) {

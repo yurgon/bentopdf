@@ -383,7 +383,10 @@ async function handleFiles(files: FileList) {
             const cmds = registry.getPlugin('commands')?.provides() as
               | { execute?: (id: string, documentId?: string) => void }
               | undefined;
-            setTimeout(() => cmds?.execute?.('mode:redact', docId), 0);
+            // the viewer sets up its toolbars after this event and may reset the mode, so
+            // switch once it has settled, and again in case it was still busy
+            for (const ms of [300, 1000, 2000])
+              setTimeout(() => cmds?.execute?.('mode:redact', docId), ms);
           }
           const pendingEntry = fileDisplayArea.querySelector(
             `[data-pending-name="${CSS.escape(docKey)}"]`

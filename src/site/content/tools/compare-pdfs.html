@@ -1,0 +1,288 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to compare two PDFs</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="10" y="14" width="66" height="72" rx="8" />
+          <rect class="f-zone" x="84" y="14" width="66" height="72" rx="8" />
+          <g transform="translate(29 26)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="28" text-anchor="middle">v1</text>
+          </g>
+          <g transform="translate(103 26)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="28" text-anchor="middle">v2</text>
+          </g>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add both files</h3>
+      </div>
+      <p>Put the original on the left and the new version on the right.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="10" y="10" width="66" height="80" rx="4" />
+          <rect class="f-page" x="84" y="10" width="66" height="80" rx="4" />
+          <path
+            class="f-line"
+            d="M20 26h46M20 38h46M20 50h30M94 26h46M94 50h30"
+          />
+          <rect class="f-accent" x="92" y="33" width="50" height="10" rx="2" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Look through the changes</h3>
+      </div>
+      <p>
+        Differences are highlighted and listed. Click one in the list to jump to
+        it in both files.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <path class="f-line" d="M6 16h18M6 22h18M6 28h12" />
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Save a report if you need one</h3>
+      </div>
+      <p>
+        Export the comparison as a PDF, in overlay, split or alternating layout,
+        to send to someone else.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="The original contract says payment within 30 days"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">4. Payment</text>
+        <text class="f-s" x="30" y="48">within 30 days of</text>
+        <text class="f-s" x="30" y="66">the invoice date.</text>
+        <text class="f-s" x="160" y="58">contract-v1.pdf</text>
+      </svg>
+      <figcaption>Original</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="The new version says 60 days, and the change is highlighted and listed"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">4. Payment</text>
+        <rect class="f-accent" x="27" y="38" width="100" height="14" rx="2" />
+        <text class="f-s" x="30" y="48">within 60 days of</text>
+        <text class="f-s" x="30" y="66">the invoice date.</text>
+        <text class="f-s" x="160" y="50">1 modified:</text>
+        <text class="f-s" x="160" y="66">30 days, now 60 days</text>
+      </svg>
+      <figcaption>New version, compared</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        Comparison views
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">View</th>
+          <th scope="col">What you see</th>
+          <th scope="col">Best for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Side by side</td>
+          <td>Both files next to each other, scrolling together</td>
+          <td>Reading changes in text</td>
+        </tr>
+        <tr>
+          <td>Overlay</td>
+          <td>One file laid over the other</td>
+          <td>Drawings, layouts, small shifts</td>
+        </tr>
+        <tr>
+          <td>Flicker</td>
+          <td>The two versions swap in place</td>
+          <td>Spotting what moved</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Comparing PDFs answers one question: what is different in the new version?
+      Reading two contracts line by line takes an hour and still misses things.
+      This tool finds every change in seconds, shows it in place and lists it,
+      and runs in your browser, so confidential documents are never uploaded.
+    </p>
+
+    <h2 id="views">Compare two PDFs side by side or as an overlay</h2>
+    <p>
+      Side by side shows both files with scrolling kept in step, which is the
+      easiest way to read a changed paragraph. Overlay puts one page over the
+      other, useful for plans, drawings and forms, where a small shift matters
+      more than the words. Flicker swaps the two versions in place so moved
+      items catch your eye. You can zoom, fit the page, and switch between all
+      changes and content only.
+    </p>
+
+    <h2 id="changes">Find text, image and formatting changes</h2>
+    <p>
+      Each difference is sorted as added, deleted, modified or moved, and by
+      what changed: text, images, headers, annotations, formatting or
+      backgrounds. Counts are shown for each kind, and you can filter the list
+      to see, for example, only deleted text. A paragraph that was moved is
+      reported as moved, not as one deletion plus one addition.
+    </p>
+
+    <h2 id="scans">Compare scanned PDFs with OCR</h2>
+    <p>
+      A scan is a picture of a page with no text inside. Turn on OCR and the
+      text is read from the images first, then compared. Recognition takes
+      longer and is only as good as the scan, so check important changes by eye.
+      To make a scan searchable for good, use
+      <a href="/ocr-pdf">PDF OCR</a>.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      Both files are read in your browser. Text is extracted with its position
+      on the page, matched between the two versions, and the differences are
+      worked out and drawn on top of the pages. When page numbers shift because
+      something was added near the start, the text is still matched correctly.
+      The report is built in the browser too. Nothing is sent anywhere.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Contracts and leases from the other side, revised drafts, legal redlines,
+      proofs from a printer, updated price lists, insurance policies at renewal,
+      and school or government forms that changed this year.
+    </p>
+    <ul>
+      <li>
+        <strong>Two PDFs only.</strong> To compare a Word file, save it as PDF
+        first, or use <a href="/word-to-pdf">Word to PDF</a>.
+      </li>
+      <li>
+        <strong>Scans</strong> depend on OCR quality: blurred or skewed pages
+        produce false changes.
+      </li>
+      <li>
+        <strong>Password-protected PDFs</strong> need the password, which the
+        tool asks for.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How can I compare two PDF files for differences?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the original and the new version on this page. Every difference is
+        highlighted in both files and listed with its type, and you can jump
+        from the list to each one.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I compare scanned PDFs?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes. Turn on OCR and the text is recognized from the scan first. Clear,
+        straight scans give the best result.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is this the same as a redline?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        It does the same job: shows what was added, deleted and changed. Export
+        the comparison as a PDF to share it like a redline.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I track changes in a PDF?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        A PDF does not record its edits the way Word does. Comparing the old and
+        new versions here gives you the same list of changes.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does it detect moved paragraphs?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Moved text is reported as moved, and it is still matched when page
+        numbers shift.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I compare a PDF with a Word document?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Convert the Word file to PDF first with
+        <a href="/word-to-pdf">Word to PDF</a>, then compare the two PDFs.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Are my files uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. Both files are compared in your browser, which makes it safe for
+        contracts and other confidential documents.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is it free?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no page limit and no watermark on the report.
+      </div>
+    </details>
+  </div>
+</section>

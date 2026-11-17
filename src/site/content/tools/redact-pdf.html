@@ -1,0 +1,321 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to redact a PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <path class="f-line" d="M6 15h18M6 21h18M6 27h12" />
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Open your PDF</h3>
+      </div>
+      <p>
+        The editor opens with the redaction tools ready. The file stays on your
+        device.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="30" y="10" width="100" height="80" rx="4" />
+          <path class="f-line" d="M42 26h76M42 38h30M42 50h76M42 62h50" />
+          <rect class="f-accent" x="76" y="33" width="42" height="10" rx="1" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Mark what to remove</h3>
+      </div>
+      <p>
+        Select text to black out, or draw a box over any area: a signature, a
+        photo, a stamp.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="30" y="10" width="100" height="80" rx="4" />
+          <path class="f-line" d="M42 26h76M42 38h30M42 50h76M42 62h50" />
+          <rect class="f-ink" x="76" y="33" width="42" height="10" rx="1" />
+          <path class="f-stroke" d="M58 74l6 6 12-12" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Apply the redactions</h3>
+      </div>
+      <p>
+        Applying removes the marked content from the page. Until then a mark is
+        only a plan and can still be moved or deleted.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <path class="f-line" d="M6 16h18M6 22h18M6 28h12" />
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Download the checked file</h3>
+      </div>
+      <p>
+        Before saving, the finished file is searched for every redacted phrase.
+        You see the result, then the file is saved.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a letter with an account number in the second line"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">Dear Ms. Lane,</text>
+        <text class="f-s" x="30" y="48">Account 4417 0293 88</text>
+        <text class="f-s" x="30" y="66">is now closed.</text>
+        <text class="f-s" x="160" y="50">Text you can select,</text>
+        <text class="f-s" x="160" y="66">copy and search</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the account number is a black bar and can no longer be found in the file"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">Dear Ms. Lane,</text>
+        <text class="f-s" x="30" y="48">Account</text>
+        <rect class="f-ink" x="72" y="39" width="62" height="12" />
+        <text class="f-s" x="30" y="66">is now closed.</text>
+        <text class="f-s" x="160" y="50">Search for 4417:</text>
+        <text class="f-s" x="160" y="66">no results</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        Covering text compared with redacting it
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Black box drawn on top</th>
+          <th scope="col">Redaction on this page</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Looks hidden on screen</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Text can be copied or searched</td>
+          <td>Yes, the words are still underneath</td>
+          <td>No, the words are removed</td>
+        </tr>
+        <tr>
+          <td>Copies in properties and bookmarks</td>
+          <td>Left as they were</td>
+          <td>Removed</td>
+        </tr>
+        <tr>
+          <td>Checked before saving</td>
+          <td>No</td>
+          <td>Yes, every redacted phrase</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      To redact a PDF is to remove information from it for good, so nobody who
+      gets the file can read, copy or search for it. A black rectangle drawn on
+      top is not enough: the words stay in the file under it. This tool removes
+      them, runs in your browser so the document is never uploaded, and checks
+      the finished file before you send it.
+    </p>
+
+    <h2 id="black-out">Black out text in a PDF permanently</h2>
+    <p>
+      Select the words you want gone, such as a name, an account number or an
+      address, and they are marked for redaction. To find every place a word
+      appears, use the search in the editor and mark each match. When you apply,
+      the letters under the marks are taken out of the page and a solid black
+      bar is drawn where they were. The rest of the text stays real text: it can
+      still be selected, copied and searched.
+    </p>
+
+    <h2 id="areas">Redact an area or an image</h2>
+    <p>
+      Draw a box to remove everything inside it: part of a scan, a photo, a
+      signature, a QR code or a stamp. On a scanned page there is no text, only
+      a picture of it, so drawing a box over the words is the way to redact a
+      scan.
+    </p>
+
+    <h2 id="check">Check that the text is really gone</h2>
+    <p>
+      Before the file is saved, it is opened again the way any PDF reader would
+      open it, and every phrase you redacted is looked for in the page text, the
+      document properties and the bookmarks. If one is still found, the file is
+      not downloaded and you are told which words to redact again. If nothing is
+      found, you see a confirmation and the file is saved.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      Redaction runs in a PDF engine inside your browser. Applying a mark
+      removes the text and image content under it from the page, not just its
+      appearance. Words you redacted are then also removed from places a PDF
+      keeps copies of text: the title and other properties, bookmarks and
+      attached files. Finally the check above runs on the finished file. The
+      document never leaves your device.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Court filings and discovery, records requests, HR and medical documents,
+      bank statements for a landlord or a visa portal, invoices with customer
+      details, and anything shared outside the company.
+    </p>
+    <ul>
+      <li>
+        <strong>A redaction cannot be undone</strong> in the saved file. Keep
+        your original and send the redacted copy.
+      </li>
+      <li>
+        <strong>Encrypted PDFs</strong> are redacted on the page, but copies in
+        their properties and bookmarks cannot be cleaned. Redact an unencrypted
+        copy and add a password afterwards with
+        <a href="/protect-pdf">Protect PDF</a>.
+      </li>
+      <li>
+        <strong>Scans</strong> contain pictures of text, so the check cannot
+        read them: redact scans with a box and look at the result.
+      </li>
+      <li>
+        <strong>Information can be guessed from context</strong>, such as the
+        length of a name next to its first letter. Redact whole phrases.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How can I redact a PDF for free?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Open the file on this page, select the text or draw a box over what to
+        remove, apply the redactions and download. It is free, with no account
+        and no watermark.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How do I black out text in a PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Select the words with the redaction tool and apply. The words are
+        removed and a black bar takes their place, so the text cannot be copied
+        or found by search.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is a black box the same as redaction?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No. A box drawn with a shape or highlight tool only covers the words,
+        and anyone can copy them from under it. Redaction removes them from the
+        file.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can redacted text be recovered?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Not from a file redacted here: the words are taken out of the page and
+        its properties, and the check confirms they cannot be found. Keep the
+        original if you may need it.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I undo a redaction?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Before you apply, yes: move or delete the mark. After the file is saved,
+        no. That is the point of redaction.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does redaction remove metadata?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Words you redact are also removed from the title and other properties,
+        bookmarks and attachments. To clear all properties, use
+        <a href="/remove-metadata">Remove Metadata</a> as well.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my document uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The PDF is opened, redacted and checked in your browser, and saved
+        straight to your device.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What does redacted mean?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Redacted means private or sensitive parts of a document have been
+        removed before it is shared, usually shown as black bars.
+      </div>
+    </details>
+  </div>
+</section>

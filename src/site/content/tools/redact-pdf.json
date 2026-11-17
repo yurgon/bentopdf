@@ -1,0 +1,67 @@
+{
+  "slug": "redact-pdf",
+  "mainQuery": "redact pdf",
+  "title": "Redact PDF: Black Out Text for Good, Free, No Upload",
+  "description": "Redact PDF files in your browser: black out text or areas, and the words are removed from the file, then checked. Free, nothing is uploaded.",
+  "h1": "Redact PDF",
+  "crumb": "Redact PDF",
+  "promise": "Redact PDF text and areas so the words are gone from the file, not just covered. Before you download, the finished file is searched to make sure. Everything runs on your device.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Checked before download"
+  ],
+  "workArea": "legacy",
+  "legacySource": "annotate-pdf",
+  "editorMode": "redact",
+  "app": {
+    "name": "Redact PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Black out selected text or any area of a page",
+      "Text under the marks is removed from the page, not covered",
+      "Redacted words are also removed from properties, bookmarks and attachments",
+      "The finished file is searched for every redacted phrase before download",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    { "id": "how-to", "label": "How to redact a PDF" },
+    { "id": "result-example", "label": "What you get" },
+    { "id": "black-out", "label": "Black out text for good" },
+    { "id": "areas", "label": "Areas and images" },
+    { "id": "check", "label": "The check before download" },
+    { "id": "how-it-works", "label": "How it works" },
+    { "id": "uses", "label": "Uses and limits" },
+    { "id": "faq", "label": "Questions" },
+    { "id": "related", "label": "Related tools" }
+  ],
+  "related": [
+    {
+      "slug": "edit-pdf",
+      "icon": "edit",
+      "name": "Edit PDF",
+      "why": "Add text, notes and highlights instead of removing them."
+    },
+    {
+      "slug": "compare-pdfs",
+      "icon": "compare",
+      "name": "Compare PDFs",
+      "why": "See exactly what changed between the original and the redacted copy."
+    },
+    {
+      "slug": "protect-pdf",
+      "icon": "lock",
+      "name": "Protect PDF",
+      "why": "Add a password after redacting, before you send the file."
+    },
+    {
+      "slug": "flatten-pdf",
+      "icon": "file",
+      "name": "Flatten PDF",
+      "why": "Turn form fields and notes into plain page content."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

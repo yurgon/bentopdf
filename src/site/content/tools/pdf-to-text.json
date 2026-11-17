@@ -1,0 +1,88 @@
+{
+  "slug": "pdf-to-text",
+  "mainQuery": "pdf to text",
+  "title": "PDF to Text: Extract Text from PDF to TXT, Free",
+  "description": "Convert PDF to text in your browser: extract all the text from one or many PDFs into plain .txt files. Free, no account, nothing is uploaded.",
+  "h1": "PDF to Text",
+  "crumb": "PDF to Text",
+  "promise": "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Many files at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to Text",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Extracts all text from digital PDFs to .txt",
+      "Several PDFs at once, saved as a ZIP",
+      "Reading order kept, page by page",
+      "UTF-8 text for any language",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert a PDF to text"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "several",
+      "label": "Extract text from several PDFs"
+    },
+    {
+      "id": "scans",
+      "label": "Scanned PDFs need OCR"
+    },
+    {
+      "id": "copy",
+      "label": "Why text will not copy from some PDFs"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "PDF OCR",
+      "why": "Get text out of scanned pages, which have no text inside."
+    },
+    {
+      "slug": "pdf-to-word",
+      "icon": "file",
+      "name": "PDF to Word",
+      "why": "Keep headings, tables and layout in an editable file."
+    },
+    {
+      "slug": "pdf-to-markdown",
+      "icon": "type",
+      "name": "PDF to Markdown",
+      "why": "Keep headings and lists as simple formatting."
+    },
+    {
+      "slug": "compare-pdfs",
+      "icon": "compare",
+      "name": "Compare PDFs",
+      "why": "See what text changed between two versions."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

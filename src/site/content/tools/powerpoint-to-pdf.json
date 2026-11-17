@@ -1,0 +1,88 @@
+{
+  "slug": "powerpoint-to-pdf",
+  "mainQuery": "powerpoint to pdf",
+  "title": "PowerPoint to PDF: Convert PPT and PPTX Free, No Upload",
+  "description": "Convert PowerPoint to PDF in your browser: PPTX, PPT and ODP, one slide per page, several files at once. Free, no account, nothing is uploaded.",
+  "h1": "PowerPoint to PDF",
+  "crumb": "PowerPoint to PDF",
+  "promise": "Convert PowerPoint to PDF so your slides look the same on any device and print cleanly. PPTX, PPT and ODP files stay on your device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "PPTX, PPT and ODP"],
+  "workArea": "legacy",
+  "app": {
+    "name": "PowerPoint to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts PPTX, PPT and ODP presentations",
+      "One slide per PDF page",
+      "Several presentations at once, saved as a ZIP",
+      "LibreOffice engine running in the browser",
+      "Nothing is uploaded; works offline after the first run"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PowerPoint to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "formats",
+      "label": "PPTX, PPT and ODP"
+    },
+    {
+      "id": "fonts",
+      "label": "Fonts and layout"
+    },
+    {
+      "id": "large",
+      "label": "Large presentations and several files"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "Convert the handout or report that goes with the slides."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Image-heavy decks get large; shrink them for email."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Join several decks into one file."
+    },
+    {
+      "slug": "pdf-booklet",
+      "icon": "book",
+      "name": "PDF Booklet",
+      "why": "Print the slides as a folded booklet."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

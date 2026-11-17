@@ -1,0 +1,261 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert a PDF to text</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <path class="f-line" d="M6 15h18M6 21h18M6 27h12" />
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDFs</h3>
+      </div>
+      <p>One or several. They are read on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">Loading engine (first time)</text>
+          <rect class="f-accent" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Extracting text...</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Extract the text</h3>
+      </div>
+      <p>
+        The first run downloads the text engine once, about 39 MB. Then
+        extraction takes seconds.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">TXT</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Save the .txt</h3>
+      </div>
+      <p>One file is saved as .txt; several come together in a ZIP.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a 30 page PDF report where copying text breaks lines and picks up page numbers"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">report.pdf, 30 pages</text>
+        <text class="f-s" x="30" y="48">Copy and paste:</text>
+        <text class="f-s" x="30" y="66">broken lines, headers</text>
+        <text class="f-s" x="160" y="50">Hard to copy</text>
+        <text class="f-s" x="160" y="66">page by page</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: one plain text file with all the words in reading order"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">report.txt</text>
+        <text class="f-s" x="30" y="48">All 30 pages</text>
+        <text class="f-s" x="30" y="66">in reading order</text>
+        <text class="f-s" x="160" y="50">Search, quote, paste</text>
+        <text class="f-s" x="160" y="66">into any app</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        Which tool to use for getting text out of a PDF
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Your PDF</th>
+          <th scope="col">Use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Made on a computer (you can select text)</td>
+          <td>PDF to Text, this page</td>
+        </tr>
+        <tr>
+          <td>A scan or photo (you cannot select text)</td>
+          <td><a href="/ocr-pdf">PDF OCR</a></td>
+        </tr>
+        <tr>
+          <td>You need headings and tables kept</td>
+          <td><a href="/pdf-to-word">PDF to Word</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Converting a PDF to text gives you just the words, without layout, fonts
+      or pictures, in a .txt file that opens anywhere. It is the quickest way to
+      search a long document, quote from it, or feed it to another program. Here
+      it runs in your browser, so your documents are never uploaded.
+    </p>
+
+    <h2 id="several">Extract text from several PDFs</h2>
+    <p>
+      Add a whole folder of reports, articles or statements. Each PDF becomes a
+      .txt file with the same name, and they are saved together in a ZIP. The
+      text follows the reading order of each page, page after page, in UTF-8, so
+      accents and non-Latin alphabets come through.
+    </p>
+
+    <h2 id="scans">Scanned PDFs need OCR</h2>
+    <p>
+      This tool reads the text that is stored inside a PDF. A scan or a photo
+      saved as PDF only contains pictures of letters, so the result is empty.
+      Quick test: if you cannot select a word in your PDF viewer, use
+      <a href="/ocr-pdf">PDF OCR</a>, which recognizes the letters and also
+      gives you a text file.
+    </p>
+
+    <h2 id="copy">Why text will not copy from some PDFs</h2>
+    <p>
+      Copying from a PDF viewer often breaks lines in the middle of sentences,
+      mixes columns or picks up headers and page numbers. Some PDFs block
+      copying with a permissions password; those can be opened with
+      <a href="/unlock-pdf">Unlock PDF</a> first. And in a few files the letters
+      are drawn with fonts that have no proper character map, so the extracted
+      text looks like gibberish; running OCR on such a file gives readable text.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      Text is extracted with MuPDF, a PDF engine running in your browser. It
+      reads the characters stored in each page together with their positions,
+      puts them into reading order and writes them as plain text. The first
+      time, the engine (about 39 MB) is downloaded and kept by your browser.
+      Your files are never sent anywhere.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Searching and quoting long reports, collecting text for research or notes,
+      pasting a contract into an email, importing documents into a translation
+      or AI tool, and keeping plain-text archives.
+    </p>
+    <ul>
+      <li>
+        <strong>Formatting is not kept</strong>: no bold, tables or pictures.
+        For that, use <a href="/pdf-to-word">PDF to Word</a>.
+      </li>
+      <li><strong>Scans give no text</strong> without OCR.</li>
+      <li>
+        <strong>Complex layouts</strong> such as tables and multi-column pages
+        may come out in an unexpected order.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert a PDF to text?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the PDF on this page and press Extract Text. A .txt file with all
+        its text is saved to your device.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does it keep the formatting?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. You get plain text in reading order. For headings and tables, use
+        PDF to Word.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will it work on a scanned PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No, a scan has no text inside. Use PDF OCR, which reads the letters and
+        also gives you a text file.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How do I extract text from a PDF for free?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        On this page it is free, with no account and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why can't I copy text from my PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        It is either a scan, protected against copying, or made with fonts that
+        hide the letters. Try PDF OCR or Unlock PDF.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I convert several PDFs at once?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Each becomes its own .txt file, saved together in a ZIP.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my file uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The text is extracted in your browser and your file never leaves
+        your device.
+      </div>
+    </details>
+  </div>
+</section>
