@@ -40,6 +40,18 @@ The printer test page, graph paper, bingo cards and name tracing worksheets make
 
 Tool scripts: `src/site/js/tools/printer-test.ts`, `graph-paper.ts`, `bingo.ts` (ready word lists in `print/bingo-themes.ts`; `CARD_LIMIT` caps the cards per set and is `null`, off), `tracing.ts` (letters from `print/hershey.json`, see docs/licenses.md; print letters are reordered into the stroke order children are taught). Styles: `src/site/css/print-tools.css`.
 
+## PDF to EPUB
+
+`/pdf-to-epub` turns a PDF book into a reflowable EPUB in the browser. Modules in `src/site/js/epub/`:
+
+- `extract.ts`: reads every page with pdf.js into lines (baseline, size, bold and italic from the font name, raised small digits as footnote markers), cuts out pictures (raster images and larger vector drawings; clip paths and white fills are ignored) and reads bookmarks, title, author and language. Pages with no text and a page-sized image are marked for OCR; `recognizePages()` renders them at about 250 dpi, recognises them with Tesseract (`ocr.ts`, model downloaded once for the chosen language) and finds pictures between the recognised lines. Pages are rendered with the `print` intent: the default display intent waits for `requestAnimationFrame` and stalls in a background tab.
+- `structure.ts`: removes running heads and page numbers (lines repeated at the top or bottom of pages, page number patterns, small lone lines far from the text, lines equal to the book or a chapter title), moves footnotes (a run of small lines at the page bottom starting with a marker) to the chapter end and links the markers, joins lines into paragraphs (spacing, indent, short last line, across pages), undoes hyphenation, and finds chapters from bookmarks or from heading sizes (sizes within 7% are one style, for OCR), or every 20 pages.
+- `build.ts`: EPUB 3 with nav and an EPUB 2 `toc.ncx`, cover from page 1, footnotes as `aside epub:type="footnote"`. `chapterBody()` is also the preview.
+
+Work area: `src/site/partials/work/pdf-to-epub.html`, `src/site/js/tools/pdf-to-epub.ts`, `src/site/css/epub-tool.css`. The sample book `public/samples/plyleaf-sample-book.pdf` is our own short story typeset in Chrome.
+
+Tested on generated books (Times and Liberation, Russian, Chrome-typeset with Georgia, 268 pages, with and without bookmarks, and a scanned copy): every paragraph matched the source exactly for text PDFs and 55 of 56 nearly exactly for the scan; 268 pages read in 3 to 8 seconds, OCR about 2 seconds a page on an M-series Mac.
+
 ## Usage counter
 
 `src/site/js/stats.ts` sends one beacon per page view and one per finished job (`plyleaf:done` event; BentoPDF's `downloadFile()` fires it too) to `/api/e`. The Pages Function `functions/api/e.ts` adds 1 to a daily total in the D1 database `plyleaf-stats` (day, kind, tool, language). No cookies, IP addresses, user agents or identifiers.

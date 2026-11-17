@@ -1,0 +1,198 @@
+<section class="work" id="tool" aria-label="PDF to EPUB converter">
+  <div class="work-body">
+    <!-- empty state -->
+    <div class="drop" id="drop-zone" data-state="idle">
+      <input
+        type="file"
+        id="file-input"
+        accept="application/pdf,.pdf"
+        aria-label="Choose a PDF file"
+      />
+      <div class="drop-icon">
+        <svg class="i"><use href="#i-upload" /></svg>
+      </div>
+      <div>
+        <p class="drop-title">Drop a PDF book here</p>
+        <p class="drop-sub">
+          or choose a file. It is read on this device and never uploaded.
+        </p>
+      </div>
+      <div class="drop-actions">
+        <span class="btn btn-sm" aria-hidden="true">Choose PDF</span>
+        <button
+          class="btn btn-sm btn-ghost raise"
+          type="button"
+          id="sample-btn"
+        >
+          Try a sample book
+        </button>
+      </div>
+      <p class="drop-error" id="drop-error" role="alert" hidden></p>
+    </div>
+
+    <!-- file chosen -->
+    <div id="file-display-area" hidden>
+      <div class="file-row">
+        <div class="file-thumb" aria-hidden="true"></div>
+        <div class="file-meta">
+          <p class="file-name" id="file-name">book.pdf</p>
+          <p class="file-info tnum" id="file-info">220 pages · 2.1 MB</p>
+        </div>
+        <button
+          class="btn btn-sm btn-ghost"
+          type="button"
+          id="remove-file"
+          aria-label="Remove file"
+        >
+          <svg class="i i-sm"><use href="#i-x" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- reading / recognizing -->
+    <div class="progress" id="progress" hidden>
+      <div class="progress-track">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-text">
+        <span id="progress-label">Reading pages</span
+        ><span class="tnum" id="progress-pct">0%</span>
+      </div>
+      <div class="epub-progress-foot">
+        <span class="hint tnum" id="progress-eta"></span>
+        <button class="btn btn-sm btn-ghost" type="button" id="cancel-btn">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- scanned pages found -->
+    <div class="epub-scan" id="scan-panel" hidden>
+      <p class="epub-scan-title" id="scan-title">12 pages are scanned images</p>
+      <p class="hint" id="scan-sub">
+        Their text has to be recognized first. On this device that takes about 4
+        minutes.
+      </p>
+      <div class="epub-scan-row">
+        <label class="field epub-lang">
+          <span class="label">Language of the book</span>
+          <select class="select" id="ocr-lang"></select>
+        </label>
+        <button class="btn btn-primary" type="button" id="ocr-btn">
+          Recognize text
+        </button>
+        <button class="btn btn-ghost" type="button" id="skip-ocr-btn">
+          Skip scanned pages
+        </button>
+      </div>
+    </div>
+
+    <!-- options and preview -->
+    <div id="tool-options" class="options" hidden>
+      <div class="opt-grid epub-opts">
+        <div class="field">
+          <span class="label" id="lbl-ch">Chapters</span>
+          <div class="seg" role="radiogroup" aria-labelledby="lbl-ch">
+            <input
+              type="radio"
+              name="chapters"
+              id="ch-auto"
+              value="auto"
+              checked
+            /><label for="ch-auto">Bookmarks</label>
+            <input
+              type="radio"
+              name="chapters"
+              id="ch-fonts"
+              value="fonts"
+            /><label for="ch-fonts">Heading size</label>
+            <input
+              type="radio"
+              name="chapters"
+              id="ch-none"
+              value="none"
+            /><label for="ch-none">Every 20 pages</label>
+          </div>
+          <p class="hint" id="ch-hint">
+            Bookmarks from the PDF; if there are none, large headings.
+          </p>
+        </div>
+        <div class="field epub-checks">
+          <label class="epub-check"
+            ><input type="checkbox" name="clean" checked /><span
+              >Remove running heads and page numbers</span
+            ></label
+          >
+          <label class="epub-check"
+            ><input type="checkbox" name="notes" checked /><span
+              >Move footnotes to the end of each chapter</span
+            ></label
+          >
+          <label class="epub-check"
+            ><input type="checkbox" name="pictures" checked /><span
+              >Keep pictures</span
+            ></label
+          >
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="preview-head">
+          <span class="label">Preview</span>
+          <span class="hint tnum" id="preview-sum"
+            >12 chapters · 340 paragraphs</span
+          >
+        </div>
+        <div class="epub-preview" id="epub-preview">
+          <nav class="epub-toc" aria-label="Chapters in the book">
+            <ol id="epub-toc"></ol>
+          </nav>
+          <div
+            class="epub-page"
+            id="epub-page"
+            tabindex="0"
+            aria-live="polite"
+          ></div>
+        </div>
+        <p class="hint epub-preview-note">
+          The preview shows the first chapters. Your e-reader sets the font and
+          page size.
+        </p>
+      </div>
+    </div>
+
+    <p class="drop-error" id="make-error" role="alert" hidden></p>
+
+    <div class="result appear" id="result" hidden>
+      <div class="result-icon">
+        <svg class="i"><use href="#i-check" /></svg>
+      </div>
+      <p class="result-title" id="result-title">EPUB ready</p>
+      <p class="result-sub tnum" id="result-sub">book.epub · 12 chapters</p>
+      <div class="result-actions">
+        <button class="btn btn-primary" type="button" id="download-btn">
+          <svg class="i">
+            <use href="#i-upload" transform="rotate(180 10 10)" /></svg
+          >Download EPUB
+        </button>
+        <a class="btn" href="#e-readers">Send it to your reader</a>
+        <button class="btn btn-ghost" type="button" id="back-btn">
+          Change settings
+        </button>
+        <button class="btn btn-ghost" type="button" id="restart-btn">
+          Start over
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="work-foot">
+    <span class="privacy-note"
+      ><svg class="i"><use href="#i-device" /></svg>Processed in your browser.
+      Nothing is uploaded.</span
+    >
+    <span class="spacer"></span>
+    <button class="btn btn-primary btn-lg" type="button" id="make-btn" disabled>
+      Make EPUB
+    </button>
+  </div>
+</section>

@@ -63,6 +63,11 @@
       "accent": true,
       "tools": [
         {
+          "slug": "pdf-to-epub",
+          "name": "PDF to EPUB",
+          "line": "Reflowable e-book from a PDF, scans too"
+        },
+        {
           "slug": "epub-to-pdf",
           "name": "EPUB to PDF",
           "line": "Print or archive an e-book"

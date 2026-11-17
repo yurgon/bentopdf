@@ -1,0 +1,211 @@
+/* PDF to EPUB work area: progress with cancel, scanned-pages panel, options, book preview. */
+.epub-progress-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-top: var(--s-2);
+}
+
+.epub-scan {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-5);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--r-lg);
+  background: var(--accent-soft);
+}
+.epub-scan-title {
+  margin: 0;
+  font-weight: var(--w-semi);
+}
+.epub-scan .hint {
+  margin: 0;
+  color: var(--ink-2);
+}
+.epub-scan-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--s-3);
+  margin-top: var(--s-2);
+}
+.epub-lang {
+  min-width: 200px;
+  margin: 0;
+}
+
+.epub-opts {
+  align-items: start;
+}
+.epub-checks {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.epub-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--t-sm);
+  cursor: pointer;
+}
+.epub-check input {
+  margin: 2px 0 0;
+  width: 16px;
+  height: 16px;
+  flex: none;
+  accent-color: var(--accent-ink);
+}
+
+/* preview: chapter list beside a page that looks like a reader screen */
+.epub-preview {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) 1fr;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--surface);
+  height: min(560px, 70vh);
+}
+.epub-toc {
+  overflow: auto;
+  border-right: 1px solid var(--line);
+  padding: var(--s-3) 0;
+}
+.epub-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.epub-toc button {
+  display: block;
+  width: 100%;
+  padding: 6px var(--s-4);
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: var(--t-sm);
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+}
+.epub-toc button:hover {
+  color: var(--ink);
+  background: var(--surface-2);
+}
+.epub-toc button[aria-current='true'] {
+  color: var(--ink);
+  font-weight: var(--w-semi);
+  background: var(--bg);
+}
+.epub-toc button:disabled {
+  cursor: default;
+  color: var(--ink-3);
+}
+.epub-toc .sub button {
+  padding-left: calc(var(--s-4) + 12px);
+  font-size: var(--t-xs);
+}
+.epub-page {
+  position: relative;
+  overflow: auto;
+  padding: var(--s-8) clamp(var(--s-5), 5%, var(--s-12));
+  background: var(--bg);
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.epub-page:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: -2px;
+}
+.epub-page > * {
+  max-width: 34em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.epub-page h1,
+.epub-page h2,
+.epub-page h3 {
+  font-family: var(--font);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.epub-page h1 {
+  font-size: 1.5em;
+  margin-top: 0.4em;
+  margin-bottom: 1em;
+}
+.epub-page h2 {
+  font-size: 1.2em;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+.epub-page h3 {
+  font-size: 1.05em;
+  margin-top: 1.3em;
+  margin-bottom: 0.4em;
+}
+.epub-page p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-indent: 1.3em;
+}
+.epub-page p.first,
+.epub-page aside p {
+  text-indent: 0;
+}
+.epub-page figure {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+.epub-page figure img {
+  max-width: 100%;
+  max-height: 360px;
+  border-radius: 2px;
+}
+.epub-page sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+.epub-page a {
+  color: var(--accent-ink);
+  text-decoration: none;
+}
+.epub-page hr {
+  width: 30%;
+  margin: 2em auto 0.8em 0;
+  border: 0;
+  border-top: 1px solid var(--line-strong);
+}
+.epub-page aside p {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+.epub-page .epub-more {
+  margin-top: var(--s-8);
+  font-family: var(--font);
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  text-indent: 0;
+}
+.epub-preview-note {
+  margin-top: var(--s-2);
+}
+
+@media (max-width: 640px) {
+  .epub-preview {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: 70vh;
+  }
+  .epub-toc {
+    max-height: 132px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}

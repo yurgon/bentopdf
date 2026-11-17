@@ -1,10 +1,10 @@
 {
   "slug": "for-e-readers",
-  "title": "E-book Tools: EPUB, MOBI, FB2 and Comics to PDF",
-  "description": "Free tools for e-books: turn EPUB, MOBI, FB2 and comic archives into PDF to print or archive them. Runs in your browser, nothing is uploaded.",
+  "title": "E-book Tools: PDF to EPUB, EPUB, MOBI and FB2 to PDF",
+  "description": "Free e-book tools: convert a PDF book to a reflowable EPUB, or turn EPUB, MOBI, FB2 and comic archives into PDF. Runs in your browser, nothing uploaded.",
   "h1": "Tools for e-readers and e-books",
   "crumb": "For e-readers",
-  "intro": "Tools for moving books between e-readers and paper: open EPUB, MOBI and FB2 books as a PDF you can print or keep, or collect a comic archive into one file. Everything runs in your browser.",
+  "intro": "Tools for moving books between e-readers and paper: turn a PDF book into an EPUB that reflows on any e-reader, open EPUB, MOBI and FB2 books as a PDF you can print or keep, or collect a comic archive into one file. Everything runs in your browser.",
   "groupId": "g-read",
-  "updated": "2026-11-16"
+  "updated": "2026-11-17"
 }

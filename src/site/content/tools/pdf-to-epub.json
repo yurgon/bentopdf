@@ -1,0 +1,100 @@
+{
+  "slug": "pdf-to-epub",
+  "section": "for-e-readers",
+  "mainQuery": "pdf to epub",
+  "title": "PDF to EPUB Converter: Reflowable eBooks, No Upload",
+  "description": "Convert PDF to EPUB in your browser: whole paragraphs, chapters and a table of contents, no page numbers in the text. Scanned books too. Free, no upload.",
+  "h1": "PDF to EPUB Converter",
+  "crumb": "PDF to EPUB",
+  "promise": "Turn a PDF book into an EPUB whose text reflows on any e-reader: page numbers and running heads removed, lines joined into paragraphs, chapters in a table of contents. Convert PDF to EPUB on your own device.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Scanned books too"],
+  "workArea": "pdf-to-epub",
+  "script": "/src/site/js/tools/pdf-to-epub.ts",
+  "app": {
+    "name": "PDF to EPUB Converter",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Reflowable EPUB 3 with a table of contents",
+      "Removes running heads and page numbers, joins lines into paragraphs and undoes hyphenation",
+      "Chapters from PDF bookmarks or from heading sizes",
+      "Footnotes moved to the end of each chapter with links from the text",
+      "Pictures kept where they stood; cover from the first page",
+      "Text recognition for scanned books, on your device",
+      "Preview of the chapters before you download"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PDF to EPUB"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "convert",
+      "label": "On your device"
+    },
+    {
+      "id": "fixed",
+      "label": "What gets fixed"
+    },
+    {
+      "id": "scanned",
+      "label": "Scanned PDFs"
+    },
+    {
+      "id": "preview",
+      "label": "Preview before download"
+    },
+    {
+      "id": "e-readers",
+      "label": "Kindle, Kobo, Apple Books"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "When it will not work well"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "epub-to-pdf",
+      "icon": "book",
+      "name": "EPUB to PDF",
+      "why": "The other way: print an e-book or keep it as a PDF."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "OCR PDF",
+      "why": "Make a scanned PDF searchable and keep its pages as they are."
+    },
+    {
+      "slug": "split-pdf",
+      "icon": "split",
+      "name": "Split PDF",
+      "why": "Convert one part of a long PDF: split it into chapters first."
+    },
+    {
+      "slug": "deskew-pdf",
+      "icon": "rotate",
+      "name": "Deskew PDF",
+      "why": "Straighten crooked scans for better recognition."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded; scanned books need the recognition model once"
+}
