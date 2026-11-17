@@ -282,7 +282,6 @@
   "The 100 mm line: if it is shorter, the page was shrunk. Print again with Actual size or 100% instead of Fit to page.": "100 公釐線：如果變短了，代表頁面被縮小了。請改用「實際大小」或 100% 重新列印，不要用「符合頁面大小」。",
   "The EPUB could not be written. Try turning off pictures, or try again.": "無法寫入 EPUB。請嘗試關閉圖片，或再試一次。",
   "The chapter goes on in the EPUB: {n} more blocks.": "本章在 EPUB 中繼續：還有 {n} 段。",
-  "The interface of this page is translated by machine and not yet checked. The page text is in English.": "本頁介面為機器翻譯，尚未校對。頁面內文為英文。",
   "The margins leave no room for the grid. Make them smaller.": "邊界太大，放不下網格。請縮小邊界。",
   "The preview shows the first chapters. Your e-reader sets the font and page size.": "預覽顯示前幾章。字型與頁面大小由您的閱讀器決定。",
   "The quick brown fox jumps over the lazy dog 0123456789": "The quick brown fox jumps over the lazy dog 0123456789",

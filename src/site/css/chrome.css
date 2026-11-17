@@ -213,16 +213,3 @@
   color: var(--ink);
   font-weight: var(--w-semi);
 }
-.lang-note {
-  max-width: 62ch;
-  margin: 0 auto var(--s-6);
-  text-align: center;
-  font-size: var(--t-sm);
-  color: var(--ink-2);
-}
-@media (max-width: 720px) {
-  .lang-note {
-    text-align: left;
-    margin-inline: 0;
-  }
-}

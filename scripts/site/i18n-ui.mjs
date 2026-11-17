@@ -3,7 +3,7 @@
 // By the brief, a language gets pages for search only after its own keyword research. Until
 // then a language copy keeps the English page text and translates only the interface: the
 // header, the footer, the working tool and the messages its script shows. Copies are noindex
-// with a self canonical and no hreflang. Translations are machine-made and marked unchecked.
+// with a self canonical and no hreflang. The pages never say how the translation was made.
 //
 // Dictionaries: src/site/i18n/<lang>.json, keyed by the English text. A value is a string, or
 // for counted phrases (tn() in src/site/js/i18n.ts) an object of plural forms
@@ -155,9 +155,7 @@ export function scriptKeys() {
   return keys;
 }
 
-const NOTE_KEY =
-  'The interface of this page is translated by machine and not yet checked. The page text is in English.';
-const UNCHECKED_KEYS = [NOTE_KEY, 'Languages'];
+const UNCHECKED_KEYS = ['Languages'];
 
 const dicts = {};
 export function loadDict(lang) {
@@ -215,14 +213,6 @@ export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
 
   if (dict) {
     walkInterface(d, dict);
-    const hero = d.querySelector('main .hero-a, main .home-hero');
-    if (hero && typeof dict[NOTE_KEY] === 'string') {
-      const note = d.createElement('p');
-      note.className = 'lang-note';
-      note.setAttribute('lang', lang);
-      note.textContent = dict[NOTE_KEY];
-      hero.after(note);
-    }
     jsKeys ??= scriptKeys();
     const used = Object.fromEntries(
       Object.entries(dict).filter(([k]) => jsKeys.has(k))
