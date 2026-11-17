@@ -763,5 +763,9 @@
   "{n} pages: {time}.": {
     "one": "{n} pàgina: {time}.",
     "other": "{n} pàgines: {time}."
-  }
+  },
+  "Accept": "Accepta",
+  "Cookies": "Galetes",
+  "Decline": "Rebutja",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Podem fer servir galetes de Google Analytics per veure quines pàgines són útils? En qualsevol cas, els teus fitxers no surten mai del teu dispositiu."
 }

@@ -919,5 +919,9 @@
     "few": "{n} صفحات: {time}.",
     "many": "{n} صفحة: {time}.",
     "other": "{n} صفحة: {time}."
-  }
+  },
+  "Accept": "قبول",
+  "Cookies": "ملفات تعريف الارتباط",
+  "Decline": "رفض",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "هل يمكننا استخدام ملفات تعريف الارتباط من Google Analytics لمعرفة الصفحات المفيدة؟ في كل الأحوال لا تغادر ملفاتك جهازك أبدًا."
 }

@@ -670,5 +670,9 @@
   "under a minute": "不到一分鐘",
   "{n} pages: {time}.": {
     "other": "{n} 頁：{time}。"
-  }
+  },
+  "Accept": "接受",
+  "Cookies": "Cookie",
+  "Decline": "拒絕",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "我們可以使用 Google Analytics Cookie 來了解哪些頁面有用嗎？無論如何，你的檔案都不會離開你的裝置。"
 }

@@ -670,5 +670,9 @@
   "under a minute": "1분 미만",
   "{n} pages: {time}.": {
     "other": "{n}페이지: {time}."
-  }
+  },
+  "Accept": "동의",
+  "Cookies": "쿠키",
+  "Decline": "거부",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "어떤 페이지가 유용한지 확인하기 위해 Google Analytics 쿠키를 사용해도 될까요? 어느 쪽을 선택하든 파일은 기기 밖으로 나가지 않습니다."
 }

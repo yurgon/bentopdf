@@ -841,5 +841,9 @@
     "few": "{n} strany: {time}.",
     "many": "{n} strany: {time}.",
     "other": "{n} strán: {time}."
-  }
+  },
+  "Accept": "Prijať",
+  "Cookies": "Súbory cookie",
+  "Decline": "Odmietnuť",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Môžeme používať súbory cookie Google Analytics, aby sme videli, ktoré stránky sú užitočné? Vaše súbory v každom prípade nikdy neopustia vaše zariadenie."
 }

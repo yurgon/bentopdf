@@ -841,5 +841,9 @@
     "few": "{n} strony: {time}.",
     "many": "{n} stron: {time}.",
     "other": "{n} strony: {time}."
-  }
+  },
+  "Accept": "Akceptuj",
+  "Cookies": "Pliki cookie",
+  "Decline": "Odrzuć",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Czy możemy używać plików cookie Google Analytics, aby sprawdzać, które strony są przydatne? Tak czy inaczej twoje pliki nigdy nie opuszczają urządzenia."
 }

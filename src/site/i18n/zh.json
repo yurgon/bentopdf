@@ -670,5 +670,9 @@
   "under a minute": "不到一分钟",
   "{n} pages: {time}.": {
     "other": "{n} 页：{time}。"
-  }
+  },
+  "Accept": "接受",
+  "Cookies": "Cookie",
+  "Decline": "拒绝",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "我们可以使用 Google Analytics Cookie 来了解哪些页面有用吗？无论如何，你的文件都不会离开你的设备。"
 }

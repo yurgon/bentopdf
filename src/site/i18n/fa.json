@@ -763,5 +763,9 @@
   "{n} pages: {time}.": {
     "one": "{n} صفحه: {time}.",
     "other": "{n} صفحه: {time}."
-  }
+  },
+  "Accept": "پذیرفتن",
+  "Cookies": "کوکی‌ها",
+  "Decline": "رد کردن",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "آیا اجازه می‌دهید از کوکی‌های Google Analytics استفاده کنیم تا ببینیم کدام صفحه‌ها مفیدند؟ در هر حال فایل‌های شما هرگز از دستگاهتان خارج نمی‌شوند."
 }

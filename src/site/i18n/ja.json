@@ -724,5 +724,9 @@
   "under a minute": "1 分未満",
   "{n} pages: {time}.": {
     "other": "{n} ページ: {time}。"
-  }
+  },
+  "Accept": "同意する",
+  "Cookies": "Cookie",
+  "Decline": "拒否する",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "どのページが役立っているかを知るため、Google Analytics の Cookie を使用してもよろしいですか？どちらを選んでも、ファイルがデバイスの外に出ることはありません。"
 }

@@ -841,5 +841,9 @@
     "few": "{n} сторінки: {time}.",
     "many": "{n} сторінок: {time}.",
     "other": "{n} сторінки: {time}."
-  }
+  },
+  "Accept": "Прийняти",
+  "Cookies": "Файли cookie",
+  "Decline": "Відхилити",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Чи можемо ми використовувати файли cookie Google Analytics, щоб бачити, які сторінки корисні? У будь-якому разі ваші файли не залишають ваш пристрій."
 }

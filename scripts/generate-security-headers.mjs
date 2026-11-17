@@ -101,8 +101,16 @@ export function buildSecurityHeaders(env = process.env) {
     toScriptSource(
       urlOrDefault(env.VITE_TESSERACT_CORE_URL, DEFAULT_TESSERACT_CORE_URL)
     ),
+    // Plyleaf: Cloudflare Web Analytics beacon (cookieless visit counts)
+    'https://static.cloudflareinsights.com',
+    // Plyleaf: Google tag / Google Analytics (in Europe only after consent)
+    'https://www.googletagmanager.com',
   ]);
   const connectOrigins = uniq([
+    'https://cloudflareinsights.com',
+    'https://www.googletagmanager.com',
+    'https://*.google-analytics.com',
+    'https://*.analytics.google.com',
     ...wasmOrigins,
     ...tesseractOrigins,
     corsProxyOrigin,

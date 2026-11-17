@@ -763,5 +763,9 @@
   "{n} pages: {time}.": {
     "one": "{n} sida: {time}.",
     "other": "{n} sidor: {time}."
-  }
+  },
+  "Accept": "Godkänn",
+  "Cookies": "Cookies",
+  "Decline": "Avböj",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Får vi använda cookies från Google Analytics för att se vilka sidor som är användbara? Dina filer lämnar aldrig din enhet, oavsett vad du väljer."
 }

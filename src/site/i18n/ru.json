@@ -841,5 +841,9 @@
     "few": "{n} страницы: {time}.",
     "many": "{n} страниц: {time}.",
     "other": "{n} страницы: {time}."
-  }
+  },
+  "Accept": "Принять",
+  "Cookies": "Файлы cookie",
+  "Decline": "Отклонить",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Можно мы будем использовать файлы cookie Google Analytics, чтобы видеть, какие страницы полезны? В любом случае ваши файлы не покидают устройство."
 }

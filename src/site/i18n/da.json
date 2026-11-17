@@ -763,5 +763,9 @@
   "{n} pages: {time}.": {
     "one": "{n} side: {time}.",
     "other": "{n} sider: {time}."
-  }
+  },
+  "Accept": "Accepter",
+  "Cookies": "Cookies",
+  "Decline": "Afvis",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Må vi bruge cookies fra Google Analytics til at se, hvilke sider der er nyttige? Dine filer forlader aldrig din enhed, uanset hvad du vælger."
 }

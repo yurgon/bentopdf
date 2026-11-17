@@ -673,5 +673,9 @@
   "under a minute": "kurang dari semenit",
   "{n} pages: {time}.": {
     "other": "{n} halaman: {time}."
-  }
+  },
+  "Accept": "Terima",
+  "Cookies": "Cookie",
+  "Decline": "Tolak",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Bolehkah kami menggunakan cookie Google Analytics untuk melihat halaman mana yang berguna? Apa pun pilihan Anda, file Anda tidak pernah meninggalkan perangkat Anda."
 }

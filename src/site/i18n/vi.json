@@ -673,5 +673,9 @@
   "under a minute": "chưa đến một phút",
   "{n} pages: {time}.": {
     "other": "{n} trang: {time}."
-  }
+  },
+  "Accept": "Chấp nhận",
+  "Cookies": "Cookie",
+  "Decline": "Từ chối",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Chúng tôi có thể dùng cookie của Google Analytics để xem trang nào hữu ích không? Dù bạn chọn gì, tệp của bạn cũng không bao giờ rời khỏi thiết bị."
 }

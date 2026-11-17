@@ -763,5 +763,9 @@
   "{n} pages: {time}.": {
     "one": "{n} Seite: {time}.",
     "other": "{n} Seiten: {time}."
-  }
+  },
+  "Accept": "Akzeptieren",
+  "Cookies": "Cookies",
+  "Decline": "Ablehnen",
+  "May we use Google Analytics cookies to see which pages are useful? Your files never leave your device either way.": "Dürfen wir Cookies von Google Analytics verwenden, um zu sehen, welche Seiten nützlich sind? Ihre Dateien verlassen Ihr Gerät so oder so nie."
 }
