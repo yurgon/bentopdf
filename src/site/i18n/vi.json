@@ -373,5 +373,82 @@
   "{step} dot grid, {a} × {b} dots": "Lưới chấm {step}, {a} × {b} chấm",
   "{step} isometric triangles": "Tam giác đẳng cự {step}",
   "{step} squares, {a} × {b}": "Ô vuông {step}, {a} × {b}",
-  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "“{name}” không phải PDF. Hãy chọn tệp có đuôi .pdf."
+  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "“{name}” không phải PDF. Hãy chọn tệp có đuôi .pdf.",
+  "(continued)": "(tiếp theo)",
+  "A separate page with the grid filled in": "Một trang riêng có lưới đã điền đáp án",
+  "ANSWER KEY": "ĐÁP ÁN",
+  "Across": "Hàng ngang",
+  "Across and down only": "Chỉ hàng ngang và hàng dọc",
+  "Add at least one card: a term and its definition on one line.": "Thêm ít nhất một thẻ: thuật ngữ và định nghĩa trên một dòng.",
+  "Add at least two words, one per line, each with its clue: word - clue.": "Thêm ít nhất hai từ, mỗi dòng một từ, kèm gợi ý: từ - gợi ý.",
+  "Add at least two words, one per line.": "Thêm ít nhất hai từ, mỗi dòng một từ.",
+  "Adds diagonals": "Thêm đường chéo",
+  "Adds words spelled backward": "Thêm từ viết ngược",
+  "All teacher printables": "Tất cả tài liệu in cho giáo viên",
+  "Answer key": "Đáp án",
+  "Answer keys": "Đáp án",
+  "Auto": "Tự động",
+  "Cards per sheet": "Số thẻ mỗi tờ",
+  "Crossword": "Ô chữ",
+  "Crossword puzzle maker": "Tạo ô chữ",
+  "Cut lines": "Đường cắt",
+  "Definition on the front": "Định nghĩa ở mặt trước",
+  "Did not fit: {words}. Choose a bigger grid or fewer words.": "Không vừa: {words}. Hãy chọn lưới lớn hơn hoặc bớt từ.",
+  "Did not fit: {words}. Press “Rebuild grid” or add words that share letters.": "Không vừa: {words}. Nhấn “Xếp lại lưới” hoặc thêm từ có chữ cái chung.",
+  "Different versions": "Các phiên bản khác nhau",
+  "Difficulty": "Độ khó",
+  "Down": "Hàng dọc",
+  "Easy": "Dễ",
+  "Find these words": "Tìm các từ này",
+  "Flashcard maker": "Tạo thẻ học",
+  "Flashcards": "Thẻ học",
+  "For teachers": "Dành cho giáo viên",
+  "Hard": "Khó",
+  "Like a notepad flipped over the top": "Như sổ tay lật qua mép trên",
+  "Lists the answers, for younger students": "Liệt kê đáp án, cho học sinh nhỏ",
+  "Long edge": "Mép dài",
+  "Name and date line": "Dòng ghi tên và ngày",
+  "New puzzles": "Tạo bộ mới",
+  "On the sheet": "Trên tờ giấy",
+  "Options": "Tùy chọn",
+  "Print two-sided. Pages alternate fronts and backs, and each back sits right behind its front.": "In hai mặt. Các trang xen kẽ mặt trước và mặt sau, mỗi mặt sau nằm ngay sau mặt trước của nó.",
+  "Put a dash, a colon or a tab between the term and the definition. You can paste two columns from a spreadsheet.": "Ngăn cách thuật ngữ và định nghĩa bằng gạch nối, dấu hai chấm hoặc tab. Bạn có thể dán hai cột từ bảng tính.",
+  "Put a dash, a colon or a tab between the word and its clue. You can paste two columns from a spreadsheet.": "Ngăn cách từ và gợi ý bằng gạch nối, dấu hai chấm hoặc tab. Bạn có thể dán hai cột từ bảng tính.",
+  "Rebuild grid": "Xếp lại lưới",
+  "Same words, a different grid in each version, so neighbors cannot copy.": "Cùng một bộ từ, mỗi phiên bản một lưới khác, để không ai chép bài bạn bên cạnh.",
+  "Set name on the fronts": "Tên bộ thẻ ở mặt trước",
+  "Short edge": "Mép ngắn",
+  "Terms and definitions, one card per line": "Thuật ngữ và định nghĩa, mỗi dòng một thẻ",
+  "The term goes on the back": "Thuật ngữ chuyển ra mặt sau",
+  "The usual two-sided setting, like a book": "Cài đặt in hai mặt thông thường, như một cuốn sách",
+  "Turn off for a harder puzzle": "Tắt để trò tìm từ khó hơn",
+  "VERSION {n}": "PHIÊN BẢN {n}",
+  "Word bank": "Danh sách từ",
+  "Word search": "Tìm từ",
+  "Word search maker": "Tạo trò tìm từ",
+  "Words and clues, one pair per line": "Từ và gợi ý, mỗi dòng một cặp",
+  "Words marked in the grid, four versions per page": "Từ được đánh dấu trên lưới, bốn phiên bản mỗi trang",
+  "Words to find": "Các từ cần tìm",
+  "Words, one per line": "Từ, mỗi dòng một từ",
+  "Your printer flips the paper on the": "Máy in của bạn lật giấy theo",
+  "flip on the long edge": "lật theo mép dài",
+  "flip on the short edge": "lật theo mép ngắn",
+  "{n} cards have no back yet.": {
+    "other": "{n} thẻ chưa có mặt sau."
+  },
+  "{n} puzzles": {
+    "other": "{n} ô chữ"
+  },
+  "{n} sheets of paper": {
+    "other": "{n} tờ giấy"
+  },
+  "{n} words have no clue yet.": {
+    "other": "{n} từ chưa có gợi ý."
+  },
+  "{n} words in the grid.": {
+    "other": "{n} từ trong lưới."
+  },
+  "{n} words.": {
+    "other": "{n} từ."
+  }
 }

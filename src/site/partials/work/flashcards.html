@@ -1,0 +1,158 @@
+<section class="work gen" id="tool" aria-label="Flashcard maker">
+  <div class="work-body">
+    <form class="gen-controls" id="gen-form">
+      <div class="field">
+        <label class="label" for="pairs"
+          >Terms and definitions, one card per line</label
+        >
+        <textarea
+          class="input"
+          id="pairs"
+          name="pairs"
+          rows="10"
+          spellcheck="true"
+        >
+Photosynthesis - How plants turn sunlight, water and air into food
+Mitochondria - The part of a cell that makes energy
+Evaporation - Liquid turning into gas as it warms
+Condensation - Gas turning back into liquid as it cools
+Habitat - The natural home of an animal or plant
+Predator - An animal that hunts other animals for food
+Herbivore - An animal that eats only plants
+Erosion - Wind and water slowly wearing away rock and soil
+Gravity - The force that pulls objects toward each other
+Fossil - Remains of a living thing preserved in rock</textarea
+        >
+        <span class="hint"
+          >Put a dash, a colon or a tab between the term and the definition. You
+          can paste two columns from a spreadsheet.</span
+        >
+        <span class="hint" id="words-info" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <span class="label" id="lbl-per">Cards per sheet</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-per">
+          <input type="radio" name="per" id="per-4" value="4" /><label
+            for="per-4"
+            >4</label
+          >
+          <input type="radio" name="per" id="per-6" value="6" /><label
+            for="per-6"
+            >6</label
+          >
+          <input type="radio" name="per" id="per-8" value="8" checked /><label
+            for="per-8"
+            >8</label
+          >
+        </div>
+      </div>
+      <fieldset>
+        <legend class="label">Your printer flips the paper on the</legend>
+        <div class="gen-checks">
+          <label class="gen-check"
+            ><input type="radio" name="flip" value="long" checked /><span
+              >Long edge<small
+                >The usual two-sided setting, like a book</small
+              ></span
+            ></label
+          >
+          <label class="gen-check"
+            ><input type="radio" name="flip" value="short" /><span
+              >Short edge<small
+                >Like a notepad flipped over the top</small
+              ></span
+            ></label
+          >
+        </div>
+      </fieldset>
+      <div class="field">
+        <span class="label" id="lbl-text">Text size</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-text">
+          <input type="radio" name="text" id="t-s" value="s" /><label for="t-s"
+            >Small</label
+          >
+          <input type="radio" name="text" id="t-m" value="m" checked /><label
+            for="t-m"
+            >Medium</label
+          >
+          <input type="radio" name="text" id="t-l" value="l" /><label for="t-l"
+            >Large</label
+          >
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="title">Set name on the fronts</label>
+        <input
+          class="input"
+          type="text"
+          id="title"
+          name="title"
+          value="Science"
+          maxlength="60"
+          autocomplete="off"
+        />
+      </div>
+      <fieldset>
+        <legend class="label">Options</legend>
+        <div class="gen-checks">
+          <label class="gen-check"
+            ><input type="checkbox" name="cuts" checked /><span
+              >Cut lines</span
+            ></label
+          >
+          <label class="gen-check"
+            ><input type="checkbox" name="swap" /><span
+              >Definition on the front<small
+                >The term goes on the back</small
+              ></span
+            ></label
+          >
+        </div>
+      </fieldset>
+      <div class="field">
+        <span class="label" id="lbl-paper">Paper</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-paper">
+          <input
+            type="radio"
+            name="paper"
+            id="paper-a4"
+            value="a4"
+            checked
+          /><label for="paper-a4">A4</label>
+          <input
+            type="radio"
+            name="paper"
+            id="paper-letter"
+            value="letter"
+          /><label for="paper-letter">Letter</label>
+        </div>
+      </div>
+    </form>
+    <div class="gen-stage">
+      <div class="preview-head">
+        <span class="label">Preview</span>
+        <span class="hint tnum" id="gen-sum"></span>
+      </div>
+      <p class="drop-error" id="gen-error" role="alert" hidden></p>
+      <div class="gen-pages" id="gen-pages" aria-live="polite"></div>
+      <p class="gen-tip">
+        Print two-sided. Pages alternate fronts and backs, and each back sits
+        right behind its front.
+      </p>
+    </div>
+  </div>
+  <div class="work-foot">
+    <span class="privacy-note"
+      ><svg class="i"><use href="#i-device" /></svg>Made in your browser.
+      Nothing is uploaded.</span
+    >
+    <span class="spacer"></span>
+    <button class="btn" type="button" id="pdf-btn">
+      <svg class="i"><use href="#i-upload" transform="rotate(180 10 10)" /></svg
+      >Download PDF
+    </button>
+    <button class="btn btn-primary btn-lg" type="button" id="print-btn">
+      <svg class="i"><use href="#i-printer" /></svg>Print
+    </button>
+  </div>
+</section>

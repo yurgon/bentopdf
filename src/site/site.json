@@ -48,6 +48,27 @@
       ]
     },
     {
+      "title": "For teachers",
+      "links": [
+        {
+          "href": "/for-teachers",
+          "label": "All teacher printables"
+        },
+        {
+          "href": "/crossword-puzzle-maker",
+          "label": "Crossword puzzle maker"
+        },
+        {
+          "href": "/word-search-maker",
+          "label": "Word search maker"
+        },
+        {
+          "href": "/flashcard-maker",
+          "label": "Flashcard maker"
+        }
+      ]
+    },
+    {
       "title": "For e-readers",
       "links": [
         {

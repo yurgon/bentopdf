@@ -424,5 +424,82 @@
   "{step} dot grid, {a} × {b} dots": "{step} のドット方眼、{a} × {b} 点",
   "{step} isometric triangles": "{step} の等角三角形",
   "{step} squares, {a} × {b}": "{step} のマス、{a} × {b}",
-  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "「{name}」は PDF ではありません。.pdf で終わるファイルを選んでください。"
+  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "「{name}」は PDF ではありません。.pdf で終わるファイルを選んでください。",
+  "(continued)": "(続き)",
+  "A separate page with the grid filled in": "答えを入れたマス目を別ページに",
+  "ANSWER KEY": "解答",
+  "Across": "ヨコのカギ",
+  "Across and down only": "横と縦のみ",
+  "Add at least one card: a term and its definition on one line.": "カードを1枚以上追加してください。1行に用語と説明を書きます。",
+  "Add at least two words, one per line, each with its clue: word - clue.": "単語を2つ以上、1行に1つずつ、ヒント付きで追加してください: 単語 - ヒント",
+  "Add at least two words, one per line.": "単語を2つ以上、1行に1つずつ追加してください。",
+  "Adds diagonals": "斜めも追加",
+  "Adds words spelled backward": "逆さ読みの単語も追加",
+  "All teacher printables": "先生向けプリント一覧",
+  "Answer key": "解答",
+  "Answer keys": "解答",
+  "Auto": "自動",
+  "Cards per sheet": "1枚あたりのカード数",
+  "Crossword": "クロスワード",
+  "Crossword puzzle maker": "クロスワード作成",
+  "Cut lines": "切り取り線",
+  "Definition on the front": "説明をおもて面に",
+  "Did not fit: {words}. Choose a bigger grid or fewer words.": "入りきりませんでした: {words}。マス目を大きくするか、単語を減らしてください。",
+  "Did not fit: {words}. Press “Rebuild grid” or add words that share letters.": "入りきりませんでした: {words}。「マス目を作り直す」を押すか、共通の文字を持つ単語を加えてください。",
+  "Different versions": "別バージョン",
+  "Difficulty": "難易度",
+  "Down": "タテのカギ",
+  "Easy": "やさしい",
+  "Find these words": "この単語をさがそう",
+  "Flashcard maker": "単語カード作成",
+  "Flashcards": "単語カード",
+  "For teachers": "先生向け",
+  "Hard": "むずかしい",
+  "Like a notepad flipped over the top": "メモ帳のように上の辺でめくる",
+  "Lists the answers, for younger students": "答えの一覧を載せる（低学年向け）",
+  "Long edge": "長辺",
+  "Name and date line": "名前と日付の欄",
+  "New puzzles": "新しいパズル",
+  "On the sheet": "用紙に入れるもの",
+  "Options": "オプション",
+  "Print two-sided. Pages alternate fronts and backs, and each back sits right behind its front.": "両面印刷してください。おもてとうらのページが交互に並び、各うら面はおもて面のちょうど裏に来ます。",
+  "Put a dash, a colon or a tab between the term and the definition. You can paste two columns from a spreadsheet.": "用語と説明はハイフン、コロン、タブで区切ります。表計算ソフトから2列をそのまま貼り付けられます。",
+  "Put a dash, a colon or a tab between the word and its clue. You can paste two columns from a spreadsheet.": "単語とヒントはハイフン、コロン、タブで区切ります。表計算ソフトから2列をそのまま貼り付けられます。",
+  "Rebuild grid": "マス目を作り直す",
+  "Same words, a different grid in each version, so neighbors cannot copy.": "同じ単語でもバージョンごとにマス目が違うので、隣の人の答えを写せません。",
+  "Set name on the fronts": "おもて面のセット名",
+  "Short edge": "短辺",
+  "Terms and definitions, one card per line": "用語と説明、1行に1枚",
+  "The term goes on the back": "用語はうら面へ",
+  "The usual two-sided setting, like a book": "ふつうの両面印刷設定。本と同じです",
+  "Turn off for a harder puzzle": "オフにすると難しくなります",
+  "VERSION {n}": "バージョン {n}",
+  "Word bank": "単語リスト",
+  "Word search": "単語さがし",
+  "Word search maker": "単語さがし作成",
+  "Words and clues, one pair per line": "単語とヒント、1行に1組",
+  "Words marked in the grid, four versions per page": "マス目に単語を表示、1ページに4バージョン",
+  "Words to find": "さがす単語",
+  "Words, one per line": "単語、1行に1つ",
+  "Your printer flips the paper on the": "プリンターが用紙をめくる辺",
+  "flip on the long edge": "長辺とじ",
+  "flip on the short edge": "短辺とじ",
+  "{n} cards have no back yet.": {
+    "other": "{n} 枚のカードにまだうら面がありません。"
+  },
+  "{n} puzzles": {
+    "other": "{n} 個のパズル"
+  },
+  "{n} sheets of paper": {
+    "other": "用紙 {n} 枚"
+  },
+  "{n} words have no clue yet.": {
+    "other": "{n} 個の単語にまだヒントがありません。"
+  },
+  "{n} words in the grid.": {
+    "other": "マス目に {n} 語。"
+  },
+  "{n} words.": {
+    "other": "{n} 語。"
+  }
 }

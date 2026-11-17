@@ -34,6 +34,21 @@
           "line": "Dashed letters with start dots, for a whole class"
         },
         {
+          "slug": "crossword-puzzle-maker",
+          "name": "Crossword puzzle maker",
+          "line": "Words and clues into a numbered grid, with answer key"
+        },
+        {
+          "slug": "word-search-maker",
+          "name": "Word search maker",
+          "line": "Easy to hard, different versions for a class"
+        },
+        {
+          "slug": "flashcard-maker",
+          "name": "Flashcard maker",
+          "line": "Two-sided cards whose backs line up"
+        },
+        {
           "slug": "posterize-pdf",
           "name": "Poster printing",
           "line": "Print one page across several sheets"
@@ -52,6 +67,41 @@
           "slug": "pdf-to-greyscale",
           "name": "Black and white PDF",
           "line": "Save colour ink on drafts and handouts"
+        }
+      ]
+    },
+    {
+      "id": "g-teach",
+      "title": "For teachers",
+      "icon": "pen",
+      "section": "for-teachers",
+      "accent": true,
+      "home": false,
+      "tools": [
+        {
+          "slug": "bingo-card-generator",
+          "name": "Bingo cards",
+          "line": "Sets of different cards with a caller sheet"
+        },
+        {
+          "slug": "name-tracing-worksheets",
+          "name": "Name tracing worksheets",
+          "line": "Dashed letters with start dots, for a whole class"
+        },
+        {
+          "slug": "crossword-puzzle-maker",
+          "name": "Crossword puzzle maker",
+          "line": "Words and clues into a numbered grid, with answer key"
+        },
+        {
+          "slug": "word-search-maker",
+          "name": "Word search maker",
+          "line": "Easy to hard, different versions for a class"
+        },
+        {
+          "slug": "flashcard-maker",
+          "name": "Flashcard maker",
+          "line": "Two-sided cards whose backs line up"
         }
       ]
     },

@@ -370,5 +370,82 @@
   "{step} dot grid, {a} × {b} dots": "{step} 점 격자, {a} × {b}점",
   "{step} isometric triangles": "{step} 등각 삼각형",
   "{step} squares, {a} × {b}": "{step} 정사각형, {a} × {b}",
-  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "“{name}”은(는) PDF가 아닙니다. .pdf로 끝나는 파일을 고르세요."
+  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "“{name}”은(는) PDF가 아닙니다. .pdf로 끝나는 파일을 고르세요.",
+  "(continued)": "(계속)",
+  "A separate page with the grid filled in": "답을 채운 격자를 별도 페이지로",
+  "ANSWER KEY": "정답",
+  "Across": "가로 열쇠",
+  "Across and down only": "가로와 세로만",
+  "Add at least one card: a term and its definition on one line.": "카드를 하나 이상 추가하세요. 한 줄에 용어와 설명을 적습니다.",
+  "Add at least two words, one per line, each with its clue: word - clue.": "단어를 두 개 이상, 한 줄에 하나씩, 힌트와 함께 추가하세요: 단어 - 힌트",
+  "Add at least two words, one per line.": "단어를 두 개 이상, 한 줄에 하나씩 추가하세요.",
+  "Adds diagonals": "대각선 추가",
+  "Adds words spelled backward": "거꾸로 쓴 단어 추가",
+  "All teacher printables": "교사용 인쇄물 전체",
+  "Answer key": "정답",
+  "Answer keys": "정답",
+  "Auto": "자동",
+  "Cards per sheet": "한 장당 카드 수",
+  "Crossword": "십자말풀이",
+  "Crossword puzzle maker": "십자말풀이 만들기",
+  "Cut lines": "자르는 선",
+  "Definition on the front": "설명을 앞면에",
+  "Did not fit: {words}. Choose a bigger grid or fewer words.": "들어가지 않음: {words}. 더 큰 격자를 고르거나 단어를 줄이세요.",
+  "Did not fit: {words}. Press “Rebuild grid” or add words that share letters.": "들어가지 않음: {words}. “격자 다시 만들기”를 누르거나 같은 글자가 있는 단어를 추가하세요.",
+  "Different versions": "다른 버전",
+  "Difficulty": "난이도",
+  "Down": "세로 열쇠",
+  "Easy": "쉬움",
+  "Find these words": "이 단어를 찾아보세요",
+  "Flashcard maker": "플래시카드 만들기",
+  "Flashcards": "플래시카드",
+  "For teachers": "교사용",
+  "Hard": "어려움",
+  "Like a notepad flipped over the top": "위쪽 가장자리로 넘기는 메모장처럼",
+  "Lists the answers, for younger students": "정답 목록 표시, 저학년용",
+  "Long edge": "긴 가장자리",
+  "Name and date line": "이름과 날짜 칸",
+  "New puzzles": "새 퍼즐",
+  "On the sheet": "인쇄물에 넣을 것",
+  "Options": "옵션",
+  "Print two-sided. Pages alternate fronts and backs, and each back sits right behind its front.": "양면으로 인쇄하세요. 앞면과 뒷면 페이지가 번갈아 나오며, 각 뒷면은 앞면 바로 뒤에 놓입니다.",
+  "Put a dash, a colon or a tab between the term and the definition. You can paste two columns from a spreadsheet.": "용어와 설명은 하이픈, 콜론, 탭으로 구분합니다. 스프레드시트에서 두 열을 붙여넣을 수 있습니다.",
+  "Put a dash, a colon or a tab between the word and its clue. You can paste two columns from a spreadsheet.": "단어와 힌트는 하이픈, 콜론, 탭으로 구분합니다. 스프레드시트에서 두 열을 붙여넣을 수 있습니다.",
+  "Rebuild grid": "격자 다시 만들기",
+  "Same words, a different grid in each version, so neighbors cannot copy.": "같은 단어라도 버전마다 격자가 달라서 옆 사람 답을 베낄 수 없습니다.",
+  "Set name on the fronts": "앞면에 넣을 세트 이름",
+  "Short edge": "짧은 가장자리",
+  "Terms and definitions, one card per line": "용어와 설명, 한 줄에 카드 한 장",
+  "The term goes on the back": "용어는 뒷면으로",
+  "The usual two-sided setting, like a book": "일반적인 양면 인쇄 설정, 책처럼",
+  "Turn off for a harder puzzle": "끄면 더 어려워집니다",
+  "VERSION {n}": "버전 {n}",
+  "Word bank": "단어 목록",
+  "Word search": "단어 찾기",
+  "Word search maker": "단어 찾기 만들기",
+  "Words and clues, one pair per line": "단어와 힌트, 한 줄에 한 쌍",
+  "Words marked in the grid, four versions per page": "격자에 단어 표시, 한 페이지에 4개 버전",
+  "Words to find": "찾을 단어",
+  "Words, one per line": "단어, 한 줄에 하나",
+  "Your printer flips the paper on the": "프린터가 종이를 넘기는 쪽",
+  "flip on the long edge": "긴 가장자리로 넘김",
+  "flip on the short edge": "짧은 가장자리로 넘김",
+  "{n} cards have no back yet.": {
+    "other": "{n}개 카드에 아직 뒷면이 없습니다."
+  },
+  "{n} puzzles": {
+    "other": "퍼즐 {n}개"
+  },
+  "{n} sheets of paper": {
+    "other": "종이 {n}장"
+  },
+  "{n} words have no clue yet.": {
+    "other": "{n}개 단어에 아직 힌트가 없습니다."
+  },
+  "{n} words in the grid.": {
+    "other": "격자에 단어 {n}개."
+  },
+  "{n} words.": {
+    "other": "단어 {n}개."
+  }
 }

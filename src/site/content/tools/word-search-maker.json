@@ -1,0 +1,89 @@
+{
+  "slug": "word-search-maker",
+  "section": "for-printing",
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded",
+  "mainQuery": "word search maker",
+  "title": "Word Search Maker: Free Printable Word Searches",
+  "description": "Make printable word search puzzles from your own words. Easy, medium or hard, different versions for a class, answer keys. Free, no sign-up.",
+  "h1": "Word Search Maker",
+  "crumb": "Word search",
+  "promise": "A free word search maker: type your words, pick a grid and a difficulty, and print a puzzle, or a different version for every student, each with its answer key.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Versions for a class"],
+  "workArea": "wordsearch",
+  "script": "/src/site/js/tools/wordsearch.ts",
+  "app": {
+    "name": "Word Search Maker",
+    "category": "EducationalApplication",
+    "featureList": [
+      "Your own word list, any length",
+      "Grid from 10×10 to 20×20, or sized automatically",
+      "Easy, medium or hard: across and down, diagonals, backward",
+      "Different versions of the same words for a whole class",
+      "Answer keys with the words highlighted",
+      "A4 or Letter, print or PDF"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to make a word search"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "own-words",
+      "label": "Your own word list"
+    },
+    {
+      "id": "difficulty",
+      "label": "Grid size and difficulty"
+    },
+    {
+      "id": "versions",
+      "label": "Versions for a class"
+    },
+    {
+      "id": "answer-keys",
+      "label": "Answer keys"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "crossword-puzzle-maker",
+      "icon": "grid",
+      "name": "Crossword puzzle maker",
+      "why": "Turn the same words into a crossword with clues."
+    },
+    {
+      "slug": "bingo-card-generator",
+      "icon": "grid",
+      "name": "Bingo cards",
+      "why": "A set of different bingo cards from a word list."
+    },
+    {
+      "slug": "name-tracing-worksheets",
+      "icon": "pen",
+      "name": "Name tracing worksheets",
+      "why": "Handwriting sheets for each child in the class."
+    }
+  ]
+}

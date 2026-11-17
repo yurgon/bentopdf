@@ -373,5 +373,82 @@
   "{step} dot grid, {a} × {b} dots": "Kisi titik {step}, {a} × {b} titik",
   "{step} isometric triangles": "Segitiga isometrik {step}",
   "{step} squares, {a} × {b}": "Kotak {step}, {a} × {b}",
-  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "“{name}” bukan PDF. Pilih file yang berakhiran .pdf."
+  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "“{name}” bukan PDF. Pilih file yang berakhiran .pdf.",
+  "(continued)": "(lanjutan)",
+  "A separate page with the grid filled in": "Halaman terpisah dengan kisi yang sudah terisi",
+  "ANSWER KEY": "KUNCI JAWABAN",
+  "Across": "Mendatar",
+  "Across and down only": "Hanya mendatar dan menurun",
+  "Add at least one card: a term and its definition on one line.": "Tambahkan minimal satu kartu: istilah dan definisinya dalam satu baris.",
+  "Add at least two words, one per line, each with its clue: word - clue.": "Tambahkan minimal dua kata, satu per baris, masing-masing dengan petunjuknya: kata - petunjuk.",
+  "Add at least two words, one per line.": "Tambahkan minimal dua kata, satu per baris.",
+  "Adds diagonals": "Ditambah diagonal",
+  "Adds words spelled backward": "Ditambah kata yang ditulis terbalik",
+  "All teacher printables": "Semua bahan cetak untuk guru",
+  "Answer key": "Kunci jawaban",
+  "Answer keys": "Kunci jawaban",
+  "Auto": "Otomatis",
+  "Cards per sheet": "Kartu per lembar",
+  "Crossword": "Teka-teki silang",
+  "Crossword puzzle maker": "Pembuat teka-teki silang",
+  "Cut lines": "Garis potong",
+  "Definition on the front": "Definisi di bagian depan",
+  "Did not fit: {words}. Choose a bigger grid or fewer words.": "Tidak muat: {words}. Pilih kisi yang lebih besar atau kurangi kata.",
+  "Did not fit: {words}. Press “Rebuild grid” or add words that share letters.": "Tidak muat: {words}. Tekan “Susun ulang kisi” atau tambahkan kata yang memiliki huruf yang sama.",
+  "Different versions": "Versi berbeda",
+  "Difficulty": "Tingkat kesulitan",
+  "Down": "Menurun",
+  "Easy": "Mudah",
+  "Find these words": "Temukan kata-kata ini",
+  "Flashcard maker": "Pembuat flashcard",
+  "Flashcards": "Flashcard",
+  "For teachers": "Untuk guru",
+  "Hard": "Sulit",
+  "Like a notepad flipped over the top": "Seperti buku catatan yang dibalik lewat tepi atas",
+  "Lists the answers, for younger students": "Menampilkan jawaban, untuk siswa yang lebih kecil",
+  "Long edge": "Tepi panjang",
+  "Name and date line": "Baris nama dan tanggal",
+  "New puzzles": "Teka-teki baru",
+  "On the sheet": "Di lembar",
+  "Options": "Opsi",
+  "Print two-sided. Pages alternate fronts and backs, and each back sits right behind its front.": "Cetak bolak-balik. Halaman bergantian antara depan dan belakang, dan setiap bagian belakang tepat di balik bagian depannya.",
+  "Put a dash, a colon or a tab between the term and the definition. You can paste two columns from a spreadsheet.": "Pisahkan istilah dan definisi dengan tanda hubung, titik dua, atau tab. Anda bisa menempelkan dua kolom dari spreadsheet.",
+  "Put a dash, a colon or a tab between the word and its clue. You can paste two columns from a spreadsheet.": "Pisahkan kata dan petunjuk dengan tanda hubung, titik dua, atau tab. Anda bisa menempelkan dua kolom dari spreadsheet.",
+  "Rebuild grid": "Susun ulang kisi",
+  "Same words, a different grid in each version, so neighbors cannot copy.": "Kata yang sama, kisi berbeda di setiap versi, jadi tidak ada yang bisa menyontek teman sebelah.",
+  "Set name on the fronts": "Nama set di bagian depan",
+  "Short edge": "Tepi pendek",
+  "Terms and definitions, one card per line": "Istilah dan definisi, satu kartu per baris",
+  "The term goes on the back": "Istilah pindah ke bagian belakang",
+  "The usual two-sided setting, like a book": "Pengaturan bolak-balik yang biasa, seperti buku",
+  "Turn off for a harder puzzle": "Matikan agar teka-teki lebih sulit",
+  "VERSION {n}": "VERSI {n}",
+  "Word bank": "Bank kata",
+  "Word search": "Cari kata",
+  "Word search maker": "Pembuat cari kata",
+  "Words and clues, one pair per line": "Kata dan petunjuk, satu pasang per baris",
+  "Words marked in the grid, four versions per page": "Kata ditandai di kisi, empat versi per halaman",
+  "Words to find": "Kata yang harus dicari",
+  "Words, one per line": "Kata, satu per baris",
+  "Your printer flips the paper on the": "Printer Anda membalik kertas lewat",
+  "flip on the long edge": "balik lewat tepi panjang",
+  "flip on the short edge": "balik lewat tepi pendek",
+  "{n} cards have no back yet.": {
+    "other": "{n} kartu belum punya bagian belakang."
+  },
+  "{n} puzzles": {
+    "other": "{n} teka-teki"
+  },
+  "{n} sheets of paper": {
+    "other": "{n} lembar kertas"
+  },
+  "{n} words have no clue yet.": {
+    "other": "{n} kata belum punya petunjuk."
+  },
+  "{n} words in the grid.": {
+    "other": "{n} kata di kisi."
+  },
+  "{n} words.": {
+    "other": "{n} kata."
+  }
 }

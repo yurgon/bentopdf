@@ -128,7 +128,7 @@
 .site-footer .wrap {
   display: grid;
   gap: var(--s-8);
-  grid-template-columns: 1.4fr repeat(3, 1fr);
+  grid-template-columns: 1.4fr repeat(4, 1fr);
 }
 .site-footer h3 {
   font-size: var(--t-sm);

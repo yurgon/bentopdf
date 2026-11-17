@@ -370,5 +370,82 @@
   "{step} dot grid, {a} × {b} dots": "{step} 點陣，{a} × {b} 個點",
   "{step} isometric triangles": "{step} 等角三角形",
   "{step} squares, {a} × {b}": "{step} 方格，{a} × {b}",
-  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "「{name}」不是 PDF。請選擇以 .pdf 結尾的檔案。"
+  "“{name}” is not a PDF. Choose a file that ends in .pdf.": "「{name}」不是 PDF。請選擇以 .pdf 結尾的檔案。",
+  "(continued)": "（續）",
+  "A separate page with the grid filled in": "另一頁，格子裡填好答案",
+  "ANSWER KEY": "解答",
+  "Across": "橫向",
+  "Across and down only": "只有橫向和縱向",
+  "Add at least one card: a term and its definition on one line.": "請至少新增一張卡片：一行寫術語和解釋。",
+  "Add at least two words, one per line, each with its clue: word - clue.": "請至少新增兩個單字，每行一個，並附上提示：單字 - 提示。",
+  "Add at least two words, one per line.": "請至少新增兩個單字，每行一個。",
+  "Adds diagonals": "加上斜向",
+  "Adds words spelled backward": "加上倒著寫的單字",
+  "All teacher printables": "所有教師列印資料",
+  "Answer key": "解答",
+  "Answer keys": "解答",
+  "Auto": "自動",
+  "Cards per sheet": "每頁卡片數",
+  "Crossword": "填字遊戲",
+  "Crossword puzzle maker": "填字遊戲產生器",
+  "Cut lines": "裁切線",
+  "Definition on the front": "解釋放在正面",
+  "Did not fit: {words}. Choose a bigger grid or fewer words.": "放不下：{words}。請選更大的格子或減少單字。",
+  "Did not fit: {words}. Press “Rebuild grid” or add words that share letters.": "放不下：{words}。請按「重新產生格子」，或加入有相同字母的單字。",
+  "Different versions": "不同版本",
+  "Difficulty": "難度",
+  "Down": "縱向",
+  "Easy": "簡單",
+  "Find these words": "找出這些單字",
+  "Flashcard maker": "字卡產生器",
+  "Flashcards": "字卡",
+  "For teachers": "教師專區",
+  "Hard": "困難",
+  "Like a notepad flipped over the top": "像便條本一樣沿上緣翻",
+  "Lists the answers, for younger students": "列出答案，適合低年級",
+  "Long edge": "長邊",
+  "Name and date line": "姓名和日期欄",
+  "New puzzles": "新的謎題",
+  "On the sheet": "頁面內容",
+  "Options": "選項",
+  "Print two-sided. Pages alternate fronts and backs, and each back sits right behind its front.": "請雙面列印。頁面正反交替，每張背面正好在對應正面的背後。",
+  "Put a dash, a colon or a tab between the term and the definition. You can paste two columns from a spreadsheet.": "術語和解釋之間用連字號、冒號或定位字元分開。可直接貼上試算表中的兩欄。",
+  "Put a dash, a colon or a tab between the word and its clue. You can paste two columns from a spreadsheet.": "單字和提示之間用連字號、冒號或定位字元分開。可直接貼上試算表中的兩欄。",
+  "Rebuild grid": "重新產生格子",
+  "Same words, a different grid in each version, so neighbors cannot copy.": "同樣的單字，每個版本的格子都不同，隔壁同學無法抄襲。",
+  "Set name on the fronts": "正面顯示的字卡組名稱",
+  "Short edge": "短邊",
+  "Terms and definitions, one card per line": "術語和解釋，每行一張卡片",
+  "The term goes on the back": "術語改放在背面",
+  "The usual two-sided setting, like a book": "常用的雙面列印設定，像書一樣",
+  "Turn off for a harder puzzle": "關閉後更難",
+  "VERSION {n}": "版本 {n}",
+  "Word bank": "單字表",
+  "Word search": "找字遊戲",
+  "Word search maker": "找字遊戲產生器",
+  "Words and clues, one pair per line": "單字和提示，每行一組",
+  "Words marked in the grid, four versions per page": "格子中標出單字，每頁四個版本",
+  "Words to find": "要找的單字",
+  "Words, one per line": "單字，每行一個",
+  "Your printer flips the paper on the": "印表機翻紙的方向",
+  "flip on the long edge": "沿長邊翻轉",
+  "flip on the short edge": "沿短邊翻轉",
+  "{n} cards have no back yet.": {
+    "other": "{n} 張卡片還沒有背面。"
+  },
+  "{n} puzzles": {
+    "other": "{n} 份謎題"
+  },
+  "{n} sheets of paper": {
+    "other": "{n} 張紙"
+  },
+  "{n} words have no clue yet.": {
+    "other": "{n} 個單字還沒有提示。"
+  },
+  "{n} words in the grid.": {
+    "other": "格子中有 {n} 個單字。"
+  },
+  "{n} words.": {
+    "other": "{n} 個單字。"
+  }
 }

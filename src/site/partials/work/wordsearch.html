@@ -1,0 +1,175 @@
+<section class="work gen" id="tool" aria-label="Word search maker">
+  <div class="work-body">
+    <form class="gen-controls" id="gen-form">
+      <div class="field">
+        <label class="label" for="title">Title</label>
+        <input
+          class="input"
+          type="text"
+          id="title"
+          name="title"
+          value="Ocean animals"
+          maxlength="80"
+          autocomplete="off"
+        />
+      </div>
+      <div class="field">
+        <label class="label" for="words">Words, one per line</label>
+        <textarea
+          class="input"
+          id="words"
+          name="words"
+          rows="8"
+          spellcheck="true"
+        >
+Dolphin
+Whale
+Octopus
+Shark
+Turtle
+Jellyfish
+Starfish
+Seahorse
+Crab
+Lobster
+Coral
+Penguin</textarea
+        >
+        <span class="hint" id="words-info" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <span class="label" id="lbl-size">Grid</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-size">
+          <input
+            type="radio"
+            name="size"
+            id="size-auto"
+            value="auto"
+            checked
+          /><label for="size-auto">Auto</label>
+          <input type="radio" name="size" id="size-10" value="10" /><label
+            for="size-10"
+            >10×10</label
+          >
+          <input type="radio" name="size" id="size-12" value="12" /><label
+            for="size-12"
+            >12×12</label
+          >
+          <input type="radio" name="size" id="size-15" value="15" /><label
+            for="size-15"
+            >15×15</label
+          >
+          <input type="radio" name="size" id="size-20" value="20" /><label
+            for="size-20"
+            >20×20</label
+          >
+        </div>
+      </div>
+      <fieldset>
+        <legend class="label">Difficulty</legend>
+        <div class="gen-checks">
+          <label class="gen-check"
+            ><input type="radio" name="level" value="easy" /><span
+              >Easy<small>Across and down only</small></span
+            ></label
+          >
+          <label class="gen-check"
+            ><input type="radio" name="level" value="medium" checked /><span
+              >Medium<small>Adds diagonals</small></span
+            ></label
+          >
+          <label class="gen-check"
+            ><input type="radio" name="level" value="hard" /><span
+              >Hard<small>Adds words spelled backward</small></span
+            ></label
+          >
+        </div>
+      </fieldset>
+      <div class="field">
+        <label class="label" for="versions">Different versions</label>
+        <input
+          class="input"
+          type="number"
+          id="versions"
+          name="versions"
+          value="1"
+          min="1"
+          max="100"
+          step="1"
+          inputmode="numeric"
+        />
+        <span class="hint"
+          >Same words, a different grid in each version, so neighbors cannot
+          copy.</span
+        >
+      </div>
+      <fieldset>
+        <legend class="label">On the sheet</legend>
+        <div class="gen-checks">
+          <label class="gen-check"
+            ><input type="checkbox" name="list" checked /><span
+              >Words to find<small>Turn off for a harder puzzle</small></span
+            ></label
+          >
+          <label class="gen-check"
+            ><input type="checkbox" name="nameline" checked /><span
+              >Name and date line</span
+            ></label
+          >
+          <label class="gen-check"
+            ><input type="checkbox" name="key" checked /><span
+              >Answer keys<small
+                >Words marked in the grid, four versions per page</small
+              ></span
+            ></label
+          >
+        </div>
+      </fieldset>
+      <div class="field">
+        <span class="label" id="lbl-paper">Paper</span>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-paper">
+          <input
+            type="radio"
+            name="paper"
+            id="paper-a4"
+            value="a4"
+            checked
+          /><label for="paper-a4">A4</label>
+          <input
+            type="radio"
+            name="paper"
+            id="paper-letter"
+            value="letter"
+          /><label for="paper-letter">Letter</label>
+        </div>
+      </div>
+    </form>
+    <div class="gen-stage">
+      <div class="preview-head">
+        <span class="label">Preview</span>
+        <span class="hint tnum" id="gen-sum"></span>
+      </div>
+      <p class="drop-error" id="gen-error" role="alert" hidden></p>
+      <div class="gen-pages" id="gen-pages" aria-live="polite"></div>
+      <div class="drop-actions" style="justify-content: flex-start">
+        <button class="btn btn-sm" type="button" id="rebuild-btn">
+          <svg class="i i-sm"><use href="#i-rotate" /></svg>New puzzles
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="work-foot">
+    <span class="privacy-note"
+      ><svg class="i"><use href="#i-device" /></svg>Made in your browser.
+      Nothing is uploaded.</span
+    >
+    <span class="spacer"></span>
+    <button class="btn" type="button" id="pdf-btn">
+      <svg class="i"><use href="#i-upload" transform="rotate(180 10 10)" /></svg
+      >Download PDF
+    </button>
+    <button class="btn btn-primary btn-lg" type="button" id="print-btn">
+      <svg class="i"><use href="#i-printer" /></svg>Print
+    </button>
+  </div>
+</section>

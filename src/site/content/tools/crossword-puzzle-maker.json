@@ -1,0 +1,89 @@
+{
+  "slug": "crossword-puzzle-maker",
+  "section": "for-printing",
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded",
+  "mainQuery": "crossword puzzle maker",
+  "title": "Crossword Puzzle Maker: Free Printable Crosswords",
+  "description": "Make a printable crossword from your own words and clues. The grid builds itself, squares are numbered, answer key included. Free, no sign-up.",
+  "h1": "Crossword Puzzle Maker",
+  "crumb": "Crossword",
+  "promise": "A free crossword puzzle maker: type your words and clues, and the grid builds itself with crossing words and numbered squares, ready to print with a separate answer key.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Answer key included"],
+  "workArea": "crossword",
+  "script": "/src/site/js/tools/crossword.ts",
+  "app": {
+    "name": "Crossword Puzzle Maker",
+    "category": "EducationalApplication",
+    "featureList": [
+      "Your own words and clues, typed or pasted from a spreadsheet",
+      "Grid builds itself: words cross on shared letters, squares numbered",
+      "Rebuild the grid for a different layout",
+      "Clues under Across and Down, with word lengths for phrases",
+      "Separate answer key and an optional word bank",
+      "A4 or Letter, print or PDF"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to make a crossword"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "words-clues",
+      "label": "Words and clues"
+    },
+    {
+      "id": "grid",
+      "label": "How the grid is built"
+    },
+    {
+      "id": "answer-key",
+      "label": "Answer key"
+    },
+    {
+      "id": "classroom",
+      "label": "Crosswords in the classroom"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "word-search-maker",
+      "icon": "grid",
+      "name": "Word search maker",
+      "why": "Hide the same words in a letter grid, with versions for the class."
+    },
+    {
+      "slug": "flashcard-maker",
+      "icon": "book",
+      "name": "Flashcard maker",
+      "why": "Print the words and clues as two-sided study cards."
+    },
+    {
+      "slug": "bingo-card-generator",
+      "icon": "grid",
+      "name": "Bingo cards",
+      "why": "Play vocabulary bingo with the same word list."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "flashcard-maker",
+  "section": "for-printing",
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded",
+  "mainQuery": "flashcard maker",
+  "title": "Flashcard Maker: Free Printable Double-Sided Flashcards",
+  "description": "Make printable flashcards from terms and definitions. 4, 6 or 8 per page, backs line up when printed two-sided, cut lines. Free, no sign-up.",
+  "h1": "Flashcard Maker",
+  "crumb": "Flashcards",
+  "promise": "A free flashcard maker: paste terms and definitions, choose 4, 6 or 8 cards per page, and print double-sided flashcards whose backs line up with the fronts, with lines to cut along.",
+  "facts": ["Nothing is uploaded", "Free, no account", "Backs line up"],
+  "workArea": "flashcards",
+  "script": "/src/site/js/tools/flashcards.ts",
+  "app": {
+    "name": "Flashcard Maker",
+    "category": "EducationalApplication",
+    "featureList": [
+      "Terms and definitions typed or pasted from a spreadsheet",
+      "4, 6 or 8 cards per sheet",
+      "Backs mirrored for two-sided printing, long or short edge",
+      "Dashed cut lines on both sides",
+      "Definition on the front if you prefer",
+      "A4 or Letter, print or PDF"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to make flashcards"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "paste",
+      "label": "Paste terms and definitions"
+    },
+    {
+      "id": "double-sided",
+      "label": "Printing double-sided"
+    },
+    {
+      "id": "per-sheet",
+      "label": "Cards per page and cutting"
+    },
+    {
+      "id": "students",
+      "label": "Flashcards for students"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "crossword-puzzle-maker",
+      "icon": "grid",
+      "name": "Crossword puzzle maker",
+      "why": "Use the same terms and definitions as a crossword."
+    },
+    {
+      "slug": "word-search-maker",
+      "icon": "grid",
+      "name": "Word search maker",
+      "why": "Hide the terms in a letter grid for review."
+    },
+    {
+      "slug": "pdf-booklet",
+      "icon": "book",
+      "name": "PDF booklet",
+      "why": "Print study notes as a folded booklet."
+    }
+  ]
+}

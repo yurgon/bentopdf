@@ -147,7 +147,7 @@ const more = toolLike
   .sort((a, b) => a.name.localeCompare(b.name));
 const home = readJson(path.join(CONTENT, 'home.json'));
 const homeGroups = [
-  ...groups,
+  ...groups.filter((g) => g.home !== false),
   { id: 'g-more', title: home.moreTitle, icon: 'plus', tools: more },
 ];
 
