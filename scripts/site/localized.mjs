@@ -24,11 +24,14 @@ export function localizedPages(distDir) {
   return out;
 }
 
-/** Page URL in a language ('en' is the root). */
+/**
+ * Page URL in a language ('en' is the root). A language home is /de/ with the slash: that is
+ * where the server serves it (/de redirects there).
+ */
 export function pageUrl(siteUrl, lang, slug) {
   const p = slug === 'index' ? '' : slug;
-  const base = lang === 'en' ? siteUrl : `${siteUrl}/${lang}`;
-  return p ? `${base}/${p}` : base;
+  if (lang === 'en') return p ? `${siteUrl}/${p}` : siteUrl;
+  return `${siteUrl}/${lang}/${p}`;
 }
 
 /** hreflang links for a page open in `langs` (plus English and x-default). */

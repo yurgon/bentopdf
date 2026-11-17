@@ -100,6 +100,9 @@ const isPageTranslated = createTranslationChecker(
 
 function hasTrailingSlash(href) {
   const { pathname } = new URL(href);
+  // a language home (/de/) is served with its slash; /de redirects there
+  const langHome = /^\/([^/]+)\/$/.exec(pathname);
+  if (langHome && LOCALE_DIRS.has(langHome[1])) return false;
   return pathname !== '/' && pathname.endsWith('/');
 }
 
@@ -134,7 +137,11 @@ function expectedCanonicalForFile(rel) {
     }
   }
   if (slug) segments.push(slug);
-  return segments.join('/').replace(/\/+$/, '') || SITE_URL;
+  const url = segments.join('/').replace(/\/+$/, '') || SITE_URL;
+  // a language home is served at /de/
+  return !slug && parts.some((d) => LOCALE_DIRS.has(d)) && url !== SITE_URL
+    ? `${url}/`
+    : url;
 }
 
 // Our pages whose language copies were translated in full: those copies are for search, and

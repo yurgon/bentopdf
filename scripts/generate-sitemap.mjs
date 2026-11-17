@@ -96,8 +96,8 @@ function getPriority(pageName) {
 function buildUrl(lang, pageName) {
   const pagePath = pageName === 'index' ? '' : pageName;
   const root = `${SITE_URL}${canonicalBasePath()}`;
-  const prefix = lang === 'en' ? root : `${root}/${lang}`;
-  return pagePath ? `${prefix}/${pagePath}` : prefix;
+  if (lang !== 'en') return `${root}/${lang}/${pagePath}`; // a language home is served at /de/
+  return pagePath ? `${root}/${pagePath}` : root;
 }
 
 function generateSitemap() {

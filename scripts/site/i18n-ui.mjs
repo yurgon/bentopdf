@@ -316,7 +316,7 @@ export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
   const d = dom.window.document;
   const dict = loadDict(lang);
   const pagePath = slug === 'index' ? '' : slug;
-  const url = `${siteUrl}/${lang}${pagePath ? `/${pagePath}` : ''}`;
+  const url = `${siteUrl}/${lang}/${pagePath}`; // the language home is /de/, where it is served
 
   // a page opens to search in its language only when all of its text is translated
   const localized =
@@ -355,7 +355,7 @@ export function languageCopy(html, { lang, slug, siteUrl, languages, server }) {
       for (const [k, v] of Object.entries(o)) {
         if ((k === 'url' || k === 'item') && own(v)) {
           const rest = v.slice(siteUrl.length + 1);
-          o[k] = `${siteUrl}/${lang}${rest ? `/${rest}` : ''}`;
+          o[k] = `${siteUrl}/${lang}/${rest}`;
         } else relink(v);
       }
     };
