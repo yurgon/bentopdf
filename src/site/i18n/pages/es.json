@@ -751,8 +751,8 @@
   "Convert DRM-free Kindle files.": "Convierte archivos de Kindle sin DRM.",
   "Convert EPUB to PDF in your browser to print an ebook or read it on any device. Several books at once, free, and the files never leave your device.": "Pasa de EPUB a PDF en tu navegador para imprimir un libro electrónico o leerlo en cualquier dispositivo. Varios libros a la vez, gratis y sin subir nada.",
   "Convert EPUB to PDF to print an ebook, read it on a device without an ebook app, or send it to anyone. The book stays on your device.": "Convierte EPUB a PDF para imprimir un libro electrónico, leerlo en un dispositivo sin app de lectura o enviárselo a quien quieras. El libro se queda en tu dispositivo.",
-  "Convert Excel to PDF in your browser: XLSX, XLS, ODS and CSV, all sheets, several files at once. Free, no account, nothing is uploaded.": "Convierte Excel a PDF en tu navegador: XLSX, XLS, ODS y CSV, todas las hojas, varios archivos a la vez. Gratis, sin cuenta y sin subir nada.",
-  "Convert Excel to PDF: add XLSX, XLS, ODS or CSV files and get a PDF of every sheet. Nothing is uploaded, and there is no account.": "Convierte Excel a PDF: añade archivos XLSX, XLS, ODS o CSV y obtén un PDF con todas las hojas. No se sube nada y no hay cuenta.",
+  "Convert Excel to PDF in your browser: XLSX, XLS, ODS and CSV, all sheets, several files at once. Free, no account, nothing is uploaded.": "Convertir Excel a PDF en el navegador: XLSX, XLS, ODS y CSV, todas las hojas, varios archivos a la vez. Gratis, sin cuenta y sin subir nada.",
+  "Convert Excel to PDF: add XLSX, XLS, ODS or CSV files and get a PDF of every sheet. Nothing is uploaded, and there is no account.": "Convertir Excel a PDF aquí es fácil: añade archivos XLSX, XLS, ODS o CSV y obtén un PDF con todas las hojas. No se sube nada y no hay cuenta.",
   "Convert HEIC to PDF in your browser: put iPhone photos into one PDF, in the order you choose, at full quality. Free, works on Windows, no upload.": "Convertir HEIC a PDF en el navegador: junta fotos del iPhone en un PDF, en el orden que elijas y con toda su calidad. Gratis, funciona en Windows.",
   "Convert HEIC to PDF: iPhone photos become one PDF, one photo per page, at full quality. Your photos stay on your device.": "Convierte HEIC a PDF: las fotos del iPhone se convierten en un PDF, una foto por página, con toda su calidad. Tus fotos se quedan en tu dispositivo.",
   "Convert JPG to PDF in your browser. Put many photos into one PDF and choose the quality. Free, no sign up, and your images never leave your device.": "Convierte JPG a PDF en tu navegador. Junta muchas fotos en un solo PDF y elige la calidad. Gratis, sin registro, y tus imágenes no salen de tu dispositivo.",
@@ -770,8 +770,8 @@
   "Convert PDF files to JSON format.": "Convierte archivos PDF a JSON.",
   "Convert PDF text and tables to Markdown format.": "Convierte el texto y las tablas de un PDF a Markdown.",
   "Convert PDF to EPUB in your browser: whole paragraphs, chapters and a table of contents, no page numbers in the text. Scanned books too. Free, no upload.": "Convertir PDF a EPUB en tu navegador: párrafos completos, capítulos e índice, sin números de página. También libros escaneados. Gratis, sin subir.",
-  "Convert PDF to Excel in your browser: tables are found on every page and saved to an XLSX file, one sheet per table. Free, nothing is uploaded.": "Convertir PDF a Excel en el navegador: se encuentran las tablas de cada página y se guardan en un XLSX, una hoja por tabla. Gratis y sin subir nada.",
-  "Convert PDF to Excel: every table in your PDF is found and saved to an XLSX workbook, one sheet per table, ready to sort and sum. Your file stays on your device.": "Convierte PDF a Excel: se encuentran todas las tablas de tu PDF y se guardan en un libro XLSX, una hoja por tabla, listas para ordenar y sumar. Tu archivo se queda en tu dispositivo.",
+  "Convert PDF to Excel in your browser: tables are found on every page and saved to an XLSX file, one sheet per table. Free, nothing is uploaded.": "Convertir PDF a Excel en el navegador: se detectan las tablas de cada página y se guardan en un XLSX, una hoja por tabla. Gratis y sin subir nada.",
+  "Convert PDF to Excel: every table in your PDF is found and saved to an XLSX workbook, one sheet per table, ready to sort and sum. Your file stays on your device.": "Convertir PDF a Excel aquí es fácil: se encuentran todas las tablas de tu PDF y se guardan en un libro XLSX, una hoja por tabla, listas para ordenar y sumar. Tu archivo se queda en tu dispositivo.",
   "Convert PDF to JPG in your browser: every page becomes a JPG image, with a quality slider. Free, no sign up, and the PDF never leaves your device.": "Convierte PDF a JPG en tu navegador: cada página pasa a ser una imagen JPG, con control de calidad. Gratis, sin registro y sin subir el PDF.",
   "Convert PDF to JPG: each page of your document becomes a separate image you can post, paste or send. The PDF stays on your device.": "Convierte PDF a JPG: cada página de tu documento pasa a ser una imagen aparte que puedes publicar, pegar o enviar. El PDF se queda en tu dispositivo.",
   "Convert PDF to PDF/A in your browser: choose PDF/A-1b, 2b or 3b, convert several files at once. Free, no account, nothing is uploaded.": "Convierte PDF a PDF/A en tu navegador: elige PDF/A-1b, 2b o 3b y convierte varios archivos a la vez. Gratis, sin cuenta y sin subir nada.",
@@ -1081,7 +1081,7 @@
   "Everywhere; accepted by most upload forms": "En todas partes; lo aceptan casi todos los formularios de subida",
   "Exact square size": "Tamaño de cuadro exacto",
   "Excel to PDF": "Excel a PDF",
-  "Excel to PDF: Convert XLSX, XLS, ODS and CSV Free": "Excel a PDF: convierte XLSX, XLS, ODS y CSV gratis",
+  "Excel to PDF: Convert XLSX, XLS, ODS and CSV Free": "Convertir Excel a PDF gratis: XLSX, XLS, ODS y CSV",
   "Export": "Exporta",
   "Export the comparison as a PDF, in overlay, split or alternating layout, to send to someone else.": "Exporta la comparación como PDF, en vista superpuesta, dividida o alterna, para enviársela a otra persona.",
   "Export uses your browser's own print engine, the same one that prints web pages, so text stays sharp and selectable. In the print window, choose <strong>Save as PDF</strong> (in Chrome and Edge) or <strong>PDF</strong> in the lower left (in Safari on a Mac), pick the paper size and save. Only the rendered document is printed, not the editor.": "Exportar usa el propio motor de impresión de tu navegador, el mismo que imprime las páginas web, así que el texto queda nítido y se puede seleccionar. En la ventana de impresión, elige <strong>Guardar como PDF</strong> (en Chrome y Edge) o <strong>PDF</strong> abajo a la izquierda (en Safari en un Mac), escoge el tamaño de papel y guarda. Solo se imprime el documento generado, no el editor.",
@@ -1120,10 +1120,10 @@
   "Files are never uploaded": "Los archivos nunca se suben",
   "Files stay on your device": "Tus archivos no salen de tu dispositivo",
   "Fill PDF Form": "Rellenar formulario PDF",
-  "Fill PDF Forms Online: Type, Tick and Save, Free": "Rellenar formularios PDF online: escribe, marca y guarda, gratis",
+  "Fill PDF Forms Online: Type, Tick and Save, Free": "Rellenar PDF online gratis: escribe, marca y guarda",
   "Fill PDF forms": "Rellenar formularios PDF",
-  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "Rellena aquí formularios PDF: escribe en los campos, marca las casillas y guarda el archivo terminado. No se sube nada y no hay cuenta.",
-  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "Rellena formularios PDF en tu navegador: escribe en los campos, marca casillas o añade texto a un formulario plano. Guarda un PDF normal. Gratis, sin cuenta y sin subir nada.",
+  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "Rellenar PDF online aquí: escribe en los campos, marca las casillas y guarda el archivo terminado. No se sube nada y no hay cuenta.",
+  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "Rellenar PDF online en tu navegador: escribe en los campos, marca casillas o añade texto a un formulario plano. Gratis, sin cuenta y sin subir nada.",
   "Fill a fillable PDF form": "Rellena un formulario PDF rellenable",
   "Fill a flat form that has no fields": "Rellena un formulario plano sin campos",
   "Fill in a form and add text, dates and initials next to your signature.": "Rellena un formulario y añade texto, fechas e iniciales junto a tu firma.",
@@ -1965,9 +1965,9 @@
   "PDF Layers": "Capas del PDF",
   "PDF Multi Tool": "Multiherramienta PDF",
   "PDF OCR": "OCR de PDF",
-  "PDF OCR in your browser: turn a scan into a searchable PDF and a text file. Over 100 languages, no page limit. Free, nothing is uploaded.": "OCR de PDF en tu navegador: convierte un escaneo en un PDF con texto buscable y en un archivo de texto. Más de 100 idiomas, sin límite de páginas. Gratis.",
-  "PDF OCR that turns a scanned document into a searchable PDF you can copy from, plus a plain text file. It runs on your device, with no page limit.": "OCR de PDF que convierte un documento escaneado en un PDF buscable del que puedes copiar, más un archivo de texto plano. Funciona en tu dispositivo, sin límite de páginas.",
-  "PDF OCR: Make Scanned PDFs Searchable, Free, No Upload": "OCR PDF gratis: haz que un PDF escaneado se pueda buscar",
+  "PDF OCR in your browser: turn a scan into a searchable PDF and a text file. Over 100 languages, no page limit. Free, nothing is uploaded.": "PDF OCR en tu navegador: convierte un escaneo en un PDF con texto buscable y en un archivo de texto. Más de 100 idiomas, sin límite de páginas. Gratis.",
+  "PDF OCR that turns a scanned document into a searchable PDF you can copy from, plus a plain text file. It runs on your device, with no page limit.": "PDF OCR online que convierte un documento escaneado en un PDF buscable del que puedes copiar, más un archivo de texto plano. Funciona en tu dispositivo, sin límite de páginas.",
+  "PDF OCR: Make Scanned PDFs Searchable, Free, No Upload": "PDF OCR online gratis: haz buscable un PDF escaneado",
   "PDF Workflow Builder": "Creador de flujos de trabajo PDF",
   "PDF booklet": "Folleto PDF",
   "PDF booklet maker": "Creador de folletos PDF",
@@ -1980,7 +1980,7 @@
   "PDF to EPUB Converter": "Convertir PDF a EPUB",
   "PDF to EPUB Converter: Reflowable eBooks, No Upload": "Convertir PDF a EPUB gratis: libros adaptables, sin subir",
   "PDF to Excel": "PDF a Excel",
-  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "PDF a Excel gratis: extrae tablas de un PDF a XLSX",
+  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "Convertir PDF a Excel gratis: tablas a XLSX sin subirlo",
   "PDF to JPG": "PDF a JPG",
   "PDF to JPG Converter": "Convertir PDF a JPG",
   "PDF to JPG: Convert PDF Pages to Images, Free": "PDF a JPG gratis: convierte páginas PDF en imágenes",
@@ -2313,9 +2313,9 @@
   "Right-to-left text is detected automatically: the direction switches and the text is right-aligned, in the editor and in the PDF.": "El texto de derecha a izquierda se detecta automáticamente: la dirección cambia y el texto se alinea a la derecha, tanto en el editor como en el PDF.",
   "Right-to-left text such as Arabic is detected automatically": "El texto de derecha a izquierda, como el árabe, se detecta automáticamente",
   "Rotate PDF": "Rotar PDF",
-  "Rotate PDF pages and save the file so they stay rotated: turn one page or all of them, left or right. Nothing is uploaded.": "Rota páginas de un PDF y guarda el archivo para que se queden giradas: gira una página o todas, a izquierda o derecha. No se sube nada.",
-  "Rotate PDF pages in your browser: turn one page or all, left or right, and save the file rotated for good. Free, no account, nothing is uploaded.": "Rota páginas de un PDF en tu navegador: gira una página o todas, a izquierda o derecha, y guarda el archivo girado para siempre. Gratis, sin cuenta y sin subir nada.",
-  "Rotate PDF: Turn Pages and Save Them Rotated, Free": "Rotar PDF: gira páginas y guárdalas giradas, gratis",
+  "Rotate PDF pages and save the file so they stay rotated: turn one page or all of them, left or right. Nothing is uploaded.": "Rotar PDF y girar sus páginas, y guardar el archivo para que se queden giradas: una página o todas, a izquierda o derecha. No se sube nada.",
+  "Rotate PDF pages in your browser: turn one page or all, left or right, and save the file rotated for good. Free, no account, nothing is uploaded.": "Rotar PDF en tu navegador: gira una página o todas, a izquierda o derecha, y guarda el PDF girado para siempre. Gratis, sin cuenta y sin subir nada.",
+  "Rotate PDF: Turn Pages and Save Them Rotated, Free": "Rotar PDF gratis: gira páginas y guárdalas para siempre",
   "Rotate by Custom Degrees": "Girar con ángulo personalizado",
   "Rotate one page or all pages": "Gira una página o todas",
   "Rotate pages": "Girar páginas",
@@ -3207,9 +3207,21 @@
       "Low": "Bajo",
       "Use it for": "Para qué usarlo"
     },
+    "excel-to-pdf": {
+      "Excel to PDF": "Convertir Excel a PDF"
+    },
+    "form-filler": {
+      "Fill PDF Form": "Rellenar PDF online"
+    },
     "index": {
       "Convert": "Convertir",
       "Graph paper": "Papel milimetrado"
+    },
+    "ocr-pdf": {
+      "PDF OCR": "PDF OCR"
+    },
+    "pdf-to-excel": {
+      "PDF to Excel": "Convertir PDF a Excel"
     },
     "sign-pdf": {
       "Good for": "Sirve para"

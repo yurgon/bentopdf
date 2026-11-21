@@ -1,0 +1,31 @@
+# Вьетнамский (vi), пачка 3: ключевые слова 25 страниц
+
+Страна seodata: vn. Данные по сайту seodata (месячные запросы). Второй раунд проверок упёрся в лимит, поэтому часть вариантов не проверена. Без данных (ни один вариант не найден): redact-pdf, form-creator, pdf-to-pdfa. Почти нет данных (10-50): form-filler, extract-images, heic-to-pdf, rtf-to-pdf, tiff-to-pdf, txt-to-pdf.
+
+| страница          | главный запрос                                | объём      | близкие варианты                                                                      | что изменено                               |
+| ----------------- | --------------------------------------------- | ---------- | ------------------------------------------------------------------------------------- | ------------------------------------------ |
+| redact-pdf        | Che thông tin PDF                             | нет данных | bôi đen pdf, redact pdf (0)                                                           | без изменений                              |
+| compare-pdfs      | so sánh 2 file pdf                            | 260        | so sánh văn bản 720 (другая выдача)                                                   | без изменений                              |
+| ocr-pdf           | OCR PDF online (ocr online 1300, ocr pdf 590) | 1300       | ocr 5400, pdf ocr 1000, online ocr 880, ocr tiếng việt 480                            | title, h1, описание: добавлено online      |
+| split-pdf         | tách file pdf                                 | 110000     | cắt file pdf 60500, tách pdf 18100, cắt pdf 12100, tách trang pdf 4400                | title с "cắt file PDF", h1 "Tách file PDF" |
+| delete-pages      | xóa trang pdf                                 | 33100      | xóa trang trong pdf 2400, xóa file pdf 3600, xóa trang pdf online 1000                | title с "xóa trang trong file PDF"         |
+| unlock-pdf        | mở khóa pdf                                   | 3600       | unlock pdf 2400-2900, mở khóa file pdf 1000, bẻ khóa pdf 590                          | без изменений                              |
+| powerpoint-to-pdf | chuyển ppt sang pdf                           | 6600       | pptx to pdf 1900, powerpoint sang pdf 720                                             | title, h1, описание, первый абзац          |
+| form-creator      | tạo form pdf điền được                        | нет данных | tạo fillable pdf (0)                                                                  | без изменений                              |
+| heic-to-pdf       | chuyển heic sang pdf                          | 140        | heic sang pdf 40, chuyển ảnh heic sang pdf 30                                         | h1                                         |
+| pdf-to-text       | chuyển pdf sang text                          | 390        | chuyển pdf sang txt 320 (та же выдача)                                                | title, h1                                  |
+| sign-pdf          | chèn chữ ký vào file pdf                      | 1600       | chèn chữ ký vào pdf 390, ký pdf 210, ký file pdf 260, ký tên online 590               | title, h1, описание, первый абзац          |
+| pdf-to-excel      | chuyển pdf sang excel                         | 74000      | chuyển file pdf sang excel 22200, chuyển đổi pdf sang excel 9900, pdf sang excel 3600 | title, h1                                  |
+| markdown-to-pdf   | markdown to pdf                               | 590        | md to pdf 590, markdown pdf 590                                                       | title                                      |
+| crop-pdf          | crop pdf                                      | 1000       | crop file pdf 260, cắt lề pdf 40 (cắt pdf 12100 = выдача Split, не берём)             | title, h1, описание, первый абзац          |
+| excel-to-pdf      | chuyển excel sang pdf                         | 27100      | excel sang pdf 1300, xlsx to pdf 390                                                  | title, h1                                  |
+| extract-images    | trích xuất ảnh từ pdf                         | 10         | tách ảnh từ pdf 50, lấy ảnh từ pdf 40                                                 | без изменений                              |
+| flatten-pdf       | làm phẳng pdf                                 | 390        | flatten pdf 320                                                                       | без изменений                              |
+| form-filler       | điền form pdf                                 | 10         | fill pdf online 20                                                                    | без изменений                              |
+| pdf-to-pdfa       | PDF sang PDF/A                                | нет данных |                                                                                       | без изменений                              |
+| pdf-to-svg        | pdf to svg                                    | 320        | convert pdf to svg 320 (та же выдача)                                                 | title                                      |
+| protect-pdf       | đặt mật khẩu cho file pdf                     | 210        | đặt mật khẩu pdf 50, khóa file pdf 210, đặt pass cho file pdf 390                     | title, h1                                  |
+| rotate-pdf        | xoay file pdf                                 | 22200      | xoay pdf 9900, xoay trang pdf 5400-8100, xoay pdf online 1600                         | title, h1, описание                        |
+| rtf-to-pdf        | rtf to pdf                                    | 110        | chuyển rtf sang pdf 30                                                                | title                                      |
+| tiff-to-pdf       | tif to pdf                                    | 170        | chuyển tiff sang pdf 140, tiff sang pdf 10                                            | title, h1                                  |
+| txt-to-pdf        | chuyển txt sang pdf                           | 90         | convert txt to pdf 90, chuyển file txt sang pdf 70, txt sang pdf 40                   | title, h1                                  |

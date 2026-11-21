@@ -714,11 +714,11 @@
   "Common graph paper square sizes and what they are used for": "Tailles de carreaux courantes et leurs usages",
   "Common square sizes": "Tailles de carreaux courantes",
   "Compare PDFs": "Comparer des PDF",
-  "Compare PDFs side by side or laid over each other and see every added, deleted, changed and moved passage, then save a report. Both files stay on your device.": "Comparez des PDF côte à côte ou superposés et voyez chaque passage ajouté, supprimé, modifié ou déplacé, puis enregistrez un rapport. Les deux fichiers restent sur votre appareil.",
-  "Compare PDFs: Find Differences Between Two Files, Free": "Comparer des PDF : trouver les différences, gratuit",
+  "Compare PDFs side by side or laid over each other and see every added, deleted, changed and moved passage, then save a report. Both files stay on your device.": "Comparez deux PDF côte à côte ou superposés et voyez chaque passage ajouté, supprimé, modifié ou déplacé, puis enregistrez un rapport. Les deux fichiers restent sur votre appareil.",
+  "Compare PDFs: Find Differences Between Two Files, Free": "Comparer deux PDF : trouver les différences, gratuit",
   "Compare scanned PDFs with OCR": "Comparer des PDF scannés avec l’OCR",
   "Compare the sheet with the checks below: even black, all gray steps, four clean ink bars, a ruler that measures 100 mm.": "Comparez la feuille aux contrôles ci-dessous : noir uniforme, tous les niveaux de gris, quatre barres d’encre nettes, une règle qui mesure 100 mm.",
-  "Compare two PDF files side by side or as an overlay. Added, deleted, changed and moved text is highlighted, scans too. Free, nothing uploaded.": "Comparez deux fichiers PDF côte à côte ou superposés. Texte ajouté, supprimé, modifié ou déplacé surligné, scans compris. Gratuit, rien n’est envoyé.",
+  "Compare two PDF files side by side or as an overlay. Added, deleted, changed and moved text is highlighted, scans too. Free, nothing uploaded.": "Comparez deux PDF côte à côte ou superposés. Texte ajouté, supprimé, modifié ou déplacé surligné, scans compris. Gratuit, rien n’est envoyé.",
   "Compare two PDFs side by side or as an overlay": "Comparer deux PDF côte à côte ou en superposition",
   "Comparing PDFs answers one question: what is different in the new version? Reading two contracts line by line takes an hour and still misses things. This tool finds every change in seconds, shows it in place and lists it, and runs in your browser, so confidential documents are never uploaded.": "Comparer des PDF répond à une question : qu’est-ce qui change dans la nouvelle version ? Relire deux contrats ligne par ligne prend une heure et laisse quand même passer des choses. Cet outil trouve chaque changement en quelques secondes, le montre sur place et le liste. Il fonctionne dans votre navigateur, donc les documents confidentiels ne sont jamais envoyés.",
   "Comparison report saved as PDF; nothing is uploaded": "Rapport de comparaison enregistré en PDF ; rien n’est envoyé",
@@ -759,8 +759,8 @@
   "Convert JPG to PDF: turn one photo or a whole batch into a single PDF, one picture per page. The images stay on your device.": "Convertissez JPG en PDF : une photo ou toute une série dans un seul PDF, une image par page. Les images restent sur votre appareil.",
   "Convert JPG, PNG, BMP, GIF, TIFF, PNM, PGM, PBM, PPM, PAM, JXR, JPX, JP2, PSD, SVG, HEIC, WebP to PDF.": "Convertissez JPG, PNG, BMP, GIF, TIFF, PNM, PGM, PBM, PPM, PAM, JXR, JPX, JP2, PSD, SVG, HEIC, WebP en PDF.",
   "Convert JSON files to PDF format.": "Convertissez des fichiers JSON en PDF.",
-  "Convert Markdown to PDF in your browser: paste text or open a .md file, see a live preview with tables, code, math and diagrams, save as PDF.": "Convertissez du Markdown en PDF dans votre navigateur : collez du texte ou ouvrez un .md, aperçu en direct avec tableaux, code, maths et diagrammes.",
-  "Convert Markdown to PDF with a live preview: tables, code, math and diagrams come out formatted, and your text never leaves your device.": "Convertissez du Markdown en PDF avec un aperçu en direct : tableaux, code, maths et diagrammes sortent mis en forme, et votre texte ne quitte jamais votre appareil.",
+  "Convert Markdown to PDF in your browser: paste text or open a .md file, see a live preview with tables, code, math and diagrams, save as PDF.": "Markdown to PDF dans votre navigateur : collez du texte ou ouvrez un .md, aperçu en direct avec tableaux, code, maths et diagrammes.",
+  "Convert Markdown to PDF with a live preview: tables, code, math and diagrams come out formatted, and your text never leaves your device.": "Markdown to PDF, avec aperçu en direct : convertissez du Markdown en PDF, tableaux, code, maths et diagrammes sortent mis en forme, et votre texte ne quitte jamais votre appareil.",
   "Convert Microsoft Publisher (PUB) files to PDF format. Supports multiple files.": "Convertissez des fichiers Microsoft Publisher (PUB) en PDF. Plusieurs fichiers à la fois.",
   "Convert Microsoft Visio (VSD, VSDX) files to PDF format. Supports multiple files.": "Convertissez des fichiers Microsoft Visio (VSD, VSDX) en PDF. Plusieurs fichiers à la fois.",
   "Convert OpenDocument Graphics (ODG) files to PDF format. Supports multiple files.": "Convertissez des dessins OpenDocument (ODG) en PDF. Plusieurs fichiers à la fois.",
@@ -784,8 +784,8 @@
   "Convert PDF to Word (DOCX) in your browser. Text, tables and images become editable. Several files at once, free, and nothing is uploaded.": "Convertissez un PDF en Word (DOCX) dans votre navigateur : texte, tableaux et images deviennent modifiables. Plusieurs fichiers à la fois, gratuit, sans envoi.",
   "Convert PDF to Word and get an editable DOCX with paragraphs, tables and pictures in place. The conversion runs in your browser.": "Convertissez un PDF en Word et obtenez un DOCX modifiable, avec paragraphes, tableaux et images en place. La conversion se fait dans votre navigateur.",
   "Convert PDF to image-based PDF. Flatten layers and remove selectable text.": "Convertissez un PDF en PDF image. Aplatit les calques et retire le texte sélectionnable.",
-  "Convert PDF to text in your browser: extract all the text from one or many PDFs into plain .txt files. Free, no account, nothing is uploaded.": "Convertissez un PDF en texte dans votre navigateur : extrayez tout le texte d’un ou plusieurs PDF en fichiers .txt. Gratuit, sans compte, rien n’est envoyé.",
-  "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.": "Convertissez un PDF en texte : récupérez chaque mot d’un PDF dans un fichier .txt brut à chercher, citer ou coller n’importe où. Vos fichiers restent sur votre appareil.",
+  "Convert PDF to text in your browser: extract all the text from one or many PDFs into plain .txt files. Free, no account, nothing is uploaded.": "Convertissez un PDF en TXT dans votre navigateur : extrayez tout le texte d’un ou plusieurs PDF en fichiers .txt. Gratuit, sans compte, rien n’est envoyé.",
+  "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.": "Convertissez un PDF en TXT : récupérez chaque mot d’un PDF dans un fichier .txt brut à chercher, citer ou coller n’importe où. Vos fichiers restent sur votre appareil.",
   "Convert PNG to PDF in your browser: screenshots, scans and graphics in one PDF, a page per image. Free, no sign up, and images never leave your device.": "Convertissez PNG en PDF dans votre navigateur : captures, scans et graphiques dans un seul PDF, une page par image. Gratuit, sans inscription ni envoi.",
   "Convert PNG to PDF: put screenshots, scans or graphics into one document, a page per image, with no loss at high quality. Nothing is uploaded.": "Convertissez PNG en PDF : réunissez captures d’écran, scans ou graphiques dans un seul document, une page par image, sans perte en qualité haute. Rien n’est envoyé.",
   "Convert PowerPoint to PDF in your browser: PPTX, PPT and ODP, one slide per page, several files at once. Free, no account, nothing is uploaded.": "Convertissez un PowerPoint en PDF dans votre navigateur : PPTX, PPT et ODP, une diapo par page, plusieurs fichiers à la fois. Gratuit, sans compte ni envoi.",
@@ -884,13 +884,13 @@
   "Default": "Par défaut",
   "Definition on the front if you prefer": "Définition au recto si vous préférez",
   "Delete Pages": "Supprimer des pages",
-  "Delete Pages from PDF": "Supprimer des pages d’un PDF",
-  "Delete Pages from PDF: Remove Pages Free, No Upload": "Supprimer des pages d’un PDF : gratuit, sans envoi",
+  "Delete Pages from PDF": "Supprimer des pages PDF",
+  "Delete Pages from PDF: Remove Pages Free, No Upload": "Supprimer des pages PDF : retirer une page, gratuit",
   "Delete a whole block by selecting it and pressing Delete. The words are removed from the file itself, not hidden under a white box, so they cannot be copied out or found by search later.": "Supprimez un bloc entier en le sélectionnant puis en appuyant sur Suppr. Les mots sont retirés du fichier lui-même, pas cachés sous un cadre blanc : on ne pourra plus les copier ni les retrouver par une recherche.",
   "Delete and save": "Supprimez et enregistrez",
   "Delete blank pages": "Supprimer les pages blanches",
   "Delete comments instead of keeping them.": "Supprimez les commentaires au lieu de les conserver.",
-  "Delete pages from PDF files by clicking them or typing their numbers, and keep everything else as it was. Everything runs on your device.": "Supprimez des pages d’un fichier PDF en cliquant dessus ou en tapant leurs numéros, et gardez tout le reste tel quel. Tout se passe sur votre appareil.",
+  "Delete pages from PDF files by clicking them or typing their numbers, and keep everything else as it was. Everything runs on your device.": "Supprimez des pages PDF (ou une seule page) en cliquant dessus ou en tapant leurs numéros, et gardez tout le reste tel quel. Tout se passe sur votre appareil.",
   "Delete pages from a PDF in your browser: click them on thumbnails or type 2, 4-6, 9, and save the rest. Free, no account, nothing is uploaded.": "Supprimez des pages d’un PDF dans votre navigateur : cliquez-les sur les miniatures ou tapez 2, 4-6, 9, et gardez le reste. Gratuit, sans compte ni envoi.",
   "Deleting pages from a PDF takes out the ones you do not want, such as a blank scan, an outdated appendix or a cover nobody needs, and keeps the rest exactly as it was. Here you do it in your browser: no upload, no account, no limit on file size.": "Supprimer des pages d’un PDF, c’est retirer celles dont vous ne voulez pas, comme un scan vide, une annexe périmée ou une couverture inutile, et garder le reste exactement tel quel. Ici, vous le faites dans votre navigateur : sans envoi, sans compte, sans limite de taille.",
   "Design apps, websites, stamps and anything resized often": "Logiciels de graphisme, sites web, tampons et tout ce qui est souvent redimensionné",
@@ -1120,10 +1120,10 @@
   "Files are never uploaded": "Les fichiers ne sont jamais envoyés",
   "Files stay on your device": "Les fichiers restent sur votre appareil",
   "Fill PDF Form": "Remplir un formulaire PDF",
-  "Fill PDF Forms Online: Type, Tick and Save, Free": "Remplir un formulaire PDF en ligne : saisir, cocher, enregistrer",
+  "Fill PDF Forms Online: Type, Tick and Save, Free": "Remplir un PDF en ligne : saisir, cocher, enregistrer",
   "Fill PDF forms": "Remplir des formulaires PDF",
-  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "Remplissez ici des formulaires PDF : saisissez dans les champs, cochez les cases et enregistrez le fichier terminé. Rien n’est envoyé, et il n’y a pas de compte.",
-  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "Remplissez un formulaire PDF dans votre navigateur : saisissez dans les champs, cochez les cases ou ajoutez du texte à un formulaire à plat. Gratuit, sans compte ni envoi.",
+  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "Remplissez un PDF ici : saisissez dans les champs, cochez les cases et enregistrez le fichier terminé. Rien n’est envoyé, et il n’y a pas de compte.",
+  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "Remplissez un PDF dans votre navigateur : saisissez dans les champs, cochez les cases ou ajoutez du texte à un formulaire à plat. Gratuit, sans compte ni envoi.",
   "Fill a fillable PDF form": "Remplir un formulaire PDF remplissable",
   "Fill a flat form that has no fields": "Remplir un formulaire à plat sans champs",
   "Fill in a form and add text, dates and initials next to your signature.": "Remplissez un formulaire et ajoutez texte, dates et initiales à côté de votre signature.",
@@ -1294,7 +1294,7 @@
   "How can I convert a PDF to PNG on my iPhone?": "Comment convertir un PDF en PNG sur iPhone ?",
   "How can I convert a PDF to Word for free?": "Comment convertir un PDF en Word gratuitement ?",
   "How can I convert a PNG file to a PDF for free?": "Comment convertir un fichier PNG en PDF gratuitement ?",
-  "How can I redact a PDF for free?": "Comment caviarder un PDF gratuitement ?",
+  "How can I redact a PDF for free?": "Comment biffer un PDF gratuitement ?",
   "How can I reduce a PDF to a certain number of MB?": "Comment réduire un PDF à un nombre précis de Mo ?",
   "How can I remove unwanted pages for free?": "Comment enlever des pages inutiles gratuitement ?",
   "How can I tell if my PDF has a text layer?": "Comment savoir si mon PDF contient une couche de texte ?",
@@ -1312,14 +1312,14 @@
   "How do I convert a HEIC file to PDF?": "Comment convertir un fichier HEIC en PDF ?",
   "How do I convert a PDF form to Word?": "Comment convertir un formulaire PDF en Word ?",
   "How do I convert a PDF to PDF/A?": "Comment convertir un PDF en PDF/A ?",
-  "How do I convert a PDF to text?": "Comment convertir un PDF en texte ?",
+  "How do I convert a PDF to text?": "Comment convertir un PDF en TXT ?",
   "How do I convert a TXT file to PDF?": "Comment convertir un fichier TXT en PDF ?",
   "How do I convert iPhone photos to PDF?": "Comment convertir des photos d’iPhone en PDF ?",
   "How do I convert or save a JPG as a PDF?": "Comment convertir ou enregistrer un JPG en PDF ?",
   "How do I create my signature?": "Comment créer ma signature ?",
   "How do I crop a PDF?": "Comment rogner un PDF ?",
   "How do I crop every page the same way?": "Comment rogner toutes les pages de la même façon ?",
-  "How do I delete pages from a PDF?": "Comment supprimer des pages d’un PDF ?",
+  "How do I delete pages from a PDF?": "Comment supprimer une page d’un PDF ?",
   "How do I edit a PDF for free?": "Comment modifier un PDF gratuitement ?",
   "How do I edit a PDF without Acrobat?": "Comment modifier un PDF sans Acrobat ?",
   "How do I electronically sign a PDF?": "Comment signer électroniquement un PDF ?",
@@ -1327,7 +1327,7 @@
   "How do I extract pages from a PDF?": "Comment extraire des pages d’un PDF ?",
   "How do I extract text from a PDF for free?": "Comment extraire le texte d’un PDF gratuitement ?",
   "How do I fill a PDF that won't let me type?": "Comment remplir un PDF dans lequel je ne peux pas écrire ?",
-  "How do I fill out a PDF form online?": "Comment remplir un formulaire PDF en ligne ?",
+  "How do I fill out a PDF form online?": "Comment remplir un PDF en ligne ?",
   "How do I flatten a PDF so it cannot be edited?": "Comment aplatir un PDF pour qu’il ne soit plus modifiable ?",
   "How do I get a signature with a transparent background?": "Comment obtenir une signature sur fond transparent ?",
   "How do I make a PDF fillable?": "Comment rendre un PDF remplissable ?",
@@ -1347,7 +1347,7 @@
   "How do I remove a password from a PDF?": "Comment enlever le mot de passe d’un PDF ?",
   "How do I remove the password later?": "Comment retirer ensuite le mot de passe ?",
   "How do I rotate a PDF 180 degrees?": "Comment faire pivoter un PDF de 180 degrés ?",
-  "How do I rotate a PDF?": "Comment faire pivoter un PDF ?",
+  "How do I rotate a PDF?": "Comment pivoter un PDF ?",
   "How do I split a PDF into separate pages?": "Comment séparer les pages d’un PDF ?",
   "How do I stop columns being cut off?": "Comment éviter que des colonnes soient coupées ?",
   "How do I turn iPhone screenshots into a PDF?": "Comment transformer des captures d’écran d’iPhone en PDF ?",
@@ -1682,8 +1682,8 @@
   "Mark what to remove": "Marquez ce qu’il faut retirer",
   "Markdown features": "Fonctions Markdown",
   "Markdown is plain text with a few symbols for headings, lists and tables, used for READMEs, notes and AI answers. Converting Markdown to PDF gives a formatted document anyone can read. Here you write or paste it, see the result as you type, and save it, all in your browser.": "Le Markdown est du texte brut avec quelques symboles pour les titres, les listes et les tableaux, utilisé pour les README, les notes et les réponses des IA. Convertir du Markdown en PDF donne un document mis en forme que tout le monde peut lire. Ici, vous l’écrivez ou le collez, voyez le résultat pendant que vous tapez et l’enregistrez, le tout dans votre navigateur.",
-  "Markdown to PDF": "Markdown en PDF",
-  "Markdown to PDF: Convert MD Files with Live Preview, Free": "Markdown en PDF : convertir un fichier MD avec aperçu",
+  "Markdown to PDF": "Markdown to PDF",
+  "Markdown to PDF: Convert MD Files with Live Preview, Free": "Markdown to PDF : convertir du Markdown en PDF",
   "Match case": "Respecter la casse",
   "Math": "Maths",
   "Math homework and graphing, science lab notes, floor plans and garden layouts, knitting and cross stitch charts, pixel art, handwriting practice, bullet journals, game maps.": "Devoirs de maths et graphiques, comptes rendus de TP, plans de maison et de jardin, grilles de tricot et de point de croix, pixel art, entraînement à l’écriture, bullet journals, cartes de jeu.",
@@ -1980,7 +1980,7 @@
   "PDF to EPUB Converter": "Convertisseur PDF en EPUB",
   "PDF to EPUB Converter: Reflowable eBooks, No Upload": "PDF en EPUB : convertir un PDF en ebook adaptable",
   "PDF to Excel": "PDF en Excel",
-  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "PDF en Excel : extraire les tableaux d’un PDF en XLSX",
+  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "Convertir un PDF en Excel : tableaux en XLSX, gratuit",
   "PDF to JPG": "PDF en JPG",
   "PDF to JPG Converter": "Convertisseur PDF en JPG",
   "PDF to JPG: Convert PDF Pages to Images, Free": "PDF to JPG : convertir un PDF en images JPG, gratuit",
@@ -1997,7 +1997,7 @@
   "PDF to TIFF": "PDF en TIFF",
   "PDF to Text": "PDF en texte",
   "PDF to Text, this page": "PDF en texte, cette page",
-  "PDF to Text: Extract Text from PDF to TXT, Free": "PDF en texte : extraire le texte d’un PDF en TXT, gratuit",
+  "PDF to Text: Extract Text from PDF to TXT, Free": "PDF en TXT : extraire le texte d’un PDF, gratuit",
   "PDF to WebP": "PDF en WebP",
   "PDF to Word": "PDF en Word",
   "PDF to Word Converter": "Convertisseur PDF en Word",
@@ -2257,9 +2257,9 @@
   "Recompresses images, subsets and merges fonts, removes unused data": "Recompresse les images, allège et fusionne les polices, supprime les données inutiles",
   "Recover data from corrupted or damaged PDF files.": "Récupérez les données de fichiers PDF corrompus ou endommagés.",
   "Redact PDF": "Caviarder un PDF",
-  "Redact PDF files in your browser: black out text or areas, and the words are removed from the file, then checked. Free, nothing is uploaded.": "Caviardez un PDF dans votre navigateur : noircissez du texte ou des zones, les mots sont retirés du fichier puis vérifiés. Gratuit, rien n’est envoyé.",
-  "Redact PDF text and areas so the words are gone from the file, not just covered. Before you download, the finished file is searched to make sure. Everything runs on your device.": "Caviardez le texte et les zones d’un PDF : les mots disparaissent du fichier, ils ne sont pas juste cachés. Avant le téléchargement, le fichier final est vérifié. Tout se passe sur votre appareil.",
-  "Redact PDF: Black Out Text for Good, Free, No Upload": "Caviarder un PDF : masquer du texte pour de bon, gratuit",
+  "Redact PDF files in your browser: black out text or areas, and the words are removed from the file, then checked. Free, nothing is uploaded.": "Biffez un PDF dans votre navigateur : caviardez du texte ou des zones, les mots sont retirés du fichier puis vérifiés. Gratuit, rien n’est envoyé.",
+  "Redact PDF text and areas so the words are gone from the file, not just covered. Before you download, the finished file is searched to make sure. Everything runs on your device.": "Biffez un PDF et caviardez le texte ou les zones : les mots disparaissent du fichier, ils ne sont pas juste cachés. Avant le téléchargement, le fichier final est vérifié. Tout se passe sur votre appareil.",
+  "Redact PDF: Black Out Text for Good, Free, No Upload": "Biffer un PDF : caviarder du texte pour de bon, gratuit",
   "Redact an area or an image": "Caviarder une zone ou une image",
   "Redacted means private or sensitive parts of a document have been removed before it is shared, usually shown as black bars.": "Caviarder, c’est retirer les parties privées ou sensibles d’un document avant de le partager. Elles apparaissent en général sous forme de barres noires.",
   "Redacted words are also removed from properties, bookmarks and attachments": "Les mots caviardés sont aussi retirés des propriétés, des signets et des pièces jointes",
@@ -2313,9 +2313,9 @@
   "Right-to-left text is detected automatically: the direction switches and the text is right-aligned, in the editor and in the PDF.": "Le texte de droite à gauche est détecté automatiquement : le sens change et le texte est aligné à droite, dans l’éditeur comme dans le PDF.",
   "Right-to-left text such as Arabic is detected automatically": "Le texte de droite à gauche, comme l’arabe, est détecté automatiquement",
   "Rotate PDF": "Faire pivoter un PDF",
-  "Rotate PDF pages and save the file so they stay rotated: turn one page or all of them, left or right. Nothing is uploaded.": "Faites pivoter les pages d’un PDF et enregistrez le fichier pour qu’elles restent pivotées : tournez une page ou toutes, à gauche ou à droite. Rien n’est envoyé.",
-  "Rotate PDF pages in your browser: turn one page or all, left or right, and save the file rotated for good. Free, no account, nothing is uploaded.": "Faites pivoter les pages d’un PDF dans votre navigateur : une page ou toutes, à gauche ou à droite, et enregistrez le fichier pivoté pour de bon. Gratuit, sans compte ni envoi.",
-  "Rotate PDF: Turn Pages and Save Them Rotated, Free": "Faire pivoter un PDF : tourner les pages et enregistrer, gratuit",
+  "Rotate PDF pages and save the file so they stay rotated: turn one page or all of them, left or right. Nothing is uploaded.": "Pivotez les pages d’un PDF et enregistrez le fichier pour qu’elles restent pivotées : tournez une page ou toutes, à gauche ou à droite. Rien n’est envoyé.",
+  "Rotate PDF pages in your browser: turn one page or all, left or right, and save the file rotated for good. Free, no account, nothing is uploaded.": "Pivotez les pages d’un PDF dans votre navigateur : une page ou toutes, à gauche ou à droite, et enregistrez le fichier pivoté pour de bon. Gratuit, sans compte ni envoi.",
+  "Rotate PDF: Turn Pages and Save Them Rotated, Free": "Pivoter un PDF : tourner les pages et enregistrer, gratuit",
   "Rotate by Custom Degrees": "Rotation personnalisée",
   "Rotate one page or all pages": "Faites pivoter une page ou toutes les pages",
   "Rotate pages": "Faire pivoter des pages",
@@ -3201,12 +3201,30 @@
   "text[^1]": "texte[^1]",
   "العربية": "العربية",
   "@pages": {
+    "compare-pdfs": {
+      "Compare PDFs": "Comparer deux PDF"
+    },
     "compress-pdf": {
       "High": "Élevé",
       "Low": "Faible"
     },
+    "form-filler": {
+      "Fill PDF Form": "Remplir un PDF"
+    },
     "jpg-to-pdf": {
       "Medium": "Moyenne"
+    },
+    "pdf-to-excel": {
+      "PDF to Excel": "Convertir un PDF en Excel"
+    },
+    "pdf-to-text": {
+      "PDF to Text": "PDF en TXT (texte)"
+    },
+    "redact-pdf": {
+      "Redact PDF": "Biffer et caviarder un PDF"
+    },
+    "rotate-pdf": {
+      "Rotate PDF": "Pivoter un PDF"
     },
     "rtf-to-pdf": {
       "Kept": "Conservé",
@@ -3214,6 +3232,9 @@
     },
     "tiff-to-pdf": {
       "Medium": "Moyenne"
+    },
+    "txt-to-pdf": {
+      "Markdown to PDF": "Markdown en PDF"
     }
   }
 }

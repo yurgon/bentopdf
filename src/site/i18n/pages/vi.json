@@ -788,8 +788,8 @@
   "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.": "Chuyển PDF sang text: lấy mọi chữ trong PDF thành một tệp .txt thuần để tìm kiếm, trích dẫn hay dán vào bất cứ đâu. Tệp của bạn vẫn ở trên thiết bị.",
   "Convert PNG to PDF in your browser: screenshots, scans and graphics in one PDF, a page per image. Free, no sign up, and images never leave your device.": "PNG to PDF ngay trong trình duyệt: ghép ảnh chụp màn hình, bản quét và đồ họa thành một PDF, mỗi ảnh một trang. Miễn phí, không đăng ký, ảnh không rời máy.",
   "Convert PNG to PDF: put screenshots, scans or graphics into one document, a page per image, with no loss at high quality. Nothing is uploaded.": "Chuyển PNG sang PDF: đưa ảnh chụp màn hình, bản quét hay đồ họa vào một tài liệu, mỗi ảnh một trang, không mất chất lượng ở mức cao. Không có gì được tải lên.",
-  "Convert PowerPoint to PDF in your browser: PPTX, PPT and ODP, one slide per page, several files at once. Free, no account, nothing is uploaded.": "Chuyển PowerPoint sang PDF ngay trên trình duyệt: PPTX, PPT và ODP, mỗi slide một trang, nhiều tệp cùng lúc. Miễn phí, không tài khoản, không tải lên.",
-  "Convert PowerPoint to PDF so your slides look the same on any device and print cleanly. PPTX, PPT and ODP files stay on your device.": "Chuyển PowerPoint sang PDF để slide trông giống nhau trên mọi thiết bị và in rõ ràng. Tệp PPTX, PPT và ODP vẫn ở trên thiết bị của bạn.",
+  "Convert PowerPoint to PDF in your browser: PPTX, PPT and ODP, one slide per page, several files at once. Free, no account, nothing is uploaded.": "Chuyển PPT sang PDF (PowerPoint) ngay trên trình duyệt: PPTX, PPT và ODP, mỗi slide một trang, nhiều tệp cùng lúc. Miễn phí, không tài khoản, không tải lên.",
+  "Convert PowerPoint to PDF so your slides look the same on any device and print cleanly. PPTX, PPT and ODP files stay on your device.": "Chuyển PPT sang PDF, PowerPoint sang PDF để slide trông giống nhau trên mọi thiết bị và in rõ ràng. Tệp PPTX, PPT và ODP vẫn ở trên thiết bị của bạn.",
   "Convert RTF to PDF in your browser: bold, lists, tables and images are kept. Several files at once. Free, no account, nothing is uploaded.": "Chuyển RTF sang PDF ngay trong trình duyệt: giữ nguyên chữ đậm, danh sách, bảng và ảnh. Nhiều tệp cùng lúc. Miễn phí, không tài khoản, không tải lên.",
   "Convert RTF to PDF: add Rich Text Format files and save PDFs with the formatting kept. Nothing is uploaded, and there is no account.": "Chuyển RTF sang PDF: thêm tệp Rich Text Format và lưu PDF với định dạng được giữ nguyên. Không tải gì lên, không cần tài khoản.",
   "Convert TIFF to PDF in your browser: multi-page TIFF files, several images at once, choose the quality. Free, no account, nothing is uploaded.": "Chuyển TIFF sang PDF ngay trong trình duyệt: TIFF nhiều trang, nhiều ảnh cùng lúc, tự chọn chất lượng. Miễn phí, không tài khoản, không tải lên.",
@@ -855,10 +855,10 @@
   "Create the PDF": "Tạo PDF",
   "Create your own word search": "Tự tạo trò chơi tìm từ",
   "Create your signature": "Tạo chữ ký",
-  "Crop PDF": "Cắt PDF",
-  "Crop PDF pages by dragging a box over the part to keep, on one page or on all pages. Nothing is uploaded, and there is no account.": "Cắt trang PDF bằng cách kéo khung lên phần cần giữ, trên một trang hoặc tất cả các trang. Không tải gì lên, không cần tài khoản.",
-  "Crop PDF pages in your browser: drag a box, crop one page or all, keep text selectable or remove the trimmed area for good. Free, nothing is uploaded.": "Cắt trang PDF ngay trong trình duyệt: kéo khung, cắt một trang hoặc tất cả, giữ chữ chọn được hoặc xóa hẳn phần đã cắt. Miễn phí, không tải lên.",
-  "Crop PDF: Trim Margins and Pages Online, Free": "Cắt PDF online: cắt lề và trang miễn phí",
+  "Crop PDF": "Crop PDF",
+  "Crop PDF pages by dragging a box over the part to keep, on one page or on all pages. Nothing is uploaded, and there is no account.": "Crop PDF: cắt lề và trang PDF bằng cách kéo khung lên phần cần giữ, trên một trang hoặc tất cả các trang. Không tải gì lên, không cần tài khoản.",
+  "Crop PDF pages in your browser: drag a box, crop one page or all, keep text selectable or remove the trimmed area for good. Free, nothing is uploaded.": "Crop PDF (cắt lề, cắt trang PDF) ngay trong trình duyệt: kéo khung, cắt một trang hoặc tất cả, giữ chữ chọn được hoặc xóa hẳn phần đã cắt. Miễn phí, không tải lên.",
+  "Crop PDF: Trim Margins and Pages Online, Free": "Crop PDF: cắt lề và trang PDF online, miễn phí",
   "Crop and save": "Cắt và lưu",
   "Crop by dragging a box on the page preview": "Cắt bằng cách kéo khung trên bản xem trước của trang",
   "Crop one page or every page": "Cắt một trang hoặc mọi trang",
@@ -885,7 +885,7 @@
   "Definition on the front if you prefer": "Định nghĩa ở mặt trước nếu bạn muốn",
   "Delete Pages": "Xóa trang",
   "Delete Pages from PDF": "Xóa trang PDF",
-  "Delete Pages from PDF: Remove Pages Free, No Upload": "Xóa trang PDF: bỏ trang không cần, miễn phí, không tải lên",
+  "Delete Pages from PDF: Remove Pages Free, No Upload": "Xóa trang PDF: xóa trang trong file PDF, miễn phí",
   "Delete a whole block by selecting it and pressing Delete. The words are removed from the file itself, not hidden under a white box, so they cannot be copied out or found by search later.": "Xóa cả một khối bằng cách chọn rồi nhấn Delete. Chữ bị xóa khỏi chính tệp, không phải bị giấu dưới một ô trắng, nên sau này không ai sao chép ra hay tìm thấy được.",
   "Delete and save": "Xóa và lưu",
   "Delete blank pages": "Xóa trang trống",
@@ -1081,7 +1081,7 @@
   "Everywhere; accepted by most upload forms": "Mọi nơi; hầu hết biểu mẫu tải lên đều nhận",
   "Exact square size": "Ô vuông đúng kích thước",
   "Excel to PDF": "Excel sang PDF",
-  "Excel to PDF: Convert XLSX, XLS, ODS and CSV Free": "Excel sang PDF: chuyển XLSX, XLS, ODS, CSV miễn phí",
+  "Excel to PDF: Convert XLSX, XLS, ODS and CSV Free": "Chuyển Excel sang PDF: XLSX, XLS, ODS, CSV miễn phí",
   "Export": "Xuất",
   "Export the comparison as a PDF, in overlay, split or alternating layout, to send to someone else.": "Xuất kết quả so sánh thành PDF, theo bố cục chồng lớp, chia đôi hoặc xen kẽ, để gửi cho người khác.",
   "Export uses your browser's own print engine, the same one that prints web pages, so text stays sharp and selectable. In the print window, choose <strong>Save as PDF</strong> (in Chrome and Edge) or <strong>PDF</strong> in the lower left (in Safari on a Mac), pick the paper size and save. Only the rendered document is printed, not the editor.": "Xuất dùng chính bộ in của trình duyệt, cũng là bộ in trang web, nên chữ vẫn sắc nét và bôi chọn được. Trong cửa sổ in, chọn <strong>Lưu dưới dạng PDF</strong> (trong Chrome và Edge) hoặc <strong>PDF</strong> ở góc dưới bên trái (trong Safari trên Mac), chọn khổ giấy rồi lưu. Chỉ tài liệu đã hiển thị được in, không in trình soạn thảo.",
@@ -1257,7 +1257,7 @@
   "HEIC (High Efficiency Image Container, also called HEIF) is the photo format iPhones and iPads use by default since iOS 11. It stores the same picture as a JPG in about half the space. The catch is support: Windows needs an extra codec, and many websites only accept JPG, PNG or PDF. To make an iPhone save JPG instead, go to Settings, Camera, Formats and choose Most Compatible.": "HEIC (High Efficiency Image Container, còn gọi là HEIF) là định dạng ảnh mặc định của iPhone và iPad từ iOS 11. Nó lưu cùng một bức ảnh như JPG nhưng chỉ tốn khoảng một nửa dung lượng. Vấn đề là khả năng hỗ trợ: Windows cần thêm codec, và nhiều trang web chỉ nhận JPG, PNG hoặc PDF. Muốn iPhone lưu ảnh JPG, vào Cài đặt, Camera, Định dạng và chọn Tương thích nhất.",
   "HEIC compared with JPG and PDF": "So sánh HEIC với JPG và PDF",
   "HEIC is the format iPhones save photos in. It keeps photos small, but many Windows computers, websites and upload forms will not open it. Converting HEIC to PDF puts your photos into one document anyone can open. It happens in your browser, so your personal photos are never uploaded.": "HEIC là định dạng iPhone dùng để lưu ảnh. Nó giữ ảnh nhẹ, nhưng nhiều máy tính Windows, trang web và biểu mẫu tải lên không mở được. Chuyển HEIC sang PDF đưa ảnh của bạn vào một tài liệu ai cũng mở được. Việc chuyển diễn ra trong trình duyệt, nên ảnh cá nhân của bạn không bao giờ bị tải lên.",
-  "HEIC to PDF": "HEIC sang PDF",
+  "HEIC to PDF": "Chuyển HEIC sang PDF",
   "HEIC to PDF: Convert iPhone Photos to PDF, Free": "Chuyển HEIC sang PDF: ảnh iPhone thành PDF, miễn phí",
   "Handwriting sheets for each child in the class, from a list of names.": "Phiếu luyện viết cho từng bé trong lớp, từ một danh sách tên.",
   "Handwriting sheets for each child in the class.": "Phiếu luyện viết cho từng bé trong lớp.",
@@ -1683,7 +1683,7 @@
   "Markdown features": "Các tính năng Markdown",
   "Markdown is plain text with a few symbols for headings, lists and tables, used for READMEs, notes and AI answers. Converting Markdown to PDF gives a formatted document anyone can read. Here you write or paste it, see the result as you type, and save it, all in your browser.": "Markdown là chữ thuần với vài ký hiệu cho tiêu đề, danh sách và bảng, được dùng cho README, ghi chú và câu trả lời của AI. Chuyển Markdown sang PDF cho bạn một tài liệu được định dạng mà ai cũng đọc được. Ở đây bạn viết hoặc dán vào, xem kết quả ngay khi gõ và lưu lại, tất cả trong trình duyệt.",
   "Markdown to PDF": "Markdown sang PDF",
-  "Markdown to PDF: Convert MD Files with Live Preview, Free": "Chuyển Markdown sang PDF: file MD, xem trước trực tiếp",
+  "Markdown to PDF: Convert MD Files with Live Preview, Free": "Markdown to PDF: chuyển Markdown sang PDF, xem trước",
   "Match case": "Phân biệt hoa thường",
   "Math": "Công thức toán",
   "Math homework and graphing, science lab notes, floor plans and garden layouts, knitting and cross stitch charts, pixel art, handwriting practice, bullet journals, game maps.": "Bài tập toán và vẽ đồ thị, ghi chép thí nghiệm, sơ đồ mặt bằng và bố trí vườn, mẫu đan và thêu chữ thập, tranh pixel, luyện viết chữ, bullet journal, bản đồ trò chơi.",
@@ -1965,9 +1965,9 @@
   "PDF Layers": "Lớp PDF",
   "PDF Multi Tool": "Công cụ PDF đa năng",
   "PDF OCR": "OCR PDF",
-  "PDF OCR in your browser: turn a scan into a searchable PDF and a text file. Over 100 languages, no page limit. Free, nothing is uploaded.": "OCR PDF ngay trên trình duyệt: biến bản scan thành PDF tìm kiếm được và tệp văn bản. Hơn 100 ngôn ngữ, không giới hạn trang. Miễn phí, không tải lên.",
+  "PDF OCR in your browser: turn a scan into a searchable PDF and a text file. Over 100 languages, no page limit. Free, nothing is uploaded.": "OCR PDF online ngay trên trình duyệt: biến bản scan thành PDF tìm kiếm được và tệp văn bản. Hơn 100 ngôn ngữ, không giới hạn trang. Miễn phí, không tải lên.",
   "PDF OCR that turns a scanned document into a searchable PDF you can copy from, plus a plain text file. It runs on your device, with no page limit.": "OCR PDF biến tài liệu quét thành PDF tìm kiếm được và sao chép được, kèm một tệp văn bản thuần. Chạy trên thiết bị của bạn, không giới hạn trang.",
-  "PDF OCR: Make Scanned PDFs Searchable, Free, No Upload": "OCR PDF: biến file PDF scan thành tìm kiếm được, miễn phí",
+  "PDF OCR: Make Scanned PDFs Searchable, Free, No Upload": "OCR PDF online: biến file scan thành PDF tìm kiếm được",
   "PDF Workflow Builder": "Trình tạo quy trình PDF",
   "PDF booklet": "Sách nhỏ PDF",
   "PDF booklet maker": "Công cụ tạo sách nhỏ PDF",
@@ -1980,7 +1980,7 @@
   "PDF to EPUB Converter": "Chuyển PDF sang EPUB (PDF to EPUB)",
   "PDF to EPUB Converter: Reflowable eBooks, No Upload": "PDF to EPUB: chuyển PDF sang EPUB tự dàn trang, miễn phí",
   "PDF to Excel": "PDF sang Excel",
-  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "Chuyển PDF sang Excel: lấy bảng PDF ra XLSX, miễn phí",
+  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "Chuyển PDF sang Excel: lấy bảng ra XLSX, miễn phí",
   "PDF to JPG": "PDF sang JPG",
   "PDF to JPG Converter": "Chuyển PDF sang JPG",
   "PDF to JPG: Convert PDF Pages to Images, Free": "Chuyển PDF sang JPG miễn phí: mỗi trang thành một ảnh",
@@ -1993,9 +1993,9 @@
   "PDF to PNG turns pages into lossless pictures: no blur around letters, no blotches on flat colours. That makes PNG the right choice for charts, diagrams, screenshots of text and anything you will zoom into. The pages are drawn in your browser, and nothing is sent to a server.": "PDF to PNG biến các trang thành ảnh không mất dữ liệu: không nhòe quanh chữ, không loang lổ trên mảng màu phẳng. Vì vậy PNG là lựa chọn đúng cho biểu đồ, sơ đồ, ảnh chụp chữ và mọi thứ bạn sẽ phóng to. Các trang được vẽ ngay trong trình duyệt và không có gì được gửi lên máy chủ.",
   "PDF to PNG: Convert PDF Pages to PNG Images, Free": "PDF to PNG: chuyển PDF sang PNG sắc nét, miễn phí",
   "PDF to SVG": "PDF sang SVG",
-  "PDF to SVG: Convert Pages to Vector Graphics, Free": "PDF sang SVG: chuyển trang thành đồ họa vector, miễn phí",
+  "PDF to SVG: Convert Pages to Vector Graphics, Free": "PDF to SVG: chuyển PDF sang SVG vector, miễn phí",
   "PDF to TIFF": "PDF sang TIFF",
-  "PDF to Text": "PDF sang văn bản (text)",
+  "PDF to Text": "PDF sang văn bản",
   "PDF to Text, this page": "PDF sang văn bản, trang này",
   "PDF to Text: Extract Text from PDF to TXT, Free": "Chuyển PDF sang text: trích xuất chữ ra TXT, miễn phí",
   "PDF to WebP": "PDF sang WebP",
@@ -2058,8 +2058,8 @@
   "Pages, text and quality unchanged": "Trang, chữ và chất lượng không đổi",
   "Paragraph Spacing": "Khoảng cách đoạn",
   "Password": "Mật khẩu",
-  "Password Protect PDF": "Đặt mật khẩu cho PDF",
-  "Password Protect PDF: Encrypt with AES-256, Free": "Đặt mật khẩu cho PDF: mã hóa AES-256, miễn phí",
+  "Password Protect PDF": "Đặt mật khẩu cho file PDF",
+  "Password Protect PDF: Encrypt with AES-256, Free": "Đặt mật khẩu cho file PDF: mã hóa AES-256, miễn phí",
   "Password protect PDF files with strong AES-256 encryption: set a password to open it, and optionally block printing and copying. Nothing is uploaded.": "Đặt mật khẩu cho tệp PDF bằng mã hóa AES-256 mạnh: đặt mật khẩu để mở và có thể chặn in và sao chép. Không tải gì lên.",
   "Password protect a PDF in your browser with AES-256 encryption. Add an owner password to block printing and copying. Free, nothing is uploaded.": "Đặt mật khẩu cho PDF ngay trong trình duyệt với mã hóa AES-256. Thêm mật khẩu chủ sở hữu để chặn in và sao chép. Miễn phí, không tải lên.",
   "Password required to open the file": "Cần mật khẩu để mở tệp",
@@ -2124,8 +2124,8 @@
   "Position, style and starting number": "Vị trí, kiểu và số bắt đầu",
   "Poster printing": "In áp phích",
   "Posting a flyer or a menu on social media, putting a chart into slides, sending a page in a messenger, making a thumbnail of a document, uploading to a site that only accepts images.": "Đăng tờ rơi hay thực đơn lên mạng xã hội, chèn biểu đồ vào slide, gửi một trang qua ứng dụng nhắn tin, làm ảnh thu nhỏ cho tài liệu, tải lên trang web chỉ nhận ảnh.",
-  "PowerPoint to PDF": "PowerPoint sang PDF",
-  "PowerPoint to PDF: Convert PPT and PPTX Free, No Upload": "Chuyển PowerPoint sang PDF: PPT, PPTX miễn phí",
+  "PowerPoint to PDF": "Chuyển PPT sang PDF",
+  "PowerPoint to PDF: Convert PPT and PPTX Free, No Upload": "Chuyển PPT sang PDF: PowerPoint, PPTX miễn phí",
   "Praise the attempt, not neatness. Letters straighten out with practice.": "Khen sự cố gắng, không phải độ ngay ngắn. Chữ sẽ đẹp dần khi luyện tập.",
   "Precise drawing, see millimeter paper": "Vẽ chính xác, xem giấy ô ly milimét",
   "Prepare PDF for AI": "Chuẩn bị PDF cho AI",
@@ -2237,7 +2237,7 @@
   "READMEs and documentation, meeting notes, homework and lab reports, answers from AI chats, notes from Obsidian or other Markdown editors, and quick formatted documents without a word processor.": "README và tài liệu kỹ thuật, biên bản họp, bài tập về nhà và báo cáo thí nghiệm, câu trả lời từ chat AI, ghi chú từ Obsidian hoặc trình soạn Markdown khác, và tài liệu định dạng nhanh mà không cần phần mềm soạn thảo văn bản.",
   "RTF to PDF": "RTF sang PDF",
   "RTF to PDF or Word to PDF": "RTF sang PDF hay Word sang PDF",
-  "RTF to PDF: Convert Rich Text Files Online, Free": "RTF sang PDF: chuyển tệp văn bản RTF online, miễn phí",
+  "RTF to PDF: Convert Rich Text Files Online, Free": "RTF to PDF: chuyển RTF sang PDF online, miễn phí",
   "RTF, Rich Text Format, is an old document format written by WordPad, TextEdit and many records systems. Converting RTF to PDF gives you a fixed copy that looks the same for everyone and is easy to print and email. The conversion runs in your browser, so letters, notes and medical or legal records are never uploaded.": "RTF, Rich Text Format, là một định dạng tài liệu cũ do WordPad, TextEdit và nhiều hệ thống hồ sơ tạo ra. Chuyển RTF sang PDF cho bạn một bản cố định trông giống nhau với mọi người, dễ in và dễ gửi email. Việc chuyển chạy ngay trong trình duyệt, nên thư từ, ghi chú và hồ sơ y tế hay pháp lý không bao giờ bị tải lên.",
   "RTL": "RTL",
   "Radio buttons": "Nút chọn một",
@@ -2314,8 +2314,8 @@
   "Right-to-left text such as Arabic is detected automatically": "Tự động nhận diện chữ viết từ phải sang trái như tiếng Ả Rập",
   "Rotate PDF": "Xoay PDF",
   "Rotate PDF pages and save the file so they stay rotated: turn one page or all of them, left or right. Nothing is uploaded.": "Xoay trang PDF và lưu tệp để chúng giữ nguyên hướng đã xoay: xoay một trang hoặc tất cả, sang trái hoặc phải. Không tải gì lên.",
-  "Rotate PDF pages in your browser: turn one page or all, left or right, and save the file rotated for good. Free, no account, nothing is uploaded.": "Xoay trang PDF ngay trong trình duyệt: xoay một trang hoặc tất cả, sang trái hoặc phải, rồi lưu tệp đã xoay vĩnh viễn. Miễn phí, không tài khoản, không tải lên.",
-  "Rotate PDF: Turn Pages and Save Them Rotated, Free": "Xoay PDF: xoay trang và lưu lại luôn, miễn phí",
+  "Rotate PDF pages in your browser: turn one page or all, left or right, and save the file rotated for good. Free, no account, nothing is uploaded.": "Xoay file PDF ngay trong trình duyệt: xoay một trang hoặc tất cả, sang trái hoặc phải, rồi lưu tệp đã xoay vĩnh viễn. Miễn phí, không tài khoản, không tải lên.",
+  "Rotate PDF: Turn Pages and Save Them Rotated, Free": "Xoay file PDF: xoay trang và lưu lại luôn, miễn phí",
   "Rotate by Custom Degrees": "Xoay theo góc tùy chọn",
   "Rotate one page or all pages": "Xoay một trang hoặc mọi trang",
   "Rotate pages": "Xoay trang",
@@ -2482,10 +2482,10 @@
   "Side by side shows both files with scrolling kept in step, which is the easiest way to read a changed paragraph. Overlay puts one page over the other, useful for plans, drawings and forms, where a small shift matters more than the words. Flicker swaps the two versions in place so moved items catch your eye. You can zoom, fit the page, and switch between all changes and content only.": "Chế độ song song hiển thị cả hai tệp và cuộn đồng bộ, đây là cách dễ nhất để đọc một đoạn đã sửa. Chồng lớp đặt trang này lên trang kia, hữu ích cho bản vẽ, sơ đồ và biểu mẫu, nơi một xê dịch nhỏ quan trọng hơn câu chữ. Nhấp nháy cho hai phiên bản thay phiên tại chỗ để những thứ bị di chuyển đập vào mắt. Bạn có thể phóng to, vừa trang, và chuyển giữa tất cả thay đổi và chỉ nội dung.",
   "Side by side, overlay and flicker views": "Chế độ xem song song, chồng lớp và nhấp nháy",
   "Sign PDF": "Ký PDF",
-  "Sign PDF documents in your browser: draw, type or upload your signature, add the date and initials, and download. Free, no account, no upload.": "Ký tài liệu PDF ngay trên trình duyệt: vẽ, gõ hoặc tải ảnh chữ ký lên, thêm ngày và chữ ký tắt, rồi tải về. Miễn phí, không tài khoản, không tải lên.",
-  "Sign PDF documents yourself in a minute: draw, type or upload your signature, place it on the page, add a date, and download. Everything runs on your device.": "Tự ký tài liệu PDF trong một phút: vẽ, gõ hoặc tải lên chữ ký, đặt lên trang, thêm ngày rồi tải về. Mọi thứ chạy trên thiết bị của bạn.",
+  "Sign PDF documents in your browser: draw, type or upload your signature, add the date and initials, and download. Free, no account, no upload.": "Chèn chữ ký vào file PDF ngay trên trình duyệt: vẽ, gõ hoặc tải ảnh chữ ký lên, thêm ngày và chữ ký tắt, rồi tải về. Miễn phí, không tài khoản, không tải lên.",
+  "Sign PDF documents yourself in a minute: draw, type or upload your signature, place it on the page, add a date, and download. Everything runs on your device.": "Chèn chữ ký vào file PDF và ký tài liệu trong một phút: vẽ, gõ hoặc tải lên chữ ký, đặt lên trang, thêm ngày rồi tải về. Mọi thứ chạy trên thiết bị của bạn.",
   "Sign PDF with form fields": "Ký PDF có ô biểu mẫu",
-  "Sign PDF: Add Your Signature to a PDF Free, No Upload": "Ký file PDF online: thêm chữ ký vào PDF miễn phí",
+  "Sign PDF: Add Your Signature to a PDF Free, No Upload": "Chèn chữ ký vào file PDF online, ký PDF miễn phí",
   "Sign a PDF": "Ký PDF",
   "Sign a PDF with your new signature": "Ký PDF bằng chữ ký mới",
   "Sign a filled form before sending it back.": "Ký biểu mẫu đã điền trước khi gửi lại.",
@@ -2516,7 +2516,7 @@
   "Split PDF": "Tách PDF",
   "Split PDF files in your browser: extract a page range, save every page as its own file, or split by bookmarks or every N pages. Free, no upload.": "Tách file PDF ngay trên trình duyệt: lấy một khoảng trang, lưu mỗi trang thành tệp riêng, hoặc tách theo dấu trang hay mỗi N trang. Miễn phí, không tải lên.",
   "Split PDF files into separate pages, page ranges, chapters or equal parts, with no limit on how many files you get. Everything runs on your device.": "Tách file PDF thành từng trang, khoảng trang, chương hoặc các phần bằng nhau, không giới hạn số tệp nhận được. Mọi thứ chạy trên thiết bị của bạn.",
-  "Split PDF: Separate Pages or Extract a Range, Free": "Tách file PDF: tách trang, lấy khoảng trang, miễn phí",
+  "Split PDF: Separate Pages or Extract a Range, Free": "Tách file PDF online: tách trang, cắt file PDF miễn phí",
   "Split across pages unless scaled": "Bị tách qua nhiều trang nếu không thu nhỏ",
   "Split and save": "Tách và lưu",
   "Split by bookmarks or every N pages; runs in the browser, nothing is uploaded": "Tách theo dấu trang hoặc mỗi N trang; chạy trong trình duyệt, không tải gì lên",
@@ -2551,10 +2551,10 @@
   "Strongest image compression": "Nén ảnh mạnh nhất",
   "Suggest a tool": "Đề xuất công cụ",
   "TIFF is the format of scanners, fax software and archives, and few apps open it easily. Converting TIFF to PDF gives you a file anyone can view, print and email. This page does it in your browser, so scans of contracts, medical records or ID documents are never uploaded.": "TIFF là định dạng của máy quét, phần mềm fax và kho lưu trữ, và ít ứng dụng mở được dễ dàng. Chuyển TIFF sang PDF cho bạn một tệp ai cũng xem, in và gửi email được. Trang này làm việc đó ngay trong trình duyệt, nên bản quét hợp đồng, hồ sơ y tế hay giấy tờ tùy thân không bao giờ bị tải lên.",
-  "TIFF to PDF": "TIFF sang PDF",
-  "TIFF to PDF: Convert TIF Images and Scans, Free": "TIFF sang PDF: chuyển ảnh TIF và bản quét, miễn phí",
+  "TIFF to PDF": "Chuyển TIFF sang PDF",
+  "TIFF to PDF: Convert TIF Images and Scans, Free": "Chuyển TIFF sang PDF: ảnh TIF, bản quét, miễn phí",
   "TXT to PDF": "TXT sang PDF",
-  "TXT to PDF: Convert Text Files or Pasted Text, Free": "TXT sang PDF: chuyển tệp văn bản hoặc chữ dán vào, miễn phí",
+  "TXT to PDF: Convert Text Files or Pasted Text, Free": "Chuyển TXT sang PDF: tệp văn bản hoặc chữ dán, miễn phí",
   "Table of Contents": "Mục lục",
   "Tables": "Bảng",
   "Tables are detected with MuPDF, a PDF engine running in your browser, which looks at the text positions and lines on each page and works out rows and columns. The cells are written into an XLSX workbook in memory and saved to your device. The first time, the engine (about 39 MB) is downloaded and kept by your browser. Nothing is sent to a server.": "Bảng được phát hiện bằng MuPDF, một bộ xử lý PDF chạy trong trình duyệt, dựa vào vị trí chữ và đường kẻ trên mỗi trang để tính ra hàng và cột. Các ô được ghi vào bảng tính XLSX trong bộ nhớ và lưu vào thiết bị của bạn. Lần đầu, bộ xử lý (khoảng 39 MB) được tải về và trình duyệt giữ lại. Không có gì được gửi lên máy chủ.",
@@ -3201,8 +3201,35 @@
   "text[^1]": "chữ[^1]",
   "العربية": "العربية",
   "@pages": {
+    "excel-to-pdf": {
+      "Excel to PDF": "Chuyển Excel sang PDF"
+    },
+    "jpg-to-pdf": {
+      "HEIC to PDF": "HEIC sang PDF"
+    },
+    "ocr-pdf": {
+      "PDF OCR": "OCR PDF online"
+    },
     "pdf-to-excel": {
-      "PDF to Text": "PDF sang văn bản"
+      "PDF to Excel": "Chuyển PDF sang Excel"
+    },
+    "pdf-to-svg": {
+      "PDF to Text": "PDF sang văn bản (text)"
+    },
+    "pdf-to-text": {
+      "PDF to Text": "Chuyển PDF sang text"
+    },
+    "rotate-pdf": {
+      "Rotate PDF": "Xoay file PDF"
+    },
+    "sign-pdf": {
+      "Sign PDF": "Chèn chữ ký vào PDF"
+    },
+    "split-pdf": {
+      "Split PDF": "Tách file PDF"
+    },
+    "txt-to-pdf": {
+      "TXT to PDF": "Chuyển TXT sang PDF"
     }
   }
 }

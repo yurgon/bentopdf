@@ -718,7 +718,7 @@
   "Compare PDFs: Find Differences Between Two Files, Free": "Comparar PDF: troba les diferències entre dos fitxers, gratis",
   "Compare scanned PDFs with OCR": "Compara PDF escanejats amb OCR",
   "Compare the sheet with the checks below: even black, all gray steps, four clean ink bars, a ruler that measures 100 mm.": "Compara el full amb les comprovacions de sota: negre uniforme, tots els graons de gris, quatre barres de tinta netes, un regle que fa 100 mm.",
-  "Compare two PDF files side by side or as an overlay. Added, deleted, changed and moved text is highlighted, scans too. Free, nothing uploaded.": "Compara dos fitxers PDF de costat o superposats. Es ressalta el text afegit, esborrat, canviat i mogut, també en escanejos. Gratis, sense pujar res.",
+  "Compare two PDF files side by side or as an overlay. Added, deleted, changed and moved text is highlighted, scans too. Free, nothing uploaded.": "Comparar PDF: dos fitxers de costat o superposats. Es ressalta el text afegit, esborrat, canviat i mogut, també en escanejos. Gratis, sense pujar res.",
   "Compare two PDFs side by side or as an overlay": "Compara dos PDF de costat o superposats",
   "Comparing PDFs answers one question: what is different in the new version? Reading two contracts line by line takes an hour and still misses things. This tool finds every change in seconds, shows it in place and lists it, and runs in your browser, so confidential documents are never uploaded.": "Comparar PDF respon una sola pregunta: què és diferent a la versió nova? Llegir dos contractes línia per línia porta una hora i encara se t'escapen coses. Aquesta eina troba cada canvi en segons, el mostra al seu lloc i el posa en una llista, i funciona al navegador, així que els documents confidencials no es pugen mai.",
   "Comparison report saved as PDF; nothing is uploaded": "Informe de la comparació desat en PDF; no es puja res",
@@ -751,8 +751,8 @@
   "Convert DRM-free Kindle files.": "Converteix fitxers de Kindle sense DRM.",
   "Convert EPUB to PDF in your browser to print an ebook or read it on any device. Several books at once, free, and the files never leave your device.": "Converteix EPUB a PDF al navegador per imprimir un llibre electrònic o llegir-lo en qualsevol dispositiu. Diversos llibres alhora, gratis i sense pujar res.",
   "Convert EPUB to PDF to print an ebook, read it on a device without an ebook app, or send it to anyone. The book stays on your device.": "Converteix EPUB a PDF per imprimir un llibre electrònic, llegir-lo en un dispositiu sense app de lectura o enviar-lo a qualsevol persona. El llibre es queda al teu dispositiu.",
-  "Convert Excel to PDF in your browser: XLSX, XLS, ODS and CSV, all sheets, several files at once. Free, no account, nothing is uploaded.": "Converteix Excel a PDF al navegador: XLSX, XLS, ODS i CSV, tots els fulls i diversos fitxers alhora. Gratis, sense compte i sense pujar res.",
-  "Convert Excel to PDF: add XLSX, XLS, ODS or CSV files and get a PDF of every sheet. Nothing is uploaded, and there is no account.": "Converteix Excel a PDF: afegeix fitxers XLSX, XLS, ODS o CSV i obtén un PDF de cada full. No es puja res i no cal compte.",
+  "Convert Excel to PDF in your browser: XLSX, XLS, ODS and CSV, all sheets, several files at once. Free, no account, nothing is uploaded.": "Convertir Excel a PDF al navegador: XLSX, XLS, ODS i CSV, tots els fulls i diversos fitxers alhora. Gratis, sense compte i sense pujar res.",
+  "Convert Excel to PDF: add XLSX, XLS, ODS or CSV files and get a PDF of every sheet. Nothing is uploaded, and there is no account.": "Convertir Excel a PDF: afegeix fitxers XLSX, XLS, ODS o CSV i obtén un PDF de cada full. No es puja res i no cal compte.",
   "Convert HEIC to PDF in your browser: put iPhone photos into one PDF, in the order you choose, at full quality. Free, works on Windows, no upload.": "Converteix HEIC a PDF al navegador: posa fotos de l'iPhone en un sol PDF, en l'ordre que vulguis i a qualitat completa. Gratis, funciona a Windows, sense pujar res.",
   "Convert HEIC to PDF: iPhone photos become one PDF, one photo per page, at full quality. Your photos stay on your device.": "Converteix HEIC a PDF: les fotos de l'iPhone es converteixen en un sol PDF, una foto per pàgina, a qualitat completa. Les fotos es queden al teu dispositiu.",
   "Convert JPG to PDF in your browser. Put many photos into one PDF and choose the quality. Free, no sign up, and your images never leave your device.": "Converteix JPG a PDF al navegador. Posa moltes fotos en un sol PDF i tria la qualitat. Gratis, sense registre, i les imatges no surten del dispositiu.",
@@ -770,8 +770,8 @@
   "Convert PDF files to JSON format.": "Converteix fitxers PDF al format JSON.",
   "Convert PDF text and tables to Markdown format.": "Converteix el text i les taules del PDF al format Markdown.",
   "Convert PDF to EPUB in your browser: whole paragraphs, chapters and a table of contents, no page numbers in the text. Scanned books too. Free, no upload.": "Converteix PDF a EPUB al navegador: paràgrafs sencers, capítols i índex, sense números de pàgina al text. També llibres escanejats. Gratis i sense pujar res.",
-  "Convert PDF to Excel in your browser: tables are found on every page and saved to an XLSX file, one sheet per table. Free, nothing is uploaded.": "Converteix PDF a Excel al navegador: es troben les taules de cada pàgina i es desen en un fitxer XLSX, un full per taula. Gratis, sense pujar res.",
-  "Convert PDF to Excel: every table in your PDF is found and saved to an XLSX workbook, one sheet per table, ready to sort and sum. Your file stays on your device.": "Converteix PDF a Excel: es troba cada taula del PDF i es desa en un llibre XLSX, un full per taula, a punt per ordenar i sumar. El fitxer es queda al teu dispositiu.",
+  "Convert PDF to Excel in your browser: tables are found on every page and saved to an XLSX file, one sheet per table. Free, nothing is uploaded.": "Convertir PDF a Excel al navegador: es troben les taules de cada pàgina i es desen en un fitxer XLSX, un full per taula. Gratis, sense pujar res.",
+  "Convert PDF to Excel: every table in your PDF is found and saved to an XLSX workbook, one sheet per table, ready to sort and sum. Your file stays on your device.": "Convertir PDF a Excel: es troba cada taula del PDF i es desa en un llibre XLSX, un full per taula, a punt per ordenar i sumar. El fitxer es queda al teu dispositiu.",
   "Convert PDF to JPG in your browser: every page becomes a JPG image, with a quality slider. Free, no sign up, and the PDF never leaves your device.": "Converteix PDF a JPG al navegador: cada pàgina es converteix en una imatge JPG, amb control de qualitat. Gratis, sense registre i sense pujar res.",
   "Convert PDF to JPG: each page of your document becomes a separate image you can post, paste or send. The PDF stays on your device.": "Converteix PDF a JPG: cada pàgina del document es converteix en una imatge a part que pots publicar, enganxar o enviar. El PDF es queda al teu dispositiu.",
   "Convert PDF to PDF/A in your browser: choose PDF/A-1b, 2b or 3b, convert several files at once. Free, no account, nothing is uploaded.": "Converteix PDF a PDF/A al navegador: tria PDF/A-1b, 2b o 3b i converteix diversos fitxers alhora. Gratis, sense compte i sense pujar res.",
@@ -784,8 +784,8 @@
   "Convert PDF to Word (DOCX) in your browser. Text, tables and images become editable. Several files at once, free, and nothing is uploaded.": "Converteix PDF a Word (DOCX) al navegador. El text, les taules i les imatges es poden editar. Diversos fitxers alhora, gratis i sense pujar res.",
   "Convert PDF to Word and get an editable DOCX with paragraphs, tables and pictures in place. The conversion runs in your browser.": "Converteix PDF a Word i obtén un DOCX editable amb els paràgrafs, les taules i les imatges al seu lloc. La conversió es fa al navegador.",
   "Convert PDF to image-based PDF. Flatten layers and remove selectable text.": "Converteix el PDF en un PDF basat en imatges. Aplana les capes i elimina el text seleccionable.",
-  "Convert PDF to text in your browser: extract all the text from one or many PDFs into plain .txt files. Free, no account, nothing is uploaded.": "Converteix PDF a text al navegador: extreu tot el text d'un o diversos PDF a fitxers .txt de text pla. Gratis, sense compte i sense pujar res.",
-  "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.": "Converteix PDF a text: obtén cada paraula d'un PDF en un fitxer .txt pla que pots cercar, citar o enganxar on vulguis. Els fitxers es queden al teu dispositiu.",
+  "Convert PDF to text in your browser: extract all the text from one or many PDFs into plain .txt files. Free, no account, nothing is uploaded.": "Converteix PDF a TXT al navegador: extreu tot el text d'un o diversos PDF a fitxers de text pla. Gratis, sense compte i sense pujar res.",
+  "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.": "Converteix PDF a TXT (text): obtén cada paraula d'un PDF en un fitxer .txt pla que pots cercar, citar o enganxar on vulguis. Els fitxers es queden al teu dispositiu.",
   "Convert PNG to PDF in your browser: screenshots, scans and graphics in one PDF, a page per image. Free, no sign up, and images never leave your device.": "Converteix PNG a PDF al navegador: captures, escanejos i gràfics en un sol PDF, una pàgina per imatge. Gratis, sense registre i sense pujar res.",
   "Convert PNG to PDF: put screenshots, scans or graphics into one document, a page per image, with no loss at high quality. Nothing is uploaded.": "Converteix PNG a PDF: posa captures, escanejos o gràfics en un sol document, una pàgina per imatge, sense pèrdua amb qualitat alta. No es puja res.",
   "Convert PowerPoint to PDF in your browser: PPTX, PPT and ODP, one slide per page, several files at once. Free, no account, nothing is uploaded.": "Converteix PowerPoint a PDF al navegador: PPTX, PPT i ODP, una diapositiva per pàgina, diversos fitxers alhora. Gratis, sense compte i sense pujar res.",
@@ -1081,7 +1081,7 @@
   "Everywhere; accepted by most upload forms": "A tot arreu; l'accepten la majoria de formularis de pujada",
   "Exact square size": "Mida de quadre exacta",
   "Excel to PDF": "Excel a PDF",
-  "Excel to PDF: Convert XLSX, XLS, ODS and CSV Free": "Excel a PDF: converteix XLSX, XLS, ODS i CSV gratis",
+  "Excel to PDF: Convert XLSX, XLS, ODS and CSV Free": "Convertir Excel a PDF: XLSX, XLS, ODS i CSV gratis",
   "Export": "Exporta",
   "Export the comparison as a PDF, in overlay, split or alternating layout, to send to someone else.": "Exporta la comparació en PDF, amb disposició superposada, dividida o alternada, per enviar-la a algú altre.",
   "Export uses your browser's own print engine, the same one that prints web pages, so text stays sharp and selectable. In the print window, choose <strong>Save as PDF</strong> (in Chrome and Edge) or <strong>PDF</strong> in the lower left (in Safari on a Mac), pick the paper size and save. Only the rendered document is printed, not the editor.": "L'exportació fa servir el motor d'impressió del mateix navegador, el que imprimeix les pàgines web, així que el text continua nítid i seleccionable. A la finestra d'impressió, tria <strong>Desa com a PDF</strong> (a Chrome i Edge) o <strong>PDF</strong> a baix a l'esquerra (a Safari en un Mac), tria la mida del paper i desa. Només s'imprimeix el document generat, no l'editor.",
@@ -1120,10 +1120,10 @@
   "Files are never uploaded": "Els fitxers no es pugen mai",
   "Files stay on your device": "Els fitxers es queden al teu dispositiu",
   "Fill PDF Form": "Emplena formulari PDF",
-  "Fill PDF Forms Online: Type, Tick and Save, Free": "Emplenar formularis PDF en línia: escriu, marca i desa, gratis",
+  "Fill PDF Forms Online: Type, Tick and Save, Free": "Emplenar PDF en línia: escriu, marca i desa, gratis",
   "Fill PDF forms": "Emplena formularis PDF",
-  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "Emplena formularis PDF aquí: escriu als camps, marca les caselles i desa el fitxer acabat. No es puja res i no cal compte.",
-  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "Emplena formularis PDF al navegador: escriu als camps, marca caselles o afegeix text a un formulari pla. Desa un PDF normal. Gratis, sense compte i sense pujar res.",
+  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "Emplenar PDF aquí: escriu als camps, marca les caselles i desa el fitxer acabat. No es puja res i no cal compte.",
+  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "Emplenar PDF al navegador: escriu als camps, marca caselles o afegeix text a un formulari pla. Desa un PDF normal. Gratis, sense compte i sense pujar res.",
   "Fill a fillable PDF form": "Emplena un formulari PDF emplenable",
   "Fill a flat form that has no fields": "Emplena un formulari pla sense camps",
   "Fill in a form and add text, dates and initials next to your signature.": "Emplena un formulari i afegeix text, dates i inicials al costat de la signatura.",
@@ -1965,9 +1965,9 @@
   "PDF Layers": "Capes del PDF",
   "PDF Multi Tool": "Eina PDF multifunció",
   "PDF OCR": "OCR de PDF",
-  "PDF OCR in your browser: turn a scan into a searchable PDF and a text file. Over 100 languages, no page limit. Free, nothing is uploaded.": "OCR de PDF al navegador: converteix un escaneig en un PDF cercable i un fitxer de text. Més de 100 idiomes, sense límit de pàgines. Gratis, sense pujar res.",
-  "PDF OCR that turns a scanned document into a searchable PDF you can copy from, plus a plain text file. It runs on your device, with no page limit.": "OCR de PDF que converteix un document escanejat en un PDF cercable del qual pots copiar, més un fitxer de text pla. Funciona al teu dispositiu, sense límit de pàgines.",
-  "PDF OCR: Make Scanned PDFs Searchable, Free, No Upload": "OCR de PDF: fes cercables els PDF escanejats, gratis",
+  "PDF OCR in your browser: turn a scan into a searchable PDF and a text file. Over 100 languages, no page limit. Free, nothing is uploaded.": "PDF OCR al navegador: converteix un escaneig en un PDF cercable i un fitxer de text. Més de 100 idiomes, sense límit de pàgines. Gratis, sense pujar res.",
+  "PDF OCR that turns a scanned document into a searchable PDF you can copy from, plus a plain text file. It runs on your device, with no page limit.": "PDF OCR que converteix un document escanejat en un PDF cercable del qual pots copiar, més un fitxer de text pla. Funciona al teu dispositiu, sense límit de pàgines.",
+  "PDF OCR: Make Scanned PDFs Searchable, Free, No Upload": "PDF OCR: fes cercables els PDF escanejats, gratis",
   "PDF Workflow Builder": "Creador de fluxos de treball PDF",
   "PDF booklet": "Fullet PDF",
   "PDF booklet maker": "Creador de fullets PDF",
@@ -1980,7 +1980,7 @@
   "PDF to EPUB Converter": "Convertidor de PDF a EPUB",
   "PDF to EPUB Converter: Reflowable eBooks, No Upload": "Convertidor de PDF a EPUB: llibres adaptables i privats",
   "PDF to Excel": "PDF a Excel",
-  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "PDF a Excel: extreu taules de PDF a XLSX, gratis",
+  "PDF to Excel: Extract PDF Tables to XLSX, Free, No Upload": "Convertir PDF a Excel: taules a XLSX, gratis",
   "PDF to JPG": "PDF a JPG",
   "PDF to JPG Converter": "Convertidor de PDF a JPG",
   "PDF to JPG: Convert PDF Pages to Images, Free": "PDF a JPG: converteix pàgines PDF en imatges gratis",
@@ -1997,7 +1997,7 @@
   "PDF to TIFF": "PDF a TIFF",
   "PDF to Text": "PDF a text",
   "PDF to Text, this page": "PDF a text, aquesta pàgina",
-  "PDF to Text: Extract Text from PDF to TXT, Free": "PDF a text: extreu el text d'un PDF a TXT, gratis",
+  "PDF to Text: Extract Text from PDF to TXT, Free": "PDF a TXT: converteix PDF a text, gratis",
   "PDF to WebP": "PDF a WebP",
   "PDF to Word": "PDF a Word",
   "PDF to Word Converter": "Convertidor de PDF a Word",
@@ -2482,7 +2482,7 @@
   "Side by side shows both files with scrolling kept in step, which is the easiest way to read a changed paragraph. Overlay puts one page over the other, useful for plans, drawings and forms, where a small shift matters more than the words. Flicker swaps the two versions in place so moved items catch your eye. You can zoom, fit the page, and switch between all changes and content only.": "La vista de costat mostra els dos fitxers amb el desplaçament sincronitzat, que és la manera més fàcil de llegir un paràgraf canviat. La superposada posa una pàgina sobre l'altra, útil per a plànols, dibuixos i formularis, on un petit desplaçament importa més que les paraules. L'alternada intercanvia les dues versions al mateix lloc perquè els elements moguts et cridin l'atenció. Pots fer zoom, ajustar la pàgina i canviar entre tots els canvis i només el contingut.",
   "Side by side, overlay and flicker views": "Vistes de costat, superposada i alternada",
   "Sign PDF": "Signa PDF",
-  "Sign PDF documents in your browser: draw, type or upload your signature, add the date and initials, and download. Free, no account, no upload.": "Signa documents PDF al navegador: dibuixa, escriu o puja la teva signatura, afegeix la data i les inicials, i baixa'l. Gratis, sense compte i sense pujar res.",
+  "Sign PDF documents in your browser: draw, type or upload your signature, add the date and initials, and download. Free, no account, no upload.": "Signar PDF al navegador: dibuixa, escriu o puja la teva signatura, afegeix la data i les inicials, i baixa'l. Gratis, sense compte i sense pujar res.",
   "Sign PDF documents yourself in a minute: draw, type or upload your signature, place it on the page, add a date, and download. Everything runs on your device.": "Signa documents PDF tu mateix en un minut: dibuixa, escriu o puja la teva signatura, col·loca-la a la pàgina, afegeix una data i baixa'l. Tot funciona al teu dispositiu.",
   "Sign PDF with form fields": "Signa PDF amb camps de formulari",
   "Sign PDF: Add Your Signature to a PDF Free, No Upload": "Signar PDF: afegeix la teva signatura a un PDF gratis",
@@ -2514,7 +2514,7 @@
   "Spelling": "Ortografia",
   "Spelling and vocabulary practice, early finisher work, substitute teacher plans, holiday and party activities, activity sheets for care homes and long trips.": "Pràctica d'ortografia i vocabulari, feina per als que acaben aviat, plans per a mestres substituts, activitats de festes, fitxes d'activitats per a residències i viatges llargs.",
   "Split PDF": "Divideix PDF",
-  "Split PDF files in your browser: extract a page range, save every page as its own file, or split by bookmarks or every N pages. Free, no upload.": "Divideix PDF al navegador: extreu un interval de pàgines, desa cada pàgina en un fitxer o divideix per marcadors o cada N pàgines. Gratis, sense pujar res.",
+  "Split PDF files in your browser: extract a page range, save every page as its own file, or split by bookmarks or every N pages. Free, no upload.": "Dividir PDF al navegador: extreu un interval de pàgines, desa cada pàgina en un fitxer o divideix per marcadors o cada N pàgines. Gratis, sense pujar res.",
   "Split PDF files into separate pages, page ranges, chapters or equal parts, with no limit on how many files you get. Everything runs on your device.": "Divideix fitxers PDF en pàgines separades, intervals de pàgines, capítols o parts iguals, sense límit de fitxers resultants. Tot funciona al teu dispositiu.",
   "Split PDF: Separate Pages or Extract a Range, Free": "Dividir PDF: separa pàgines o extreu un interval, gratis",
   "Split across pages unless scaled": "Es reparteixen en diverses pàgines si no s'escalen",
@@ -2815,7 +2815,7 @@
   "Unchanged": "Sense canvis",
   "Under each tool: step-by-step instructions, an example of the result and honest notes on what it cannot do.": "A sota de cada eina: instruccions pas a pas, un exemple del resultat i notes sinceres sobre el que no pot fer.",
   "Unlock PDF": "Desbloqueja PDF",
-  "Unlock PDF files in your browser: remove a password you know, or lift print and copy restrictions. Several files at once. Free, nothing uploaded.": "Desbloqueja PDF al navegador: treu una contrasenya que coneixes o les restriccions d'impressió i còpia. Diversos fitxers alhora. Gratis, sense pujar res.",
+  "Unlock PDF files in your browser: remove a password you know, or lift print and copy restrictions. Several files at once. Free, nothing uploaded.": "Desbloquejar PDF al navegador: treu una contrasenya que coneixes o les restriccions d'impressió i còpia. Diversos fitxers alhora. Gratis, sense pujar res.",
   "Unlock PDF files so they open without a password and can be printed and copied. You need the password if the file asks for one when it opens. Everything runs on your device.": "Desbloqueja fitxers PDF perquè s'obrin sense contrasenya i es puguin imprimir i copiar. Necessites la contrasenya si el fitxer te la demana en obrir-lo. Tot funciona al teu dispositiu.",
   "Unlock PDF: Remove a PDF Password, Free, No Upload": "Desbloquejar PDF: treu la contrasenya d'un PDF, gratis",
   "Unlock and save": "Desbloqueja i desa",
@@ -3201,11 +3201,17 @@
   "text[^1]": "text[^1]",
   "العربية": "العربية",
   "@pages": {
+    "compare-pdfs": {
+      "Compare PDFs": "Comparar PDF"
+    },
     "compress-pdf": {
       "Compress PDF": "Comprimir PDF",
       "High": "Alt",
       "Low": "Baix",
       "Medium": "Mitjà"
+    },
+    "excel-to-pdf": {
+      "Excel to PDF": "Convertir Excel a PDF"
     },
     "flatten-pdf": {
       "Text stays selectable": "El text continua sent seleccionable"
@@ -3213,15 +3219,34 @@
     "form-creator": {
       "Flatten PDF": "Aplana PDF"
     },
+    "form-filler": {
+      "Fill PDF Form": "Emplenar PDF"
+    },
     "merge-pdf": {
       "Merge PDF": "Unir PDF"
+    },
+    "ocr-pdf": {
+      "PDF OCR": "PDF OCR"
+    },
+    "pdf-to-excel": {
+      "PDF to Excel": "Convertir PDF a Excel"
+    },
+    "pdf-to-text": {
+      "PDF to Text": "PDF a TXT"
     },
     "redact-pdf": {
       "Flatten PDF": "Aplana PDF",
       "Redact PDF": "Censurar PDF"
     },
     "sign-pdf": {
-      "Flatten PDF": "Aplana PDF"
+      "Flatten PDF": "Aplana PDF",
+      "Sign PDF": "Signar PDF"
+    },
+    "split-pdf": {
+      "Split PDF": "Dividir PDF"
+    },
+    "unlock-pdf": {
+      "Unlock PDF": "Desbloquejar PDF"
     }
   }
 }

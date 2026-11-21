@@ -784,8 +784,8 @@
   "Convert PDF to Word (DOCX) in your browser. Text, tables and images become editable. Several files at once, free, and nothing is uploaded.": "PDF をワード (DOCX) に変換。文字、表、画像を編集できる形に。複数ファイルを一度に、無料で、アップロードもありません。",
   "Convert PDF to Word and get an editable DOCX with paragraphs, tables and pictures in place. The conversion runs in your browser.": "PDF をワードに変換して、段落、表、画像がそのまま並んだ編集できる DOCX に。変換はブラウザ内で行われます。",
   "Convert PDF to image-based PDF. Flatten layers and remove selectable text.": "PDF を画像ベースの PDF に変換します。レイヤーを統合し、選択できる文字を取り除きます。",
-  "Convert PDF to text in your browser: extract all the text from one or many PDFs into plain .txt files. Free, no account, nothing is uploaded.": "PDF のテキスト抽出をブラウザで。1 つでも複数でも、PDF の文字をすべてプレーンな .txt ファイルに。無料、アカウント不要、アップロードなし。",
-  "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.": "PDF をテキストに変換: PDF のすべての言葉をプレーンな .txt ファイルにして、検索、引用、どこへでも貼り付けができます。ファイルは端末に残ります。",
+  "Convert PDF to text in your browser: extract all the text from one or many PDFs into plain .txt files. Free, no account, nothing is uploaded.": "PDF のテキスト抽出とテキスト化をブラウザで。1 つでも複数でも、PDF の文字をすべてプレーンな .txt に。無料、アカウント不要、アップロードなし。",
+  "Convert PDF to text: get every word of a PDF as a plain .txt file you can search, quote or paste anywhere. Your files stay on your device.": "PDF のテキスト抽出: PDF のすべての言葉をプレーンな .txt ファイルにして、検索、引用、どこへでも貼り付けができます。ファイルは端末に残ります。",
   "Convert PNG to PDF in your browser: screenshots, scans and graphics in one PDF, a page per image. Free, no sign up, and images never leave your device.": "PNG を PDF に変換。スクリーンショット、スキャン、図を 1 つの PDF に、画像 1 枚につき 1 ページ。無料、登録不要、画像は端末から出ません。",
   "Convert PNG to PDF: put screenshots, scans or graphics into one document, a page per image, with no loss at high quality. Nothing is uploaded.": "PNG を PDF に変換。スクリーンショット、スキャン、図を 1 つの文書に、画像 1 枚につき 1 ページで。高画質なら劣化しません。アップロードはありません。",
   "Convert PowerPoint to PDF in your browser: PPTX, PPT and ODP, one slide per page, several files at once. Free, no account, nothing is uploaded.": "パワポを PDF に変換。PowerPoint の PPTX、PPT、ODP をブラウザで、1 スライド 1 ページ、複数ファイルも一度に。無料、アカウント不要、アップロードなし。",
@@ -1120,10 +1120,10 @@
   "Files are never uploaded": "ファイルはアップロードされません",
   "Files stay on your device": "ファイルは端末に残ります",
   "Fill PDF Form": "PDF フォームに入力",
-  "Fill PDF Forms Online: Type, Tick and Save, Free": "PDF 入力: フォームに入力して保存、無料でアップロード不要",
+  "Fill PDF Forms Online: Type, Tick and Save, Free": "PDF 書き込み: フォームに入力して保存、無料",
   "Fill PDF forms": "PDF フォームに入力",
-  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "PDF フォームにここで入力します。欄に文字を入れ、チェックを付けて、完成したファイルを保存。アップロードはなく、アカウントも不要です。",
-  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "PDF フォームにブラウザで入力。欄に文字を入れ、チェックを付け、フラットなフォームにも文字を追加できます。普通の PDF で保存。無料、アカウント不要、アップロードなし。",
+  "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.": "PDF への書き込みはここで。フォームの欄に文字を入れ、チェックを付けて、完成したファイルを保存します。アップロードはなく、アカウントも不要です。",
+  "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.": "PDF への書き込みと入力をブラウザで。欄に文字を入れ、チェックを付け、フラットなフォームにも文字を追加。無料、アカウント不要、アップロードなし。",
   "Fill a fillable PDF form": "入力できる PDF フォームに入力",
   "Fill a flat form that has no fields": "フィールドのないフラットなフォームに入力",
   "Fill in a form and add text, dates and initials next to your signature.": "フォームに記入し、サインの横に文字、日付、イニシャルを入れます。",
@@ -1312,7 +1312,7 @@
   "How do I convert a HEIC file to PDF?": "HEIC ファイルを PDF に変換するには?",
   "How do I convert a PDF form to Word?": "PDF のフォームをワードに変換するには?",
   "How do I convert a PDF to PDF/A?": "PDF を PDF/A に変換するには?",
-  "How do I convert a PDF to text?": "PDF をテキストに変換するには?",
+  "How do I convert a PDF to text?": "PDF のテキスト抽出 (テキスト化) はどうやるの?",
   "How do I convert a TXT file to PDF?": "TXT ファイルを PDF に変換するには?",
   "How do I convert iPhone photos to PDF?": "iPhone の写真を PDF に変換するには?",
   "How do I convert or save a JPG as a PDF?": "JPG を PDF に変換・保存するには?",
@@ -1325,9 +1325,9 @@
   "How do I electronically sign a PDF?": "PDF に電子署名するには?",
   "How do I extract images from a PDF?": "PDF から画像を抽出するには?",
   "How do I extract pages from a PDF?": "PDF からページを抽出するには?",
-  "How do I extract text from a PDF for free?": "PDF から無料で文字を抽出するには?",
-  "How do I fill a PDF that won't let me type?": "入力できない PDF に記入するには?",
-  "How do I fill out a PDF form online?": "PDF フォームにオンラインで入力するには?",
+  "How do I extract text from a PDF for free?": "PDF から無料で文字を抽出 (文字起こし) するには?",
+  "How do I fill a PDF that won't let me type?": "ダウンロードした PDF に書き込めないときは?",
+  "How do I fill out a PDF form online?": "PDF に書き込む、フォームに入力するには?",
   "How do I flatten a PDF so it cannot be edited?": "PDF を編集できないようにフラット化するには?",
   "How do I get a signature with a transparent background?": "背景が透明なサインを作るには?",
   "How do I make a PDF fillable?": "PDF を入力できるようにするには?",
@@ -1997,7 +1997,7 @@
   "PDF to TIFF": "PDF を TIFF に",
   "PDF to Text": "PDF をテキストに",
   "PDF to Text, this page": "PDF をテキストに (このページ)",
-  "PDF to Text: Extract Text from PDF to TXT, Free": "PDF をテキストに変換: 文字を TXT で抽出、無料",
+  "PDF to Text: Extract Text from PDF to TXT, Free": "PDF テキスト抽出: 文字を TXT に変換、無料",
   "PDF to WebP": "PDF を WebP に",
   "PDF to Word": "PDF をワードに",
   "PDF to Word Converter": "PDF をワードに変換",
@@ -2257,7 +2257,7 @@
   "Recompresses images, subsets and merges fonts, removes unused data": "画像の再圧縮、フォントのサブセット化と統合、不要なデータの削除",
   "Recover data from corrupted or damaged PDF files.": "破損した PDF ファイルからデータを復旧します。",
   "Redact PDF": "PDF 黒塗り",
-  "Redact PDF files in your browser: black out text or areas, and the words are removed from the file, then checked. Free, nothing is uploaded.": "PDF の黒塗りをブラウザで。文字や範囲を黒く塗ると、その言葉はファイルから削除され、確認まで行います。無料、アップロードなし。",
+  "Redact PDF files in your browser: black out text or areas, and the words are removed from the file, then checked. Free, nothing is uploaded.": "PDF の黒塗り (墨消し) をブラウザで。文字や範囲を黒く塗ると、その言葉はファイルから削除され、確認まで行います。無料、アップロードなし。",
   "Redact PDF text and areas so the words are gone from the file, not just covered. Before you download, the finished file is searched to make sure. Everything runs on your device.": "PDF の文字や範囲を黒塗りし、言葉を隠すだけでなくファイルから消します。ダウンロード前に完成ファイルを検索して確かめます。すべて端末の中で動きます。",
   "Redact PDF: Black Out Text for Good, Free, No Upload": "PDF 黒塗り: 文字を完全に消去、無料でアップロード不要",
   "Redact an area or an image": "範囲や画像を黒塗り",
@@ -2815,7 +2815,7 @@
   "Unchanged": "変わりません",
   "Under each tool: step-by-step instructions, an example of the result and honest notes on what it cannot do.": "各ツールの下に、手順、仕上がりの例、できないことの正直な説明があります。",
   "Unlock PDF": "PDF のロック解除",
-  "Unlock PDF files in your browser: remove a password you know, or lift print and copy restrictions. Several files at once. Free, nothing uploaded.": "PDF のパスワード解除をブラウザで。わかっているパスワードを外し、印刷やコピーの制限も解除します。複数ファイルを一度に。無料、アップロードなし。",
+  "Unlock PDF files in your browser: remove a password you know, or lift print and copy restrictions. Several files at once. Free, nothing uploaded.": "PDF のパスワード解除 (ロック解除) をブラウザで。わかっているパスワードを外し、印刷やコピーの制限も解除。複数ファイルを一度に。無料、アップロードなし。",
   "Unlock PDF files so they open without a password and can be printed and copied. You need the password if the file asks for one when it opens. Everything runs on your device.": "PDF のロックを解除して、パスワードなしで開け、印刷やコピーもできるようにします。開くときにパスワードを求められるファイルには、そのパスワードが必要です。すべて端末の中で動きます。",
   "Unlock PDF: Remove a PDF Password, Free, No Upload": "PDF パスワード解除: 無料でロックを外す、アップロード不要",
   "Unlock and save": "解除して保存",
@@ -3226,6 +3226,9 @@
       "After": "作成後",
       "Before": "作成前"
     },
+    "form-filler": {
+      "Fill PDF Form": "PDF に書き込み、入力"
+    },
     "graph-paper": {
       "After": "設定後",
       "Before": "設定前"
@@ -3241,6 +3244,9 @@
     "pdf-booklet": {
       "After": "作成後",
       "Before": "作成前"
+    },
+    "pdf-to-text": {
+      "PDF to Text": "PDF テキスト抽出"
     },
     "printer-test-page": {
       "After": "印刷後",
