@@ -1,0 +1,274 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to crop a PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDF</h3>
+      </div>
+      <p>One file. The first page opens as a preview on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="20" y="8" width="120" height="84" rx="4" />
+          <rect class="f-accent" x="42" y="24" width="76" height="52" rx="2" />
+          <path class="f-stroke" d="M42 24h6M42 24v6M118 76h-6M118 76v-6" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Drag the crop box</h3>
+      </div>
+      <p>
+        Move the corners or edges over the part to keep. Use the page arrows to
+        set another box for another page, or tick Apply to all pages.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Crop and save</h3>
+      </div>
+      <p>Press Crop & Download. The PDF is saved with every page trimmed.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a page with wide empty margins"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">scan.pdf</text>
+        <text class="f-s" x="30" y="48">Wide margins</text>
+        <text class="f-s" x="30" y="66">Content in the middle</text>
+        <text class="f-s" x="160" y="50">Page too big</text>
+        <text class="f-s" x="160" y="66">for the content</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same page trimmed to its content"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">scan.pdf</text>
+        <text class="f-s" x="30" y="48">Margins trimmed</text>
+        <text class="f-s" x="30" y="66">Content fills the page</text>
+        <text class="f-s" x="160" y="50">Page takes the</text>
+        <text class="f-s" x="160" y="66">size of the box</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        Two ways to crop
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Mode</th>
+          <th scope="col">What happens</th>
+          <th scope="col">Text selectable?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default</td>
+          <td>Sets the visible area; the rest stays hidden in the file</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Flattening Crop</td>
+          <td>Pages become images; the trimmed area is gone</td>
+          <td>No, and the file is usually larger</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      To crop a PDF is to cut away the margins or any part of a page you do not
+      need, so the page shows only the content. It is handy for scans with black
+      borders, slides with white edges and pages you want to paste into a
+      document. This tool crops in your browser, so the file never leaves your
+      device.
+    </p>
+
+    <h2 id="box">Drag a box over what to keep</h2>
+    <p>
+      The page appears as a preview with a movable box. Drag the corners or
+      edges until it frames the part to keep. There is no field for exact
+      measurements, so zoom the browser in when a margin is only a few
+      millimeters wide.
+    </p>
+
+    <h2 id="pages">Crop one page or every page</h2>
+    <p>
+      Use the page arrows to draw a separate box on each page; the tool
+      remembers every box, and pages you never touch keep their size. To use one
+      box everywhere, tick <strong>Apply to all pages</strong> and the box on
+      the current page is copied to the rest.
+    </p>
+
+    <h2 id="modes">Hide the margin or remove it</h2>
+    <p>
+      By default the tool sets each page's visible area. Viewers and printers
+      show only the box, text stays selectable and quality is unchanged, but the
+      trimmed part is still inside the file. Turn on
+      <strong>Flattening Crop</strong> when it must be gone, for example before
+      you share an excerpt. That turns each cropped page into an image, so the
+      text is no longer selectable.
+    </p>
+
+    <h2 id="size">The page size after cropping</h2>
+    <p>
+      Each page takes the size of its box. Trimming a 1 inch margin from every
+      side of a Letter page leaves a 6.5 by 9 inch page. To get back to a
+      standard size, run the result through
+      <a href="/fix-page-size">Fix Page Size</a>.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      The page preview is drawn by your browser. A PDF library on your device
+      sets each page's crop area, or in flattening mode redraws the cropped part
+      as an image, and saves a new file. The document is never uploaded.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Scans with black or gray borders, slides and handouts with wide margins,
+      figures and tables to reuse, pages to print without edges.
+    </p>
+    <ul>
+      <li>
+        <strong>The default crop is not a redaction.</strong> Hidden content can
+        be restored in a PDF editor. To hide private details for good, use
+        Flattening Crop or <a href="/redact-pdf">Redact PDF</a>.
+      </li>
+      <li>
+        <strong>File size stays about the same</strong> in the default mode,
+        because the hidden margin is still in the file.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I crop a PDF?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Add the file, drag the box over the part to keep, press Crop & Download
+        and save.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I crop only some pages?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes. Move through the pages and draw a box on each one you want; pages
+        you do not touch keep their size.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How do I crop every page the same way?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Tick Apply to all pages and the box on the current page is copied to
+        every page.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does cropping delete the part outside the box?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Not in the default mode: it is only hidden and can be restored.
+        Flattening Crop removes it for good.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will the text still be selectable?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        In the default mode, yes. Flattening Crop turns pages into images, so
+        text is no longer selectable.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I type exact crop measurements?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No. Crop by dragging the box; zoom the browser in for fine adjustments.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What size is the cropped page?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Each page takes the size of its box. Fix Page Size can bring it back to
+        A4 or Letter.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is cropping free and private?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes. It is free, needs no account, and the file never leaves your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

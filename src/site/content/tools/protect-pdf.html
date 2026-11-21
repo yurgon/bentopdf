@@ -1,0 +1,291 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to password protect a PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDF</h3>
+      </div>
+      <p>One file. It stays on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-accent" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">User password: ••••••••</text>
+          <rect class="f-page" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Owner password (optional)</text>
+          <rect class="f-page" x="8" y="62" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="75">AES 256-bit</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Set the passwords</h3>
+      </div>
+      <p>
+        The user password is needed to open the file. Add an owner password if
+        you also want to block printing, copying and editing.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Encrypt and save</h3>
+      </div>
+      <p>Press Encrypt PDF. The protected PDF downloads.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a contract that anyone can open"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">contract.pdf</text>
+        <text class="f-s" x="30" y="48">Opens for anyone</text>
+        <text class="f-s" x="30" y="66">No password</text>
+        <text class="f-s" x="160" y="50">Anyone with the</text>
+        <text class="f-s" x="160" y="66">file can read it</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same contract asking for a password"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">contract.pdf</text>
+        <text class="f-s" x="30" y="48">Enter password</text>
+        <text class="f-s" x="30" y="66">AES-256 encrypted</text>
+        <text class="f-s" x="160" y="50">Only people with</text>
+        <text class="f-s" x="160" y="66">the password</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        The two passwords
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Password</th>
+          <th scope="col">What it does</th>
+          <th scope="col">Required here?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>User password</td>
+          <td>Needed to open the file</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Owner password</td>
+          <td>
+            Blocks printing, copying, editing, annotating, form filling and page
+            changes
+          </td>
+          <td>No, optional</td>
+        </tr>
+        <tr>
+          <td>Only a user password</td>
+          <td>File asks for a password; no limits once open</td>
+          <td>Allowed</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      To password protect a PDF is to encrypt it, so it cannot be read without
+      the password. It is the right step before you email a contract, ID scan,
+      medical record or bank statement. This tool encrypts in your browser, so
+      the document and the password are never uploaded anywhere.
+    </p>
+
+    <h2 id="user">Set a password to open the PDF</h2>
+    <p>
+      The <strong>user password</strong> is required. Anyone who wants to open
+      the file must type it. The PDF is encrypted with 256-bit AES, the
+      strongest standard encryption in PDF, so the protection depends on how
+      strong your password is. Use a long one that is not a word.
+    </p>
+
+    <h2 id="owner">Add an owner password for restrictions</h2>
+    <p>
+      The <strong>owner password</strong> is optional. When you set one that
+      differs from the user password, the file also gets usage restrictions:
+      someone who opens it with only the user password cannot print, copy, edit,
+      annotate, fill forms or rearrange pages. Leave it empty for no
+      restrictions.
+    </p>
+
+    <h2 id="restrict">Restrict printing without a password to open</h2>
+    <p>
+      This tool always asks for a password to open the file. To block printing
+      or copying while leaving the PDF openable by anyone, use
+      <a href="/change-permissions">Change Permissions</a>.
+    </p>
+
+    <h2 id="forgot">If you forget the password</h2>
+    <p>
+      There is no recovery. AES-256 cannot be broken in any practical time, and
+      nothing is kept anywhere but on your device. Write the password down in a
+      safe place and keep an unprotected original for yourself.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF encryption library (QPDF, compiled for the browser) applies AES-256
+      encryption on your device and saves a new file. The document and the
+      passwords never leave your browser.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Contracts, tax returns, payslips, ID and passport scans, medical and legal
+      records, anything you send by email or keep in cloud storage.
+    </p>
+    <ul>
+      <li>
+        <strong>Send the password separately</strong>, by message or phone, not
+        in the same email as the file.
+      </li>
+      <li>
+        <strong>To remove it later</strong>, open the file in
+        <a href="/unlock-pdf">Unlock PDF</a> with the password.
+      </li>
+      <li>
+        <strong>Restrictions are weaker than a password to open.</strong> Treat
+        printing and copying limits as a polite request, not as security.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I password protect a PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the file, type a user password, press Encrypt PDF and save the
+        protected copy.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is it free to password protect a PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What encryption does it use?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        256-bit AES. There is no weaker option, so the strength comes down to
+        your password.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What is the difference between the user and owner password?<svg
+          class="i"
+        >
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        The user password opens the file. The owner password, if different, also
+        blocks printing, copying and editing.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I block printing without asking for a password to open?<svg
+          class="i"
+        >
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Not with this tool. Use Change Permissions for that.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What if I forget the password?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        It cannot be recovered. Keep the password safe and keep an unprotected
+        original.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How do I remove the password later?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Open the file in Unlock PDF, type the password and save a copy without
+        encryption.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is it safe to protect a PDF online?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Here the file and the password stay in your browser and are never
+        uploaded.
+      </div>
+    </details>
+  </div>
+</section>

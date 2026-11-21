@@ -1,0 +1,96 @@
+{
+  "slug": "txt-to-pdf",
+  "mainQuery": "txt to pdf",
+  "title": "TXT to PDF: Convert Text Files or Pasted Text, Free",
+  "description": "Convert TXT to PDF in your browser: upload text files or type text, pick the font, size and page size. Free, no account, nothing is uploaded.",
+  "h1": "TXT to PDF",
+  "crumb": "TXT to PDF",
+  "promise": "Convert TXT to PDF: upload text files or type and paste text, choose the font and page size, and save a PDF. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Upload or type text",
+    "Fonts, size, page format"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "TXT to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts .txt files to PDF",
+      "Type or paste text instead of uploading a file",
+      "Four fonts, 6 to 72 point, any text color",
+      "A0 to C10, Letter, Legal and Tabloid page sizes",
+      "Right-to-left text such as Arabic is detected automatically"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert TXT to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "type",
+      "label": "Upload files or type text"
+    },
+    {
+      "id": "fonts",
+      "label": "Fonts, sizes and page formats"
+    },
+    {
+      "id": "rtl",
+      "label": "Arabic, Hebrew and other right-to-left text"
+    },
+    {
+      "id": "many",
+      "label": "Several text files"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "markdown-to-pdf",
+      "icon": "type",
+      "name": "Markdown to PDF",
+      "why": "Format headings, tables and code before saving."
+    },
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "Convert documents with formatting."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Join several text PDFs into one."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the result if needed."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

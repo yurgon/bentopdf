@@ -9,6 +9,7 @@ import { showWasmRequiredDialog } from '../utils/wasm-provider.js';
 
 import { trText, onPageReady } from '../i18n/i18n.js';
 
+import { noteBefore, textEngineNote } from '../../site/js/tools/legacy-notes';
 let pymupdf: PyMuPDFInstance | null = null;
 let files: File[] = [];
 
@@ -201,6 +202,8 @@ onPageReady(() => {
   const fileInput = document.getElementById('file-input') as HTMLInputElement;
   const dropZone = document.getElementById('drop-zone');
   const processBtn = document.getElementById('process-btn');
+  // Plyleaf: say before the first run that the engine is a one-time download
+  noteBefore(processBtn, 'engine-note', textEngineNote());
   const backBtn = document.getElementById('back-to-tools');
   const addMoreBtn = document.getElementById('add-more-btn');
   const clearFilesBtn = document.getElementById('clear-files-btn');

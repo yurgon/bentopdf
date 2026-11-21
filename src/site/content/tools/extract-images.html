@@ -1,0 +1,290 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to extract images from a PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDFs</h3>
+      </div>
+      <p>One file or several. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-accent" x="14" y="10" width="26" height="36" rx="2" />
+          <rect class="f-page" x="50" y="10" width="26" height="36" rx="2" />
+          <rect class="f-page" x="86" y="10" width="26" height="36" rx="2" />
+          <rect class="f-accent" x="122" y="10" width="26" height="36" rx="2" />
+          <rect class="f-page" x="14" y="54" width="26" height="36" rx="2" />
+          <rect class="f-accent" x="50" y="54" width="26" height="36" rx="2" />
+          <rect class="f-page" x="86" y="54" width="26" height="36" rx="2" />
+          <rect class="f-page" x="122" y="54" width="26" height="36" rx="2" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Press Extract Images</h3>
+      </div>
+      <p>
+        Every embedded picture appears in a preview grid, numbered in the order
+        it was found.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">ZIP</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Save the images</h3>
+      </div>
+      <p>Download single pictures or all of them in one ZIP.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: photos locked inside a PDF"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">brochure.pdf</text>
+        <text class="f-s" x="30" y="48">4 photos inside</text>
+        <text class="f-s" x="30" y="66">Cannot save them</text>
+        <text class="f-s" x="160" y="50">Pictures are part</text>
+        <text class="f-s" x="160" y="66">of the file</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the photos saved as separate image files"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">image_1.jpg</text>
+        <text class="f-s" x="30" y="48">image_2.png</text>
+        <text class="f-s" x="30" y="66">image_3.jpg</text>
+        <text class="f-s" x="160" y="50">Original files,</text>
+        <text class="f-s" x="160" y="66">full quality</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        What you get
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">In the PDF</th>
+          <th scope="col">Extracted as</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Photos (JPEG)</td>
+          <td>image_1.jpg</td>
+          <td>No re-encoding, original quality</td>
+        </tr>
+        <tr>
+          <td>Graphics (PNG)</td>
+          <td>image_2.png</td>
+          <td>Keeps transparency</td>
+        </tr>
+        <tr>
+          <td>Charts and drawings made of vectors</td>
+          <td>Nothing</td>
+          <td>Use PDF to PNG to save the page as a picture</td>
+        </tr>
+        <tr>
+          <td>Scanned pages</td>
+          <td>One full-page picture each</td>
+          <td>Crop what you need afterward</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Photos and graphics in a PDF are stored as image files inside it.
+      Extracting them gives you those files back, in the format they are stored
+      in, without screenshots or quality loss. It is how you reuse a photo from
+      a brochure, report or ebook. The PDF is opened in your browser, so nothing
+      is uploaded.
+    </p>
+
+    <h2 id="original">Original format and quality</h2>
+    <p>
+      Each image comes out in the format it is stored in inside the PDF, most
+      often JPEG or PNG, with no re-encoding. You get the image data at its
+      stored resolution. If whoever made the PDF shrank the pictures before
+      embedding them, that smaller size is all that exists in the file.
+    </p>
+
+    <h2 id="save">Download one image or all</h2>
+    <p>
+      Images are numbered in the order they are found, such as image_1.jpg and
+      image_2.png, and shown in a preview grid. Save single pictures, or use
+      <strong>Download All (ZIP)</strong> to get extracted-images.zip.
+    </p>
+
+    <h2 id="none">When no images are found</h2>
+    <p>
+      Only embedded raster images can be extracted. Charts, logos and text drawn
+      as vector shapes are not pictures inside the file, so there is nothing to
+      pull out. Render the pages as images with
+      <a href="/pdf-to-png">PDF to PNG</a> instead.
+    </p>
+
+    <h2 id="scans">Scanned PDFs and duplicates</h2>
+    <p>
+      A scanned PDF stores each page as one large image, so you get one
+      full-page picture per page. A logo repeated on many pages is extracted
+      once for every page it appears on; keep the first copy and delete the
+      rest.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF engine (PyMuPDF compiled for the browser) reads the images straight
+      out of the file in memory on your device. The first run downloads the
+      engine, about 39 MB, once. There is no page or image selection; every
+      embedded image on every page is extracted. Nothing is uploaded.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Photos from brochures, reports and magazines, figures from papers, images
+      from ebooks and manuals, assets from a design that was sent as a PDF.
+    </p>
+    <ul>
+      <li>
+        <strong>Respect copyright.</strong> Extract only images you are allowed
+        to use.
+      </li>
+      <li>
+        <strong>Several PDFs at once</strong> are numbered continuously in one
+        grid and one ZIP.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I extract images from a PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the PDF, press Extract Images and download the pictures one by one
+        or as a ZIP.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is extracting images from a PDF free?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What format are the extracted images?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        The format they are stored in, most often JPEG or PNG, with no
+        re-encoding.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will I get the original full-resolution images?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        You get them as embedded at their stored resolution. If the PDF's author
+        shrank them, that is all there is.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why does it say no images were found?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Only raster images can be extracted. Vector graphics and text have no
+        picture inside the file; use PDF to PNG for those.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I extract images from a scanned PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        You get one full-page image per page, because a scan is stored as
+        page-sized pictures.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why do I get duplicate images?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        A picture repeated on many pages is extracted once per page. Keep one
+        copy.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my PDF uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The images are extracted in your browser and never leave your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

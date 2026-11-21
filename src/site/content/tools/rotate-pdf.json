@@ -1,0 +1,92 @@
+{
+  "slug": "rotate-pdf",
+  "mainQuery": "rotate pdf",
+  "title": "Rotate PDF: Turn Pages and Save Them Rotated, Free",
+  "description": "Rotate PDF pages in your browser: turn one page or all, left or right, and save the file rotated for good. Free, no account, nothing is uploaded.",
+  "h1": "Rotate PDF",
+  "crumb": "Rotate PDF",
+  "promise": "Rotate PDF pages and save the file so they stay rotated: turn one page or all of them, left or right. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "One page or all", "Saved rotated for good"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Rotate PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Rotates single pages or the whole document",
+      "Turns left or right in 90 degree steps",
+      "Thumbnails show the result before you save",
+      "No quality loss: text stays selectable",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to rotate a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "pages",
+      "label": "Rotate one page or all pages"
+    },
+    {
+      "id": "angles",
+      "label": "Turn 90, 180 or 270 degrees"
+    },
+    {
+      "id": "permanent",
+      "label": "The rotation is saved in the file"
+    },
+    {
+      "id": "other",
+      "label": "Other angles and page groups"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "rotate-custom",
+      "icon": "rotate",
+      "name": "Rotate by Custom Degrees",
+      "why": "Turn pages by any angle, not only 90 degrees."
+    },
+    {
+      "slug": "deskew-pdf",
+      "icon": "scan",
+      "name": "Deskew PDF",
+      "why": "Straighten a tilted scan automatically."
+    },
+    {
+      "slug": "organize-pdf",
+      "icon": "grid",
+      "name": "Organize PDF",
+      "why": "Reorder and remove pages in the same file."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Join the corrected file with others."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

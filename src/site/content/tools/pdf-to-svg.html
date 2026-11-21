@@ -1,0 +1,275 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert PDF to SVG</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDFs</h3>
+      </div>
+      <p>One file or several. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="12" y="14" width="56" height="72" rx="3" />
+          <text class="f-s" x="20" y="48">PDF</text>
+          <path class="f-stroke" d="M76 50h18M88 44l6 6-6 6" />
+          <rect class="f-accent" x="100" y="14" width="48" height="72" rx="3" />
+          <text class="f-t" x="124" y="55" text-anchor="middle">SVG</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Press Convert to SVG</h3>
+      </div>
+      <p>Every page of every file is converted at its own page size.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">SVG</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Save the SVG files</h3>
+      </div>
+      <p>One page saves as a .svg file; several pages come as a ZIP.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a PDF logo that turns blurry when enlarged as an image"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">logo.png</text>
+        <text class="f-s" x="30" y="48">Pixels</text>
+        <text class="f-s" x="30" y="66">Blurry when big</text>
+        <text class="f-s" x="160" y="50">Loses sharpness</text>
+        <text class="f-s" x="160" y="66">when enlarged</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same page as an SVG with crisp vector shapes"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">page_1.svg</text>
+        <text class="f-s" x="30" y="48">Vector shapes</text>
+        <text class="f-s" x="30" y="66">Sharp at any size</text>
+        <text class="f-s" x="160" y="50">Edit in Inkscape</text>
+        <text class="f-s" x="160" y="66">or Illustrator</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        What each part becomes in the SVG
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">In the PDF</th>
+          <th scope="col">In the SVG</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Shapes and lines</td>
+          <td>Vector paths</td>
+          <td>Editable in a vector editor</td>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td>Outlines (shapes)</td>
+          <td>Not selectable, no font needed</td>
+        </tr>
+        <tr>
+          <td>Photos and scans</td>
+          <td>Embedded raster images</td>
+          <td>Makes the file larger</td>
+        </tr>
+        <tr>
+          <td>Pages</td>
+          <td>One SVG per page</td>
+          <td>SVG has no pages</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      SVG is a vector graphics format: shapes and lines described by math, so
+      they stay sharp when you zoom or print large. Converting PDF to SVG is the
+      way to reuse a logo, diagram or map from a PDF in a design tool or on a
+      website. The conversion runs in your browser, so your file is not
+      uploaded.
+    </p>
+
+    <h2 id="perpage">One SVG per page</h2>
+    <p>
+      SVG has no concept of pages, so every page becomes its own file. A single
+      page downloads as filename.svg, a longer PDF as filename_svg.zip with
+      page_1.svg, page_2.svg and so on, and several PDFs together as
+      pdf_to_svg.zip.
+    </p>
+
+    <h2 id="edit">Edit in Inkscape, Illustrator or Figma</h2>
+    <p>
+      The output is standard SVG. Shapes and paths arrive as editable vector
+      objects, and the file opens in Inkscape, Illustrator, Figma and any web
+      browser. Photos in the PDF stay raster images inside the SVG.
+    </p>
+
+    <h2 id="text">Text becomes outlines</h2>
+    <p>
+      Text is drawn as vector outlines, so it scales cleanly and does not depend
+      on installed fonts, but it is no longer live text you can select or
+      search. If you need the words, use
+      <a href="/pdf-to-text">PDF to Text</a> as well.
+    </p>
+
+    <h2 id="size">When the SVG is large or unsuitable</h2>
+    <p>
+      Scanned or photo-heavy pages make big SVG files, because every image is
+      embedded in the file. For image pages,
+      <a href="/pdf-to-png">PDF to PNG</a> is smaller and more practical. There
+      is no page range here; to convert only some pages, extract them first with
+      <a href="/extract-pages">Extract Pages</a>.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF engine (PyMuPDF compiled for the browser) writes each page as an SVG
+      on your device. The first conversion downloads the engine, about 39 MB,
+      once. A password-protected PDF asks for its password first. Your files are
+      never uploaded.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Logos and icons, diagrams and charts, maps, floor plans and technical
+      drawings you want to reuse, scale or restyle.
+    </p>
+    <ul>
+      <li>
+        <strong>Best for vector PDFs.</strong> A scan converted to SVG is just a
+        picture inside an SVG wrapper.
+      </li>
+      <li>
+        <strong>No scaling or page range options.</strong> Pages keep their
+        native size.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert PDF to SVG?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Add the PDF, press Convert to SVG and save the file or ZIP.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is PDF to SVG free?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Do I get one SVG or one per page?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        One per page. A multi-page PDF is saved as a ZIP of SVG files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is the text in the SVG selectable?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No. Text is drawn as outlines, so it is sharp but not selectable. PDF to
+        Text gives the words.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I edit the SVG in Illustrator or Inkscape?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. It is standard SVG with editable paths and shapes.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why is my SVG so large?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Scans and photos are embedded as images, which makes the file big. PDF
+        to PNG is smaller for those pages.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I convert only some pages?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Not directly. Extract the pages first with Extract Pages.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my PDF uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The conversion runs in your browser and the file never leaves your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

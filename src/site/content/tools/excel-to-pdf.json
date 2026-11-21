@@ -1,0 +1,96 @@
+{
+  "slug": "excel-to-pdf",
+  "mainQuery": "excel to pdf",
+  "title": "Excel to PDF: Convert XLSX, XLS, ODS and CSV Free",
+  "description": "Convert Excel to PDF in your browser: XLSX, XLS, ODS and CSV, all sheets, several files at once. Free, no account, nothing is uploaded.",
+  "h1": "Excel to PDF",
+  "crumb": "Excel to PDF",
+  "promise": "Convert Excel to PDF: add XLSX, XLS, ODS or CSV files and get a PDF of every sheet. Nothing is uploaded, and there is no account.",
+  "facts": [
+    "Nothing is uploaded",
+    "XLSX, XLS, ODS, CSV",
+    "All sheets included"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Excel to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts XLSX, XLS, ODS and CSV to PDF",
+      "Includes every sheet, with charts and cell formatting",
+      "Follows the print area and page setup of the file",
+      "Several files at once, saved as a ZIP",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert Excel to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "formats",
+      "label": "XLSX, XLS, ODS and CSV"
+    },
+    {
+      "id": "layout",
+      "label": "Stop wide tables being cut off"
+    },
+    {
+      "id": "sheets",
+      "label": "All sheets, charts and formatting"
+    },
+    {
+      "id": "many",
+      "label": "Several files at once"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "csv-to-pdf",
+      "icon": "file",
+      "name": "CSV to PDF",
+      "why": "A lighter option for plain tables."
+    },
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "Convert documents the same way."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine several sheets into one PDF."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a large workbook PDF before sending it."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

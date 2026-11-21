@@ -1,0 +1,96 @@
+{
+  "slug": "flatten-pdf",
+  "mainQuery": "flatten pdf",
+  "title": "Flatten PDF: Make Forms and Comments Uneditable, Free",
+  "description": "Flatten a PDF in your browser: turn form fields, comments and marks into fixed page content. Several files at once. Free, nothing is uploaded.",
+  "h1": "Flatten PDF",
+  "crumb": "Flatten PDF",
+  "promise": "Flatten PDF files so form fields, comments and marks become part of the page and can no longer be edited. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Text stays selectable",
+    "Several files at once"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Flatten PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Turns form fields into fixed page content",
+      "Flattens comments, highlights, stamps and ink marks",
+      "Text stays selectable and searchable",
+      "Several PDFs at once, saved as a ZIP",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to flatten a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "lock",
+      "label": "Lock a filled form"
+    },
+    {
+      "id": "what",
+      "label": "What gets flattened"
+    },
+    {
+      "id": "text",
+      "label": "Text stays selectable"
+    },
+    {
+      "id": "links",
+      "label": "Links and comments"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "form-filler",
+      "icon": "pen",
+      "name": "Fill PDF Form",
+      "why": "Fill the form first, then flatten it."
+    },
+    {
+      "slug": "sign-pdf",
+      "icon": "sign",
+      "name": "Sign PDF",
+      "why": "Flatten the form, then add the signature."
+    },
+    {
+      "slug": "rasterize-pdf",
+      "icon": "image",
+      "name": "Rasterize PDF",
+      "why": "Turn every page into a picture instead."
+    },
+    {
+      "slug": "remove-annotations",
+      "icon": "x",
+      "name": "Remove Annotations",
+      "why": "Delete comments instead of keeping them."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

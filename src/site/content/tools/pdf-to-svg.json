@@ -1,0 +1,96 @@
+{
+  "slug": "pdf-to-svg",
+  "mainQuery": "pdf to svg",
+  "title": "PDF to SVG: Convert Pages to Vector Graphics, Free",
+  "description": "Convert PDF to SVG in your browser: each page becomes a scalable vector file you can edit in Inkscape or Illustrator. Free, nothing is uploaded.",
+  "h1": "PDF to SVG",
+  "crumb": "PDF to SVG",
+  "promise": "Convert PDF to SVG: every page becomes a scalable vector graphic that stays sharp at any size. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "One SVG per page",
+    "Opens in Inkscape and Illustrator"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to SVG",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts each PDF page to an SVG file",
+      "Vector shapes and text outlines stay sharp at any size",
+      "Opens in Inkscape, Illustrator, Figma and browsers",
+      "Several PDFs at once, saved as a ZIP",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PDF to SVG"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "perpage",
+      "label": "One SVG per page"
+    },
+    {
+      "id": "edit",
+      "label": "Edit in Inkscape, Illustrator or Figma"
+    },
+    {
+      "id": "text",
+      "label": "Text becomes outlines"
+    },
+    {
+      "id": "size",
+      "label": "When the SVG is large or unsuitable"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-png",
+      "icon": "image",
+      "name": "PDF to PNG",
+      "why": "A pixel image, smaller for photo-heavy pages."
+    },
+    {
+      "slug": "pdf-to-text",
+      "icon": "type",
+      "name": "PDF to Text",
+      "why": "Get the words as text next to the SVG."
+    },
+    {
+      "slug": "extract-pages",
+      "icon": "split",
+      "name": "Extract Pages",
+      "why": "Pull out only the pages you want to convert."
+    },
+    {
+      "slug": "svg-to-pdf",
+      "icon": "file",
+      "name": "SVG to PDF",
+      "why": "Go the other way."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

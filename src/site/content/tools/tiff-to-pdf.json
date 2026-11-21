@@ -1,0 +1,96 @@
+{
+  "slug": "tiff-to-pdf",
+  "mainQuery": "tiff to pdf",
+  "title": "TIFF to PDF: Convert TIF Images and Scans, Free",
+  "description": "Convert TIFF to PDF in your browser: multi-page TIFF files, several images at once, choose the quality. Free, no account, nothing is uploaded.",
+  "h1": "TIFF to PDF",
+  "crumb": "TIFF to PDF",
+  "promise": "Convert TIFF to PDF: add one or more TIFF files, multi-page ones too, and save a single PDF. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Multi-page TIFF supported",
+    "Choose the quality"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "TIFF to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts TIFF and TIF images to PDF",
+      "Every page of a multi-page TIFF becomes a PDF page",
+      "Several files combined into one PDF",
+      "High, medium or low quality",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert TIFF to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "multi",
+      "label": "Multi-page TIFF to one PDF"
+    },
+    {
+      "id": "quality",
+      "label": "Choose the quality"
+    },
+    {
+      "id": "variants",
+      "label": "Which TIFF files work"
+    },
+    {
+      "id": "size",
+      "label": "Page size and searching"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "PDF OCR",
+      "why": "Make the scanned pages searchable."
+    },
+    {
+      "slug": "fix-page-size",
+      "icon": "file",
+      "name": "Fix Page Size",
+      "why": "Set real A4 or Letter pages."
+    },
+    {
+      "slug": "jpg-to-pdf",
+      "icon": "image",
+      "name": "JPG to PDF",
+      "why": "Convert photos the same way."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a large scan."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

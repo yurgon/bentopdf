@@ -362,7 +362,7 @@
     "subtitle": "Fill in forms directly in the browser. Also supports XFA forms.",
     "uploadHint": "Upload a PDF with form fields. Fill them directly in the viewer below, then click the button to save and download the filled form. Also supports XFA forms.",
     "xfaNoteTitle": "Note on XFA Forms:",
-    "xfaNoteDescription": "XFA (XML Forms Architecture) is a legacy format that's only supported by certain PDF viewers like BentoPDF and Firefox. If you open an XFA PDF in other software and see blank pages or no form fields, it means that viewer doesn't support XFA. To view and fill XFA forms properly, use Firefox or BentoPDF's Form Filler."
+    "xfaNoteDescription": "XFA (XML Forms Architecture) is a legacy format that's only supported by certain PDF viewers like Plyleaf and Firefox. If you open an XFA PDF in other software and see blank pages or no form fields, it means that viewer doesn't support XFA. To view and fill XFA forms properly, use Firefox or Plyleaf's Form Filler."
   },
   "createPdfForm": {
     "name": "Create PDF Form",

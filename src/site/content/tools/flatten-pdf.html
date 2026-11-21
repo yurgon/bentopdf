@@ -1,0 +1,290 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to flatten a PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDFs</h3>
+      </div>
+      <p>One file or several. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="30" y="8" width="100" height="84" rx="4" />
+          <text class="f-s" x="40" y="26">Name</text>
+          <rect class="f-accent" x="40" y="30" width="80" height="12" rx="2" />
+          <text class="f-s" x="40" y="58">Date</text>
+          <rect class="f-page" x="40" y="62" width="50" height="12" rx="2" />
+          <rect class="f-page" x="100" y="62" width="12" height="12" rx="2" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Check what will be flattened</h3>
+      </div>
+      <p>
+        Form fields, annotations and other interactive elements become fixed
+        page content.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Flatten and save</h3>
+      </div>
+      <p>
+        Press Flatten PDF(s). One file downloads directly; several come as a
+        ZIP.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a filled form whose answers can still be changed"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">form.pdf</text>
+        <text class="f-s" x="30" y="48">Name: A. Rivera</text>
+        <text class="f-s" x="30" y="66">Fields editable</text>
+        <text class="f-s" x="160" y="50">Answers can be</text>
+        <text class="f-s" x="160" y="66">edited or deleted</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same form with the answers fixed on the page"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">form.pdf</text>
+        <text class="f-s" x="30" y="48">Name: A. Rivera</text>
+        <text class="f-s" x="30" y="66">Fields fixed</text>
+        <text class="f-s" x="160" y="50">Looks the same,</text>
+        <text class="f-s" x="160" y="66">cannot be changed</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        What flattening changes
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Element</th>
+          <th scope="col">After flattening</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Form fields</td>
+          <td>Fixed text and ticks on the page</td>
+          <td>Cannot be filled again</td>
+        </tr>
+        <tr>
+          <td>Comments, highlights, stamps</td>
+          <td>Burned into the page</td>
+          <td>Pop-up notes are lost</td>
+        </tr>
+        <tr>
+          <td>Text, images, bookmarks</td>
+          <td>Unchanged</td>
+          <td>Text stays selectable</td>
+        </tr>
+        <tr>
+          <td>Links</td>
+          <td>May stop working</td>
+          <td>Links are annotations too</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Flattening a PDF merges its interactive layers into the page itself. A
+      filled form, comments and highlights look exactly the same afterward, but
+      nobody can move, edit or delete them. It is the usual last step before you
+      send a filled form or share a marked-up document.
+    </p>
+
+    <h2 id="lock">Lock a filled form</h2>
+    <p>
+      After you fill a form, flatten it and the answers become part of the page,
+      so recipients cannot change them. Do it only when you are done, because
+      there is no way to unflatten a PDF. Fill the form first with
+      <a href="/form-filler">Fill PDF Form</a>.
+    </p>
+
+    <h2 id="what">What gets flattened</h2>
+    <p>
+      Form fields (text boxes, checkboxes, radio buttons, dropdowns, signature
+      fields), comments, highlights, strikethroughs, sticky notes, stamps and
+      ink marks. The page looks the same, but it is now fixed content. If the
+      file has annotations but no form, you simply see a message that no form
+      was found; the annotations are still flattened.
+    </p>
+
+    <h2 id="text">Text stays selectable</h2>
+    <p>
+      Flattening does not turn pages into images. Regular text, images,
+      bookmarks and page sizes are untouched. If you want every page turned into
+      a picture, use <a href="/rasterize-pdf">Rasterize PDF</a> instead.
+    </p>
+
+    <h2 id="links">Links and comments</h2>
+    <p>
+      Comments and highlights stay visible but lose their pop-up notes and can
+      no longer be edited. Links are annotations as well, so a clickable link
+      may stop working even though its text remains on the page. Flatten before
+      you sign, not after, so the signed content cannot change.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF library on your device draws each form field and annotation into the
+      page content and removes the interactive objects, then saves a new file.
+      Nothing is uploaded.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Completed applications and tax forms, contracts with filled blanks,
+      reviewed documents you want to share without the review tools, forms that
+      look empty in some viewers.
+    </p>
+    <ul>
+      <li>
+        <strong>Keep an editable copy.</strong> A flattened PDF cannot be filled
+        or edited again.
+      </li>
+      <li>
+        <strong>Several files at once</strong> come back as
+        <strong>flattened_pdfs.zip</strong>; a single file is saved with
+        flattened_ added to its name.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        What does it mean to flatten a PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        It merges form fields, comments and other interactive elements into the
+        page, so they look the same but cannot be edited.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How do I flatten a PDF so it cannot be edited?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the file, press Flatten PDF(s) and save the result.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will the text still be selectable after flattening?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Pages are not turned into images; only form fields and annotations
+        become fixed content.
+      </div>
+    </details>
+    <details>
+      <summary>
+        I filled out a form. Should I flatten it?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes, once you are finished, to lock the answers. There is no way to
+        unflatten a PDF.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Do links and comments survive flattening?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Comments and highlights stay visible but lose their notes. Links may
+        stop working.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I flatten several PDFs at once?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Several files are saved together as a ZIP with one flattened PDF
+        each.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Should I flatten before or after signing?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Before, so form values and marks cannot change after the signature.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is it private?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes. Flattening runs in your browser and the file is never uploaded.
+      </div>
+    </details>
+  </div>
+</section>

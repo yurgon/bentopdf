@@ -1,0 +1,96 @@
+{
+  "slug": "pdf-to-pdfa",
+  "mainQuery": "pdf to pdfa",
+  "title": "PDF to PDF/A: Convert for Long-Term Archiving, Free",
+  "description": "Convert PDF to PDF/A in your browser: choose PDF/A-1b, 2b or 3b, convert several files at once. Free, no account, nothing is uploaded.",
+  "h1": "PDF to PDF/A",
+  "crumb": "PDF to PDF/A",
+  "promise": "Convert PDF to PDFA (PDF/A) for long-term archiving: pick the PDF/A level, press Convert, save the archive copy. Your files never leave your device.",
+  "facts": [
+    "Nothing is uploaded",
+    "PDF/A-1b, 2b and 3b",
+    "Several files at once"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to PDF/A",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts PDF to PDF/A-1b, PDF/A-2b or PDF/A-3b",
+      "Embeds fonts and adds an sRGB color profile",
+      "Several PDFs at once, saved as a ZIP",
+      "Optional pre-flatten for stubborn files",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert a PDF to PDF/A"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "levels",
+      "label": "Choose PDF/A-1b, 2b or 3b"
+    },
+    {
+      "id": "changes",
+      "label": "What the conversion changes"
+    },
+    {
+      "id": "flatten",
+      "label": "When a file will not convert"
+    },
+    {
+      "id": "validate",
+      "label": "Check the result if a rule requires proof"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "PDF/A files are often larger; shrink the result."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "PDF OCR",
+      "why": "Make scans searchable before archiving them."
+    },
+    {
+      "slug": "flatten-pdf",
+      "icon": "lock",
+      "name": "Flatten PDF",
+      "why": "Remove form fields and notes before archiving."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine records into one file first."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

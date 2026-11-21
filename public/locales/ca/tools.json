@@ -362,7 +362,7 @@
     "subtitle": "Emplena formularis directament al navegador. També admet formularis XFA.",
     "uploadHint": "Puja un PDF amb camps de formulari. Emplena'ls directament al visor següent i fes clic al botó per desar i descarregar el formulari emplenat. També s'admeten formularis XFA.",
     "xfaNoteTitle": "Nota sobre els formularis XFA:",
-    "xfaNoteDescription": "XFA (XML Forms Architecture) és un format antic que només admeten alguns visors PDF, com BentoPDF i Firefox. Si obres un PDF XFA en un altre programa i veus pàgines en blanc o no hi apareixen camps, vol dir que aquest visor no admet XFA. Per visualitzar i emplenar correctament els formularis XFA, utilitza Firefox o l'eina d'emplenament de formularis de BentoPDF."
+    "xfaNoteDescription": "XFA (XML Forms Architecture) és un format antic que només admeten alguns visors PDF, com Plyleaf i Firefox. Si obres un PDF XFA en un altre programa i veus pàgines en blanc o no hi apareixen camps, vol dir que aquest visor no admet XFA. Per visualitzar i emplenar correctament els formularis XFA, utilitza Firefox o l'eina d'emplenament de formularis de Plyleaf."
   },
   "createPdfForm": {
     "name": "Crea un formulari PDF",

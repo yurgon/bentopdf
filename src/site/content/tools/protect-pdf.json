@@ -1,0 +1,92 @@
+{
+  "slug": "protect-pdf",
+  "mainQuery": "password protect pdf",
+  "title": "Password Protect PDF: Encrypt with AES-256, Free",
+  "description": "Password protect a PDF in your browser with AES-256 encryption. Add an owner password to block printing and copying. Free, nothing is uploaded.",
+  "h1": "Password Protect PDF",
+  "crumb": "Protect PDF",
+  "promise": "Password protect PDF files with strong AES-256 encryption: set a password to open it, and optionally block printing and copying. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "AES-256 encryption", "Free, no account"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Protect PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "256-bit AES encryption",
+      "Password required to open the file",
+      "Optional owner password to block printing, copying and editing",
+      "Pages, text and quality unchanged",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to password protect a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "user",
+      "label": "Set a password to open the PDF"
+    },
+    {
+      "id": "owner",
+      "label": "Add an owner password for restrictions"
+    },
+    {
+      "id": "restrict",
+      "label": "Restrict printing without a password to open"
+    },
+    {
+      "id": "forgot",
+      "label": "If you forget the password"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "unlock-pdf",
+      "icon": "lock",
+      "name": "Unlock PDF",
+      "why": "Remove a password you know later."
+    },
+    {
+      "slug": "change-permissions",
+      "icon": "lock",
+      "name": "Change Permissions",
+      "why": "Restrict printing or copying without a password to open."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the file before you protect it."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine documents first, then protect one file."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

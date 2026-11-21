@@ -362,7 +362,7 @@
     "subtitle": "ブラウザでフォームに直接入力します。XFAフォームもサポートします。",
     "uploadHint": "フォームフィールドのあるPDFをアップロードしてください。下のビューアで直接入力し、ボタンをクリックして入力済みフォームを保存・ダウンロードします。XFAフォームにも対応しています。",
     "xfaNoteTitle": "XFAフォームに関する注意:",
-    "xfaNoteDescription": "XFA (XML Forms Architecture) はレガシー形式で、BentoPDFやFirefoxなど特定のPDFビューアーのみが対応しています。他のソフトでXFA PDFを開いて空白ページまたはフォームフィールドが表示されない場合、そのビューアーはXFAに対応していません。XFAフォームを正しく表示・入力するには、FirefoxまたはBentoPDFのフォーム入力ツールを使用してください。"
+    "xfaNoteDescription": "XFA (XML Forms Architecture) はレガシー形式で、PlyleafやFirefoxなど特定のPDFビューアーのみが対応しています。他のソフトでXFA PDFを開いて空白ページまたはフォームフィールドが表示されない場合、そのビューアーはXFAに対応していません。XFAフォームを正しく表示・入力するには、FirefoxまたはPlyleafのフォーム入力ツールを使用してください。"
   },
   "createPdfForm": {
     "name": "PDFフォームの作成",

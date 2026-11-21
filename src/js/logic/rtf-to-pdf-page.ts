@@ -10,6 +10,7 @@ import { deduplicateFileName } from '../utils/deduplicate-filename.js';
 
 import { trText, onPageReady } from '../i18n/i18n.js';
 
+import { noteBefore, officeNote } from '../../site/js/tools/legacy-notes';
 onPageReady(() => {
   state.files = [];
 
@@ -22,6 +23,8 @@ onPageReady(() => {
   const clearFilesBtn = document.getElementById('clear-files-btn');
   const backBtn = document.getElementById('back-to-tools');
   const processBtn = document.getElementById('process-btn');
+  // Plyleaf: say before the first run that the engine is a one-time download
+  noteBefore(processBtn, 'office-note', officeNote());
 
   if (backBtn) {
     backBtn.addEventListener('click', () => {

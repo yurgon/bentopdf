@@ -1,0 +1,288 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert a PDF to PDF/A</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDFs</h3>
+      </div>
+      <p>One file or several. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">PDF/A-1b strict</text>
+          <rect class="f-accent" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">PDF/A-2b recommended</text>
+          <rect class="f-page" x="8" y="62" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="75">PDF/A-3b with attachments</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Choose the PDF/A level</h3>
+      </div>
+      <p>
+        PDF/A-2b suits most archives. Pick 1b or 3b only if the recipient asks
+        for it.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF/A</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Convert and save</h3>
+      </div>
+      <p>
+        Press Convert to PDF/A. One file downloads directly; several come as a
+        ZIP.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: an ordinary PDF that depends on fonts of the computer that made it"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">report.pdf</text>
+        <text class="f-s" x="30" y="48">Fonts: not embedded</text>
+        <text class="f-s" x="30" y="66">Colors: device</text>
+        <text class="f-s" x="160" y="50">May look different</text>
+        <text class="f-s" x="160" y="66">in 20 years</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: a PDF/A file with fonts and colors built in"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">report_pdfa.pdf</text>
+        <text class="f-s" x="30" y="48">Fonts: embedded</text>
+        <text class="f-s" x="30" y="66">Colors: sRGB</text>
+        <text class="f-s" x="160" y="50">Same pages, text</text>
+        <text class="f-s" x="160" y="66">stays selectable</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        Which PDF/A level to choose
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Level</th>
+          <th scope="col">Best for</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PDF/A-1b</td>
+          <td>A recipient that demands it</td>
+          <td>Strictest: no transparency, no layers</td>
+        </tr>
+        <tr>
+          <td>PDF/A-2b</td>
+          <td>Most archives (default)</td>
+          <td>Allows transparency and JPEG 2000</td>
+        </tr>
+        <tr>
+          <td>PDF/A-3b</td>
+          <td>E-invoices and records with data files</td>
+          <td>Allows embedded files such as XML</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      PDF/A is a version of PDF made for long-term storage. It embeds every font
+      and fixes the color profile, so the document looks the same decades from
+      now on any computer. Courts, tax offices, universities and archives often
+      ask for it. This page converts your PDF to PDF/A in the browser, so
+      confidential records are not uploaded.
+    </p>
+
+    <h2 id="levels">Choose PDF/A-1b, 2b or 3b</h2>
+    <p>
+      The letter after the number is the conformance level.
+      <strong>2b</strong> is the default and fits most needs.
+      <strong>1b</strong> is the oldest and strictest and forbids transparency,
+      so use it only when a recipient names it. <strong>3b</strong> lets the
+      file carry attachments, such as the XML data used by electronic invoices.
+    </p>
+
+    <h2 id="changes">What the conversion changes</h2>
+    <p>
+      Every font is embedded as a subset, colors are converted to a standard
+      sRGB profile, and features the chosen level forbids are dropped instead of
+      stopping the whole job. Pages and text stay as they are, and the text
+      remains selectable. The file is usually a little larger, because the fonts
+      and the color profile are now stored inside it.
+    </p>
+
+    <h2 id="flatten">When a file will not convert</h2>
+    <p>
+      If a file with unusual fonts or transparency fails, turn on
+      <strong>Pre-flatten PDF</strong>. It draws each page as an image at 300
+      DPI first, which gets around broken fonts, but the text is then no longer
+      selectable, so try without it first.
+    </p>
+
+    <h2 id="validate">Check the result if a rule requires proof</h2>
+    <p>
+      The conversion produces conforming files for the great majority of
+      documents, but it is not a validator. If an authority, court or archive
+      requires proof of compliance, check the saved file with a dedicated PDF/A
+      validator such as veraPDF.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A Ghostscript engine compiled for the browser rewrites the PDF to meet the
+      chosen PDF/A standard. Pre-flatten uses a second module that loads the
+      first time it is needed. Everything runs on your device; the files are
+      never sent to a server.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Legal and court filings, tax records, contracts and invoices kept for
+      years, theses and journal submissions, library and government archives.
+    </p>
+    <ul>
+      <li>
+        <strong>Keep the original.</strong> PDF/A drops features such as layers
+        and some transparency.
+      </li>
+      <li>
+        <strong>Size can grow.</strong> Run the result through
+        <a href="/compress-pdf">Compress PDF</a>, then validate again if strict
+        compliance matters.
+      </li>
+      <li>
+        <strong>Scans need OCR first</strong> if you want them searchable:
+        <a href="/ocr-pdf">PDF OCR</a>.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert a PDF to PDF/A?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the file, choose a PDF/A level (2b by default), press Convert to
+        PDF/A and save the result.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What is PDF/A?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        A PDF standard for long-term archiving. It embeds all fonts and a color
+        profile so the file looks the same in the future.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Which PDF/A version should I choose?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        PDF/A-2b for most uses, 1b only if a recipient requires it, and 3b when
+        the file must carry attachments such as XML data.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is PDF to PDF/A free?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I convert several PDFs to PDF/A at once?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. They are converted one after another with the same settings and
+        saved together as a ZIP.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why is the PDF/A file bigger?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        PDF/A stores every font and a color profile inside the file. Compress
+        PDF can shrink it afterwards.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is the result guaranteed to pass a validator?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Not guaranteed. It works for most files, but if proof is required, check
+        the file with a validator such as veraPDF.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Are my documents uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The conversion runs in your browser and the files never leave your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

@@ -1,0 +1,92 @@
+{
+  "slug": "rtf-to-pdf",
+  "mainQuery": "rtf to pdf",
+  "title": "RTF to PDF: Convert Rich Text Files Online, Free",
+  "description": "Convert RTF to PDF in your browser: bold, lists, tables and images are kept. Several files at once. Free, no account, nothing is uploaded.",
+  "h1": "RTF to PDF",
+  "crumb": "RTF to PDF",
+  "promise": "Convert RTF to PDF: add Rich Text Format files and save PDFs with the formatting kept. Nothing is uploaded, and there is no account.",
+  "facts": ["Nothing is uploaded", "Formatting kept", "Several files at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "RTF to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts RTF files to PDF",
+      "Keeps bold, italic, alignment, lists, tables and images",
+      "Several files at once, saved as a ZIP",
+      "Works with files from WordPad and TextEdit",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert RTF to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "kept",
+      "label": "What formatting is kept"
+    },
+    {
+      "id": "fonts",
+      "label": "Fonts and languages"
+    },
+    {
+      "id": "many",
+      "label": "Several files at once"
+    },
+    {
+      "id": "word",
+      "label": "RTF to PDF or Word to PDF"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "Also accepts DOC, DOCX and ODT."
+    },
+    {
+      "slug": "txt-to-pdf",
+      "icon": "type",
+      "name": "TXT to PDF",
+      "why": "For plain text without formatting."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine converted documents into one PDF."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the result for email."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

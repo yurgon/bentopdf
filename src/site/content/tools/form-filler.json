@@ -1,0 +1,96 @@
+{
+  "slug": "form-filler",
+  "mainQuery": "fill pdf",
+  "title": "Fill PDF Forms Online: Type, Tick and Save, Free",
+  "description": "Fill PDF forms in your browser: type into fields, tick boxes, or add text to a flat form. Saves a normal PDF. Free, no account, nothing uploaded.",
+  "h1": "Fill PDF Form",
+  "crumb": "Fill PDF Form",
+  "promise": "Fill PDF forms here: type into the fields, tick the boxes and save the finished file. Nothing is uploaded, and there is no account.",
+  "facts": [
+    "Nothing is uploaded",
+    "Free, no account",
+    "Fillable and flat forms"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Fill PDF Form",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Fills real form fields: text, checkboxes, radio buttons, dropdowns",
+      "Adds text, drawings and images to a flat form",
+      "Fills XFA forms too",
+      "Saves a normal PDF other viewers can read",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to fill out a PDF form"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "fillable",
+      "label": "Fill a fillable PDF form"
+    },
+    {
+      "id": "flat",
+      "label": "Fill a flat form that has no fields"
+    },
+    {
+      "id": "xfa",
+      "label": "XFA forms"
+    },
+    {
+      "id": "sign",
+      "label": "Sign and lock the form"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "sign-pdf",
+      "icon": "sign",
+      "name": "Sign PDF",
+      "why": "Add your signature once the form is filled."
+    },
+    {
+      "slug": "form-creator",
+      "icon": "pen",
+      "name": "Create PDF Form",
+      "why": "Turn a flat form into one with real fields."
+    },
+    {
+      "slug": "flatten-pdf",
+      "icon": "lock",
+      "name": "Flatten PDF",
+      "why": "Lock the answers so nobody can change them."
+    },
+    {
+      "slug": "edit-pdf",
+      "icon": "edit",
+      "name": "Edit PDF",
+      "why": "Change the text or layout of the form itself."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

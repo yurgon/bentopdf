@@ -1,0 +1,96 @@
+{
+  "slug": "extract-images",
+  "mainQuery": "extract images from pdf",
+  "title": "Extract Images from PDF: Save Every Picture, Free",
+  "description": "Extract images from a PDF in your browser: every embedded picture in its original format, in a ZIP. Several PDFs at once. Free, nothing is uploaded.",
+  "h1": "Extract Images from PDF",
+  "crumb": "Extract Images",
+  "promise": "Extract images from PDF files: every picture embedded in the file is saved in its original format. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Original format, no re-encoding",
+    "Download all as ZIP"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Extract Images",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Pulls out every embedded raster image",
+      "Keeps the original format and resolution (JPEG, PNG and others)",
+      "Preview grid and single downloads",
+      "Download all as a ZIP",
+      "Several PDFs at once, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to extract images from a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "original",
+      "label": "Original format and quality"
+    },
+    {
+      "id": "save",
+      "label": "Download one image or all"
+    },
+    {
+      "id": "none",
+      "label": "When no images are found"
+    },
+    {
+      "id": "scans",
+      "label": "Scanned PDFs and duplicates"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-png",
+      "icon": "image",
+      "name": "PDF to PNG",
+      "why": "Turn whole pages into pictures instead."
+    },
+    {
+      "slug": "pdf-to-jpg",
+      "icon": "image",
+      "name": "PDF to JPG",
+      "why": "Save pages as JPG images."
+    },
+    {
+      "slug": "extract-pages",
+      "icon": "split",
+      "name": "Extract Pages",
+      "why": "Pull out only the pages you need first."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a PDF that is large because of its images."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

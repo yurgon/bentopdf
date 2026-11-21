@@ -1,0 +1,92 @@
+{
+  "slug": "crop-pdf",
+  "mainQuery": "crop pdf",
+  "title": "Crop PDF: Trim Margins and Pages Online, Free",
+  "description": "Crop PDF pages in your browser: drag a box, crop one page or all, keep text selectable or remove the trimmed area for good. Free, nothing is uploaded.",
+  "h1": "Crop PDF",
+  "crumb": "Crop PDF",
+  "promise": "Crop PDF pages by dragging a box over the part to keep, on one page or on all pages. Nothing is uploaded, and there is no account.",
+  "facts": ["Nothing is uploaded", "One page or all", "Text stays selectable"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Crop PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Crop by dragging a box on the page preview",
+      "Different crop for each page, or one for all",
+      "Keeps text and links, or removes the trimmed area for good",
+      "Each page takes the size of its box",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to crop a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "box",
+      "label": "Drag a box over what to keep"
+    },
+    {
+      "id": "pages",
+      "label": "Crop one page or every page"
+    },
+    {
+      "id": "modes",
+      "label": "Hide the margin or remove it"
+    },
+    {
+      "id": "size",
+      "label": "The page size after cropping"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "fix-page-size",
+      "icon": "file",
+      "name": "Fix Page Size",
+      "why": "Bring cropped pages back to A4 or Letter."
+    },
+    {
+      "slug": "split-pdf",
+      "icon": "split",
+      "name": "Split PDF",
+      "why": "Pull out only the pages you need."
+    },
+    {
+      "slug": "rotate-pdf",
+      "icon": "rotate",
+      "name": "Rotate PDF",
+      "why": "Turn sideways pages before you crop."
+    },
+    {
+      "slug": "redact-pdf",
+      "icon": "redact",
+      "name": "Redact PDF",
+      "why": "Black out details instead of trimming."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

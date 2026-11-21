@@ -11,6 +11,7 @@ import { createIcons, icons } from 'lucide';
 import { loadPyMuPDF } from '../utils/pymupdf-loader.js';
 import { batchDecryptIfNeeded } from '../utils/password-prompt.js';
 
+import { noteBefore, textEngineNote } from '../../site/js/tools/legacy-notes';
 interface ExtractedImage {
   data: Uint8Array;
   name: string;
@@ -23,6 +24,8 @@ onPageReady(() => {
   const fileInput = document.getElementById('file-input') as HTMLInputElement;
   const dropZone = document.getElementById('drop-zone');
   const processBtn = document.getElementById('process-btn');
+  // Plyleaf: say before the first run that the engine is a one-time download
+  noteBefore(processBtn, 'engine-note', textEngineNote());
   const fileDisplayArea = document.getElementById('file-display-area');
   const extractOptions = document.getElementById('extract-options');
   const fileControls = document.getElementById('file-controls');
