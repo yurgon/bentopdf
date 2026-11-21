@@ -1,0 +1,92 @@
+{
+  "slug": "remove-metadata",
+  "mainQuery": "remove metadata from pdf",
+  "title": "Remove Metadata from PDF: Strip Hidden Data, Free",
+  "description": "Remove metadata from PDF in your browser: author, dates, creator, XMP and document IDs wiped in one click. Free, nothing is uploaded.",
+  "h1": "Remove Metadata from PDF",
+  "crumb": "Remove Metadata",
+  "promise": "Remove metadata from PDF files: author, title, dates, creator and hidden XMP data are cleared in one click. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "One click", "Check the result"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Remove Metadata",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Clears title, author, subject and keywords",
+      "Clears creator, producer and dates",
+      "Removes the XMP stream, document IDs and PieceInfo",
+      "Visible content, links and bookmarks untouched",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to remove metadata from a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "what",
+      "label": "What metadata is removed"
+    },
+    {
+      "id": "stays",
+      "label": "What stays in the file"
+    },
+    {
+      "id": "images",
+      "label": "Metadata inside images"
+    },
+    {
+      "id": "verify",
+      "label": "Check that it worked"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "view-metadata",
+      "icon": "search",
+      "name": "View Metadata",
+      "why": "See what a file contains before and after."
+    },
+    {
+      "slug": "sanitize-pdf",
+      "icon": "lock",
+      "name": "Sanitize PDF",
+      "why": "Also strip comments, scripts and attachments."
+    },
+    {
+      "slug": "redact-pdf",
+      "icon": "redact",
+      "name": "Redact PDF",
+      "why": "Black out visible private text."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the file further."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

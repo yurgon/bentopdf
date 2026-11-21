@@ -1,0 +1,92 @@
+{
+  "slug": "add-watermark",
+  "mainQuery": "add watermark to pdf",
+  "title": "Add Watermark to PDF: Text or Image, Free Online",
+  "description": "Add a watermark to PDF in your browser: text or logo, single or tiled, any pages, with opacity and angle. Free, nothing is uploaded.",
+  "h1": "Add Watermark to PDF",
+  "crumb": "Add Watermark",
+  "promise": "Add watermark to PDF pages: stamp text such as CONFIDENTIAL or your logo, single or tiled, on all pages or a range. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "Text or image", "Single or tiled"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Add Watermark",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Text or image watermark (PNG or JPG)",
+      "Single mark or tiled across the page",
+      "Page range, opacity, angle, color and size",
+      "Drag the mark into position on a live preview",
+      "Optional flattening to make it tamper-resistant"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to add a watermark to a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "text",
+      "label": "A diagonal CONFIDENTIAL or DRAFT mark"
+    },
+    {
+      "id": "image",
+      "label": "A logo as the watermark"
+    },
+    {
+      "id": "tiled",
+      "label": "Single or tiled"
+    },
+    {
+      "id": "pages",
+      "label": "Some pages only, and tamper resistance"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "add-stamps",
+      "icon": "sign",
+      "name": "Add Stamps",
+      "why": "Place image stamps with the annotation tools."
+    },
+    {
+      "slug": "flatten-pdf",
+      "icon": "lock",
+      "name": "Flatten PDF",
+      "why": "Lock marks and annotations into the page."
+    },
+    {
+      "slug": "protect-pdf",
+      "icon": "lock",
+      "name": "Protect PDF",
+      "why": "Add a password after watermarking."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the watermarked file."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

@@ -1,0 +1,96 @@
+{
+  "slug": "csv-to-pdf",
+  "mainQuery": "csv to pdf",
+  "title": "CSV to PDF: Turn CSV Files into Tables, Free Online",
+  "description": "Convert CSV to PDF in your browser: a clean striped table, header repeated on every page, several files at once. Free, nothing is uploaded.",
+  "h1": "CSV to PDF",
+  "crumb": "CSV to PDF",
+  "promise": "Convert CSV to PDF: each CSV file becomes a clean table with the header repeated on every page. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Header on every page",
+    "Several files at once"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "CSV to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts CSV files to PDF tables",
+      "Detects comma, semicolon, tab and pipe separators",
+      "Bold header row repeated on every page",
+      "Several files at once, saved as a ZIP",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert CSV to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "layout",
+      "label": "How the table looks"
+    },
+    {
+      "id": "delimiters",
+      "label": "Commas, semicolons and tabs"
+    },
+    {
+      "id": "wide",
+      "label": "Wide files and other scripts"
+    },
+    {
+      "id": "excel",
+      "label": "CSV to PDF or Excel to PDF"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "excel-to-pdf",
+      "icon": "file",
+      "name": "Excel to PDF",
+      "why": "For workbooks with formatting and several sheets."
+    },
+    {
+      "slug": "pdf-to-excel",
+      "icon": "grid",
+      "name": "PDF to Excel",
+      "why": "Go from a PDF table back to a spreadsheet."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine several tables into one PDF."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a long table PDF."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

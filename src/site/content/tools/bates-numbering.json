@@ -1,0 +1,92 @@
+{
+  "slug": "bates-numbering",
+  "mainQuery": "bates numbering",
+  "title": "Bates Numbering for PDF: Add Bates Stamps Free",
+  "description": "Bates numbering for PDF in your browser: custom prefixes, zero padding, numbering across several files. Free, nothing is uploaded.",
+  "h1": "Bates Numbering",
+  "crumb": "Bates Numbering",
+  "promise": "Bates numbering for PDF files: stamp sequential numbers with a prefix and zero padding, across one or many documents. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "Across many files", "Custom templates"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Bates Numbering",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Sequential Bates numbers across one or more PDFs",
+      "Presets and custom templates with placeholders",
+      "3 to 6 digit padding or none",
+      "Six header and footer positions",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to add Bates numbers to a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "style",
+      "label": "Prefixes, padding and custom templates"
+    },
+    {
+      "id": "many",
+      "label": "Numbering across several files"
+    },
+    {
+      "id": "digits",
+      "label": "Digits, position and font"
+    },
+    {
+      "id": "text",
+      "label": "Real text, not an image"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "page-numbers",
+      "icon": "hash",
+      "name": "Page Numbers",
+      "why": "Plain page numbers without a prefix."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine documents before stamping."
+    },
+    {
+      "slug": "redact-pdf",
+      "icon": "redact",
+      "name": "Redact PDF",
+      "why": "Black out privileged text first."
+    },
+    {
+      "slug": "header-footer",
+      "icon": "type",
+      "name": "Header & Footer",
+      "why": "Add running text to every page."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

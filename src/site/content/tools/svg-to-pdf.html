@@ -1,0 +1,275 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert SVG to PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">SVG</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your SVG files</h3>
+      </div>
+      <p>One file or many. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-accent" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">Quality: High (lossless)</text>
+          <rect class="f-page" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Quality: Medium</text>
+          <rect class="f-page" x="8" y="62" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="75">Quality: Low (smaller)</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Choose the quality</h3>
+      </div>
+      <p>High keeps a lossless image. Medium and Low give a smaller file.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Convert and save</h3>
+      </div>
+      <p>
+        Press Convert to PDF. Several SVGs become consecutive pages of one PDF.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a logo as an SVG file"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">logo.svg</text>
+        <text class="f-s" x="30" y="48">Vector graphic</text>
+        <text class="f-s" x="30" y="66">Opens in browsers</text>
+        <text class="f-s" x="160" y="50">Not a document</text>
+        <text class="f-s" x="160" y="66">you can print or send</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same logo on a PDF page"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">from_svgs.pdf</text>
+        <text class="f-s" x="30" y="48">1 page</text>
+        <text class="f-s" x="30" y="66">Opens anywhere</text>
+        <text class="f-s" x="160" y="50">Ready to print</text>
+        <text class="f-s" x="160" y="66">and share</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        What to expect
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">SVG feature</th>
+          <th scope="col">In the PDF</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Shapes and text</td>
+          <td>Drawn as a picture</td>
+          <td>Not vector, text not selectable</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td>Becomes white</td>
+          <td>The canvas is filled with white first</td>
+        </tr>
+        <tr>
+          <td>Linked images and fonts</td>
+          <td>May be missing</td>
+          <td>Embed images and convert text to paths</td>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td>Taken from width and height</td>
+          <td>Without them, 800 by 600</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      SVG is a vector image format used for logos, icons and diagrams.
+      Converting SVG to PDF gives you a page you can print, send or merge with
+      other documents. This page does it in your browser, so your artwork is
+      never uploaded.
+    </p>
+
+    <h2 id="many">Several SVGs in one PDF</h2>
+    <p>
+      Add as many files as you like. They become consecutive pages of one PDF in
+      the order shown in the list, and each page takes the size of its own SVG.
+    </p>
+
+    <h2 id="image">The PDF is a picture, not vector</h2>
+    <p>
+      Each SVG is drawn by your browser and the result is placed on the page as
+      an image. It will not scale without loss, and the text in it is not
+      selectable. If you need true vector output, export the PDF from a vector
+      editor such as Inkscape. To go from PDF to vector, use
+      <a href="/pdf-to-svg">PDF to SVG</a>.
+    </p>
+
+    <h2 id="size">Page size and resolution</h2>
+    <p>
+      The page matches the SVG's width and height in pixels, one pixel per PDF
+      point. An SVG with only a viewBox renders at 800 by 600, so set explicit
+      dimensions for predictable results. There is no DPI setting; to get more
+      pixels, enlarge the width and height in the SVG. To fit A4 or Letter, use
+      <a href="/fix-page-size">Fix Page Size</a>.
+    </p>
+
+    <h2 id="quality">Quality settings</h2>
+    <p>
+      <strong>High</strong> keeps a lossless PNG at full size.
+      <strong>Medium</strong>
+      re-encodes as JPEG at 75 percent and limits the longest side to 2500
+      pixels;
+      <strong>Low</strong> uses 50 percent and 1500 pixels. For line art and
+      text, High avoids JPEG artifacts.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      Your browser draws each SVG onto a canvas filled with white, and a PDF
+      library on your device puts that image on a page. Nothing is sent to a
+      server.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Logos for letterheads, icons for print sheets, diagrams for reports,
+      designs to share with someone who has no vector software.
+    </p>
+    <ul>
+      <li>
+        <strong>External resources are not loaded.</strong> Embed images as data
+        URIs and convert text to paths before converting.
+      </li>
+      <li>
+        <strong>Mix formats</strong> with
+        <a href="/image-to-pdf">Images to PDF</a>.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert SVG to PDF?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Add the SVG files, choose the quality, press Convert to PDF and save.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is the PDF vector or an image?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        An image. The SVG is drawn by the browser and placed on the page, so it
+        does not scale without loss.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What size will the page be?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        The SVG's width and height in pixels, one pixel per point. Without them
+        it is 800 by 600.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I set 300 DPI?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        There is no DPI setting. Enlarge the width and height in the SVG source
+        for more pixels.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why are text, fonts or images missing?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        External files, fonts and CSS cannot load. Embed images as data URIs and
+        convert text to paths.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is transparency kept?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">No. Transparent areas become white.</div>
+    </details>
+    <details>
+      <summary>
+        Can I put several SVGs in one PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. They become consecutive pages in the order of the list.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my SVG uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. It is converted in your browser and never leaves your device.
+      </div>
+    </details>
+  </div>
+</section>

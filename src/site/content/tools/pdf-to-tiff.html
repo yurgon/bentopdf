@@ -1,0 +1,286 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert PDF to TIFF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDF</h3>
+      </div>
+      <p>One file. It stays on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-accent" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">DPI: 300</text>
+          <rect class="f-page" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Compression: LZW</text>
+          <rect class="f-page" x="8" y="62" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="75">Color: Greyscale</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Set DPI, compression and color</h3>
+      </div>
+      <p>
+        300 DPI with LZW suits most uses. For fax and e-filing choose Black &
+        White with CCITT Group 4.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">TIFF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Convert and save</h3>
+      </div>
+      <p>
+        Tick Save as multi-page TIFF for one file, or get a ZIP of page_1.tiff,
+        page_2.tiff and so on.
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a PDF that a system will not accept"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">scan.pdf</text>
+        <text class="f-s" x="30" y="48">10 pages</text>
+        <text class="f-s" x="30" y="66">PDF not accepted</text>
+        <text class="f-s" x="160" y="50">The system wants</text>
+        <text class="f-s" x="160" y="66">TIFF files</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same pages as one multi-page TIFF"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">scan.tiff</text>
+        <text class="f-s" x="30" y="48">10 pages</text>
+        <text class="f-s" x="30" y="66">CCITT G4, 300 DPI</text>
+        <text class="f-s" x="160" y="50">Accepted by fax and</text>
+        <text class="f-s" x="160" y="66">records systems</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        Compression options
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Compression</th>
+          <th scope="col">Type</th>
+          <th scope="col">Best for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>LZW (default)</td>
+          <td>Lossless</td>
+          <td>Any content</td>
+        </tr>
+        <tr>
+          <td>Deflate / ZIP</td>
+          <td>Lossless</td>
+          <td>Any content</td>
+        </tr>
+        <tr>
+          <td>CCITT Group 4</td>
+          <td>Lossless, 1-bit</td>
+          <td>Black and white scans, fax, e-filing</td>
+        </tr>
+        <tr>
+          <td>JPEG</td>
+          <td>Lossy, quality 85</td>
+          <td>Photo-heavy pages</td>
+        </tr>
+        <tr>
+          <td>PackBits or None</td>
+          <td>Legacy</td>
+          <td>Older systems</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      TIFF is the format of scanners, fax systems and document archives, and
+      some agencies and e-filing systems accept only TIFF. Converting PDF to
+      TIFF turns each page into a bitmap image. You set the resolution and
+      compression in your browser, so the document is never uploaded.
+    </p>
+
+    <h2 id="multipage">One multi-page TIFF or one file per page</h2>
+    <p>
+      Tick <strong>Save as multi-page TIFF (single file)</strong> and every page
+      is written into one .tiff named after the PDF. Leave it unticked and a
+      multi-page PDF downloads as a ZIP with page_1.tiff, page_2.tiff and so on.
+      A one-page PDF always gives a single .tiff.
+    </p>
+
+    <h2 id="dpi">Which DPI to use</h2>
+    <p>
+      The slider runs from 72 to 600 and defaults to 300, the usual choice for
+      print and archival scans. Fax and document management systems typically
+      expect 200 to 300, and 150 is enough for screens. Very high DPI on large
+      pages can run the browser out of memory.
+    </p>
+
+    <h2 id="fax">Black and white TIFF for fax or e-filing</h2>
+    <p>
+      Set Color Mode to <strong>Black &amp; White (1-bit)</strong> and
+      Compression to <strong>CCITT Group 4</strong>, then pick 200 or 300 DPI.
+      That combination is what most fax gateways and document systems expect,
+      and it makes very small files. CCITT Group 4 switches the color mode to
+      1-bit by itself.
+    </p>
+
+    <h2 id="size">Why the TIFF is large</h2>
+    <p>
+      TIFF stores a bitmap of every page. An uncompressed 300 DPI color Letter
+      page is about 25 MB, so lower the DPI, switch to greyscale or black and
+      white, or use CCITT Group 4 for text scans. For lossless images on screen,
+      <a href="/pdf-to-png">PDF to PNG</a> is smaller.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      Your browser draws each page at the chosen resolution and a TIFF encoder
+      on your device writes the file with the compression you chose. The PDF is
+      never uploaded.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Fax gateways, court e-filing, records and document management systems,
+      printers and print shops, archives that require TIFF.
+    </p>
+    <ul>
+      <li>
+        <strong>The text is no longer text.</strong> Each page becomes an image;
+        run <a href="/ocr-pdf">PDF OCR</a> on the PDF if you need searchable
+        text.
+      </li>
+      <li>
+        <strong>One PDF at a time.</strong> Convert further files separately.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert PDF to TIFF?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Add the PDF, set the DPI, compression and color mode and press Convert.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is PDF to TIFF free?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I get all pages in one multi-page TIFF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Tick Save as multi-page TIFF. Otherwise you get a ZIP with one TIFF
+        per page.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What DPI should I use?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        300 for print and archives, 200 to 300 for fax and document systems, 150
+        for screens.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Which compression should I choose?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        LZW or Deflate for any content, CCITT Group 4 for black and white scans,
+        JPEG for photo pages.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How do I make a black and white TIFF for fax or e-filing?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Set Black & White (1-bit), CCITT Group 4 and 200 or 300 DPI.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why is my TIFF so large?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        TIFF stores a bitmap per page. Lower the DPI, use greyscale or black and
+        white, or CCITT Group 4.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my PDF uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The conversion runs in your browser and the file never leaves your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

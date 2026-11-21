@@ -6,6 +6,7 @@ import { loadPyMuPDF } from '../utils/pymupdf-loader.js';
 
 import { trText, onPageReady } from '../i18n/i18n.js';
 
+import { noteBefore, textEngineNote } from '../../site/js/tools/legacy-notes';
 const FILETYPE = 'mobi';
 const EXTENSIONS = ['.mobi'];
 const TOOL_NAME = 'MOBI';
@@ -14,6 +15,8 @@ onPageReady(() => {
   const fileInput = document.getElementById('file-input') as HTMLInputElement;
   const dropZone = document.getElementById('drop-zone');
   const processBtn = document.getElementById('process-btn');
+  // Plyleaf: say before the first run that the engine is a one-time download
+  noteBefore(processBtn, 'engine-note', textEngineNote());
   const fileDisplayArea = document.getElementById('file-display-area');
   const fileControls = document.getElementById('file-controls');
   const addMoreBtn = document.getElementById('add-more-btn');

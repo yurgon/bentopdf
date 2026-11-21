@@ -1,0 +1,92 @@
+{
+  "slug": "svg-to-pdf",
+  "mainQuery": "svg to pdf",
+  "title": "SVG to PDF: Convert SVG Images to a PDF, Free",
+  "description": "Convert SVG to PDF in your browser: several SVG files become pages of one PDF, with a quality choice. Free, no account, nothing is uploaded.",
+  "h1": "SVG to PDF",
+  "crumb": "SVG to PDF",
+  "promise": "Convert SVG to PDF: add one or more SVG files and save them as pages of a single PDF. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "Many SVGs, one PDF", "Choose the quality"],
+  "workArea": "legacy",
+  "app": {
+    "name": "SVG to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts SVG files to PDF pages",
+      "Several SVGs become one PDF in list order",
+      "High, medium or low quality",
+      "Each page takes the size of its SVG",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert SVG to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "many",
+      "label": "Several SVGs in one PDF"
+    },
+    {
+      "id": "image",
+      "label": "The PDF is a picture, not vector"
+    },
+    {
+      "id": "size",
+      "label": "Page size and resolution"
+    },
+    {
+      "id": "quality",
+      "label": "Quality settings"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-svg",
+      "icon": "file",
+      "name": "PDF to SVG",
+      "why": "Go the other way and get vector pages."
+    },
+    {
+      "slug": "image-to-pdf",
+      "icon": "image",
+      "name": "Images to PDF",
+      "why": "Mix SVG, JPG and PNG in one PDF."
+    },
+    {
+      "slug": "fix-page-size",
+      "icon": "file",
+      "name": "Fix Page Size",
+      "why": "Set A4 or Letter pages."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a large result."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

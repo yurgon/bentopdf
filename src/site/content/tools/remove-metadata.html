@@ -1,0 +1,289 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to remove metadata from a PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDF</h3>
+      </div>
+      <p>One file. It stays on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-page" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">Title, Author, Subject</text>
+          <rect class="f-accent" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Creator, dates, XMP</text>
+          <rect class="f-page" x="8" y="62" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="75">Document IDs</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Check what will be removed</h3>
+      </div>
+      <p>
+        The tool always clears the document info, the XMP data, the document IDs
+        and private application data. There are no options.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Remove and save</h3>
+      </div>
+      <p>Press Remove All Metadata. The cleaned PDF downloads.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a PDF that reveals author and software"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">offer.pdf</text>
+        <text class="f-s" x="30" y="48">Author: J. Smith</text>
+        <text class="f-s" x="30" y="66">Created: 14 Mar, Word</text>
+        <text class="f-s" x="160" y="50">Shows who made it</text>
+        <text class="f-s" x="160" y="66">and how</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same PDF with empty properties"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">offer.pdf</text>
+        <text class="f-s" x="30" y="48">Author: (empty)</text>
+        <text class="f-s" x="30" y="66">Created: (empty)</text>
+        <text class="f-s" x="160" y="50">Same pages,</text>
+        <text class="f-s" x="160" y="66">no hidden details</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        What is removed and what stays
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Part</th>
+          <th scope="col">Result</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Title, author, subject, keywords</td>
+          <td>Removed</td>
+          <td>Document properties</td>
+        </tr>
+        <tr>
+          <td>Creator, producer, dates</td>
+          <td>Removed</td>
+          <td>Created and modified times</td>
+        </tr>
+        <tr>
+          <td>XMP stream, document IDs, PieceInfo</td>
+          <td>Removed</td>
+          <td>Left by editors like InDesign</td>
+        </tr>
+        <tr>
+          <td>Comments and attachments</td>
+          <td>Stay</td>
+          <td>Use Sanitize PDF to strip them</td>
+        </tr>
+        <tr>
+          <td>EXIF inside images</td>
+          <td>Stays</td>
+          <td>Rasterize PDF re-renders pages</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Every PDF carries hidden properties: who wrote it, which program made it
+      and when it was created or changed. Before you publish or send a file, you
+      may want those details gone. This tool clears them in your browser, so the
+      file you are cleaning is never uploaded.
+    </p>
+
+    <h2 id="what">What metadata is removed</h2>
+    <p>
+      The document info fields (title, author, subject, keywords, creator,
+      producer and the creation and modification dates), the XMP metadata
+      stream, the document ID pair and the application-specific PieceInfo left
+      by tools such as Illustrator or InDesign. There are no options; it always
+      clears all of these.
+    </p>
+
+    <h2 id="stays">What stays in the file</h2>
+    <p>
+      All visible content, plus form fields, annotations, bookmarks, links and
+      file attachments. Names stored inside them, such as the author of a sticky
+      note, are not touched. To strip comments, scripts and attachments too, use
+      <a href="/sanitize-pdf">Sanitize PDF</a>.
+    </p>
+
+    <h2 id="images">Metadata inside images</h2>
+    <p>
+      Image data is left as it is, so any EXIF or XMP information a photo
+      carried when it was placed in the PDF stays with that image. If that
+      matters,
+      <a href="/rasterize-pdf">Rasterize PDF</a> re-renders every page as a
+      fresh image, at the cost of selectable text.
+    </p>
+
+    <h2 id="verify">Check that it worked</h2>
+    <p>
+      Open the cleaned file in <a href="/view-metadata">View Metadata</a> and
+      confirm the fields are blank. Running the same check on the original first
+      shows exactly what is about to be removed. It cannot be undone, so keep
+      your original.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF library on your device overwrites the document info, deletes the XMP
+      stream, the document IDs and private application data, and saves a new
+      file. The file is never uploaded.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Documents you publish or send to clients, files going to journalists or
+      courts, CVs and reports where you do not want the author or software
+      shown, anonymous reviews and tips.
+    </p>
+    <ul>
+      <li>
+        <strong>The saving is small</strong>, usually a few kilobytes. For a
+        real reduction follow up with <a href="/compress-pdf">Compress PDF</a>.
+      </li>
+      <li>
+        <strong>Hidden or white text</strong> is part of the page and is not
+        touched; review the document itself.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I remove metadata from a PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the file, press Remove All Metadata and save the cleaned copy.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What metadata does it remove?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Title, author, subject, keywords, creator, producer, dates, the XMP
+        stream, document IDs and PieceInfo.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What stays in the file?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Visible content, form fields, annotations, bookmarks, links and
+        attachments.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does it remove metadata from images inside the PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No. Image data is untouched. Rasterize PDF re-renders pages as new
+        images.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How can I confirm the metadata is gone?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Open the cleaned file in View Metadata and check that the fields are
+        blank.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can this be undone?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The cleaned file keeps no record of the removed values, so keep your
+        original.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does removing metadata reduce file size?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        A little, usually a few kilobytes. Compress PDF shrinks the file
+        further.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my PDF uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The metadata is removed in your browser and the file never leaves
+        your device.
+      </div>
+    </details>
+  </div>
+</section>

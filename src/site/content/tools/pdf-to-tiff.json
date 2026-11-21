@@ -1,0 +1,92 @@
+{
+  "slug": "pdf-to-tiff",
+  "mainQuery": "pdf to tiff",
+  "title": "PDF to TIFF: Convert PDF Pages to TIFF Images, Free",
+  "description": "Convert PDF to TIFF in your browser: choose DPI, compression and color mode, single or multi-page TIFF. Free, nothing is uploaded.",
+  "h1": "PDF to TIFF",
+  "crumb": "PDF to TIFF",
+  "promise": "Convert PDF to TIFF: pick the DPI, compression and color mode, and save one multi-page TIFF or a ZIP of pages. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "72 to 600 DPI", "Multi-page TIFF"],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to TIFF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts PDF pages to TIFF images",
+      "DPI from 72 to 600",
+      "LZW, Deflate, CCITT Group 4, JPEG, PackBits or none",
+      "Color, greyscale or black and white 1-bit",
+      "One multi-page TIFF or a ZIP of single pages"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert PDF to TIFF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "multipage",
+      "label": "One multi-page TIFF or one file per page"
+    },
+    {
+      "id": "dpi",
+      "label": "Which DPI to use"
+    },
+    {
+      "id": "fax",
+      "label": "Black and white TIFF for fax or e-filing"
+    },
+    {
+      "id": "size",
+      "label": "Why the TIFF is large"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "tiff-to-pdf",
+      "icon": "file",
+      "name": "TIFF to PDF",
+      "why": "Go the other way."
+    },
+    {
+      "slug": "pdf-to-png",
+      "icon": "image",
+      "name": "PDF to PNG",
+      "why": "Smaller lossless images for screens."
+    },
+    {
+      "slug": "pdf-to-jpg",
+      "icon": "image",
+      "name": "PDF to JPG",
+      "why": "Compact photos of pages."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the PDF before converting."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

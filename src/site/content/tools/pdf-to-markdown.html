@@ -1,0 +1,286 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert a PDF to Markdown</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDFs</h3>
+      </div>
+      <p>One or many. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-accent" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">Include images as base64</text>
+          <rect class="f-page" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Headings, lists, bold</text>
+          <rect class="f-page" x="8" y="62" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="75">Pages split by ---</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Choose whether to include images</h3>
+      </div>
+      <p>
+        Leave images off for a small, readable .md file. Tick the option for a
+        self-contained file.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">MD</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Convert and save</h3>
+      </div>
+      <p>One file downloads as filename.md; several come as a ZIP.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a PDF with headings and lists"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">notes.pdf</text>
+        <text class="f-s" x="30" y="48">Heading, list</text>
+        <text class="f-s" x="30" y="66">Cannot paste cleanly</text>
+        <text class="f-s" x="160" y="50">Copying loses</text>
+        <text class="f-s" x="160" y="66">the structure</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same content as Markdown"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">notes.md</text>
+        <text class="f-s" x="30" y="48"># Heading</text>
+        <text class="f-s" x="30" y="66">- list item</text>
+        <text class="f-s" x="160" y="50">Ready to paste</text>
+        <text class="f-s" x="160" y="66">into a wiki</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        How the PDF is read
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">In the PDF</th>
+          <th scope="col">In the Markdown</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Large text</td>
+          <td>Headings (#, ##)</td>
+          <td>Level guessed from font size</td>
+        </tr>
+        <tr>
+          <td>Lists, bold, italic</td>
+          <td>Lists and emphasis</td>
+          <td>Kept</td>
+        </tr>
+        <tr>
+          <td>Page breaks</td>
+          <td>A line with ---</td>
+          <td>One per page</td>
+        </tr>
+        <tr>
+          <td>Multi-column pages, sidebars</td>
+          <td>May be mixed</td>
+          <td>Review and tidy the result</td>
+        </tr>
+        <tr>
+          <td>Scanned pages</td>
+          <td>Nothing</td>
+          <td>Run PDF OCR first</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Markdown is the plain-text format of notes, wikis, documentation and
+      static sites. Converting a PDF to Markdown gives you headings, lists and
+      emphasis you can paste straight into Obsidian, GitHub or a blog. The PDF
+      is read in your browser, so the document is never uploaded.
+    </p>
+
+    <h2 id="structure">How much structure is kept</h2>
+    <p>
+      Headings, paragraphs, lists and basic bold and italic come through, and
+      each page is separated by a horizontal rule (---). Heading levels are
+      inferred from font sizes, so a document with inconsistent styling may get
+      some headings at the wrong level.
+    </p>
+
+    <h2 id="images">Images and file size</h2>
+    <p>
+      With <strong>Include images as base64</strong> ticked, pictures are
+      embedded in the Markdown so the single .md file is self-contained, but it
+      can get large. Leave it off for text-heavy documents to keep the output
+      small.
+    </p>
+
+    <h2 id="scans">Scans and complex layouts</h2>
+    <p>
+      The converter reads the PDF's text layer, so a scanned document has
+      nothing to convert; add a text layer with
+      <a href="/ocr-pdf">PDF OCR</a> first. Multi-column text can be interleaved
+      and footnotes or sidebars may land in the wrong place, so expect to tidy
+      magazine-style pages. Single-column documents need little cleanup.
+    </p>
+
+    <h2 id="text">Markdown or plain text</h2>
+    <p>
+      <a href="/pdf-to-text">PDF to Text</a> gives raw text with no structure,
+      better for scripts. PDF to Markdown keeps headings, lists and emphasis, so
+      the result is ready for notes and documentation. A password-protected PDF
+      asks for its password first.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF engine (PyMuPDF compiled for the browser) reads the text and its
+      font sizes and writes Markdown on your device. The first run downloads the
+      engine, about 39 MB, once. Your PDF is never uploaded.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Moving papers and manuals into Obsidian or Notion, preparing text for
+      static sites and documentation, cleaning up reports for editing, feeding
+      structured text to writing tools.
+    </p>
+    <ul>
+      <li>
+        <strong>Check the headings.</strong> Levels come from font sizes and can
+        be off.
+      </li>
+      <li>
+        <strong>Several PDFs</strong> come back as markdown-files.zip with one
+        .md each.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert PDF to Markdown?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the PDF, press Convert to Markdown and save the .md file.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is PDF to Markdown free?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How well is the structure preserved?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Headings, paragraphs, lists and basic bold and italic are kept; heading
+        levels come from font sizes.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What does Include images do?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        It embeds pictures as base64 data, which makes one self-contained but
+        larger .md file.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why is the Markdown empty?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        A scanned PDF has no text layer. Run PDF OCR first, then convert.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How does it handle columns and footnotes?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Complex layouts are the weak spot: columns can be interleaved and
+        footnotes misplaced.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is this the same as PDF to Text?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        No. PDF to Text gives raw text; PDF to Markdown keeps headings, lists
+        and emphasis.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my PDF uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The conversion runs in your browser and the file never leaves your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

@@ -1,0 +1,271 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert CSV to PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">CSV</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your CSV files</h3>
+      </div>
+      <p>One or many. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Press Convert to PDF</h3>
+      </div>
+      <p>Each file becomes a table on landscape A4 pages.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Save the PDFs</h3>
+      </div>
+      <p>One file downloads as a PDF; several come as a ZIP.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: raw CSV text with commas"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">data.csv</text>
+        <text class="f-s" x="30" y="48">name,qty,price</text>
+        <text class="f-s" x="30" y="66">pen,10,1.20</text>
+        <text class="f-s" x="160" y="50">Hard to read</text>
+        <text class="f-s" x="160" y="66">and share</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same data as a striped table in a PDF"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">data.pdf</text>
+        <text class="f-s" x="30" y="48">name | qty | price</text>
+        <text class="f-s" x="30" y="66">pen | 10 | 1.20</text>
+        <text class="f-s" x="160" y="50">A table anyone</text>
+        <text class="f-s" x="160" y="66">can open</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        How the table is laid out
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Part</th>
+          <th scope="col">In the PDF</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First row</td>
+          <td>Bold header on a blue background</td>
+          <td>Repeated on each page</td>
+        </tr>
+        <tr>
+          <td>Other rows</td>
+          <td>Striped, 9 point text</td>
+          <td>Landscape A4</td>
+        </tr>
+        <tr>
+          <td>Many columns</td>
+          <td>Shrunk to fit the width</td>
+          <td>Cell text wraps onto extra lines</td>
+        </tr>
+        <tr>
+          <td>Separators</td>
+          <td>Comma, semicolon, tab or pipe</td>
+          <td>Detected automatically</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      A CSV file is plain data with commas, easy for programs and hard for
+      people. Converting CSV to PDF turns it into a readable table you can
+      print, email or attach. The file is converted in your browser, so your
+      data is never uploaded.
+    </p>
+
+    <h2 id="layout">How the table looks</h2>
+    <p>
+      The first row becomes a bold header with a blue background and the rest
+      become striped rows in 9 point text on landscape A4 pages. Long tables
+      continue over as many pages as needed, with the header repeated on each
+      page.
+    </p>
+
+    <h2 id="delimiters">Commas, semicolons and tabs</h2>
+    <p>
+      The delimiter is detected automatically, so comma, semicolon, tab and pipe
+      separated files all convert. Quoted fields with commas or line breaks
+      follow standard CSV rules.
+    </p>
+
+    <h2 id="wide">Wide files and other scripts</h2>
+    <p>
+      All columns are shrunk to the page width and cell text wraps, so very wide
+      files get narrow columns. There is no page size or orientation setting;
+      split wide data or drop columns you do not need. The file is read as UTF-8
+      and the PDF uses Helvetica, so accents work, but Chinese, Arabic or
+      Cyrillic text may not display.
+    </p>
+
+    <h2 id="excel">CSV to PDF or Excel to PDF</h2>
+    <p>
+      CSV holds raw values only, so no formatting is kept. For .xlsx or .xls
+      files with formatting and several sheets use
+      <a href="/excel-to-pdf">Excel to PDF</a>. Rows that are completely blank
+      are dropped, and a file with no values triggers an empty-file message.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF library in your browser reads the CSV, draws the table and saves the
+      PDF on your device. Your spreadsheet data is never sent anywhere.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Data exports, inventory and price lists, survey results, logs, reports
+      from databases and web apps.
+    </p>
+    <ul>
+      <li>
+        <strong>Several CSV files</strong> come back as csv-converted.zip with
+        one PDF each.
+      </li>
+      <li>
+        <strong>Check encoding.</strong> Files saved in other encodings can show
+        garbled characters.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert CSV to PDF?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Add the CSV file, press Convert to PDF and save the result.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is CSV to PDF free?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How is the CSV laid out in the PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        A bold header row, striped rows in 9 point text and landscape A4 pages,
+        with the header repeated on each page.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does it work with semicolons or tabs?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">Yes. The separator is detected automatically.</div>
+    </details>
+    <details>
+      <summary>
+        Why is my table squashed?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        All columns shrink to fit the page width. Split wide data or remove
+        columns.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I convert several CSV files at once?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. One file gives a PDF; several are saved as a ZIP.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does it handle accents and other alphabets?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Latin letters with accents work. Chinese, Arabic or Cyrillic text may
+        not display.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my data uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The conversion runs in your browser and the file never leaves your
+        device.
+      </div>
+    </details>
+  </div>
+</section>

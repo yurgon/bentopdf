@@ -1,0 +1,96 @@
+{
+  "slug": "odt-to-pdf",
+  "mainQuery": "odt to pdf",
+  "title": "ODT to PDF: Convert OpenDocument Text Files, Free",
+  "description": "Convert ODT to PDF in your browser, no LibreOffice needed: layout, tables and images kept, searchable text. Free, nothing is uploaded.",
+  "h1": "ODT to PDF",
+  "crumb": "ODT to PDF",
+  "promise": "Convert ODT to PDF without installing LibreOffice: add OpenDocument text files and save PDFs with the layout kept. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "No LibreOffice needed",
+    "Several files at once"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "ODT to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts OpenDocument text (.odt) to PDF",
+      "Styles, tables, images and page layout kept",
+      "Text stays selectable and searchable",
+      "Several files at once, saved as a ZIP",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert ODT to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "noinstall",
+      "label": "Convert without LibreOffice"
+    },
+    {
+      "id": "kept",
+      "label": "Formatting, tables and images"
+    },
+    {
+      "id": "first",
+      "label": "Why the first file is slower"
+    },
+    {
+      "id": "other",
+      "label": "Several files and other formats"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "word-to-pdf",
+      "icon": "file",
+      "name": "Word to PDF",
+      "why": "For DOC, DOCX and the same engine."
+    },
+    {
+      "slug": "rtf-to-pdf",
+      "icon": "type",
+      "name": "RTF to PDF",
+      "why": "For rich text files."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine converted documents."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink the result for email."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

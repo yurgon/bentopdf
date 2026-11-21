@@ -1,0 +1,96 @@
+{
+  "slug": "pdf-to-markdown",
+  "mainQuery": "pdf to markdown",
+  "title": "PDF to Markdown: Convert PDF Text and Tables, Free",
+  "description": "Convert PDF to Markdown in your browser: headings, lists and emphasis kept, optional images. Free, no account, nothing is uploaded.",
+  "h1": "PDF to Markdown",
+  "crumb": "PDF to Markdown",
+  "promise": "Convert PDF to Markdown: headings, lists and emphasis are kept, ready for Obsidian, a wiki or your notes. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Headings and lists kept",
+    "Several PDFs at once"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "PDF to Markdown",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts PDF text to Markdown",
+      "Headings from font sizes, lists, bold and italic",
+      "Optional images embedded as base64",
+      "Pages separated by a horizontal rule",
+      "Several PDFs at once, saved as a ZIP"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert a PDF to Markdown"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "structure",
+      "label": "How much structure is kept"
+    },
+    {
+      "id": "images",
+      "label": "Images and file size"
+    },
+    {
+      "id": "scans",
+      "label": "Scans and complex layouts"
+    },
+    {
+      "id": "text",
+      "label": "Markdown or plain text"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "pdf-to-text",
+      "icon": "type",
+      "name": "PDF to Text",
+      "why": "Raw text with no structure."
+    },
+    {
+      "slug": "ocr-pdf",
+      "icon": "scan",
+      "name": "PDF OCR",
+      "why": "Add a text layer to scans first."
+    },
+    {
+      "slug": "markdown-to-pdf",
+      "icon": "file",
+      "name": "Markdown to PDF",
+      "why": "Go the other way."
+    },
+    {
+      "slug": "pdf-to-word",
+      "icon": "file",
+      "name": "PDF to Word",
+      "why": "For an editable Word document instead."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

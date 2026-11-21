@@ -1,0 +1,92 @@
+{
+  "slug": "page-numbers",
+  "mainQuery": "add page numbers to pdf",
+  "title": "Add Page Numbers to PDF: Any Position, Free Online",
+  "description": "Add page numbers to PDF in your browser: six positions, 1 or 1 / 5 format, any size and color. Free, no account, nothing is uploaded.",
+  "h1": "Add Page Numbers to PDF",
+  "crumb": "Page Numbers",
+  "promise": "Add page numbers to PDF files: pick the position, the format and the size, and save the numbered document. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "Six positions", "1 or 1 / 5 format"],
+  "workArea": "legacy",
+  "app": {
+    "name": "Page Numbers",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Six positions: top or bottom, left, center or right",
+      "Format 1, 2, 3 or 1 / 5, 2 / 5",
+      "Font size 6 to 72 points and any color",
+      "Numbers drawn into the page, shown in every viewer",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to add page numbers to a PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "position",
+      "label": "Choose where the numbers go"
+    },
+    {
+      "id": "format",
+      "label": "Page 3 or 3 / 12"
+    },
+    {
+      "id": "cover",
+      "label": "Skip a cover or start later"
+    },
+    {
+      "id": "permanent",
+      "label": "The numbers are permanent"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "header-footer",
+      "icon": "type",
+      "name": "Header & Footer",
+      "why": "Custom text with page and total placeholders."
+    },
+    {
+      "slug": "bates-numbering",
+      "icon": "hash",
+      "name": "Bates Numbering",
+      "why": "Prefixed legal numbers across several files."
+    },
+    {
+      "slug": "add-page-labels",
+      "icon": "hash",
+      "name": "Page Labels",
+      "why": "Roman numerals shown by viewers."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Combine files before numbering."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

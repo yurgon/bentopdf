@@ -1,0 +1,283 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to add Bates numbers to a PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your PDFs</h3>
+      </div>
+      <p>One or many, in the order they should be numbered.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-accent" x="8" y="14" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="27">Style: CASE-000001</text>
+          <rect class="f-page" x="8" y="38" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="51">Padding: 6 digits</text>
+          <rect class="f-page" x="8" y="62" width="144" height="18" rx="4" />
+          <text class="f-s" x="18" y="75">Position: Footer Right</text>
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Set the style</h3>
+      </div>
+      <p>
+        Pick a preset or write a custom template, then choose the padding,
+        position, font and starting number.
+      </p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Apply and save</h3>
+      </div>
+      <p>Press Apply Bates Numbers. The numbered files download.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: discovery documents without identifying numbers"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">contract.pdf</text>
+        <text class="f-s" x="30" y="48">30 pages</text>
+        <text class="f-s" x="30" y="66">No Bates numbers</text>
+        <text class="f-s" x="160" y="50">Hard to cite</text>
+        <text class="f-s" x="160" y="66">a specific page</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: each page stamped with a Bates number"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">contract.pdf</text>
+        <text class="f-s" x="30" y="48">SMITH-000001</text>
+        <text class="f-s" x="30" y="66">SMITH-000030</text>
+        <text class="f-s" x="160" y="50">Every page has a</text>
+        <text class="f-s" x="160" y="66">unique number</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        Template placeholders
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Placeholder</th>
+          <th scope="col">Prints</th>
+          <th scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[BATES]</td>
+          <td>The sequential number</td>
+          <td>000001, 000002</td>
+        </tr>
+        <tr>
+          <td>[PAGE]</td>
+          <td>The page number within the file</td>
+          <td>1, 2, 3</td>
+        </tr>
+        <tr>
+          <td>[FILE]</td>
+          <td>The file counter</td>
+          <td>1, 2</td>
+        </tr>
+        <tr>
+          <td>[FILENAME]</td>
+          <td>The source file name</td>
+          <td>contract</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      Bates numbering gives every page in a set of documents its own sequential
+      identifier, so lawyers and reviewers can cite a page without confusion. It
+      is standard in discovery, audits and records requests. Here you stamp the
+      numbers in your browser, so privileged documents are never uploaded.
+    </p>
+
+    <h2 id="style">Prefixes, padding and custom templates</h2>
+    <p>
+      By default a Bates number is a six-digit zero-padded number such as 000001
+      at the footer center. Presets add an exhibit number, a case label and a
+      page number, for example
+      <strong>Exhibit 1 Case XYZ 000001 Page 1</strong>, and a preview shows the
+      exact text before you process anything. For your own prefix, choose Custom
+      style and write a template: <strong>SMITH-[BATES]</strong> gives
+      SMITH-000001, SMITH-000002 and so on.
+    </p>
+
+    <h2 id="many">Numbering across several files</h2>
+    <p>
+      Numbering continues across files. If the first file has 30 pages and
+      numbering starts at 1, the second begins at 000031, following the order of
+      the file list, which you can rearrange by dragging. There is no option to
+      restart the count per file; process the files separately if you need that.
+    </p>
+
+    <h2 id="digits">Digits, position and font</h2>
+    <p>
+      Padding can be 3, 4, 5 or 6 digits, or off. The count itself is not
+      capped. Choose one of six spots, header or footer at the left, center or
+      right, in Helvetica, Times New Roman or Courier. The margin scales with
+      the page, and existing content is not moved, so on pages printed edge to
+      edge the stamp can overlap it.
+    </p>
+
+    <h2 id="text">Real text, not an image</h2>
+    <p>
+      The numbers are real text, so they can be selected, searched and read by
+      review software without OCR. They use the built-in PDF fonts, which cover
+      Latin characters only, so a template with other scripts will fail.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A PDF library in your browser draws the stamp on each page and saves the
+      numbered files to your downloads. The documents, the case name and the
+      numbering are never sent anywhere.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Litigation discovery, regulatory productions, audits, FOIA and records
+      responses, due diligence rooms, any set where each page needs a unique
+      number.
+    </p>
+    <ul>
+      <li>
+        <strong>Redact before you stamp</strong> so the numbers sit on the final
+        pages: <a href="/redact-pdf">Redact PDF</a>.
+      </li>
+      <li>
+        <strong>For plain numbers</strong> without a prefix use
+        <a href="/page-numbers">Page Numbers</a>.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        What is Bates numbering?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        A way to give every page in a set of documents a unique sequential
+        number, often with a prefix, so each page can be cited exactly.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How do I add Bates numbers to a PDF?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the file, choose a style or write a template, set the padding and
+        position and press Apply Bates Numbers.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is Bates numbering free here?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">Yes, with no account and no limit on files.</div>
+    </details>
+    <details>
+      <summary>
+        Can I use my own prefix or case number?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. Choose Custom style and write a template such as SMITH-[BATES].
+      </div>
+    </details>
+    <details>
+      <summary>
+        Does the numbering continue across several PDFs?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. The count follows the order of the file list and continues from one
+        file to the next.
+      </div>
+    </details>
+    <details>
+      <summary>
+        How many digits can the number have?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Zero padding can be 3, 4, 5 or 6 digits, or none. The count is not
+        capped.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Are the Bates numbers searchable?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. They are real text drawn in Helvetica, Times New Roman or Courier.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Are my documents uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. The stamping happens in your browser and nothing is sent to a
+        server.
+      </div>
+    </details>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+{
+  "slug": "organize-pdf",
+  "mainQuery": "rearrange pdf pages",
+  "title": "Rearrange PDF Pages: Reorder, Duplicate, Delete, Free",
+  "description": "Rearrange PDF pages in your browser: drag thumbnails, type a new order, duplicate or delete pages. Free, no account, nothing is uploaded.",
+  "h1": "Rearrange PDF Pages",
+  "crumb": "Organize PDF",
+  "promise": "Rearrange PDF pages by dragging their thumbnails or typing a new order, then duplicate or delete pages and save. Nothing is uploaded.",
+  "facts": [
+    "Nothing is uploaded",
+    "Drag to reorder",
+    "Duplicate and delete pages"
+  ],
+  "workArea": "legacy",
+  "app": {
+    "name": "Organize PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Reorder pages by dragging thumbnails",
+      "Type a new page order such as 3, 1, 2, 4",
+      "Duplicate pages and delete pages",
+      "Pages copied as they are, no quality loss",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to rearrange PDF pages"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "drag",
+      "label": "Drag pages into a new order"
+    },
+    {
+      "id": "type",
+      "label": "Type a new page order"
+    },
+    {
+      "id": "duplicate",
+      "label": "Duplicate and delete pages"
+    },
+    {
+      "id": "quality",
+      "label": "Quality, bookmarks and other files"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "delete-pages",
+      "icon": "x",
+      "name": "Delete Pages",
+      "why": "Remove many pages at once by range."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Bring pages from other PDFs into one file."
+    },
+    {
+      "slug": "rotate-pdf",
+      "icon": "rotate",
+      "name": "Rotate PDF",
+      "why": "Turn sideways pages while you sort."
+    },
+    {
+      "slug": "bookmark",
+      "icon": "book",
+      "name": "Bookmarks",
+      "why": "Add the outline back after reordering."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

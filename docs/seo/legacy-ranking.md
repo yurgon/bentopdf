@@ -2,6 +2,8 @@
 
 Главный запрос и показы в месяц. Взяты в работу в третьей пачке: fill pdf (form-filler), pdf to pdfa, excel to pdf, rotate pdf, crop pdf, password protect pdf, flatten pdf, tiff to pdf, txt to pdf, pdf to svg, rtf to pdf, extract images from pdf.
 
+Четвёртая пачка (только английский, 2026-11-21): organize-pdf (rearrange pdf pages), svg-to-pdf, mobi-to-pdf, page-numbers, bates-numbering, csv-to-pdf, add-watermark, odt-to-pdf, webp-to-pdf, pdf-to-tiff, remove-metadata, pdf-to-markdown. Переводы на другие языки откладываем: сначала проверка запросов каждой страны.
+
 Не делаем отдельно (та же выдача, что у готовых страниц): extract pages (как Split PDF), pdf to csv (как PDF в Excel), compress to 100kb/200kb/500kb/1mb/2mb (как Compress PDF).
 
 | Страница                        | Запрос                   | Показов                            |

@@ -1,0 +1,92 @@
+{
+  "slug": "mobi-to-pdf",
+  "mainQuery": "mobi to pdf",
+  "title": "MOBI to PDF: Convert Kindle MOBI eBooks, Free",
+  "description": "Convert MOBI to PDF in your browser: DRM-free Kindle eBooks keep their headings, images and searchable text. Free, nothing is uploaded.",
+  "h1": "MOBI to PDF",
+  "crumb": "MOBI to PDF",
+  "promise": "Convert MOBI to PDF: add DRM-free MOBI eBooks and save PDFs with real, searchable text. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "Searchable text", "Several books at once"],
+  "workArea": "legacy",
+  "app": {
+    "name": "MOBI to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts MOBI eBooks to PDF",
+      "Keeps headings, bold, lists and images",
+      "Text stays selectable and searchable",
+      "Several books at once, saved as a ZIP",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert MOBI to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "drm",
+      "label": "Which books can be converted"
+    },
+    {
+      "id": "formats",
+      "label": "Only .mobi files"
+    },
+    {
+      "id": "layout",
+      "label": "Pages, text and images"
+    },
+    {
+      "id": "many",
+      "label": "Several books at once"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "epub-to-pdf",
+      "icon": "book",
+      "name": "EPUB to PDF",
+      "why": "For EPUB books and converted Kindle files."
+    },
+    {
+      "slug": "pdf-to-epub",
+      "icon": "book",
+      "name": "PDF to EPUB",
+      "why": "Turn a PDF back into an eBook."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a book with many pictures."
+    },
+    {
+      "slug": "merge-pdf",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "why": "Join several books into one PDF."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

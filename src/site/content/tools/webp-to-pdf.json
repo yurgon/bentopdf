@@ -1,0 +1,92 @@
+{
+  "slug": "webp-to-pdf",
+  "mainQuery": "webp to pdf",
+  "title": "WebP to PDF: Convert WebP Images to PDF, Free",
+  "description": "Convert WebP to PDF in your browser: several images become pages of one PDF, with a quality choice. Free, no account, nothing is uploaded.",
+  "h1": "WebP to PDF",
+  "crumb": "WebP to PDF",
+  "promise": "Convert WebP to PDF: add one or more WebP images and save them as pages of one PDF. Nothing is uploaded.",
+  "facts": ["Nothing is uploaded", "One page per image", "Choose the quality"],
+  "workArea": "legacy",
+  "app": {
+    "name": "WebP to PDF",
+    "category": "UtilitiesApplication",
+    "featureList": [
+      "Converts WebP images to PDF",
+      "Each image on its own page, in list order",
+      "High, medium or low quality",
+      "Reorder or remove images before converting",
+      "Runs in the browser, nothing is uploaded"
+    ]
+  },
+  "outline": [
+    {
+      "id": "how-to",
+      "label": "How to convert WebP to PDF"
+    },
+    {
+      "id": "result-example",
+      "label": "What you get"
+    },
+    {
+      "id": "pages",
+      "label": "One page per image"
+    },
+    {
+      "id": "size",
+      "label": "Page size"
+    },
+    {
+      "id": "quality",
+      "label": "Quality, transparency and animation"
+    },
+    {
+      "id": "mixed",
+      "label": "Mixing formats"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How it works"
+    },
+    {
+      "id": "uses",
+      "label": "Uses and limits"
+    },
+    {
+      "id": "faq",
+      "label": "Questions"
+    },
+    {
+      "id": "related",
+      "label": "Related tools"
+    }
+  ],
+  "related": [
+    {
+      "slug": "image-to-pdf",
+      "icon": "image",
+      "name": "Images to PDF",
+      "why": "Mix WebP, JPG and PNG in one PDF."
+    },
+    {
+      "slug": "jpg-to-pdf",
+      "icon": "image",
+      "name": "JPG to PDF",
+      "why": "For photos in JPG."
+    },
+    {
+      "slug": "fix-page-size",
+      "icon": "file",
+      "name": "Fix Page Size",
+      "why": "Set A4 or Letter pages."
+    },
+    {
+      "slug": "compress-pdf",
+      "icon": "compress",
+      "name": "Compress PDF",
+      "why": "Shrink a large result."
+    }
+  ],
+  "updated": "2026-11-17",
+  "updatedNote": "Works offline once the page has loaded"
+}

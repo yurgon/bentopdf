@@ -1,0 +1,278 @@
+<section class="block" id="how-to" aria-labelledby="h-how">
+  <h2 id="h-how" class="block-title">How to convert ODT to PDF</h2>
+  <ol class="steps">
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <rect class="f-zone" x="20" y="14" width="120" height="72" rx="8" />
+          <g transform="translate(65 22)">
+            <path class="f-page" d="M0 0h22l8 8v30H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">ODT</text>
+          </g>
+          <path class="f-stroke" d="M80 80V68M75 73l5-5 5 5" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Add your ODT files</h3>
+      </div>
+      <p>One or many. They stay on your device.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Press Convert to PDF</h3>
+      </div>
+      <p>The first conversion downloads the converter, about 77 MB, once.</p>
+    </li>
+    <li class="step">
+      <div class="step-fig" aria-hidden="true">
+        <svg viewBox="0 0 160 100">
+          <g transform="translate(65 12)">
+            <path class="f-accent" d="M0 0h22l8 8v32H0z" />
+            <text class="f-t" x="15" y="30" text-anchor="middle">PDF</text>
+          </g>
+          <path class="f-stroke" d="M80 60v16M74 70l6 6 6-6M56 86h48" />
+        </svg>
+      </div>
+      <div class="step-head">
+        <span class="step-num"></span>
+        <h3>Save the PDFs</h3>
+      </div>
+      <p>One file downloads as a PDF; several come as a ZIP.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="block" id="result-example" aria-labelledby="h-result">
+  <h2 id="h-result" class="block-title">What you get</h2>
+  <div class="before-after">
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="Before: a document in OpenDocument format"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">letter.odt</text>
+        <text class="f-s" x="30" y="48">LibreOffice Writer</text>
+        <text class="f-s" x="30" y="66">Needs the program</text>
+        <text class="f-s" x="160" y="50">Many people cannot</text>
+        <text class="f-s" x="160" y="66">open it</text>
+      </svg>
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure class="ba-fig">
+      <svg
+        viewBox="0 0 300 120"
+        role="img"
+        aria-label="After: the same document as a PDF"
+      >
+        <rect class="f-page" x="20" y="8" width="120" height="104" rx="4" />
+        <text class="f-s" x="30" y="30">letter.pdf</text>
+        <text class="f-s" x="30" y="48">Same layout</text>
+        <text class="f-s" x="30" y="66">Opens anywhere</text>
+        <text class="f-s" x="160" y="50">Fixed layout,</text>
+        <text class="f-s" x="160" y="66">searchable text</text>
+      </svg>
+      <figcaption>After</figcaption>
+    </figure>
+  </div>
+  <div class="table-wrap" style="margin-top: 24px">
+    <table class="table">
+      <caption class="visually-hidden">
+        What is kept
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">In the ODT</th>
+          <th scope="col">In the PDF</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Styles, tables, images</td>
+          <td>Kept</td>
+          <td>As Writer would print them</td>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td>Real, searchable text</td>
+          <td>Not a picture of the page</td>
+        </tr>
+        <tr>
+          <td>Embedded OLE objects, missing fonts</td>
+          <td>May differ</td>
+          <td>Check one sample first</td>
+        </tr>
+        <tr>
+          <td>.docx, .doc, .ott</td>
+          <td>Not here</td>
+          <td>Use Word to PDF, or save .ott as .odt</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block block-prose" id="article" aria-label="Guide">
+  <div class="prose">
+    <p class="lede">
+      ODT is the OpenDocument text format used by LibreOffice, OpenOffice and
+      many other programs. Converting ODT to PDF gives you a fixed document
+      anyone can open and print, without LibreOffice. It runs in your browser,
+      so the document is never uploaded.
+    </p>
+
+    <h2 id="noinstall">Convert without LibreOffice</h2>
+    <p>
+      Drop the .odt file on the page and press Convert to PDF. A build of
+      LibreOffice compiled for the browser does the conversion, so you need no
+      LibreOffice, OpenOffice or Word on the computer.
+    </p>
+
+    <h2 id="kept">Formatting, tables and images</h2>
+    <p>
+      The conversion uses LibreOffice's own PDF export, so styles, tables,
+      images and page layout come through as Writer would print them. The text
+      is real text, so it can be selected, copied and searched. Documents with
+      embedded OLE objects or fonts that are not available may differ slightly,
+      so check one sample before a big batch.
+    </p>
+
+    <h2 id="first">Why the first file is slower</h2>
+    <p>
+      The engine is large and is downloaded and started the first time you
+      convert, with a progress indicator. After that it starts at once, even
+      offline. Any standard OpenDocument text file works, whichever program
+      saved it.
+    </p>
+
+    <h2 id="other">Several files and other formats</h2>
+    <p>
+      Add as many .odt files as you like. One downloads as a PDF with the
+      original name; two or more arrive in odt-converted.zip. Word files go
+      through
+      <a href="/word-to-pdf">Word to PDF</a>, which uses the same engine.
+    </p>
+
+    <h2 id="how-it-works">How it works</h2>
+    <p>
+      A LibreOffice engine compiled for the browser opens the ODT and exports it
+      to PDF on your device. It is downloaded once, about 77 MB, and runs
+      locally. Your documents are never sent to a server.
+    </p>
+
+    <h2 id="uses">What people use it for, and when it will not work</h2>
+    <p>
+      Letters, reports, theses and notes written in LibreOffice or OpenOffice
+      that you need to send, print or archive as PDF.
+    </p>
+    <ul>
+      <li>
+        <strong>Only .odt is accepted.</strong> Open and save an .ott template
+        as .odt first.
+      </li>
+      <li>
+        <strong>Combine</strong> the results with
+        <a href="/merge-pdf">Merge PDF</a>.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="block-title">Questions and answers</h2>
+  <div class="faq">
+    <details open>
+      <summary>
+        How do I convert ODT to PDF without LibreOffice?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Add the .odt file and press Convert to PDF. The converter runs inside
+        your browser.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is ODT to PDF free?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        Yes, with no account, no watermark and no limit on files.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will formatting, tables and images be preserved?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. LibreOffice's own PDF export keeps styles, tables, images and
+        layout.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Why is the first conversion slower?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        The converter, about 77 MB, is downloaded once. After that it starts at
+        once.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Can I convert several ODT files at once?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. One file gives a PDF; several are saved together as a ZIP.
+      </div>
+    </details>
+    <details>
+      <summary>
+        What about DOCX, DOC or OTT files?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Only .odt works here. Use Word to PDF for Word files, and save .ott as
+        .odt first.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Will the PDF text be searchable?<svg class="i">
+          <use href="#i-plus" />
+        </svg>
+      </summary>
+      <div class="answer">
+        Yes. The PDF is exported from the real text, not a picture.
+      </div>
+    </details>
+    <details>
+      <summary>
+        Is my document uploaded?<svg class="i"><use href="#i-plus" /></svg>
+      </summary>
+      <div class="answer">
+        No. It is converted in your browser and never leaves your device.
+      </div>
+    </details>
+  </div>
+</section>
