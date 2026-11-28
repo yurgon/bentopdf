@@ -93,7 +93,14 @@ function fragment(html) {
       while (prev && prev.nodeType === 3 && !prev.data.trim())
         prev = prev.previousSibling;
       const text = prev?.textContent?.trim().toLowerCase();
-      if (text && text === pre.dataset.lang && !prev.querySelector?.('pre')) {
+      const labelLike =
+        prev?.nodeType === 3 || /^(DIV|SPAN)$/.test(prev?.tagName);
+      if (
+        text &&
+        text === pre.dataset.lang &&
+        labelLike &&
+        !prev.querySelector?.('pre')
+      ) {
         prev.remove();
         break;
       }
