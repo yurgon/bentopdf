@@ -1,6 +1,6 @@
 /* global chrome */
 // First run: what the extension does, then the first settings, then the one permission.
-import { PAPERS, getSettings, setSettings } from './shared.js';
+import { PAPERS, getSettings, setSettings, ALL_SITES } from './shared.js';
 
 const $ = (id) => document.getElementById(id);
 
@@ -75,3 +75,22 @@ $('allow').addEventListener('click', async () => {
     );
 });
 paintAllow();
+
+const pdfStatus = (text, kind) => {
+  $('open-pdfs-status').textContent = text;
+  $('open-pdfs-status').className = 'status ' + kind;
+};
+async function paintOpenPdfs() {
+  const { openPdfs } = await chrome.storage.sync.get('openPdfs');
+  if (openPdfs && (await chrome.permissions.contains(ALL_SITES))) {
+    $('open-pdfs').hidden = true;
+    pdfStatus('On. PDF links open in the Plyleaf editor.', 'ok');
+  }
+}
+$('open-pdfs').addEventListener('click', async () => {
+  await chrome.storage.sync.set({ openPdfs: true });
+  if (await chrome.permissions.request(ALL_SITES)) return paintOpenPdfs();
+  await chrome.storage.sync.set({ openPdfs: false });
+  pdfStatus('Not turned on. You can do it later in the Plyleaf button.', 'err');
+});
+paintOpenPdfs();

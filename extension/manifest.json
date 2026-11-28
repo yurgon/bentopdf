@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Plyleaf: Save Web Page as PDF",
+  "name": "Plyleaf: Save Web Page as PDF, PDF Editor",
   "short_name": "Plyleaf",
-  "version": "1.0.0",
-  "description": "Save any web page as a PDF in one click and open PDFs in free Plyleaf tools. No account, no uploads: files stay on your device.",
+  "version": "1.1.0",
+  "description": "Save any web page as a PDF in one click. Edit, sign and fill in PDFs in Chrome. No account, no uploads: files stay on your device.",
   "homepage_url": "https://plyleaf.com/",
   "minimum_chrome_version": "116",
   "icons": {
@@ -30,7 +30,8 @@
     "downloads",
     "offscreen",
     "scripting",
-    "storage"
+    "storage",
+    "declarativeNetRequestWithHostAccess"
   ],
   "optional_permissions": ["debugger"],
   "optional_host_permissions": ["https://*/*", "http://*/*"],
@@ -39,6 +40,16 @@
       "matches": ["https://plyleaf.com/*"],
       "js": ["receive.js"],
       "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["pdfjs/editor.html"],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": false
     }
   ]
 }

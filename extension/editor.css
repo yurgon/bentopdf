@@ -1,0 +1,55 @@
+/* Plyleaf additions to the bundled PDF.js editor. */
+#plyleafEmpty {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  width: min(440px, calc(100vw - 32px));
+  padding: 32px 24px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  background: light-dark(#ffffff, #2a2622);
+  color: light-dark(#2b2621, #f3f0ea);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.25);
+  font:
+    400 15px/1.5 ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  text-align: center;
+  color-scheme: light dark;
+  pointer-events: none; /* drops still reach the viewer underneath */
+}
+#plyleafEmpty h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-wrap: balance;
+}
+#plyleafEmpty p {
+  margin: 0;
+  color: light-dark(#5c544b, #cfc8bc);
+}
+#plyleafEmpty button {
+  pointer-events: auto;
+  min-height: 44px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #f0b43c;
+  color: #2b2219;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+#plyleafEmpty button:hover {
+  background: #e6a52c;
+}
+#plyleafEmpty small {
+  color: light-dark(#7a7167, #a8a095);
+}

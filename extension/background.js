@@ -2,7 +2,9 @@
 // Plyleaf extension service worker.
 // 1. Save the current page as a real (text, not screenshot) PDF through Chrome's own print
 //    engine (DevTools protocol Page.printToPDF). Nothing leaves the computer.
-// 2. Send a PDF (a link, the open PDF tab, or a local file from the popup) to a tool on
+// 2. Open PDFs in the bundled PDF.js editor (pdfjs/editor.html): from a link, the open PDF
+//    tab, a local file, or (when the visitor turns it on) every PDF link they open.
+// 3. Send a PDF (a link, the open PDF tab, or a local file from the popup) to a tool on
 //    plyleaf.com. The bytes go from here to the plyleaf.com tab through the extension only;
 //    plyleaf.com itself runs the tools in the browser and never uploads the file.
 import {
@@ -16,6 +18,8 @@ import {
   deleteHandoff,
   sweepHandoffs,
   toolUrl,
+  editorUrl,
+  ALL_SITES,
 } from './shared.js';
 
 const PDF_LINKS = [
@@ -42,6 +46,20 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
     contexts: ['link'],
     targetUrlPatterns: PDF_LINKS,
   });
+  chrome.contextMenus.create({
+    id: 'open-link:editor',
+    parentId: 'open-link',
+    title: 'Edit in the Plyleaf editor',
+    contexts: ['link'],
+    targetUrlPatterns: PDF_LINKS,
+  });
+  chrome.contextMenus.create({
+    id: 'open-link:sep',
+    parentId: 'open-link',
+    type: 'separator',
+    contexts: ['link'],
+    targetUrlPatterns: PDF_LINKS,
+  });
   for (const t of TOOLS) {
     chrome.contextMenus.create({
       id: `open-link:${t.slug}`,
@@ -52,9 +70,13 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
     });
   }
   sweepHandoffs().catch(() => {});
+  syncPdfRule();
 });
 
-chrome.runtime.onStartup.addListener(() => sweepHandoffs().catch(() => {}));
+chrome.runtime.onStartup.addListener(() => {
+  sweepHandoffs().catch(() => {});
+  syncPdfRule();
+});
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   const id = String(info.menuItemId);
@@ -73,7 +95,8 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     chrome.permissions.request({ origins: [originPattern(url)] }, (ok) => {
       if (!ok)
         return toast(tab, 'Plyleaf needs permission to read that PDF link.');
-      openUrlInTool(url, slug, tab).catch((e) => toast(tab, e.message));
+      if (slug === 'editor') openEditor(url, tab);
+      else openUrlInTool(url, slug, tab).catch((e) => toast(tab, e.message));
     });
   }
 });
@@ -81,6 +104,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 // The popup closes while Chrome shows a permission prompt, so it leaves the action in
 // session storage and it is finished here once the permission is granted.
 chrome.permissions.onAdded.addListener(async () => {
+  syncPdfRule();
   const { pending } = await chrome.storage.session.get('pending');
   if (!pending || Date.now() - pending.at > 2 * 60 * 1000) return;
   await chrome.storage.session.remove('pending');
@@ -89,6 +113,8 @@ chrome.permissions.onAdded.addListener(async () => {
     if (pending.type === 'save') await savePage(tab);
     else if (pending.type === 'open-url')
       await openUrlInTool(pending.url, pending.slug, tab);
+    else if (pending.type === 'open-editor')
+      await openEditor(pending.url, tab, pending.sameTab);
   } catch (e) {
     toast(tab, e.message);
   }
@@ -105,6 +131,10 @@ chrome.runtime.onMessage.addListener((msg, sender, reply) => {
       case 'open-url': {
         const tab = msg.tabId ? await chrome.tabs.get(msg.tabId) : undefined;
         return openUrlInTool(msg.url, msg.slug, tab);
+      }
+      case 'open-editor': {
+        const tab = msg.tabId ? await chrome.tabs.get(msg.tabId) : undefined;
+        return openEditor(msg.url, tab, msg.sameTab);
       }
       case 'handoff-get': {
         if (!sender.url?.startsWith('https://plyleaf.com/'))
@@ -212,6 +242,53 @@ async function blobUrl(base64, type) {
     throw new Error(res?.error || 'Could not prepare the download.');
   return res.url;
 }
+
+// ---------- the bundled editor ----------
+async function openEditor(url, tab, sameTab = false) {
+  const target = editorUrl(url);
+  if (sameTab && tab?.id) await chrome.tabs.update(tab.id, { url: target });
+  else
+    await chrome.tabs.create({
+      url: target,
+      index: tab ? tab.index + 1 : undefined,
+    });
+  return true;
+}
+
+// "Open PDFs in the Plyleaf editor": a redirect rule for PDF addresses opened in a tab.
+// It is on only while the setting is on AND the visitor has given access to all sites.
+const PDF_RULE_ID = 1;
+async function syncPdfRule() {
+  try {
+    const { openPdfs } = await chrome.storage.sync.get('openPdfs');
+    const allowed = await chrome.permissions.contains(ALL_SITES);
+    const addRules = [];
+    if (openPdfs && allowed) {
+      addRules.push({
+        id: PDF_RULE_ID,
+        priority: 1,
+        action: {
+          type: 'redirect',
+          redirect: { regexSubstitution: editorUrl('\\0') },
+        },
+        condition: {
+          regexFilter: '^https?://[^?#]*\\.[Pp][Dd][Ff]([?#].*)?$',
+          resourceTypes: ['main_frame'],
+        },
+      });
+    }
+    await chrome.declarativeNetRequest.updateDynamicRules({
+      removeRuleIds: [PDF_RULE_ID],
+      addRules,
+    });
+  } catch (e) {
+    console.warn('Plyleaf: PDF rule', e);
+  }
+}
+chrome.permissions.onRemoved.addListener(syncPdfRule);
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === 'sync' && 'openPdfs' in changes) syncPdfRule();
+});
 
 // ---------- open a PDF in a Plyleaf tool ----------
 async function openUrlInTool(url, slug, tab) {

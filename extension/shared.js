@@ -147,6 +147,16 @@ export async function sweepHandoffs() {
   });
 }
 
+/** The bundled editor, optionally opening a PDF from the web. */
+export function editorUrl(src) {
+  return (
+    chrome.runtime.getURL('pdfjs/editor.html') + (src ? '#src=' + src : '')
+  );
+}
+
+/** Host access needed to open every PDF link in the editor. */
+export const ALL_SITES = { origins: ['https://*/*', 'http://*/*'] };
+
 export function toolUrl(slug, id) {
   return `${SITE}/${slug}#plyleaf-ext=${id}`;
 }

@@ -107,3 +107,9 @@ body {
 html {
   overflow-x: hidden;
 }
+.more {
+  margin-top: 6px;
+  color: var(--ink-2);
+  font-size: 13px;
+  font-weight: 600;
+}

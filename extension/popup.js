@@ -7,6 +7,8 @@ import {
   canSave,
   looksLikePdfUrl,
   SITE,
+  editorUrl,
+  ALL_SITES,
 } from './shared.js';
 
 const $ = (id) => document.getElementById(id);
@@ -113,6 +115,23 @@ async function main() {
   if (tab && (await isPdfTab(tab))) {
     $('pdf').hidden = false;
     $('pdf-title').textContent = tab.title || tab.url;
+    $('edit-btn').addEventListener('click', async () => {
+      const st = $('pdf-status');
+      try {
+        const msg = {
+          type: 'open-editor',
+          url: tab.url,
+          tabId: tab.id,
+          sameTab: true,
+        };
+        await withPermission({ origins: [originPattern(tab.url)] }, msg, () =>
+          send(msg)
+        );
+        window.close();
+      } catch (e) {
+        status(st, e.message, 'err');
+      }
+    });
     toolButtons($('pdf-tools'), async (slug) => {
       const st = $('pdf-status');
       status(st, 'Opening…');
@@ -162,6 +181,41 @@ async function main() {
   } else {
     $('blocked').hidden = false;
   }
+
+  // ---------- local file in the editor ----------
+  $('local-edit').addEventListener('click', () => {
+    chrome.tabs.create({
+      url: editorUrl(),
+      index: tab ? tab.index + 1 : undefined,
+    });
+    window.close();
+  });
+
+  // ---------- open every PDF link in the editor ----------
+  const openPdfs = $('open-pdfs');
+  const stored = await chrome.storage.sync.get('openPdfs');
+  openPdfs.checked =
+    !!stored.openPdfs && (await chrome.permissions.contains(ALL_SITES));
+  openPdfs.addEventListener('change', async () => {
+    const st = $('open-pdfs-status');
+    if (!openPdfs.checked) {
+      await chrome.storage.sync.set({ openPdfs: false });
+      return status(st, '');
+    }
+    // set first: if the popup closes during Chrome's prompt, the service worker still
+    // turns the rule on when the permission arrives
+    await chrome.storage.sync.set({ openPdfs: true });
+    const ok = await chrome.permissions.request(ALL_SITES);
+    if (!ok) {
+      openPdfs.checked = false;
+      await chrome.storage.sync.set({ openPdfs: false });
+      status(
+        st,
+        'Chrome needs your OK to open PDF links from any site.',
+        'err'
+      );
+    } else status(st, 'PDF links now open in the Plyleaf editor.', 'ok');
+  });
 
   // ---------- tools on the site for a local file ----------
   toolButtons($('site-tools'), (slug) => {

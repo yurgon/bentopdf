@@ -43,6 +43,15 @@ Plyleaf is a free set of more than 100 PDF tools at https://plyleaf.com
 - Data usage: collects none of the listed data types. Tick the three certifications.
 - Privacy policy URL: https://plyleaf.com/privacy
 
+## v1.1 (built-in editor): extra fields
+
+- Name: Plyleaf: Save Web Page as PDF, PDF Editor
+- Summary: Save any web page as a PDF in one click. Edit, sign and fill in PDFs in Chrome. No account, no uploads: files stay on your device.
+- Add to the description, under OPEN PDFS IN PLYLEAF: "• Built-in PDF editor: add text, draw, highlight, insert images, sign and fill in forms right in Chrome, then save. Works offline." and "• Optional: open every PDF link in the Plyleaf editor instead of Chrome's viewer."
+- declarativeNetRequestWithHostAccess: Only when the user turns on "Open PDF links in the Plyleaf editor": one redirect rule sends tabs opening a .pdf address to the bundled editor page. Off by default.
+- Host permission (all sites, optional): asked only when the user turns on that setting, to read the PDF the user opened so the bundled editor can show it.
+- 'wasm-unsafe-eval' in the extension CSP: the bundled PDF.js uses WebAssembly to decode images inside PDFs. All code is in the package; nothing is loaded from the web.
+
 ## Permission justifications
 
 - `debugger` (optional, asked on first save): runs Chrome's own print engine (`Page.printToPDF`) on the page the user chose to save. Attached only for the moment of saving, then detached.

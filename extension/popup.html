@@ -95,19 +95,42 @@
 
     <!-- shown when the tab is a PDF -->
     <section id="pdf" class="panel" hidden>
-      <h1>Open this PDF in Plyleaf</h1>
+      <h1>Edit this PDF</h1>
       <p class="page-title" id="pdf-title"></p>
+      <button type="button" class="btn btn-primary btn-block" id="edit-btn">
+        Open in the Plyleaf editor
+      </button>
+      <p class="muted">
+        Add text, draw, highlight, sign and fill in forms, right here.
+      </p>
+      <h2 class="more">Or use another tool on plyleaf.com</h2>
       <div class="tools" id="pdf-tools"></div>
       <p class="status" id="pdf-status" role="status" aria-live="polite"></p>
     </section>
 
     <section class="panel local">
       <h2>A PDF on your computer?</h2>
+      <button type="button" class="btn btn-block" id="local-edit">
+        Edit a PDF from your computer
+      </button>
       <p class="muted">
-        Open a tool on plyleaf.com and drop the file in. It is processed right
-        in your browser.
+        Or open a tool on plyleaf.com and drop the file in. It is processed
+        right in your browser.
       </p>
       <div class="tools" id="site-tools"></div>
+    </section>
+
+    <section class="panel">
+      <label class="check"
+        ><input type="checkbox" id="open-pdfs" /> Open PDF links in the Plyleaf
+        editor</label
+      >
+      <p
+        class="status"
+        id="open-pdfs-status"
+        role="status"
+        aria-live="polite"
+      ></p>
     </section>
 
     <footer class="foot">
