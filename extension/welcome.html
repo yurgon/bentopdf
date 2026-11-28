@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Plyleaf</title>
+    <link rel="stylesheet" href="ui.css" />
+    <link rel="stylesheet" href="welcome.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="top">
+        <svg
+          class="mark"
+          viewBox="0 0 24 24"
+          width="28"
+          height="28"
+          aria-hidden="true"
+        >
+          <rect
+            class="s"
+            x="3.5"
+            y="5.5"
+            width="13"
+            height="16"
+            rx="2.5"
+            fill="none"
+            stroke-width="1.6"
+          />
+          <path
+            class="s"
+            d="M8 2.5h10.5a2.5 2.5 0 0 1 2.5 2.5v13.5"
+            fill="none"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+          <path
+            d="M3.5 13.5 10 9.5l6.5 4"
+            fill="none"
+            stroke="#d99a1e"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span class="brand">Plyleaf</span>
+      </header>
+
+      <!-- step 1: what it does -->
+      <section class="step" id="step-1">
+        <h1>Any web page, saved as a clean PDF</h1>
+        <ul class="points">
+          <li>
+            <strong>One click.</strong> Press the Plyleaf button, or right-click
+            a page and choose <em>Save page as PDF</em>. Links and text stay
+            selectable.
+          </li>
+          <li>
+            <strong>PDF links, ready to edit.</strong> Right-click a link to a
+            PDF and open it straight in a free Plyleaf tool: edit, sign,
+            compress, merge, convert.
+          </li>
+          <li>
+            <strong>Nothing is uploaded.</strong> Pages and files are handled on
+            your computer. No account, no limits.
+          </li>
+        </ul>
+        <div class="actions">
+          <button type="button" class="btn btn-primary" data-next="2">
+            Continue
+          </button>
+        </div>
+      </section>
+
+      <!-- step 2: first settings -->
+      <section class="step" id="step-2" hidden>
+        <h1>Your PDF settings</h1>
+        <p class="lede">You can change these any time in the Plyleaf button.</p>
+        <div class="opts">
+          <label class="field">
+            <span>Paper size</span>
+            <select id="paper"></select>
+          </label>
+          <div class="field">
+            <span id="orient-label">Orientation</span>
+            <div class="seg" role="group" aria-labelledby="orient-label">
+              <button type="button" data-landscape="false">Portrait</button>
+              <button type="button" data-landscape="true">Landscape</button>
+            </div>
+          </div>
+          <label class="check"
+            ><input type="checkbox" id="background" /> Keep background colors
+            and images</label
+          >
+          <label class="check"
+            ><input type="checkbox" id="nomargins" /> No margins</label
+          >
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-primary" data-next="3">
+            Continue
+          </button>
+        </div>
+      </section>
+
+      <!-- step 3: permission + pin -->
+      <section class="step" id="step-3" hidden>
+        <h1>Turn on page saving</h1>
+        <p class="lede">
+          Plyleaf saves pages with Chrome's own print engine. Chrome will ask
+          you to allow this once. It is used only while a page is being saved,
+          and the PDF goes straight to your Downloads folder.
+        </p>
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="allow">
+            Allow page saving
+          </button>
+          <span
+            class="status"
+            id="allow-status"
+            role="status"
+            aria-live="polite"
+          ></span>
+        </div>
+        <div class="pin">
+          <h2>Keep Plyleaf one click away</h2>
+          <p>
+            Click the puzzle icon at the top right of Chrome, then the pin next
+            to Plyleaf.
+          </p>
+        </div>
+      </section>
+
+      <footer class="foot">
+        More free PDF tools at
+        <a href="https://plyleaf.com/" target="_blank" rel="noopener"
+          >plyleaf.com</a
+        >
+      </footer>
+    </main>
+    <script type="module" src="welcome.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Plyleaf</title>
+    <link rel="stylesheet" href="ui.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="top">
+      <svg
+        class="mark"
+        viewBox="0 0 24 24"
+        width="22"
+        height="22"
+        aria-hidden="true"
+      >
+        <rect
+          class="s"
+          x="3.5"
+          y="5.5"
+          width="13"
+          height="16"
+          rx="2.5"
+          fill="none"
+          stroke-width="1.6"
+        />
+        <path
+          class="s"
+          d="M8 2.5h10.5a2.5 2.5 0 0 1 2.5 2.5v13.5"
+          fill="none"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+        <path
+          d="M3.5 13.5 10 9.5l6.5 4"
+          fill="none"
+          stroke="#d99a1e"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+        />
+      </svg>
+      <span class="brand">Plyleaf</span>
+      <a class="site" href="https://plyleaf.com/" target="_blank" rel="noopener"
+        >All tools</a
+      >
+    </header>
+
+    <!-- shown on ordinary web pages -->
+    <section id="save" class="panel" hidden>
+      <h1>Save this page as PDF</h1>
+      <p class="page-title" id="page-title"></p>
+
+      <div class="opts">
+        <label class="field">
+          <span>Paper</span>
+          <select id="paper"></select>
+        </label>
+        <div class="field">
+          <span id="orient-label">Orientation</span>
+          <div class="seg" role="group" aria-labelledby="orient-label">
+            <button type="button" data-landscape="false">Portrait</button>
+            <button type="button" data-landscape="true">Landscape</button>
+          </div>
+        </div>
+        <label class="check"
+          ><input type="checkbox" id="background" /> Background colors and
+          images</label
+        >
+        <label class="check"
+          ><input type="checkbox" id="nomargins" /> No margins</label
+        >
+      </div>
+
+      <p class="perm-note" id="perm-note" hidden>
+        The first time, Chrome asks to let Plyleaf use its print engine on
+        pages. It is used only while a page is being saved, and the PDF never
+        leaves your computer.
+      </p>
+      <button type="button" class="btn btn-primary btn-block" id="save-btn">
+        Save as PDF
+      </button>
+      <p class="status" id="save-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- shown on pages Chrome does not let extensions print -->
+    <section id="blocked" class="panel" hidden>
+      <h1>This page can't be saved</h1>
+      <p class="muted">
+        Chrome does not let extensions save its own pages, the Web Store or
+        local files. Open any website and try again.
+      </p>
+    </section>
+
+    <!-- shown when the tab is a PDF -->
+    <section id="pdf" class="panel" hidden>
+      <h1>Open this PDF in Plyleaf</h1>
+      <p class="page-title" id="pdf-title"></p>
+      <div class="tools" id="pdf-tools"></div>
+      <p class="status" id="pdf-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel local">
+      <h2>A PDF on your computer?</h2>
+      <p class="muted">
+        Open a tool on plyleaf.com and drop the file in. It is processed right
+        in your browser.
+      </p>
+      <div class="tools" id="site-tools"></div>
+    </section>
+
+    <footer class="foot">
+      Files stay on your device. Plyleaf never uploads them.
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+body {
+  width: 340px;
+}
+.top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  font-weight: 600;
+  font-size: 15px;
+}
+.site {
+  margin-left: auto;
+  font-size: 13px;
+  text-decoration: none;
+}
+.site:hover {
+  text-decoration: underline;
+}
+.panel {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
+.panel + .panel {
+  border-top: 1px solid var(--line);
+}
+.panel h1 {
+  font-size: 17px;
+}
+.panel h2 {
+  font-size: 14px;
+}
+.page-title {
+  margin-top: -4px;
+  overflow: hidden;
+  color: var(--ink-3);
+  font-size: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.muted {
+  color: var(--ink-2);
+  font-size: 13px;
+}
+.opts {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+.perm-note {
+  padding: 8px 10px;
+  border-radius: var(--r-md);
+  background: var(--accent-soft);
+  color: var(--ink-2);
+  font-size: 12.5px;
+}
+.status {
+  min-height: 1em;
+  color: var(--ink-2);
+  font-size: 13px;
+}
+.status:empty {
+  display: none;
+}
+.status.ok {
+  color: var(--ok);
+}
+.status.err {
+  color: var(--danger);
+}
+.local {
+  background: var(--surface);
+}
+.local .btn {
+  background: var(--bg);
+}
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tools button {
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--bg);
+  font-size: 13px;
+  cursor: pointer;
+}
+.tools button:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.foot {
+  padding: 10px 16px 12px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 12px;
+}
+html {
+  overflow-x: hidden;
+}
