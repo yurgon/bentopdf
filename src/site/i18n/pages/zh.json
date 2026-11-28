@@ -3382,5 +3382,7 @@
       "Fonts and layout": "字体和排版",
       "Why is the first conversion slow?": "为什么第一次转换很慢？"
     }
-  }
+  },
+  "The Plyleaf browser extension": "Plyleaf 浏览器扩展",
+  "The Plyleaf extension for Chrome saves web pages as PDF and opens PDFs in Plyleaf tools. Chrome makes the PDF on your computer and saves it to your Downloads folder. When you send a PDF to a tool, the extension fetches it from the link you chose and hands it to the plyleaf.com tab on your device. The extension has no analytics, collects no data and sends nothing to us or anyone else. It only keeps your PDF settings, such as paper size, in Chrome’s storage.": "Plyleaf 的 Chrome 扩展可以把网页保存为 PDF，并在 Plyleaf 工具中打开 PDF。PDF 由 Chrome 在您的电脑上生成，并保存到“下载”文件夹。当您把 PDF 发送到某个工具时，扩展会从您选择的链接获取文件，再交给您设备上的 plyleaf.com 标签页。扩展没有统计分析，不收集任何数据，也不会向我们或任何人发送任何内容。它只在 Chrome 的存储中保存您的 PDF 设置，例如纸张大小。"
 }

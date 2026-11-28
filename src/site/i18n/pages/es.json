@@ -3236,5 +3236,7 @@
     "word-search-maker": {
       "Is there an answer key?": "¿Hay soluciones?"
     }
-  }
+  },
+  "The Plyleaf browser extension": "La extensión de Plyleaf para el navegador",
+  "The Plyleaf extension for Chrome saves web pages as PDF and opens PDFs in Plyleaf tools. Chrome makes the PDF on your computer and saves it to your Downloads folder. When you send a PDF to a tool, the extension fetches it from the link you chose and hands it to the plyleaf.com tab on your device. The extension has no analytics, collects no data and sends nothing to us or anyone else. It only keeps your PDF settings, such as paper size, in Chrome’s storage.": "La extensión de Plyleaf para Chrome guarda páginas web como PDF y abre PDF en las herramientas de Plyleaf. Chrome crea el PDF en tu computadora y lo guarda en tu carpeta de Descargas. Cuando envías un PDF a una herramienta, la extensión lo obtiene del enlace que elegiste y lo pasa a la pestaña de plyleaf.com en tu dispositivo. La extensión no tiene analítica, no recopila datos y no envía nada a nosotros ni a nadie. Solo guarda tus ajustes de PDF, como el tamaño del papel, en el almacenamiento de Chrome."
 }
