@@ -3321,5 +3321,6 @@
     }
   },
   "The Plyleaf browser extension": "Plyleaf 瀏覽器擴充功能",
-  "The Plyleaf extension for Chrome saves web pages as PDF and opens PDFs in Plyleaf tools. Chrome makes the PDF on your computer and saves it to your Downloads folder. When you send a PDF to a tool, the extension fetches it from the link you chose and hands it to the plyleaf.com tab on your device. The extension has no analytics, collects no data and sends nothing to us or anyone else. It only keeps your PDF settings, such as paper size, in Chrome’s storage.": "Plyleaf 的 Chrome 擴充功能可將網頁儲存為 PDF，並在 Plyleaf 工具中開啟 PDF。PDF 由 Chrome 在您的電腦上產生，並儲存到「下載」資料夾。當您把 PDF 傳送到某個工具時，擴充功能會從您選擇的連結取得檔案，再交給您裝置上的 plyleaf.com 分頁。擴充功能沒有統計分析，不收集任何資料，也不會傳送任何內容給我們或任何人。它只在 Chrome 的儲存空間中保存您的 PDF 設定，例如紙張大小。"
+  "The Plyleaf extension for Chrome saves web pages as PDF and opens PDFs in Plyleaf tools. Chrome makes the PDF on your computer and saves it to your Downloads folder. When you send a PDF to a tool, the extension fetches it from the link you chose and hands it to the plyleaf.com tab on your device. The extension has no analytics, collects no data and sends nothing to us or anyone else. It only keeps your PDF settings, such as paper size, in Chrome’s storage.": "Plyleaf 的 Chrome 擴充功能可將網頁儲存為 PDF，並在 Plyleaf 工具中開啟 PDF。PDF 由 Chrome 在您的電腦上產生，並儲存到「下載」資料夾。當您把 PDF 傳送到某個工具時，擴充功能會從您選擇的連結取得檔案，再交給您裝置上的 plyleaf.com 分頁。擴充功能沒有統計分析，不收集任何資料，也不會傳送任何內容給我們或任何人。它只在 Chrome 的儲存空間中保存您的 PDF 設定，例如紙張大小。",
+  "28 November 2026": "2026 年 11 月 28 日"
 }
