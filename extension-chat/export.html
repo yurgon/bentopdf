@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat export</title>
+    <link rel="icon" href="icons/icon-32.png" />
+    <link rel="stylesheet" href="ui.css" />
+    <link rel="stylesheet" href="doc.css" />
+    <link rel="stylesheet" href="export.css" />
+    <style id="page-size"></style>
+  </head>
+  <body>
+    <aside class="panel" aria-label="Export options">
+      <header class="panel-top">
+        <img src="icons/icon-32.png" width="24" height="24" alt="" />
+        <span class="brand">Plyleaf</span>
+        <span class="count" id="count"></span>
+      </header>
+
+      <section class="group">
+        <button type="button" class="btn btn-primary btn-block" id="pdf">
+          Download PDF
+        </button>
+        <p class="hint" id="pdf-hint"></p>
+        <div class="formats" role="group" aria-label="Other formats">
+          <button type="button" class="btn" data-format="md">Markdown</button>
+          <button type="button" class="btn" data-format="doc">Word</button>
+          <button type="button" class="btn" data-format="html">HTML</button>
+          <button type="button" class="btn" data-format="copy">
+            Copy text
+          </button>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="group">
+        <h2>Page</h2>
+        <label class="field">
+          <span>Paper size</span>
+          <select id="paper"></select>
+        </label>
+        <div class="field">
+          <span id="size-label">Text size</span>
+          <div class="seg" role="group" aria-labelledby="size-label">
+            <button type="button" data-size="s">Small</button>
+            <button type="button" data-size="m">Medium</button>
+            <button type="button" data-size="l">Large</button>
+          </div>
+        </div>
+        <label class="check"
+          ><input type="checkbox" id="questions" /> Include my messages</label
+        >
+        <label class="check"
+          ><input type="checkbox" id="labels" /> Show who wrote each
+          message</label
+        >
+        <label class="check"
+          ><input type="checkbox" id="header" /> Title, date and link at the
+          top</label
+        >
+        <label class="check"
+          ><input type="checkbox" id="breaks" /> Start each answer on a new
+          page</label
+        >
+      </section>
+
+      <section class="group msgs-group">
+        <div class="msgs-head">
+          <h2>Messages</h2>
+          <button type="button" class="link" id="all">All</button>
+          <button type="button" class="link" id="none">None</button>
+        </div>
+        <ol class="msgs" id="msgs"></ol>
+      </section>
+
+      <footer class="panel-foot">
+        Read on this computer only. Nothing was uploaded.
+        <a href="https://plyleaf.com/" target="_blank" rel="noopener"
+          >More free PDF tools</a
+        >
+      </footer>
+    </aside>
+
+    <main class="stage">
+      <article class="doc" id="doc" aria-live="polite">
+        <p class="loading">Loading the chat…</p>
+      </article>
+    </main>
+    <script type="module" src="export.js"></script>
+  </body>
+</html>

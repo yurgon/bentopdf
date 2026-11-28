@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Plyleaf chat export</title>
+    <link rel="stylesheet" href="ui.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="top">
+      <img src="icons/icon-32.png" width="22" height="22" alt="" />
+      <span class="brand">Plyleaf</span>
+      <span class="site" id="site"></span>
+    </header>
+
+    <!-- a chat page -->
+    <section id="chat" hidden>
+      <button type="button" class="btn btn-primary btn-block" data-then="pdf">
+        Download PDF
+      </button>
+      <div class="row">
+        <button type="button" class="btn" data-then="md">Markdown</button>
+        <button type="button" class="btn" data-then="doc">Word</button>
+      </div>
+      <button type="button" class="btn btn-block" data-then="">
+        Preview and choose messages
+      </button>
+      <p class="note" id="note">
+        Plyleaf scrolls through the chat once to read every message.
+      </p>
+    </section>
+
+    <!-- not a chat -->
+    <section id="other" hidden>
+      <p class="lede">
+        Open a chat in one of these, then press the Plyleaf button again:
+      </p>
+      <ul class="sites" id="sites"></ul>
+      <button type="button" class="btn btn-block" data-then="" id="try">
+        Try this page anyway
+      </button>
+    </section>
+
+    <!-- a page Chrome does not let extensions read -->
+    <section id="blocked" hidden>
+      <p class="lede">
+        Chrome does not let extensions read this page. Open a chat in ChatGPT,
+        Claude, Gemini or another AI and try again.
+      </p>
+    </section>
+
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <footer class="foot">
+      Nothing is uploaded. ·
+      <a href="https://plyleaf.com/" target="_blank" rel="noopener"
+        >More PDF tools</a
+      >
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

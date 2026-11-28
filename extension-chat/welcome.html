@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Plyleaf chat export</title>
+    <link rel="icon" href="icons/icon-32.png" />
+    <link rel="stylesheet" href="ui.css" />
+    <link rel="stylesheet" href="welcome.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="top">
+        <img src="icons/icon-48.png" width="32" height="32" alt="" />
+        <span class="brand">Plyleaf</span>
+        <ol class="dots" aria-label="Steps">
+          <li aria-current="step"></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </header>
+
+      <!-- step 1: what it does -->
+      <section class="step" id="step-1">
+        <h1>Save any AI chat as a clean PDF</h1>
+        <ul class="points">
+          <li>
+            <strong>Every big AI.</strong> ChatGPT, Claude, Gemini, Perplexity,
+            DeepSeek, Grok, Copilot and Le Chat.
+          </li>
+          <li>
+            <strong>Looks like a document.</strong> Headings, lists, tables,
+            code and math come out sharp, without the sidebar and buttons.
+          </li>
+          <li>
+            <strong>Your choice of format.</strong> PDF, Markdown, Word or HTML.
+            Keep only the messages you want.
+          </li>
+          <li>
+            <strong>Private.</strong> The chat is read on your computer and
+            never uploaded. No account.
+          </li>
+        </ul>
+        <div class="actions">
+          <button type="button" class="btn btn-primary" data-next="2">
+            Continue
+          </button>
+        </div>
+      </section>
+
+      <!-- step 2: first settings -->
+      <section class="step" id="step-2" hidden>
+        <h1>How should your PDFs look?</h1>
+        <p class="lede">
+          You can change all of this later, right before you save.
+        </p>
+        <div class="opts">
+          <label class="field">
+            <span>Paper size</span>
+            <select id="paper"></select>
+          </label>
+          <div class="field">
+            <span id="size-label">Text size</span>
+            <div class="seg" role="group" aria-labelledby="size-label">
+              <button type="button" data-size="s">Small</button>
+              <button type="button" data-size="m">Medium</button>
+              <button type="button" data-size="l">Large</button>
+            </div>
+          </div>
+          <label class="check"
+            ><input type="checkbox" id="questions" /> Include my messages</label
+          >
+          <label class="check"
+            ><input type="checkbox" id="labels" /> Show who wrote each
+            message</label
+          >
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-primary" data-next="3">
+            Continue
+          </button>
+        </div>
+      </section>
+
+      <!-- step 3: how to use -->
+      <section class="step" id="step-3" hidden>
+        <h1>You're set</h1>
+        <ol class="how">
+          <li>Open a chat in any AI you use.</li>
+          <li>
+            Press the Plyleaf button in the toolbar, or right-click the page and
+            choose <em>Export this chat to PDF</em>.
+          </li>
+          <li>Pick the messages you want and save.</li>
+        </ol>
+        <div class="pin">
+          <h2>Save PDFs in one click</h2>
+          <p>
+            Without this, Chrome shows its print window and you choose
+            <em>Save as PDF</em>. Allow Plyleaf to use Chrome's print engine to
+            skip that window. Chrome asks once; it is used only on the Plyleaf
+            export page.
+          </p>
+          <div class="actions">
+            <button type="button" class="btn" id="direct">
+              Allow one-click PDF
+            </button>
+            <span
+              class="status"
+              id="direct-status"
+              role="status"
+              aria-live="polite"
+            ></span>
+          </div>
+        </div>
+        <div class="pin">
+          <h2>Keep Plyleaf one click away</h2>
+          <p>
+            Click the puzzle icon at the top right of Chrome, then the pin next
+            to Plyleaf.
+          </p>
+        </div>
+        <ul class="sites" id="sites" aria-label="Open an AI chat"></ul>
+      </section>
+
+      <footer class="foot">
+        Made by Plyleaf, free PDF tools that run in your browser:
+        <a href="https://plyleaf.com/" target="_blank" rel="noopener"
+          >plyleaf.com</a
+        >
+      </footer>
+    </main>
+    <script type="module" src="welcome.js"></script>
+  </body>
+</html>
